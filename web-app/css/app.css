@@ -1,0 +1,33 @@
+﻿
+
+.list-actions form {
+	display:inline;
+}
+
+
+
+.datepicker {
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    padding: 4px;
+    margin-top: 1px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.editor {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea.editor-html {
+  visibility: hidden;
+}
+
