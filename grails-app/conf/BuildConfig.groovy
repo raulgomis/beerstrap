@@ -52,7 +52,7 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.1"
 		
 		compile ":spring-security-core:1.2.7.3"
-
+		compile ":mail:1.0"
         compile ':cache:1.0.0'
     }
 }
