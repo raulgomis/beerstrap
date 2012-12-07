@@ -33,20 +33,20 @@
 	               	<g:render template="/configuration/list" bean="${listServer}" var="configurationInstanceList"></g:render>
 				  </div>
 				  <div class="tab-pane" id="system">
-				  system
+				  	<h2>${message(code: 'app.configuration.system.label')}</h2>
 				  </div>
 				  <div class="tab-pane" id="notifications">
-				  notifications
+				  	<h2>${message(code: 'app.configuration.notifications.label')}</h2>
 				  </div>
 				  <div class="tab-pane" id="security">
-				  security
+				  	<h2>${message(code: 'app.configuration.security.label')}</h2>
 				  </div>
 				  <div class="tab-pane" id="jobs">
-				  Jobs
+				  	<h2>${message(code: 'app.configuration.jobs.label')}</h2>
 				  </div>
 				</div>
 				<div class="form-actions">
-					<input type="submit" class="btn primary" value="${message(code: 'default.button.update.label', default: 'Update')}">&nbsp;
+					<input type="submit" class="btn btn-primary" value="${message(code: 'default.button.update.label', default: 'Update')}">&nbsp;
 					<button type="reset" class="btn">Cancel</button>
 				</div>
             </g:form>

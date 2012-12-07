@@ -1,24 +1,23 @@
-<%@ page import="com.app.domain.configuration.Configuration"%>
+<%@ page import="com.app.domain.configuration.Configuration" %>
 <html>
 <head>
 	<parameter name="menu_Profile" value="active" />
 	<meta name="layout" content="main" />
-	<g:set var="entityName"
-		value="${message(code: 'profile.label', default: 'Profile')}" />
+	<g:set var="entityName" value="${message(code: 'profile.label', default: 'Profile')}" />
 	<title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body>
 
 	<g:render template="sidebar" model="['selected':'sb_notifications']" />
-	
+
 	<g:form action="update">
 
 		<div class="row">
 			<div class="span3">
 				<h2>Notifications</h2>
-				<p>¡Sé astuto! Tu contraseña debe tener al menos 6 caracteres
-					y no ser una palabra del diccionario o un nombre común. Por
-					favor, usa una contraseña que no uses para otras cosas y cámbiala
+				<p>¡Sé astuto! Tu contraseña debe tener al menos 6 caracteres y
+					no ser una palabra del diccionario o un nombre común. Por favor,
+					usa una contraseña que no uses para otras cosas y cámbiala
 					ocasionalmente. Nunca escribas tu contraseña en un servicio o
 					software que parezca sospechoso.</p>
 			</div>
@@ -28,20 +27,16 @@
 					<legend>Messages</legend>
 					<div class="clearfix">
 						<label id="optionsCheckboxes">Send me an email when</label>
-						<div class="input">
-							<ul class="inputs-list">
-								<li><label> <input type="checkbox"
-										name="optionsCheckboxes" value="option1"> 
-										<span>Someone send me a direct message</span>
-								</label></li>
-								<li><label> <input type="checkbox"
-										name="optionsCheckboxes" value="option2"> 
-										<span>Someone mentions me</span>
-								</label></li>
-							</ul>
-							<span class="help-block"> <strong>Note:</strong> Labels
-								surround all the options for much larger click areas and a
-								more usable form.
+						<div class="controls">
+							<label> <input class="checkbox" type="checkbox"
+								name="optionsCheckboxes" value="option1"> <span>Someone
+									send me a direct message</span>
+							</label> <label> <input class="checkbox" type="checkbox"
+								name="optionsCheckboxes" value="option2"> <span>Someone
+									mentions me</span>
+							</label> <span class="help-block"> <strong>Note:</strong> Labels
+								surround all the options for much larger click areas and a more
+								usable form.
 							</span>
 						</div>
 					</div>
@@ -52,24 +47,19 @@
 					<legend>Alerts</legend>
 					<div class="clearfix">
 						<label id="optionsCheckboxes">Send me an email when</label>
-						<div class="input">
-							<ul class="inputs-list">
-								<li><label> <input type="checkbox"
-										name="optionsCheckboxes" value="option1"> 
-										<span>I recieve an alert of type 1</span>
-								</label></li>
-								<li><label> <input type="checkbox"
-										name="optionsCheckboxes" value="option2"> 
-										<span>I recieve an alert of type 2</span>
-								</label></li>
-								<li><label> <input type="checkbox"
-										name="optionsCheckboxes" value="option2"> 
-										<span>I recieve an alert of type 3</span>
-								</label></li>
-							</ul>
-							<span class="help-block"> <strong>Note:</strong> Labels
-								surround all the options for much larger click areas and a
-								more usable form.
+						<div class="controls">
+							<label> <input class="checkbox" type="checkbox"
+								name="optionsCheckboxes" value="option1"> <span>I
+									recieve an alert of type 1</span>
+							</label> <label> <input class="checkbox" type="checkbox"
+								name="optionsCheckboxes" value="option2"> <span>I
+									recieve an alert of type 2</span>
+							</label> <label> <input class="checkbox" type="checkbox"
+								name="optionsCheckboxes" value="option2"> <span>I
+									recieve an alert of type 3</span>
+							</label> <span class="help-block"> <strong>Note:</strong> Labels
+								surround all the options for much larger click areas and a more
+								usable form.
 							</span>
 						</div>
 					</div>
@@ -78,7 +68,7 @@
 
 				<div class="form-actions">
 					<button class="btn btn-primary">
-						<g:message code="default.button.update.label" default="Update"/>
+						<g:message code="default.button.update.label" default="Update" />
 					</button>
 					<button type="reset" class="btn">Cancel</button>
 				</div>

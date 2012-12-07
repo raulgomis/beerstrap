@@ -45,10 +45,6 @@
 		<fieldset>
 			<g:hiddenField name="id" value="\${${propertyName}?.id}" />
 			<div class="form-actions">
-				<g:link class="btn" action="list">
-					<i class="icon-th-list"></i>
-					<g:message code="default.button.list.label" default="List" />
-				</g:link>
 				<g:link class="btn" action="edit" id="\${${propertyName}?.id}">
 					<i class="icon-pencil"></i>
 					<g:message code="default.button.edit.label" default="Edit" />
@@ -57,6 +53,10 @@
 					<i class="icon-trash"></i>
 					<g:message code="default.button.delete.label" default="Delete" />
 				</button>
+				<g:link class="btn" action="list">
+					<i class="icon-th-list"></i>
+					<g:message code="default.button.list.label" default="List" />
+				</g:link>
 			</div>
 		</fieldset>
 		</g:form>

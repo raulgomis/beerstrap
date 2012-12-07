@@ -24,36 +24,27 @@
 						</p>
 				    </div>
 					<div class="span9">
-					
-					<div class="clearfix ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
-						<label for="username">
-							<g:message code="user.username.label" default="Username" />
-							<span class="required-indicator">*</span>
-						</label>
-						<div class="input">
-						<g:textField name="username" required="" value="${userInstance?.username}"/>
-						</div>
-					</div>
-					
-					<div class="clearfix ${hasErrors(bean: userInstance, field: 'name', 'error')} required">
-						<label for="name">
-							<g:message code="user.name.label" default="Name" />
-							<span class="required-indicator">*</span>
-						</label>
-						<div class="input">
-						<g:textField name="name" required="" value="${userInstance?.name}"/>
-						</div>
-					</div>
-					
-					<div class="clearfix ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
-						<label for="email">
-							<g:message code="user.email.label" default="Email" />
-							<span class="required-indicator">*</span>
-						</label>
-						<div class="input">
-						<g:field type="email" name="email" required="" value="${userInstance?.email}"/>
-						</div>
-					</div>
+						<fieldset>
+							<legend>Preferences</legend>
+							<div class="clearfix">
+								<label id="optionsCheckboxes">Send me an email when</label>
+								<div class="controls">
+									<label> 
+										<input class="checkbox" type="checkbox" name="optionsCheckboxes" value="option1"> 
+											<span>Preference 1</span>
+										</label>
+										<label> 
+										<input class="checkbox" type="checkbox" name="optionsCheckboxes" value="option2"> 
+											<span>Preference 2</span>
+										</label>
+									<span class="help-block"> <strong>Note:</strong> Labels
+										surround all the options for much larger click areas and a
+										more usable form.
+									</span>
+								</div>
+							</div>
+							<!-- /clearfix -->
+						</fieldset>
            
 					<div class="form-actions">
 						<button class="btn btn-primary">

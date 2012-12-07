@@ -45,11 +45,13 @@
                     </label>
                 </div>
             </div>
+            
 
 			<button type="submit" name="submit" class="btn btn-info">
             <i class="icon-lock icon-white"></i>
             Acceder
             </button>
+            <g:link controller="register">¿No dispone de un usuario?</g:link>
 		</div>
 	</div>
 	

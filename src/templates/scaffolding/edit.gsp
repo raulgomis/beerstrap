@@ -27,14 +27,14 @@
 			<fieldset>
 				<g:render template="form"/>
 				<div class="form-actions">
-					<g:link class="btn" action="list">
-						<i class="icon-th-list"></i>
-						<g:message code="default.button.list.label" default="List" />
-					</g:link>
 					<button type="submit" class="btn btn-primary">
 						<i class="icon-ok icon-white"></i>
 						<g:message code="default.button.update.label" default="Update" />
 					</button>
+					<g:link class="btn" action="list">
+						<i class="icon-th-list"></i>
+						<g:message code="default.button.list.label" default="List" />
+					</g:link>
 				</div>
 			</fieldset>
 		</g:form>

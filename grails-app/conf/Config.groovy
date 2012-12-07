@@ -95,16 +95,17 @@ grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.app.domain.s
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.app.domain.security.UserRole'
 grails.plugins.springsecurity.authority.className = 'com.app.domain.security.Role'
 grails.plugins.springsecurity.requestMap.className = 'com.app.domain.security.Requestmap'
-grails.plugins.springsecurity.securityConfigType = 'Requestmap'
+//grails.plugins.springsecurity.securityConfigType = 'Requestmap'
 
 
 grails.plugins.springsecurity.active = true
 grails.plugins.springsecurity.securityConfigType = grails.plugins.springsecurity.SecurityConfigType.InterceptUrlMap
 grails.plugins.springsecurity.rejectIfNoRule = true //rechazar si no hay regla
-grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/home'
+grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/public'
 
 grails.plugins.springsecurity.interceptUrlMap = [
 	'/admin/**':	['ROLE_ADMIN'],
+	'/home/**':	['IS_AUTHENTICATED_FULLY'],
 	'/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
@@ -112,7 +113,9 @@ grails.plugins.springsecurity.interceptUrlMap = [
 	'/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	'/favicon.ico':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
-	'/**':            ['IS_AUTHENTICATED_FULLY']
+	'/public/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
+	'/**':            ['IS_AUTHENTICATED_ANONYMOUSLY']
+	//'/**':            ['IS_AUTHENTICATED_FULLY']
  ]
 
 //grails.plugins.springsecurity.dao.reflectionSaltSourceProperty = 'username'

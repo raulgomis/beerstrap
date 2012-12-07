@@ -17,7 +17,14 @@ modules = {
 		resource url:'css/login.css'
 	}
 	
-
+	publicpart {
+		dependsOn 'jquery'
+		resource url:'css/bootstrap/css/bootstrap.min.css'
+		resource url:'css/public.css'
+		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+		resource url:'css/bootstrap/js/bootstrap.min.js'
+	}
+	
 	
 	jquerycookie {
 		dependsOn 'jquery'
