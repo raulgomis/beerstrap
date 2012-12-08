@@ -43,7 +43,6 @@
 	
 		<g:layoutBody />
 		
-      </div>
 
       <hr>
 
