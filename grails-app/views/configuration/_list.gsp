@@ -2,8 +2,8 @@
 <table class="table" cellpadding="0" cellspacing="0" summary="configuration table">
   <thead>
     <tr>
-   		<th>${message(code: 'configuration.name.label', default: 'Name')}</th>
-    	<th>${message(code: 'configuration.value.label', default: 'Value')}</th>
+   		<th></th>
+    	<th></th>
     </tr>
   </thead>
   <tbody>

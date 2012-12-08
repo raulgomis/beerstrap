@@ -3,7 +3,7 @@
 
 <hr>
 				<div class="row">
-                    <div class="span6">
+                    <div class="span4">
                         <p>
                         	<g:meta name="app.name"></g:meta> <g:meta name="app.version"></g:meta>
                             <a rel="tooltip" href="http://www.eltallerdigital.com" data-original-title="Desarrollado por © Taller Digital de la Universidad de Alicante y Universidad de Alicante">
@@ -13,8 +13,8 @@
                     </div>
 
 
-					<div class="span2">
-                        
+					<div class="span4">
+                        <g:render template="/common/lang" />
 					</div>
                     
 

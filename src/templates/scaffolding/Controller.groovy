@@ -9,7 +9,7 @@ class ${className}Controller {
     }
 
     def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 1, 100)
         [${propertyName}List: ${className}.list(params), ${propertyName}Total: ${className}.count()]
     }
 
