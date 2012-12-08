@@ -4,11 +4,11 @@ LOGIN VIEW
 *********************************** */
 .view-login {
 	/*padding-top: 0;*/
-	background-color: #142849;
+	/*background-color: #142849;
 	background-image: -webkit-gradient(radial,center center,0,center center,460,from(#165387),to(#005682));
 	background-image: -webkit-radial-gradient(circle,#165387,#005682);
 	background-image: -moz-radial-gradient(circle,#165387,#005682);
-	background-image: -o-radial-gradient(circle,#165387,#005682);
+	background-image: -o-radial-gradient(circle,#165387,#005682);*/
 	/*background-repeat: no-repeat;*/
 }
 .view-login .container {
