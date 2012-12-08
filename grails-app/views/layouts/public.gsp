@@ -30,11 +30,11 @@
             <div class="container">
               <ul class="nav">
                 <li class="active"><g:link action="index">Home</g:link></li>
-                <li><a href="#">Docs</a></li>
+                <li><g:link action="docs">Docs</g:link></li>
                 <li><g:link action="pricing">Pricing</g:link></li>
-                <li><a href="#">Downloads</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><g:link action="downloads">Downloads</g:link></li>
+                <li><g:link action="about">About</g:link></li>
+                <li><g:link action="contact">Contact</g:link></li>
               </ul>
             </div>
           </div>

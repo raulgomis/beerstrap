@@ -4,5 +4,13 @@ class PublicController {
 
     def index() { }
 	
-	def pricing() {}
+	def docs() { }
+	
+	def pricing() { }
+	
+	def downloads() { }
+	
+	def about() { }
+	
+	def contact() { }
 }
