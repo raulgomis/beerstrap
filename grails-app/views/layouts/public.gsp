@@ -29,9 +29,9 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><g:link action="index">Home</g:link></li>
                 <li><a href="#">Docs</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><g:link action="pricing">Pricing</g:link></li>
                 <li><a href="#">Downloads</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>

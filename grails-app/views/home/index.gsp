@@ -17,5 +17,6 @@
         </div>
     	<g:render template="/home/info"></g:render>
 
+
 	</body>
 </html>

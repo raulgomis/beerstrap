@@ -22,7 +22,9 @@ modules = {
 		resource url:'css/bootstrap/css/bootstrap.min.css'
 		resource url:'css/public.css'
 		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+		resource url:'css/pricing.css'
 		resource url:'css/bootstrap/js/bootstrap.min.js'
+		
 	}
 	
 	
