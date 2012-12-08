@@ -47,12 +47,12 @@ class RegisterController {
 		render view: 'index', model: [emailSent: true]
 	}
 	
-	def verifyRegistration() {
+	def verifyRegistration(String t) {
 
 		def conf = SpringSecurityUtils.securityConfig
 		String defaultTargetUrl = conf.successHandler.defaultTargetUrl
 
-		String token = params.t
+		String token = t
 
 		def registrationCode = token ? RegisterCode.findByToken(token) : null
 		if (!registrationCode) {
@@ -90,14 +90,13 @@ class RegisterController {
 		redirect uri: conf.ui.register.postRegisterUrl ?: defaultTargetUrl
 	}
 
-	def forgotPassword() {
+	def forgotPassword(String username) {
 
 		if (!request.post) {
 			// show the form
 			return
 		}
 
-		String username = params.username
 		if (!username) {
 			flash.error = message(code: 'spring.security.ui.forgotPassword.username.missing')
 			return
@@ -122,9 +121,9 @@ class RegisterController {
 		[emailSent: true]
 	}
 
-	def resetPassword = { ResetPasswordCommand command ->
+	def resetPassword(ResetPasswordCommand command, String t){
 
-		String token = params.t
+		String token = t
 
 		def registrationCode = token ? RegisterCode.findByToken(token) : null
 		if (!registrationCode) {
