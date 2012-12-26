@@ -7,12 +7,14 @@
 </head>
 <body>
 
+	<h2 class="section_header">
+		<span> Password recovery <small> Have you forgot your password? Recover it within seconds</small>
+		</span>
+		<hr class="right visible-desktop">
+	</h2>
+
 	<div class="row">
-		
-		<div class="span4">
-			<h3>Password recovery</h3>
-		</div>
-		
+
 		<div class="span12">
 			<g:hasErrors bean="${command}">
 			<div class="alert-message block-message error">
@@ -25,12 +27,18 @@
 	      	</div>
 	      	</g:hasErrors>
 			
-			<g:form action="forgotPassword">
+			<g:form action="forgotPassword" class="form-horizontal">
 			
-				<p><input type="text" name="username" placeholder="User name" /></p>
+				<div class="control-group">
+					<label class="control-label" for="username">Username</label>
+					<div class="controls">
+						<input type="text" name="username" placeholder="Username" value="${command?.username }" />
+					</div>
+				</div>
 				
-				<div class="actions">
-	            	<input type="submit" class="btn primary" value="Accept">&nbsp;<button type="reset" class="btn">Cancel</button>
+				
+				<div class="form-actions">
+	            	<button class="btn btn-primary">Enviar</button>
 	          	</div>
 			</g:form>
 		</div>

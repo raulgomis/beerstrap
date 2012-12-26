@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=ISO-8859-1"%>
+<%@ page contentType="text/html"%>
 <html>
 <head>
 <meta name="layout" content="public" />

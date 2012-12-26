@@ -28,7 +28,6 @@ class RegisterController {
 			return
 		}
 
-
 		def user = new User(email: command.email, username: command.username, name:command.name,
 				password: command.password, accountLocked: true, enabled: true)
 		if (!user.validate() || !user.save()) {
