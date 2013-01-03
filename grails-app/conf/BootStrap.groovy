@@ -24,7 +24,11 @@ class BootStrap {
             }
 
             production {
-
+				bootstrapService.cargarRequestMapInicial()
+				bootstrapService.cargarPermisos()
+				bootstrapService.cargarRolesyUsuarios()
+				bootstrapService.loadInitialData()
+				bootstrapService.cargarDatosEjemplo()
             }
         }
 		println "Fin bootstrap"

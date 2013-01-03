@@ -121,6 +121,8 @@ grails.plugins.springsecurity.interceptUrlMap = [
 //grails.plugins.springsecurity.dao.reflectionSaltSourceProperty = 'username'
 //grails.plugins.springsecurity.password.encodeHashAsBase64 = true
 
+//grails.dbconsole.enabled = true
+//grails.dbconsole.urlRoot = '/dbconsole'
 
 grails.resources.debug = true
 
