@@ -51,7 +51,10 @@
             <i class="icon-lock icon-white"></i>
             Acceder
             </button>
-            <g:link controller="register">¿No dispone de un usuario?</g:link>
+            
+            <p><g:link controller="register">¿No dispone de usuario?</g:link></p>
+            <p><g:link controller="register" action="recover">¿Olvidó su contraseña?</g:link></p>
+            
 		</div>
 	</div>
 	
