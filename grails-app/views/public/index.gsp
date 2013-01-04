@@ -10,7 +10,7 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1><bs:config name="BT_SITE_NAME" /></h1>
+        <h1><bs:config key="BT_SITE_NAME" /></h1>
         <p class="lead">
         Productivity booster. Kick-start your project with the combined knowledge and effort of 100s of developers, all in one little package. Web development never has been so fast!
         </p>

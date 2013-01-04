@@ -95,13 +95,24 @@ class BootstrapService {
 			"BT_SITE_OFFLINE":"False",
 			"BT_SITE_MAXLISTHOME":"5",
 			"BT_SITE_MAXLIST":"30",
-			"BT_HELP_FAQ":"FAQ text goes here"
+			"BT_HELP_FAQ":"FAQ text goes here",
+			
+			"grails.mail.default.from":"grailsbs@gmail.com",
+			"grails.mail.host":"smtp.gmail.com",
+			"grails.mail.port":"465",
+			"grails.mail.username":"grailsbs@gmail.com",
+			"grails.mail.password":"bsgrails",
+			"grails.mail.props.mail.smtp.auth":"true",
+			"grails.mail.props.mail.smtp.socketFactory.port":"465",
+			"grails.mail.props.mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+			"grails.mail.props.mail.smtp.socketFactory.fallback":"false"
+
 		]
 
         log.info("Loading global configuration...")
 
         configMap.each {
-            if(!Configuration.findByName(it.key)) new Configuration(name:it.key,value:it.value).save()
+            if(!Configuration.findByKey(it.key)) new Configuration(key:it.key,value:it.value).save()
         }
 		assert Configuration.list().size() == configMap.size()
 		

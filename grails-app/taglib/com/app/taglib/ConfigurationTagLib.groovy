@@ -11,10 +11,10 @@ class ConfigurationTagLib {
 	
 	def config = { attrs, body ->
 		
-		String name = attrs.name
+		String key = attrs.key
 		
-		if(name){
-			Configuration c = Configuration.findByName(name)
+		if(key){
+			Configuration c = Configuration.findByKey(key)
 			if(c){
 				out << c?.value
 			}

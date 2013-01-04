@@ -7,7 +7,7 @@
 	</head>
 	<body>
          <div class="page-header">
-          <h1><bs:config name="BT_SITE_NAME" /><small> Agilize your projects</small></h1>
+          <h1><bs:config key="BT_SITE_NAME" /><small> Agilize your projects</small></h1>
 			<%-- 
 			<ul class="breadcrumb">
 			  <li><a href="#">Home</a> <span class="divider">/</span></li>
@@ -15,7 +15,7 @@
 			</ul>
 			--%>
         </div>
-    	<g:render template="/home/info"></g:render>
+    	
 
 
 	</body>

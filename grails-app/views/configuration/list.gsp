@@ -21,6 +21,7 @@
 				  <li><a href="#notifications" data-toggle="tab">Notifications</a></li>
 				  <li><a href="#security" data-toggle="tab">Security</a></li>
 				  <li><a href="#jobs" data-toggle="tab">Jobs</a></li>
+				  <li><a href="#grails" data-toggle="tab">Grails</a></li>
 				</ul>
 				
 				<div class="tab-content">
@@ -44,6 +45,10 @@
 				  <div class="tab-pane" id="jobs">
 				  	<h2>${message(code: 'app.configuration.jobs.label')}</h2>
 				  </div>
+				  <div class="tab-pane" id="grails">
+				  	<g:render template="/configuration/info"></g:render>
+				  </div>
+				  
 				</div>
 				<div class="form-actions">
 					<input type="submit" class="btn btn-primary" value="${message(code: 'default.button.update.label', default: 'Update')}">&nbsp;

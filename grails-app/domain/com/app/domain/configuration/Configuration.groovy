@@ -2,11 +2,11 @@ package com.app.domain.configuration
 
 class Configuration {
 
-    String name
+    String key
     String value
 
     static constraints = {
-        name(nullable:false, blank:false, unique:true)
+        key(nullable:false, blank:false, unique:true)
         value(nullable:false)
     }
 	
@@ -15,7 +15,7 @@ class Configuration {
 	}
 
     String toString(){
-        name+":"+value
+        key+":"+value
     }
 }
 

@@ -9,10 +9,10 @@
   <tbody>
     <g:each in="${configurationInstanceList}" status="i" var="configurationInstance">
       <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-        <td><strong><g:message code="app.configuration.${configurationInstance?.name}.label" default="${configurationInstance?.name}" /></strong></td>
+        <td><strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}" /></strong></td>
         <td>
-        	<g:textField name="${configurationInstance?.name}" value="${configurationInstance?.value}" />
-        	<g:message code="app.configuration.${configurationInstance?.name}.description" default="-- No description --" />
+        	<g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" />
+        	<g:message code="app.configuration.${configurationInstance?.key}.description" default="-- No description --" />
         </td>
       </tr>
     </g:each>

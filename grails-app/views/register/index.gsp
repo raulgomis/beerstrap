@@ -8,7 +8,7 @@
 <body>
 
 	<h2 class="section_header">
-		<span>Join <bs:config name="BT_SITE_NAME" /> today <small> It's completely free</small>
+		<span>Join <bs:config key="BT_SITE_NAME" /> today <small> It's completely free</small>
 		</span>
 		<hr class="right visible-desktop">
 	</h2>

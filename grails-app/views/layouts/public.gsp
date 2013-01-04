@@ -24,7 +24,7 @@
 	<div class="container">
 	
       <div class="masthead">
-        <h3 class="muted"><bs:config name="BT_SITE_NAME" /></h3>
+        <h3 class="muted"><bs:config key="BT_SITE_NAME" /></h3>
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">

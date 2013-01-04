@@ -26,11 +26,11 @@ class ConfigurationController {
 		println grailsApplication.config.grails.mail.default.from*/
 		
         for(Configuration config in listConfig){
-            def name = config.name
-            if(name.startsWith('BT_SITE_') || name.startsWith('BT_HELP_')){
+            def key = config.key
+            if(key.startsWith('BT_SITE_') || key.startsWith('BT_HELP_')){
                 listSite.add(config)
             }
-            else if(name.startsWith('BT_SERVER_')){
+            else if(key.startsWith('BT_SERVER_') || key.startsWith('grails.mail.')){
                 listServer.add(config)
             }
 			else{
@@ -48,11 +48,11 @@ class ConfigurationController {
 
         listConfig.each { configurationInstance ->
 
-            def name = configurationInstance.name
+            def name = configurationInstance.key
             def value = configurationInstance.value
 
-            if(configurationInstance.value != params[configurationInstance.name]){
-                configurationInstance.value = params[configurationInstance.name]
+            if(configurationInstance.value != params[configurationInstance.key]){
+                configurationInstance.value = params[configurationInstance.key]
                 configurationInstance.save()
             }
         }

@@ -27,7 +27,7 @@
 
 	<div >
 		<div id="faq">
-			<bs:config name="BT_HELP_FAQ"></bs:config>
+			<bs:config key="BT_HELP_FAQ"></bs:config>
                
 		</div>
 	</div>
