@@ -83,12 +83,14 @@
 			</g:each>
 			</tbody>
 		</table>
-		<div class="row">
+		<div id="grailsbspag" class="row">
 			<div class="span4">
-				<div class="dataTables_info" id="example_info">Mostrando \${${propertyName}List?.size()} de \${${propertyName}Total}</div>
+				<div class="pagination grailsbspag-left">
+					Mostrando \${${propertyName}List?.size()} de \${${propertyName}Total}
+				</div>
 			</div>
 			<div class="span8">
-				<div class="dataTables_paginate paging_bootstrap pagination">
+				<div class="pagination grailsbspag-right">
 					<g:paginate total="\${${propertyName}Total}" maxsteps="4" params="['q':params?.q]" />
 				</div>
 			</div>

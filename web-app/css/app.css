@@ -33,4 +33,15 @@ textarea.editor-html {
 
 
 
+/*******************************************************************
+* TWITTERBSPAGINATION 
+*******************************************************************/
 
+#grailsbspag {}
+
+
+#grailsbspag .grailsbspag-left {
+	font-weight: bold;
+}
+
+#grailsbspag .grailsbspag-right {}
