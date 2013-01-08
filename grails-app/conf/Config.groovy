@@ -2,10 +2,10 @@
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
 
-// grails.config.locations = [ "classpath:${appName}-config.properties",
-//                             "classpath:${appName}-config.groovy",
-//                             "file:${userHome}/.grails/${appName}-config.properties",
-//                             "file:${userHome}/.grails/${appName}-config.groovy"]
+ grails.config.locations = [ "classpath:${appName}-config.properties",
+                             "classpath:${appName}-config.groovy",
+                             "file:${userHome}/.grails/${appName}-config.properties",
+                             "file:${userHome}/.grails/${appName}-config.groovy"]
 
 // if (System.properties["${appName}.config.location"]) {
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
@@ -162,13 +162,18 @@ grails {
 	  port = 465
 	  username = "grailsbs@gmail.com"
 	  password = "bsgrails"
-	  props = ["mail.smtp.auth":"true",
-			   "mail.smtp.socketFactory.port":"465",
-			   "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
-			   "mail.smtp.socketFactory.fallback":"false"]
+	  props.mail.smtp.auth = "true"
+	  props.mail.smtp.socketFactory.port = "465"
+	  props.mail.smtp.socketFactory.class = "javax.net.ssl.SSLSocketFactory"
+	  props.mail.smtp.socketFactory.fallback = "false"
+
 	}
  }
 
+/*props = ["mail.smtp.auth":"true",
+ "mail.smtp.socketFactory.port":"465",
+ "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+ "mail.smtp.socketFactory.fallback":"false"]*/
 
 //************************************************************
  //TWITTER BOOSTRAP

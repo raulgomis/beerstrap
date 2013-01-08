@@ -10,6 +10,8 @@ class ConfigurationController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 	static admin = true
 	
+	def configurationService
+	
     def index() {
         redirect(action: "list", params: params)
     }
@@ -21,9 +23,13 @@ class ConfigurationController {
         def listServer = []
 		def listHelp = []
 		
-		/*println grailsApplication.config.grails.mail.default.from
+		//println "HOLAAA"
+		//println grailsApplication.config.grails.mail.port
+		
+		/*
 		grailsApplication.config.grails.mail.default.from = "nrr@hotmail.com"
-		println grailsApplication.config.grails.mail.default.from*/
+		println grailsApplication.config.grails.mail.default.from
+		*/
 		
         for(Configuration config in listConfig){
             def key = config.key
@@ -41,22 +47,32 @@ class ConfigurationController {
         [listServer:listServer,listSite:listSite]
 
     }
+	
 
     def update() {
 
         def listConfig = Configuration.list()
-
+		
+		def mailConfig = grailsApplication.config.grails.mail
+		
         listConfig.each { configurationInstance ->
 
             def name = configurationInstance.key
             def value = configurationInstance.value
 
-            if(configurationInstance.value != params[configurationInstance.key]){
-                configurationInstance.value = params[configurationInstance.key]
+            if(configurationInstance.value != params[name]){
+                configurationInstance.value = params[name]
                 configurationInstance.save()
+				if(name.startsWith("grails.mail.")){
+					println name
+					println value
+					configurationService.setConfigValue("${name}", configurationInstance.value)
+				}
             }
         }
-
+		
+		
+		
         flash.message = "${message(code: 'default.updated.message', args: [message(code: 'configuration.label', default: 'Configuration')])}"
         redirect(action: "list")
 

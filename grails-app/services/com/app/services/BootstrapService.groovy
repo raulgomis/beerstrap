@@ -6,7 +6,9 @@ import com.app.domain.configuration.*
 
 class BootstrapService {
 
-
+	def grailsApplication
+	def configurationService
+	
 	//Cargar requestMap inicial
 	def cargarRequestMapInicial() {
 
@@ -82,14 +84,16 @@ class BootstrapService {
 	//Cargar otros datos iniciales necesarios para el correcto funcionamiento de la aplicación
     def loadInitialData(){
 		
+
+		
 		def configMap = []
 		
 		configMap = [
 			"BT_SERVER_ACTIVO":"true",
-			"BT_SERVER_FROM":"sistemas@eltallerdigital.com",
+			/*"BT_SERVER_FROM":"sistemas@eltallerdigital.com",
         	"BT_SERVER_PORT":"25",
         	"BT_SERVER_USERNAME":"sistemas@eltallerdigital.com",
-        	"BT_SERVER_PASSWORD":"password",
+        	"BT_SERVER_PASSWORD":"password",*/
 			
 			"BT_SITE_NAME":"Grails bootstrap",
 			"BT_SITE_OFFLINE":"False",
@@ -97,11 +101,11 @@ class BootstrapService {
 			"BT_SITE_MAXLIST":"30",
 			"BT_HELP_FAQ":"FAQ text goes here",
 			
-			"grails.mail.default.from":"grailsbs@gmail.com",
+			"grails.mail.default.from":"rgomis@gmail.com",
 			"grails.mail.host":"smtp.gmail.com",
 			"grails.mail.port":"465",
 			"grails.mail.username":"grailsbs@gmail.com",
-			"grails.mail.password":"bsgrails",
+			"grails.mail.password":"bsgrailss",
 			"grails.mail.props.mail.smtp.auth":"true",
 			"grails.mail.props.mail.smtp.socketFactory.port":"465",
 			"grails.mail.props.mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
@@ -115,6 +119,12 @@ class BootstrapService {
             if(!Configuration.findByKey(it.key)) new Configuration(key:it.key,value:it.value).save()
         }
 		assert Configuration.list().size() == configMap.size()
+		
+		//set grails const
+		List configurationInstanceList = Configuration.findAllByKeyLike("grails.%")
+		for(Configuration c in configurationInstanceList){
+			configurationService.setConfigValue("${c.key}",c.value)
+		}
 		
     }
 
