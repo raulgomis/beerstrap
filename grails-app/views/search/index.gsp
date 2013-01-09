@@ -5,9 +5,21 @@
 <meta name="layout" content="main" />
 </head>
 <body>
-	<h1>Buscar:${params.q}</h1>
+	<div class="page-header">
+		<h1>
+			<i class="icon-search"></i>
+			Search
+			<small>${params.q}</small>
+		</h1>
+		<%-- 
+		<ul class="breadcrumb">
+		  <li><a href="#">Home</a> <span class="divider">/</span></li>
+		  <li class="active">You are here</li>
+		</ul>
+		--%>
+	</div>
 	<div class="body">
-	
+	Search results go here
 	</div>
 </body>
 </html>

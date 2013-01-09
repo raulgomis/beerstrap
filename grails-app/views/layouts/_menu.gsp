@@ -14,7 +14,8 @@
 				<bs:config key="BT_SITE_NAME"></bs:config>
 			</a> 
 			--%>
-			<g:link elementId="brand" class="brand" controller="home">
+			<g:link elementId="" class="brand" controller="home">
+				<i class="icon-beer"></i>
 				<bs:config key="BT_SITE_NAME"></bs:config>
 			</g:link>
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 

@@ -19,6 +19,11 @@
 		<li><g:link controller="user" action="list"><g:message code="menu.administracion.usuarios.label" default="Usuarios" /></g:link></li>
 		<li><g:link controller="configuration" action="list"><g:message code="menu.administracion.configuracion.label" default="Configuración global" /></g:link></li>
 		--%>
+		<li><g:link controller="configuration" action="list">
+			<i class="icon-cog"></i>
+			<g:message code="menu.administracion.configuration.label" default="Configuration" /></g:link>
+		</li>
+		
 		<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
 			<g:if test="${c.getPropertyValue('admin')}">
 				<li class='controller ${pageProperty(name:"page.menu_"+c.name)}'>

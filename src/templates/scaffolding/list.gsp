@@ -10,15 +10,16 @@
 	</head>
 	<body>
 		<div class="page-header">
-			<h1>\${entityName} <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
+			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
 		</div>
 		<div class="row rowbar">
 			<div class="span6">
 				<div id="search_bar" class="rowbar-left pull-left">
 					<g:form action="list" class="form-inline" method="GET">
-						<label for="q">Buscar</label>
-						<g:textField name="q" placeholder="Introduzca texto a buscar" value="\${params.q}" />
-						<button class="btn">Buscar</button>
+						<div class="input-append">
+						<g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="span2" />
+						<button class="btn" type="button">Search</button>
+						</div>
 					</g:form>
 				</div>
 			</div>

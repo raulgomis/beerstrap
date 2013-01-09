@@ -23,7 +23,7 @@ jQuery(function () {
     $("a[rel=tooltip]").tooltip({
         placement: 'top'
     });
-    /*
+    
     $('input[datadatepicker]').datepicker({
         format: 'dd/mm/yyyy', autoclose: "true", language: "es"
     })
@@ -33,7 +33,7 @@ jQuery(function () {
         $('input[datadatepicker]').data({ date: today }).datepicker('update');
     });
 
-*/
+
 
     // ------------------- TAB COOKIE
     $('a[data-toggle="tab"]').on('shown', function (e) {

@@ -11,7 +11,7 @@
 	<body>
 
 		<div class="page-header">
-			<h1>\${entityName} <small><g:message code="default.show.label" args="[entityName]" /></small></h1>
+			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.show.label" args="[entityName]" /></small></h1>
 		</div>
 		<table class="table table-striped property-list ${domainClass.propertyName}">
 		<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'

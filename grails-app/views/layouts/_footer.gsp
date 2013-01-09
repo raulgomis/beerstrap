@@ -20,9 +20,11 @@
 			</div>
 
 			<div class="span4">
+				<!-- 
 				<div class="pull-left">
 					<img class="img-circle" style="margin:0 15px 10px 0;" alt="Foto personal" src="https://si0.twimg.com/profile_images/1538926046/IMGP0701-2_bigger.jpg">
 				</div>
+				 -->
 				<div>
 					<strong>CONTACTO</strong>
 					<ul class="unstyled">

@@ -8,7 +8,7 @@
     </head>
     <body>
     <div class="page-header">
-    	<h1>${entityName}</h1>
+    	<h1><i class="icon-cog"></i>${entityName}</h1>
     </div>
     	<div class="row">
     		<div class="span12">
@@ -51,8 +51,14 @@
 				  
 				</div>
 				<div class="form-actions">
-					<input type="submit" class="btn btn-primary" value="${message(code: 'default.button.update.label', default: 'Update')}">&nbsp;
-					<button type="reset" class="btn">Cancel</button>
+					<button type="submit" class="btn btn-primary">
+						<i class="icon-ok"></i>
+						${message(code: 'default.button.update.label', default: 'Update')}
+					</button>
+					<button type="reset" class="btn">
+						<i class="icon-chevron-down"></i>
+						Reset
+					</button>
 				</div>
             </g:form>
             </div>

@@ -8,7 +8,7 @@ import com.app.domain.configuration.Configuration;
 class ConfigurationController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-	static admin = true
+	//static admin = true
 	
 	def configurationService
 	

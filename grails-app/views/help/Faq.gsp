@@ -14,7 +14,7 @@
 
 <div class="page-header">
 	<h1>
-		Ayuda <small>Ayuda con la herramienta</small>
+		Help <small>Ask for help!</small>
 	</h1>
 </div>
 

@@ -15,22 +15,25 @@ class User {
 	boolean accountLocked = false
 	boolean passwordExpired = false
 	
+	UserPreferences preferences
+	Date lastLogin
+	
 	Date dateCreated
 	Date lastUpdated
 	
-	UserPreferences preferences
-
 	static constraints = {
 		username(blank: false, unique: true)
 		name(nullable: true)
 		email(blank: false, email: true)
-		dateCreated()
+		lastLogin(nullable:true)
 		enabled()
 		accountExpired()
 		accountLocked()
 		passwordExpired()
 		password(blank: false, password:true)
 		preferences(nullable:true)
+		dateCreated()
+		lastUpdated()
 	}
 
 	static mapping = {

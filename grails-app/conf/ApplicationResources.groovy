@@ -24,13 +24,10 @@ modules = {
 		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
 		resource url:'css/pricing.css'
 		resource url:'css/bootstrap/js/bootstrap.min.js'
-		
 	}
-	
-	
+
 	jquerycookie {
 		dependsOn 'jquery'
-		
 	}
 	
 	init {
@@ -44,6 +41,16 @@ modules = {
 		resource url:'css/bootstrap/css/bootstrap.min.css'
 		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
 		resource url:'css/bootstrap/js/bootstrap.min.js'
+	}
+	
+	fontawesome {
+		resource url:'css/fontawesome/css/font-awesome.min.css'
+		resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
+	}
+	
+	datepicker {
+		resource url:'js/bootstrap-datepicker/css/datepicker.css'
+		resource url:'js/bootstrap-datepicker/js/bootstrap-datepicker.js'
 	}
 
 }
