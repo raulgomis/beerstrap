@@ -6,9 +6,8 @@
 </head>
 <body>
 
-
 	<h2 class="section_header">
-		<span> Pricing <small> See all plan details here</small>
+		<span><i class="icon-shopping-cart"></i> Pricing<small> See all plan details here</small>
 		</span>
 		<hr class="right visible-desktop">
 	</h2>

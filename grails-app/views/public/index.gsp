@@ -19,25 +19,52 @@
       </div>
 
       <hr>
-
+	<section id="why" class="clearfix">
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
-          <h2>True Productivity</h2>
+          <h2><i class="icon-dashboard"></i> Productivity</h2>
           <p>Don't waste your time configuring your app, BE PRODUCTIVE MY FRIEND! Download it and start to develop. Everything is already configured: Security, Email messages, Application configuration, User preferences, etc.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
         <div class="span4">
-          <h2>Scaffolding</h2>
+          <h2><i class="icon-magic"></i> Scaffolding</h2>
           <p>Best scaffolding templates for rapid prototyping. Generate CRUD functionality based on client's requirements and show a functional version to your client within 15 minutes.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
        	</div>
         <div class="span4">
-          <h2>Grails based</h2>
+          <h2><i class="icon-beaker"></i> Grails based</h2>
           <p>It's been implemented using Grails: a rapid, dynamic & robust framework. Is an open source web application framework which uses the Groovy programming language (based on the Java platform).</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
 	</div>
+	</section>
+	
+	<hr>
+	
+	<section id="testimonials" class="clearfix">
+	<h2>Testimonials</h2>
+	<div class="well well-large well-transparent">
+		<i class="icon-quote-left icon-2x pull-left icon-border"></i> Use a
+		few of the new styles together, and you've got easy pull quotes or a
+		great introductory article image. Or spinning icons for loading and
+		refreshing content. Or fun big icons in multi-line buttons. You can
+		combine all of them in any combination to get lots of new
+		possibilities.
+
+	</div>
+
+	<div class="well well-large well-transparent">
+		<i class="icon-camera-retro icon-2x pull-left icon-border"></i> Use a
+		few of the new styles together, and you've got easy pull quotes or a
+		great introductory article image. Or spinning icons for loading and
+		refreshing content. Or fun big icons in multi-line buttons. You can
+		combine all of them in any combination to get lots of new
+		possibilities. Use a few of the new styles together, and you've got
+		easy pull quotes or a great introductory article image. Or spinning
+		icons for loading and refreshing content. Or fun big icons in
+		multi-line buttons. You can combine all of them in any combination to
+		get lots of new possibilities.
+	</div>
+	</section>
+	
 
 </body>
 

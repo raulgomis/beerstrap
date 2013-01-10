@@ -12,9 +12,9 @@
 			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.edit.label" args="[entityName]" /></small></h1>
 		</div>
 		<g:hasErrors bean="\${${propertyName}}">
-		<div class="alert-message block-message error" data-alert="alert">
+		<div class="alert alert-message alert-error" data-alert="alert">
 			<a class="close" data-dismiss="alert" href="#">×</a>
-			<ul class="errors" role="alert">
+			<ul role="alert">
 				<g:eachError bean="\${${propertyName}}" var="error">
 				<li <g:if test="\${error in org.springframework.validation.FieldError}">data-field-id="\${error.field}"</g:if>><g:message error="\${error}"/></li>
 				</g:eachError>

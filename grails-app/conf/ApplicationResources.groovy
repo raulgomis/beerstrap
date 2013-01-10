@@ -24,6 +24,8 @@ modules = {
 		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
 		resource url:'css/pricing.css'
 		resource url:'css/bootstrap/js/bootstrap.min.js'
+		resource url:'css/fontawesome/css/font-awesome.min.css'
+		resource url:'css/fontawesome/css/font-awesome-ie7.min.css' 
 	}
 
 	jquerycookie {

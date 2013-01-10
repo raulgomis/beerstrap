@@ -27,6 +27,7 @@
 				<p>${flash.message}</p>
 			</div>
 		</g:if>
+		
       	<div class="contents">
         	<g:layoutBody />
         </div>

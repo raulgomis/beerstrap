@@ -8,7 +8,7 @@
 
 
 	<h2 class="section_header">
-		<span> Contact <small> See all plan details here</small>
+		<span><i class="icon-info-sign"></i> Contact <small> See all plan details here</small>
 		</span>
 		<hr class="right visible-desktop">
 	</h2>

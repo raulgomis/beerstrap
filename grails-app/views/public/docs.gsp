@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h2 class="section_header">
-		<span> Docs <small> See all plan details here</small>
+		<span><i class="icon-file-alt"></i> Docs <small> See all plan details here</small>
 		</span>
 		<hr class="right visible-desktop"></hr>
 	</h2>

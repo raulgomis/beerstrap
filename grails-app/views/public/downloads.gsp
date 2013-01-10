@@ -8,7 +8,7 @@
 
 
 	<h2 class="section_header">
-		<span> Downloads <small> See all plan details here</small>
+		<span><i class="icon-cloud-download"></i> Downloads <small> See all plan details here</small>
 		</span>
 		<hr class="right visible-desktop">
 	</h2>
