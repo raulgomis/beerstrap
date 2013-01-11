@@ -1,8 +1,10 @@
 package com.app.services
 
 class ConfigurationService {
-	def grailsApplication
 	
+	static transactional = false
+	def grailsApplication
+
 	def void setConfigValue(String pathString, def newValue) {
 		def config = grailsApplication.config /* hope you have injected grailsApplication bean */
 		List paths = pathString.tokenize(".")

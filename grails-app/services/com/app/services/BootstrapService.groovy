@@ -5,7 +5,9 @@ import com.app.domain.security.*
 import com.app.domain.configuration.*
 
 class BootstrapService {
-
+	
+	static transactional = false
+	
 	def grailsApplication
 	def configurationService
 	
