@@ -29,12 +29,12 @@
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="active"><g:link action="index">Home</g:link></li>
-                <li><g:link controller="public" action="docs">Docs</g:link></li>
-                <li><g:link controller="public" action="pricing">Pricing</g:link></li>
-                <li><g:link controller="public" action="downloads">Downloads</g:link></li>
-                <li><g:link controller="public" action="about">About</g:link></li>
-                <li><g:link controller="public" action="contact">Contact</g:link></li>
+                <li class="${pageProperty(name:"page.menu_Home")}"><g:link action="index">Home</g:link></li>
+                <li class="${pageProperty(name:"page.menu_Docs")}"><g:link controller="public" action="docs">Docs</g:link></li>
+                <li class="${pageProperty(name:"page.menu_Pricing")}"><g:link controller="public" action="pricing">Pricing</g:link></li>
+                <li class="${pageProperty(name:"page.menu_Downloads")}"><g:link controller="public" action="downloads">Downloads</g:link></li>
+                <li class="${pageProperty(name:"page.menu_About")}"><g:link controller="public" action="about">About</g:link></li>
+                <li class="${pageProperty(name:"page.menu_Contact")}"><g:link controller="public" action="contact">Contact</g:link></li>
               </ul>
             </div>
           </div>

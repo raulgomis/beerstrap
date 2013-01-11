@@ -1,7 +1,8 @@
 <%@ page contentType="text/html"%>
 <html>
 <head>
-<meta name="layout" content="public" />
+		<meta name="layout" content="public" />
+		<parameter name="menu_Pricing" value="active" />
 <title>Insert title here</title>
 </head>
 <body>

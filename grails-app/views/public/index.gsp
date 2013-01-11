@@ -1,7 +1,8 @@
 <html>
 
 <head>
-<meta name="layout" content="public">
+		<meta name="layout" content="public" />
+		<parameter name="menu_Home" value="active" />
 </head>
 <body>
 	<div class="jumbotron">
@@ -46,7 +47,7 @@
 	<hr>
 
 	<section id="features" class="clearfix">
-		<h2>Features</h2>
+		<h2 class="page-header">Features</h2>
 		<div class="row-fluid">
 			<div class="span3">
 				<h4>
@@ -133,7 +134,7 @@
 	<hr>
 
 	<section id="testimonials" class="clearfix">
-		<h2>Testimonials</h2>
+		<h2 class="page-header">Testimonials</h2>
 		<div class="well well-large well-transparent">
 			<i class="icon-quote-left icon-2x pull-left icon-border"></i> Use a
 			few of the new styles together, and you've got easy pull quotes or a

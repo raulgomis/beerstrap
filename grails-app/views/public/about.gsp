@@ -1,8 +1,9 @@
 <%@ page contentType="text/html"%>
 <html>
 <head>
-<meta name="layout" content="public" />
-<title>Insert title here</title>
+		<meta name="layout" content="public" />
+		<parameter name="menu_About" value="active" />
+		<title>Insert title here</title>
 </head>
 <body>
 
