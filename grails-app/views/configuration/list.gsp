@@ -48,7 +48,6 @@
 				  <div class="tab-pane" id="grails">
 				  	<g:render template="/configuration/info"></g:render>
 				  </div>
-				  
 				</div>
 				<div class="form-actions">
 					<button type="submit" class="btn btn-primary">

@@ -103,15 +103,15 @@ class BootstrapService {
 			"BT_SITE_MAXLIST":"30",
 			"BT_HELP_FAQ":"FAQ text goes here",
 			
-			"grails.mail.default.from":"rgomis@gmail.com",
+			"grails.mail.default.from":"grailsbs@gmail.com",
 			"grails.mail.host":"smtp.gmail.com",
 			"grails.mail.port":"465",
 			"grails.mail.username":"grailsbs@gmail.com",
-			"grails.mail.password":"bsgrailss",
-			"grails.mail.props.mail.smtp.auth":"true",
+			"grails.mail.password":"bsgrails",
+			/*"grails.mail.props.mail.smtp.auth":"true",
 			"grails.mail.props.mail.smtp.socketFactory.port":"465",
 			"grails.mail.props.mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
-			"grails.mail.props.mail.smtp.socketFactory.fallback":"false"
+			"grails.mail.props.mail.smtp.socketFactory.fallback":"false"*/
 
 		]
 
@@ -141,13 +141,15 @@ class BootstrapService {
 		def user = new User( username:"user",
 										password:"user",
 										name:"User 1",
-										email:"raulgomis@gmail.com",
+										email:"raulgomis@hotmail.com",
 										enabled:true,
 										accountExpired:false,
 										accountLocked:false,
 										passwordExpired:false).save()
 			UserRole.create user, userRole
 		}
+		
+		assert User.findByUsername('user')!=null
     }
 	
 }

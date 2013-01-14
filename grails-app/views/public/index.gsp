@@ -135,26 +135,37 @@
 
 	<section id="testimonials" class="clearfix">
 		<h2 class="page-header">Testimonials</h2>
+		<!--  
 		<div class="well well-large well-transparent">
-			<i class="icon-quote-left icon-2x pull-left icon-border"></i> Use a
+			<i class="icon-user icon-2x pull-left icon-border"></i> Use a
 			few of the new styles together, and you've got easy pull quotes or a
 			great introductory article image. Or spinning icons for loading and
 			refreshing content. Or fun big icons in multi-line buttons. You can
 			combine all of them in any combination to get lots of new
 			possibilities.
 		</div>
-
+		-->
 		<div class="well well-large well-transparent">
-			<i class="icon-camera-retro icon-2x pull-left icon-border"></i> Use a
+			<blockquote>
+		  	<p>Use a
 			few of the new styles together, and you've got easy pull quotes or a
 			great introductory article image. Or spinning icons for loading and
-			refreshing content. Or fun big icons in multi-line buttons. You can
-			combine all of them in any combination to get lots of new
-			possibilities. Use a few of the new styles together, and you've got
+			multi-line buttons. You can combine all of them in any combination to
+			get lots of new possibilities.</p>
+			  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+			</blockquote>
+		</div>
+		<div class="well well-large well-transparent">
+			<blockquote>
+		  	<p>Use a
+			few of the new styles together, and you've got easy pull quotes or a
+			great introductory article image. Or spinning icons for loading and
 			easy pull quotes or a great introductory article image. Or spinning
 			icons for loading and refreshing content. Or fun big icons in
 			multi-line buttons. You can combine all of them in any combination to
-			get lots of new possibilities.
+			get lots of new possibilities.</p>
+			  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+			</blockquote>
 		</div>
 	</section>
 

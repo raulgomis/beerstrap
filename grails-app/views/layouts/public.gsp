@@ -18,18 +18,14 @@
 	</head>
     <body>
 
-    
-		
-
 	<div class="container">
-	
       <div class="masthead">
         <h3 class="muted"><bs:config key="BT_SITE_NAME" /></h3>
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
               <ul class="nav">
-                <li class="${pageProperty(name:"page.menu_Home")}"><g:link action="index">Home</g:link></li>
+                <li class="${pageProperty(name:"page.menu_Home")}"><g:link controller="public" action="index">Home</g:link></li>
                 <li class="${pageProperty(name:"page.menu_Docs")}"><g:link controller="public" action="docs">Docs</g:link></li>
                 <li class="${pageProperty(name:"page.menu_Pricing")}"><g:link controller="public" action="pricing">Pricing</g:link></li>
                 <li class="${pageProperty(name:"page.menu_Downloads")}"><g:link controller="public" action="downloads">Downloads</g:link></li>
@@ -43,9 +39,7 @@
 	
 		<g:layoutBody />
 		
-
       <hr>
-
       <div class="footer">
         <p>&copy; Company 2012</p>
       </div>

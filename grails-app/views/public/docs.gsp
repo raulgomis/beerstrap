@@ -3,7 +3,7 @@
 <head>
 		<meta name="layout" content="public" />
 		<parameter name="menu_Docs" value="active" />
-<title>Insert title here</title>
+		<title>Docs</title>
 </head>
 <body>
 	<h2 class="section_header">

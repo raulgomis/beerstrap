@@ -60,9 +60,9 @@
 
 				<div class="form-actions">
 					<button class="btn btn-primary">
+						<i class="icon-ok"></i>
 						<g:message code="default.button.update.label" default="Update"/>
 					</button>
-					<button type="reset" class="btn">Cancel</button>
 				</div>
 
 			</div>

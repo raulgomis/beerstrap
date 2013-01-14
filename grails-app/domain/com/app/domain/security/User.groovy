@@ -24,7 +24,7 @@ class User {
 	static constraints = {
 		username(blank: false, unique: true)
 		name(nullable: true)
-		email(blank: false, email: true)
+		email(blank: false, email: true, unique:true)
 		lastLogin(nullable:true)
 		enabled()
 		accountExpired()

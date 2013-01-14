@@ -3,13 +3,13 @@
 <head>
 		<meta name="layout" content="public" />
 		<parameter name="menu_Contact" value="active" />
-<title>Insert title here</title>
+		<title>Contact</title>
 </head>
 <body>
 
 
 	<h2 class="section_header">
-		<span><i class="icon-info-sign"></i> Contact <small> See all plan details here</small>
+		<span><i class="icon-phone-sign"></i> Contact <small> See all plan details here</small>
 		</span>
 		<hr class="right visible-desktop">
 	</h2>

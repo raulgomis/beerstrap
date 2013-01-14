@@ -28,7 +28,7 @@ class RegisterController {
 			return
 		}
 
-		def user = new User(email: command.email, username: command.username, name:command.name,
+		def user = new User(name:command.name, username: command.username, email: command.email,
 				password: command.password, accountLocked: true, enabled: true)
 		if (!user.validate() || !user.save()) {
 			// TODO
@@ -36,14 +36,12 @@ class RegisterController {
 		}
 
 		def registrationCode = new RegisterCode(username: user.username).save()
-
 		String url = g.createLink(action:'verifyRegistration',absolute:true,params:[t:registrationCode?.token])
-		
 		Map opt = ['urlToken':url,'email':command.email]
 		emailService.register(opt)
 		
 		flash.message = "Email has been sent. Check your email in order to complete the process"
-		render view: 'index', model: [emailSent: true]
+		redirect(controller:"home")
 	}
 	
 	def verifyRegistration(String t) {
@@ -70,7 +68,6 @@ class RegisterController {
 			user.save()
 			
 			def listRoles = [Role.USER]
-			
 			for (roleName in listRoles) {
 				UserRole.create user, Role.findByAuthority(roleName)
 			}
@@ -89,29 +86,26 @@ class RegisterController {
 		redirect uri: conf.ui.register.postRegisterUrl ?: defaultTargetUrl
 	}
 
-	def forgotPassword(String username) {
+	def forgotPassword(String email) {
 
 		if (!request.post) {
 			// show the form
 			return
 		}
 
-		if (!username) {
+		if (!email) {
 			flash.error = message(code: 'spring.security.ui.forgotPassword.username.missing')
 			return
 		}
 
-		def user = User.findByUsername(username)
+		def user = User.findByEmail(email)
 		if (!user) {
 			flash.error = message(code: 'spring.security.ui.forgotPassword.user.notFound')
 			return
 		}
 
 		def registrationCode = new RegisterCode(username: user.username).save()
-		
 		String url = g.createLink(action:'resetPassword',absolute:true,params:[t:registrationCode?.token])
-		
-		
 		Map opt = ['urlToken':url,'email':user.email]
 		emailService.forgotPassword(opt)
 				

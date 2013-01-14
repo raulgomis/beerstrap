@@ -162,11 +162,20 @@ grails {
 	  port = 465
 	  username = "grailsbs@gmail.com"
 	  password = "bsgrails"
-	  props.mail.smtp.auth = "true"
-	  props.mail.smtp.socketFactory.port = "465"
-	  props.mail.smtp.socketFactory.class = "javax.net.ssl.SSLSocketFactory"
-	  props.mail.smtp.socketFactory.fallback = "false"
-
+	  props = ["mail.smtp.auth":"true",
+		  "mail.smtp.socketFactory.port":"465",
+		  "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+		  "mail.smtp.socketFactory.fallback":"false"]
+	  /*props {
+		  mail { 
+			  smtp {
+				  auth = "true"
+				  socketFactory.port = "465"
+				  socketFactory.class = "javax.net.ssl.SSLSocketFactory"
+				  socketFactory.fallback = "false"
+			  }
+		  }
+	  }*/
 	}
  }
 

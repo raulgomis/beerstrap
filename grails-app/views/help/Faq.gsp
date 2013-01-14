@@ -1,37 +1,25 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="layout" content="main" />
-	<parameter name="menu_Help" value="active" />
-	<!-- 2. flowplayer -->
-	<script src="http://releases.flowplayer.org/5.1.1/flowplayer.min.js"></script>
-	
-	<!-- 3. skin -->
-	<link rel="stylesheet" type="text/css" href="http://releases.flowplayer.org/5.1.1/skin/minimalist.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="layout" content="main" />
+<parameter name="menu_Help" value="active" />
+<!-- 2. flowplayer -->
+<script src="http://releases.flowplayer.org/5.1.1/flowplayer.min.js"></script>
+
+<!-- 3. skin -->
+<link rel="stylesheet" type="text/css"
+	href="http://releases.flowplayer.org/5.1.1/skin/minimalist.css" />
 </head>
 <body>
 
-<div class="page-header">
-	<h1>
-		Help <small>Ask for help!</small>
-	</h1>
-</div>
+	<g:render template="top" model="['selected':'faq']" />
 
-<div>
-
-	<ul class="nav nav-pills">
-		<li class="active"><g:link action="Faq">Faq</g:link></li>
-		<li><g:link action="Videos">Videotutoriales</g:link></li>
-	</ul>
-
-	<div >
-		<div id="faq">
-			<bs:config key="BT_HELP_FAQ"></bs:config>
-               
-		</div>
+	<div id="faq">
+		<bs:config key="BT_HELP_FAQ"></bs:config>
 	</div>
-</div>
+
+
 
 </body>
 </html>

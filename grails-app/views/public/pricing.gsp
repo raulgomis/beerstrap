@@ -3,7 +3,7 @@
 <head>
 		<meta name="layout" content="public" />
 		<parameter name="menu_Pricing" value="active" />
-<title>Insert title here</title>
+		<title>Pricing</title>
 </head>
 <body>
 
