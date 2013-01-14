@@ -47,7 +47,7 @@
             </div>
             
 
-			<button type="submit" name="submit" class="btn btn-info">
+			<button type="submit" name="submit" class="btn btn-info btn-block">
             <i class="icon-lock icon-white"></i>
             Acceder
             </button>
