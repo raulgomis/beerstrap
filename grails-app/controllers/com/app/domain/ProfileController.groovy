@@ -86,12 +86,19 @@ class ProfileController {
         redirect(action: redirectTo)
 	}
 	
-	def notifications() {
+	def preferences() {
+		if (request.method == 'GET') {
+			User userInstance = getCurrentUser()
+			println userInstance.preferences
+			[]
+			
+		} else {
+			
+
 		
+		}
 	}
 	
-	def profile() {
-		
-	}
+
 	
 }

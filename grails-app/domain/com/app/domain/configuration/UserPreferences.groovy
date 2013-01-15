@@ -8,10 +8,15 @@ class UserPreferences {
 	String timezone
 	
 	Boolean email_subscription = true
+	
 	Boolean email_directmessage = true
-	Boolean email_alert = true
+	Boolean email_mention = true
 
-    static constraints = {
+	Boolean email_alert_type1 = true
+	Boolean email_alert_type2 = true
+	Boolean email_alert_type3 = true
+	
+    /*static constraints = {
         language nullable: false
     }
 
@@ -19,5 +24,5 @@ class UserPreferences {
 
     static mapping = {
         cache true
-    }
+    }*/
 }

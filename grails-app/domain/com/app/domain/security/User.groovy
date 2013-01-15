@@ -41,6 +41,8 @@ class User {
 		password column: '`password`'
 		preferences lazy: true
 	}
+	
+	static embedded = ['preferences']
 
 	Set<Role> getAuthorities() {
 		UserRole.findAllByUser(this).collect { it.role } as Set
