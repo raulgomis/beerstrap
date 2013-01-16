@@ -16,10 +16,10 @@ class UserPreferences {
 	Boolean email_alert_type2 = true
 	Boolean email_alert_type3 = true
 	
-    /*static constraints = {
+    static constraints = {
         language nullable: false
     }
-
+	/*
     static belongsTo = [user: User]
 
     static mapping = {

@@ -1,6 +1,6 @@
 package com.app.domain.security
 
-import com.app.domain.configuration.UserPreferences
+//import com.app.domain.configuration.UserPreferences
 
 class User {
 
@@ -67,3 +67,21 @@ class User {
 	}
 
 }
+
+
+class UserPreferences {
+	
+		String language = "en"
+		String timezone
+		
+		Boolean email_subscription = true
+		
+		Boolean email_directmessage = true
+		Boolean email_mention = true
+	
+		Boolean email_alert_type1 = true
+		Boolean email_alert_type2 = true
+		Boolean email_alert_type3 = true
+	
+}
+	
