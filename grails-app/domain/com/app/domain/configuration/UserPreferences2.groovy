@@ -2,7 +2,7 @@ package com.app.domain.configuration
 
 import com.app.domain.security.User
 
-class UserPreferences {
+class UserPreferences2 {
 
     String language = "en"
 	String timezone
@@ -19,10 +19,10 @@ class UserPreferences {
     static constraints = {
         language nullable: false
     }
-	/*
+	
     static belongsTo = [user: User]
 
     static mapping = {
         cache true
-    }*/
+    }
 }

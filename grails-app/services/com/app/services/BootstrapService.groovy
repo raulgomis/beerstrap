@@ -143,6 +143,7 @@ class BootstrapService {
 										name:"User 1",
 										email:"raulgomis@hotmail.com",
 										enabled:true,
+                                        preferences: new UserPreferences(),
 										accountExpired:false,
 										accountLocked:false,
 										passwordExpired:false).save()

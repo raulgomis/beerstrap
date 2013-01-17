@@ -20,7 +20,9 @@ class User {
 	
 	Date dateCreated
 	Date lastUpdated
-	
+
+    static embedded = ['preferences']
+
 	static constraints = {
 		username(blank: false, unique: true)
 		name(nullable: true)
@@ -39,10 +41,10 @@ class User {
 	static mapping = {
 		//cache true
 		password column: '`password`'
-		preferences lazy: true
+		//preferences lazy: true
 	}
 	
-	static embedded = ['preferences']
+
 
 	Set<Role> getAuthorities() {
 		UserRole.findAllByUser(this).collect { it.role } as Set
@@ -50,6 +52,10 @@ class User {
 
 	def beforeInsert() {
 		encodePassword()
+        /*if(preferences == null){
+            UserPreferences up = new UserPreferences()
+            this.addToPreferences(language : "en")
+        }      */
 	}
 
 	def beforeUpdate() {
@@ -58,9 +64,17 @@ class User {
 		}
 	}
 
+
 	protected void encodePassword() {
 		password = springSecurityService.encodePassword(password)
 	}
+
+    def afterInsert() {
+        /*if(preferences == null){
+            UserPreferences up = new UserPreferences()
+            up.save()
+        }*/
+    }
 	
 	String toString(){
 		username	
@@ -68,20 +82,18 @@ class User {
 
 }
 
-
 class UserPreferences {
-	
-		String language = "en"
-		String timezone
-		
-		Boolean email_subscription = true
-		
-		Boolean email_directmessage = true
-		Boolean email_mention = true
-	
-		Boolean email_alert_type1 = true
-		Boolean email_alert_type2 = true
-		Boolean email_alert_type3 = true
-	
+
+    String language = "en"
+    String timezone = "GMT"
+
+    Boolean email_subscription = true
+
+    Boolean email_directmessage = true
+    Boolean email_mention = true
+
+    Boolean email_alert_type1 = true
+    Boolean email_alert_type2 = true
+    Boolean email_alert_type3 = true
 }
-	
+

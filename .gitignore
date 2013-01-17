@@ -18,3 +18,7 @@ stacktrace.log
 .classpath
 .project
 /bin/
+
+.idea/
+*.iml
+*.yml
