@@ -15,7 +15,7 @@ class User {
 	boolean accountLocked = false
 	boolean passwordExpired = false
 	
-	UserPreferences preferences
+	UserPreferences preferences = new UserPreferences()
 	Date lastLogin
 	
 	Date dateCreated
@@ -52,10 +52,6 @@ class User {
 
 	def beforeInsert() {
 		encodePassword()
-        /*if(preferences == null){
-            UserPreferences up = new UserPreferences()
-            this.addToPreferences(language : "en")
-        }      */
 	}
 
 	def beforeUpdate() {
@@ -64,18 +60,10 @@ class User {
 		}
 	}
 
-
 	protected void encodePassword() {
 		password = springSecurityService.encodePassword(password)
 	}
 
-    def afterInsert() {
-        /*if(preferences == null){
-            UserPreferences up = new UserPreferences()
-            up.save()
-        }*/
-    }
-	
 	String toString(){
 		username	
 	}
@@ -84,8 +72,10 @@ class User {
 
 class UserPreferences {
 
-    String language = "en"
-    String timezone = "GMT"
+    String country = null;
+    String locale = null;
+    String timezone = null;
+    String currency = null;
 
     Boolean email_subscription = true
 
@@ -95,5 +85,9 @@ class UserPreferences {
     Boolean email_alert_type1 = true
     Boolean email_alert_type2 = true
     Boolean email_alert_type3 = true
+
+    String toString(){
+        country
+    }
 }
 

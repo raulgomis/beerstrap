@@ -89,13 +89,9 @@ class ProfileController {
 	def preferences() {
 		if (request.method == 'GET') {
 			User userInstance = getCurrentUser()
-			println userInstance.preferences
-			[]
-			
-		} else {
-			
+			[userPreferencesInstance: userInstance.preferences]
+		} else (request.method == 'POST') {
 
-		
 		}
 	}
 	

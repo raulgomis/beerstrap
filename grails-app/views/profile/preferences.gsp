@@ -13,7 +13,7 @@
 
 			<g:render template="sidebar" model="['selected':'sb_preferences']" />
 
-			<g:form action="update">
+			<g:form action="update" class="form-horizontal">
 
 				<div class="row">
 					<div class="span3">
@@ -26,21 +26,33 @@
 					</div>
 					<div class="span9">
 						<fieldset>
-							<legend>Culture</legend>
+							<legend>Culture preferences</legend>
 							<div class="clearfix">
-								<label id="optionsCheckboxes">Send me an email when</label>
-								<div class="controls">
-									<label> <input class="checkbox" type="checkbox"
-										name="optionsCheckboxes" value="option1"> <span>Preference
-											1</span>
-									</label> <label> <input class="checkbox" type="checkbox"
-										name="optionsCheckboxes" value="option2"> <span>Preference
-											2</span>
-									</label> <span class="help-block"> <strong>Note:</strong> Labels
-										surround all the options for much larger click areas and a
-										more usable form.
-									</span>
-								</div>
+                                <div class="control-group">
+                                    <label class="control-label">Country</label>
+                                    <div class="controls">
+                                        <g:countrySelect name="country" value="${userPreferencesInstance?.country}" noSelection="['':'-Choose your country-']"/>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Locale</label>
+                                    <div class="controls">
+                                        <g:localeSelect name="locale" value="${userPreferencesInstance?.locale}" noSelection="['':'-Choose your locale-']" />
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Time zone</label>
+                                    <div class="controls">
+                                        <g:timeZoneSelect name="timezone" value="${userPreferencesInstance?.timezone}" noSelection="['':'-Choose your time zone-']" />
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Currency</label>
+                                    <div class="controls">
+                                        <g:currencySelect name="currency" value="${userPreferencesInstance?.currency}" noSelection="['':'-Choose your currency-']" />
+                                    </div>
+                                </div>
+
 							</div>
 							<!-- /clearfix -->
 						</fieldset>
