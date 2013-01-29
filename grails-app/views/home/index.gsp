@@ -19,19 +19,14 @@
 		</ul>
 		-->
 	</div>
+<div class="row-fluid">
+	<div class="span8">
     <div id="d3" style="width: 100%">
         <img src="http://demandware.edgesuite.net/aagl_prd/on/demandware.static/Sites-adidas-CO-Site/-/es_CO/v1358302772225/images/loading-small.gif" class="pull-right" />
 
     </div>
-<br>
-<br>
-
-
-<div class="row-fluid">
-
-    <input type="text" value="75" class="dial">
-
-    <div class="span4">
+	</div>
+	<div class="span4">
         <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">5,3,8,7,9,1,2,6,5,8</span>
             <h4>71 </h4>
             <h4 class="sub">signups</h4>
@@ -48,11 +43,34 @@
             <h4>82</h4>
             <h4 class="sub">comments</h4><br>
         </div>
-    </div>
-    <div class="span8">
+	</div>
+</div>
+<br>
+<br>
+<hr>
 
+<div class="row-fluid">
+    <div class="span3">
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
+    </div>
+    <div class="span3">
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
+    </div>
+    <div class="span3">
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
+    </div>
+    <div class="span3">
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
     </div>
 </div>
+<div id="activeUsers" style="height: 300px; padding: 0px; position: relative;">
+
+</div>
+
+<script type="text/javascript">
+
+</script>
+
 
 </body>
 </html>

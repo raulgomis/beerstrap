@@ -69,6 +69,7 @@ modules = {
     peity {
         resource url:'js/peity/jquery.peity.min.js'
         resource url:'http://wbpreview.com/previews/WB0G25H3J/js/jquery.knob.js'
+		resource url:'http://wbpreview.com/previews/WB0JLR295/js/jquery.flot.js'
     }
 
 }
