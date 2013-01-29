@@ -72,13 +72,12 @@ class User {
 
 class UserPreferences {
 
-    String country = null;
-    String locale = null;
-    String timezone = null;
-    String currency = null;
+    String country = "esp"; //Change it and write your country code :)
+    String locale = Locale.getDefault();
+    String timezone = TimeZone.getDefault().ID;
+    String currency = Currency.getInstance(Locale.getDefault());
 
     Boolean email_subscription = true
-
     Boolean email_directmessage = true
     Boolean email_mention = true
 

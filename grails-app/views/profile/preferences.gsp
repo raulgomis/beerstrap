@@ -13,7 +13,7 @@
 
 			<g:render template="sidebar" model="['selected':'sb_preferences']" />
 
-			<g:form action="update" class="form-horizontal">
+			<g:form action="updatePreferences" class="form-horizontal" method="POST">
 
 				<div class="row">
 					<div class="span3">
@@ -31,29 +31,28 @@
                                 <div class="control-group">
                                     <label class="control-label">Country</label>
                                     <div class="controls">
-                                        <g:countrySelect name="country" value="${userPreferencesInstance?.country}" noSelection="['':'-Choose your country-']"/>
+                                        <g:countrySelect name="country" value="${userPreferencesInstance?.country}" noSelection="['':'-Choose your country-']" class="span5"/>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">Locale</label>
                                     <div class="controls">
-                                        <g:localeSelect name="locale" value="${userPreferencesInstance?.locale}" noSelection="['':'-Choose your locale-']" />
+                                        <g:localeSelect name="locale" value="${userPreferencesInstance?.locale}" noSelection="['':'-Choose your locale-']" class="span5"/>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">Time zone</label>
                                     <div class="controls">
-                                        <g:timeZoneSelect name="timezone" value="${userPreferencesInstance?.timezone}" noSelection="['':'-Choose your time zone-']" />
+                                        <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userPreferencesInstance?.timezone)}" noSelection="['':'-Choose your time zone-']" class="span5"/>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">Currency</label>
                                     <div class="controls">
-                                        <g:currencySelect name="currency" value="${userPreferencesInstance?.currency}" noSelection="['':'-Choose your currency-']" />
+                                        <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userPreferencesInstance?.currency)}" noSelection="['':'-Choose your currency-']" class="span5"/>
                                     </div>
                                 </div>
-
-							</div>
+                            </div>
 							<!-- /clearfix -->
 						</fieldset>
 
@@ -63,13 +62,17 @@
 							<div class="clearfix">
 								<label id="optionsCheckboxes">Send me an email when</label>
 								<div class="controls">
-									<label> <input class="checkbox" type="checkbox"
-										name="optionsCheckboxes" value="option1"> <span>Someone
-											send me a direct message</span>
-									</label> <label> <input class="checkbox" type="checkbox"
-										name="optionsCheckboxes" value="option2"> <span>Someone
-											mentions me</span>
-									</label> <span class="help-block"> <strong>Note:</strong> Labels
+									<label>
+                                        <g:checkBox name="email_directmessage" value="${userPreferencesInstance?.email_subscription}" class="checkbox" />
+                                        <span>Email Subscription</span>
+									</label>
+                                    <label> <g:checkBox name="email_directmessage" value="${userPreferencesInstance?.email_directmessage}" class="checkbox" />
+                                        <span>Someone send me a direct message</span>
+                                    </label>
+                                    <label> <g:checkBox name="email_mention" value="${userPreferencesInstance?.email_mention}" class="checkbox" />
+                                        <span>Someone mentions me</span>
+									</label>
+                                    <span class="help-block"> <strong>Note:</strong> Labels
 										surround all the options for much larger click areas and a
 										more usable form.
 									</span>
@@ -83,16 +86,19 @@
 							<div class="clearfix">
 								<label id="optionsCheckboxes">Send me an email when</label>
 								<div class="controls">
-									<label> <input class="checkbox" type="checkbox"
-										name="optionsCheckboxes" value="option1"> <span>I
-											receive an alert of type 1</span>
-									</label> <label> <input class="checkbox" type="checkbox"
-										name="optionsCheckboxes" value="option2"> <span>I
-											receive an alert of type 2</span>
-									</label> <label> <input class="checkbox" type="checkbox"
-										name="optionsCheckboxes" value="option2"> <span>I
-											receive an alert of type 3</span>
-									</label> <span class="help-block"> <strong>Note:</strong> Labels
+                                    <label>
+                                        <g:checkBox name="email_alert_type1" value="${userPreferencesInstance?.email_alert_type1}" class="checkbox" />
+                                        <span>Email Alert 1</span>
+                                    </label>
+                                    <label>
+                                        <g:checkBox name="email_alert_type2" value="${userPreferencesInstance?.email_alert_type2}" class="checkbox" />
+                                        <span>Email Alert 2</span>
+                                    </label>
+                                    <label>
+                                        <g:checkBox name="email_alert_type3" value="${userPreferencesInstance?.email_alert_type3}" class="checkbox" />
+                                        <span>Email Alert 3</span>
+                                    </label>
+                                    <span class="help-block"> <strong>Note:</strong> Labels
 										surround all the options for much larger click areas and a
 										more usable form.
 									</span>

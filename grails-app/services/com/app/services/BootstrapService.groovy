@@ -146,7 +146,7 @@ class BootstrapService {
                                         preferences: new UserPreferences(),
 										accountExpired:false,
 										accountLocked:false,
-										passwordExpired:false).save()
+										passwordExpired:false).save(failOnError: true)
 			UserRole.create user, userRole
 		}
 		

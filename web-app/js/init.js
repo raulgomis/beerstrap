@@ -51,6 +51,20 @@ jQuery(function () {
     }
     // ------------------- FIN TAB COOKIE
 
+    $('select').select2();
+
+    $(".pbar").peity("bar", {
+        colours: ["#EA494A"],
+        strokeWidth: 4,
+        height: 32,
+        max: null,
+        min: 0,
+        spacing: 4,
+        width: 58
+    });
+
+    $(".dial").knob();
+
 });
 
 
@@ -85,4 +99,7 @@ jQuery(function () {
              $('input[datadatepicker]').data({ date: today }).datepicker('update');
          });
     }
+
+
+
 

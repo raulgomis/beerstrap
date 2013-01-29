@@ -33,6 +33,34 @@ textarea.editor-html {
 
 
 
+.myalert {
+    position: fixed;
+    right: 0;
+    top: 43px;
+    z-index: 99999;
+}
+
+body {
+    background-color: #f6f6f6;
+ }
+
+/* ============== peity ============== */
+.peity {
+    margin-bottom: 20px; }
+.peity canvas {
+    margin-right: 10px; }
+.peity h4 {
+    display: inline-block;
+    font-weight: 600;
+    min-width: 30px;
+    margin: 0; }
+.peity h4.sub {
+    font-weight: 300;
+    color: #999;
+}
+
+
+
 /*******************************************************************
 * TWITTERBSPAGINATION 
 *******************************************************************/
@@ -45,3 +73,4 @@ textarea.editor-html {
 }
 
 #grailsbspag .grailsbspag-right {}
+

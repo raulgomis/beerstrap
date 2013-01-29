@@ -55,4 +55,20 @@ modules = {
 		resource url:'js/bootstrap-datepicker/js/bootstrap-datepicker.js'
 	}
 
+    select2 {
+        resource url:'js/select2/select2.css'
+        resource url:'js/select2/select2.js'
+
+    }
+
+    d3js {
+        resource url:'http://d3js.org/d3.v3.min.js'
+        resource url:'js/d3js/d3-setup.js'
+    }
+
+    peity {
+        resource url:'js/peity/jquery.peity.min.js'
+        resource url:'http://wbpreview.com/previews/WB0G25H3J/js/jquery.knob.js'
+    }
+
 }
