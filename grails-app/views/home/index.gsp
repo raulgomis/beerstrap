@@ -50,27 +50,99 @@
 <hr>
 
 <div class="row-fluid">
-    <div class="span3">
-		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
+    <div class="span3 knob">
+        <h4>JOBS</h4>
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#14B8D4" data-width="120" />
     </div>
-    <div class="span3">
-		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
+    <div class="span3 knob">
+        <h4>JOBS</h4>
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#EA494A" data-width="120" />
     </div>
-    <div class="span3">
-		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
+    <div class="span3 knob">
+        <h4>JOBS</h4>
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#FFA93C" data-width="120" />
     </div>
-    <div class="span3">
-		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="chartreuse" data-width="120" />
+    <div class="span3 knob">
+        <h4>JOBS</h4>
+		<input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
     </div>
 </div>
+<%--
 <div id="activeUsers" style="height: 300px; padding: 0px; position: relative;">
+    --%>
 
+<div class="row-fluid">
+    <div class="span6">
+        <div class="table-panel">
+            <h4> <i class="icon-eye-open"></i>Browsers</h4>
+            <table class="table table-striped sortable">
+                <thead>
+                <tr>
+                    <th class="header headerSortUp">Browser</th>
+                    <th class="header">Visitors</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+
+
+
+                <tr>
+                    <td>Safari</td>
+                    <td>3021</td>
+                </tr><tr>
+                    <td>Opera</td>
+                    <td>922</td>
+                </tr><tr>
+                    <td>Internet Explorer</td>
+                    <td>1011</td>
+                </tr><tr>
+                    <td>Firefox</td>
+                    <td>9580</td>
+                </tr><tr>
+                    <td>Chrome</td>
+                    <td>7668</td>
+                </tr></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="span6">
+        <div class="table-panel">
+            <h4> <i class="icon-share-alt"></i>Referrers</h4>
+            <table class="table table-striped sortable">
+                <thead>
+                <tr>
+                    <th class="header">URL</th>
+                    <th class="header">Visits</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td> <a href="">google.com</a></td>
+                    <td>17665</td>
+                </tr>
+                <tr>
+                    <td><a href="">bing.com</a></td>
+                    <td>24588</td>
+                </tr>
+                <tr>
+                    <td><a href="">logobro.com</a></td>
+                    <td>13022</td>
+                </tr>
+                <tr>
+                    <td><a href="">yahoo.com</a></td>
+                    <td>8922</td>
+                </tr>
+                <tr>
+                    <td><a href="">duckduckgo.com</a></td>
+                    <td>11014</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-
-<script type="text/javascript">
-
-</script>
-
-
+</div>
 </body>
 </html>
