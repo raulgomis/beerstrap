@@ -3,6 +3,19 @@
 <head>
 		<meta name="layout" content="public" />
 		<parameter name="menu_Home" value="active" />
+    <style>
+
+    .publicprice {
+        color: #999999;
+        font-size: 37px;
+        margin: 0;
+        padding: 5px ;
+    }
+    </style>
+    <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://jquerytools.org/media/css/standalone2.css">
+    <link rel="stylesheet" type="text/css" href="http://jquerytools.org/media/css/rangeinput/skin1.css">
+
 </head>
 <body>
 	<div class="jumbotron">
@@ -14,6 +27,8 @@
 			little package. Web development never has been so fast!</p>
 		<g:link class="btn btn-large btn-success" controller="home">Get started now</g:link>
 		<g:link class="btn btn-large btn-info" controller="home"><i class="icon-github"></i>GitHub project</g:link>
+
+
 	</div>
 
 	<hr>
@@ -37,10 +52,14 @@
 			</div>
 			<div class="span4">
 				<h2>
-					<i class="icon-money"></i> Earn money
+					<i class="icon-money"></i> Earn <span class="publicprice">2323$</span>
 				</h2>
 				<p>Earn 500$ each time you download it. It is the money that would cost to you to develop the features in Grails Bootstrap, features presented in almost every management web application.</p>
+
+
 			</div>
+
+
 		</div>
 	</section>
 
@@ -65,7 +84,10 @@
 				<h4>
 					<i class="icon-lock"></i> Security ready
 				</h4>
-				<p>Don't waste your time configuring and programming security basic stuff: Grails bootstrap is already secured.</p>
+				<p>Don't waste your time configuring and programming security basic stuff: Grails bootstrap is already secured.
+                    <a href="http://grails.org/plugin/spring-security-core">Spring Security Core</a>
+                </p>
+
 			</div>
 			<div class="span3">
 				<h4>
@@ -86,8 +108,9 @@
 				<h4>
 					<i class="icon-beaker"></i> Made with Grails
 				</h4>
-				<p>It's been implemented using Grails: a rapid, dynamic & robust
-					framework which uses the Groovy programming language (based on the Java platform).</p>
+				<p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.2.0</a>: a rapid, dynamic & robust
+					framework which uses the Groovy programming language (based on the Java platform).
+                </p>
 			</div>
 			<div class="span3">
 				<h4>
@@ -108,13 +131,13 @@
 				<h4>
 					<i class="icon-envelope-alt"></i> Email sending
 				</h4>
-				Grails bootstrap comes with a structured way to send emails. Configure your credentials and start sending emails to the users.
+                <p>Grails bootstrap comes with a structured way to send emails. Configure your credentials and start sending emails to the users.</p>
 			</div>
 			<div class="span3">
 				<h4>
-					<i class="icon-lightbulb"></i> User interface
+					<i class="icon-flag"></i> I18N ready
 				</h4>
-				<p></p>
+				<p>Grails bootstrap has it own core translated into English and Spanish. Help us translate it into your own language.</p>
 			</div>
 			<div class="span3">
 				<h4>
@@ -169,6 +192,46 @@
 		</div>
 	</section>
 
+<section id="income" class="clearfix">
+    <h2 class="page-header">Income calculator</h2>
+
+    <!-- HTML5 range input -->
+    <p style="clear:both">
+    <input type="range" class="range" id="range" name="test" min="0" max="200" value="15" width="100%" /> dollars / hour
+    </p>
+    <br />
+    <p>
+        <div class="publicprice">You win <span class="price">7800</span>$</div>
+
+    </p>
+
+    <!-- make it happen -->
+    <script>
+        $(":range").rangeinput();
+        /*$(":range").live('change', function(){
+
+            setTimeout(function(){
+                alert("hello")
+                console.log($range.data('test').getValue());
+            }, 0);
+        });      */
+
+
+        $(":range").change(function() {
+            var $range = $(this);
+            var value = $range.val() * 520;
+            $(".price").html(value);
+        });
+    </script>
+
+</section>
+
+
+<section id="whoami" class="clearfix">
+    <h2 class="page-header">Who am I</h2>
+
+
+</section>
 
 </body>
 
