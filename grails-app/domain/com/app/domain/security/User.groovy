@@ -1,6 +1,6 @@
 package com.app.domain.security
 
-//import com.app.domain.configuration.UserPreferences
+import com.app.domain.configuration.UserPreferences2
 
 class User {
 
@@ -14,13 +14,12 @@ class User {
 	boolean accountExpired = false
 	boolean accountLocked = false
 	boolean passwordExpired = false
-	
-	UserPreferences preferences = new UserPreferences()
+
 	Date lastLogin
-	
 	Date dateCreated
 	Date lastUpdated
 
+    UserPreferences preferences = new UserPreferences()
     static embedded = ['preferences']
 
 	static constraints = {
@@ -43,8 +42,6 @@ class User {
 		password column: '`password`'
 		//preferences lazy: true
 	}
-	
-
 
 	Set<Role> getAuthorities() {
 		UserRole.findAllByUser(this).collect { it.role } as Set
@@ -69,6 +66,11 @@ class User {
 	}
 
 }
+
+/*
+
+*/
+
 
 class UserPreferences {
 
