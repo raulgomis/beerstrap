@@ -13,9 +13,8 @@ class UserController {
 
     def list(Integer max, String q, Long roleID,String disabled,Integer dateCreatedDays,Integer lastUpdatedDays) {
 
+        params.max = Math.min(max ?: 1, 100)
 
-        params.max = Math.min(max ?: 10, 100)
-        def roleInstanceList = Role.list()
         def now = new Date()
         List listFilters = ["enabled","accountExpired","accountLocked","passwordExpired"]
 
@@ -59,8 +58,8 @@ class UserController {
 
 
         [userInstanceList: userInstanceList,
-                userInstanceTotal: User.count(),
-                roleInstanceList:roleInstanceList]
+                userInstanceTotal: userInstanceList.totalCount,
+                roleInstanceList:Role.list()]
     }
 
     def create() {

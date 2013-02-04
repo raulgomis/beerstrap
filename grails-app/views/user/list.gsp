@@ -18,7 +18,7 @@
 					<g:form action="list" class="form-inline" method="GET">
 						<div class="input-append">
 						<g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="span2" />
-						<button class="btn" type="button">Search</button>
+						<button class="btn" type="submit">Search</button>
 						</div>
                         <!--
                         <div class="btn-group">
@@ -203,7 +203,7 @@
                         </div>
                         <div class="span8">
                             <div class="pagination grailsbspag-right">
-                                <g:paginate total="${userInstanceTotal}" maxsteps="4" params="['q':params?.q]" />
+                                <g:paginate total="${userInstanceTotal}" maxsteps="4" params="${params}" />
                             </div>
                         </div>
                     </div>

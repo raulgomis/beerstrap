@@ -215,8 +215,6 @@
                 console.log($range.data('test').getValue());
             }, 0);
         });      */
-
-
         $(":range").change(function() {
             var $range = $(this);
             var value = $range.val() * 520;
