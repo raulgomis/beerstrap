@@ -3,13 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="layout" content="public" />
-<title>Password recovery</title>
+<title><g:message code="app.security.resetPassword.title" /></title>
 </head>
 <body>
 
 	<h2 class="section_header">
-		<span><i class="icon-info-sign"></i> Password recovery <small>
-				Introduce your new password</small></span>
+		<span><i class="icon-info-sign"></i> Password recovery <small>Introduce your new password</small></span>
 		<hr class="right visible-desktop">
 	</h2>
 
@@ -32,21 +31,21 @@
 		<g:hiddenField name="t" value="${token}" />
 
 		<div class="control-group">
-			<label class="control-label" for="password">Password</label>
+			<label class="control-label" for="password"><g:message code="app.resetPasswordCommand.password.label"/></label>
 			<div class="controls">
-				<input type="password" name="password" placeholder="Password" />
+				<input type="password" name="password" placeholder="${message(code:'app.resetPasswordCommand.password.label')}" />
 			</div>
 		</div>
 
 		<div class="control-group">
-			<label class="control-label" for="password2">Password2</label>
+			<label class="control-label" for="password2"><g:message code="app.resetPasswordCommand.password2.label"/></label>
 			<div class="controls">
-				<input type="password" name="password2" placeholder="Password2" />
+				<input type="password" name="password2" placeholder="${message(code:'app.resetPasswordCommand.password2.label')}" />
 			</div>
 		</div>
 
 		<div class="form-actions">
-			<button type="submit" class="btn btn-primary">Create</button>
+			<button type="submit" class="btn btn-primary"><g:message code="app.security.forgotPassword.submit"/></button>
 		</div>
 	</g:form>
 

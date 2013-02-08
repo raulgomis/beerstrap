@@ -12,10 +12,11 @@
         padding: 5px ;
     }
     </style>
+    <!--
     <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://jquerytools.org/media/css/standalone2.css">
     <link rel="stylesheet" type="text/css" href="http://jquerytools.org/media/css/rangeinput/skin1.css">
-
+    -->
 </head>
 <body>
 	<div class="jumbotron">
@@ -141,9 +142,11 @@
 			</div>
 			<div class="span3">
 				<h4>
-					<i class="icon-thumbs-up"></i> Made for Twitter
+					<i class="icon-copy"></i> Well documented
 				</h4>
-				<p></p>
+				<p>
+                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use the more productive you will be at work.
+				</p>
 			</div>
 			<div class="span3">
 				<h4>

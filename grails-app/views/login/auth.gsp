@@ -11,20 +11,18 @@
 	<div class="row">
 		<div class="well">
 			<legend><g:message code="springSecurity.login.header"/></legend>
-			<g:if test='${flash.message}'>
-				<div class='login_message'>${flash.message}</div>
-			</g:if>
-            <div class="">
-            	<!-- 
-                <img src="Logo" alt="Logo Universidad de Alicante">
-                 -->
-            </div>
+            <g:if test="${flash.message}">
+                <div class="alert alert-info" role="status">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p>${flash.message}</p>
+                </div>
+            </g:if>
             <br />
             <div class="control-group">
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-user"></i></span>
-                        <input type='text' class='span3' name='j_username' id='username' placeholder="Usuario"/>
+                        <input type='text' class='span3' name='j_username' id='username' placeholder="Username"/>
                     </div>
                 </div>
             </div>
@@ -32,7 +30,7 @@
                 <div class="controls">
                     <div class="input-prepend">
                         <span class="add-on"><i class="icon-lock"></i></span>
-                        <input type='password' class='span3' name='j_password' id='password' placeholder="Contraseña"/>
+                        <input type='password' class='span3' name='j_password' id='password' placeholder="Password"/>
                     </div>
                 </div>
             </div>
@@ -49,7 +47,7 @@
 
 			<button type="submit" name="submit" class="btn btn-info btn-block">
             <i class="icon-lock icon-white"></i>
-            Acceder
+            Log in
             </button>
             <hr>
             <p>Don't have Account? <g:link controller="register" action="index">Register</g:link></p>

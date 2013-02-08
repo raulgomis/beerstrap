@@ -62,14 +62,14 @@ modules = {
     }
 
     d3js {
-        resource url:'http://d3js.org/d3.v3.min.js'
-        resource url:'js/d3js/d3-setup.js'
+        resource url:'js/graph/d3.v3.min.js'
+        resource url:'js/d3-setup.js'
     }
 
     peity {
-        resource url:'js/peity/jquery.peity.min.js'
-        resource url:'http://wbpreview.com/previews/WB0G25H3J/js/jquery.knob.js'
-		resource url:'http://wbpreview.com/previews/WB0JLR295/js/jquery.flot.js'
+        resource url:'js/graph/jquery.peity.min.js'
+        resource url:'js/graph/jquery.knob.js'
+		resource url:'js/graph/jquery.flot.js'
     }
 
 }

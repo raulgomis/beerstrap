@@ -1,13 +1,11 @@
 package com.app.domain.security
 
-
 import groovy.text.SimpleTemplateEngine
 
 import org.codehaus.groovy.grails.commons.ApplicationHolder as AH
 import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 import com.app.services.EmailService;
-
 
 class RegisterController {
 
@@ -18,13 +16,12 @@ class RegisterController {
 	def index() {
 		[command: new RegisterCommand()]
 	}
-	
-	
+
 	def register = { RegisterCommand command ->
 
 		if(command.hasErrors()) {
 			log.error(command.errors)
-			render view: 'index', model: [command: command]
+			render(view: 'index', model: [command: command])
 			return
 		}
 
@@ -35,12 +32,16 @@ class RegisterController {
 			log.error("Error to save user")
 		}
 
+        //create registration code
 		def registrationCode = new RegisterCode(username: user.username).save()
-		String url = g.createLink(action:'verifyRegistration',absolute:true,params:[t:registrationCode?.token])
-		Map opt = ['urlToken':url,'email':command.email]
-		emailService.register(opt)
+
+        //generate url to verify token
+        String url = g.createLink(action:'verifyRegistration',absolute:true,params:[t:registrationCode?.token])
+
+        //sent an email
+		emailService.register(['urlToken':url,'email':command.email])
 		
-		flash.message = "Email has been sent. Check your email in order to complete the process"
+		flash.message = message(code: 'app.security.register.sent')
 		redirect(controller:"home")
 	}
 	
@@ -49,15 +50,17 @@ class RegisterController {
 		def conf = SpringSecurityUtils.securityConfig
 		String defaultTargetUrl = conf.successHandler.defaultTargetUrl
 
-		String token = t
+        String token = t
 
+        //check registrationCode
 		def registrationCode = token ? RegisterCode.findByToken(token) : null
 		if (!registrationCode) {
-			flash.error = message(code: 'spring.security.ui.register.badCode')
+			flash.error = message(code: 'app.security.register.badCode')
 			redirect uri: defaultTargetUrl
 			return
 		}
 
+        //get user from token and assign Role.USER
 		def user
 		RegisterCode.withTransaction { status ->
 			user = User.findByUsername(registrationCode.username)
@@ -75,15 +78,16 @@ class RegisterController {
 		}
 
 		if (!user) {
-			flash.error = message(code: 'spring.security.ui.register.badCode')
-			redirect uri: defaultTargetUrl
+			flash.error = message(code: 'app.security.register.badCode')
+			redirect(uri: defaultTargetUrl)
 			return
 		}
 
-		springSecurityService.reauthenticate user.username
+        //authenticate user into the app
+		springSecurityService.reauthenticate(user.username)
 
-		flash.message = message(code: 'spring.security.ui.register.complete')
-		redirect uri: conf.ui.register.postRegisterUrl ?: defaultTargetUrl
+		flash.message = message(code: 'app.security.register.complete')
+		redirect(uri: conf.ui.register.postRegisterUrl ?: defaultTargetUrl)
 	}
 
 	def forgotPassword(String email) {
@@ -94,23 +98,25 @@ class RegisterController {
 		}
 
 		if (!email) {
-			flash.error = message(code: 'spring.security.ui.forgotPassword.username.missing')
+			flash.error = message(code: 'app.security.forgotPassword.username.missing')
 			return
 		}
 
+        //get user from email
 		def user = User.findByEmail(email)
 		if (!user) {
-			flash.error = message(code: 'spring.security.ui.forgotPassword.user.notFound')
+			flash.error = message(code: 'app.security.forgotPassword.user.notFound')
 			return
 		}
 
+        //create registration code
 		def registrationCode = new RegisterCode(username: user.username).save()
 		String url = g.createLink(action:'resetPassword',absolute:true,params:[t:registrationCode?.token])
-		Map opt = ['urlToken':url,'email':user.email]
-		emailService.forgotPassword(opt)
+
+        //send email
+		emailService.forgotPassword(['urlToken':url,'email':user.email])
 				
-		flash.message = "Email has been sent. Check your email in order to complete the process"
-		
+		flash.message = message(code: 'app.security.register.complete')
 		[emailSent: true]
 	}
 
@@ -118,9 +124,10 @@ class RegisterController {
 
 		String token = t
 
+        //check registrationCode
 		def registrationCode = token ? RegisterCode.findByToken(token) : null
 		if (!registrationCode) {
-			flash.error = message(code: 'spring.security.ui.resetPassword.badCode')
+			flash.error = message(code: 'app.security.resetPassword.badCode')
 			redirect uri: SpringSecurityUtils.securityConfig.successHandler.defaultTargetUrl
 			return
 		}
@@ -136,6 +143,7 @@ class RegisterController {
 			return [token: token, command: command]
 		}
 
+        //get user and change the password, after that delete registrationCode
 		RegisterCode.withTransaction { status ->
 			def user = User.findByUsername(registrationCode.username)
 			user.password = command.password
@@ -143,13 +151,15 @@ class RegisterController {
 			registrationCode.delete()
 		}
 
-		springSecurityService.reauthenticate registrationCode.username
+        //authenticate user into the app
+		springSecurityService.reauthenticate(registrationCode.username)
 
-		flash.message = message(code: 'spring.security.ui.resetPassword.success')
+
+		flash.message = message(code: 'app.security.resetPassword.success')
 
 		def conf = SpringSecurityUtils.securityConfig
 		String postResetUrl = conf.ui.register.postResetUrl ?: conf.successHandler.defaultTargetUrl
-		redirect uri: postResetUrl
+		redirect(uri: postResetUrl)
 	}
 
 	protected String generateLink(String action, linkParams) {
