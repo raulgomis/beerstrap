@@ -29,7 +29,7 @@ class RegisterController {
 				password: command.password, accountLocked: true, enabled: true)
 		if (!user.validate() || !user.save()) {
 			// TODO
-			log.error("Error to save user")
+			log.error("Error to save user: "+user.errors.allErrors)
 		}
 
         //create registration code
@@ -212,7 +212,13 @@ class RegisterCommand {
 				}
 			}
 		}
-		email blank: false, email: true
+		email blank: false, email: true, validator: { value, command ->
+            if (value) {
+                if (User.findByEmail(value)) {
+                    return 'registerCommand.email.unique'
+                }
+            }
+        }
 		password blank: false, minSize: 8, maxSize: 64, validator: RegisterController.passwordValidator
 		//password2 validator: RegisterController.password2Validator
 		terms validator: { value, command ->
