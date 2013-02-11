@@ -1,5 +1,5 @@
       body {
-        padding-top: 20px;
+        /*padding-top: 20px;*/
         padding-bottom: 60px;
       }
 
@@ -50,6 +50,7 @@
         display: table-cell;
         width: 1%;
         float: none;
+        line-height: 30px;
       }
       .navbar .nav li a {
         font-weight: bold;

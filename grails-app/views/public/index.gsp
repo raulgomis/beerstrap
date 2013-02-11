@@ -142,7 +142,7 @@
 			</div>
 			<div class="span3">
 				<h4>
-					<i class="icon-copy"></i> Well documented
+					<i class="icon-copy"></i> Documentation
 				</h4>
 				<p>
                     Documentation is one key to success. The more documented and easier Grails Bootstrap is to use the more productive you will be at work.
