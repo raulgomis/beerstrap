@@ -149,7 +149,7 @@
 					<i class="icon-tasks"></i> Testing <small>Coming soon!</small>
 				</h4>
 				<p>
-                    Use <a href="http://code.google.com/p/spock/">Spock</a> to test the features provided and to test also your new features.
+                    Use <a href="http://www.spockframework.org">Spock</a> to test the features provided and to test also your new features.
 				</p>
 			</div>
 		</div>
