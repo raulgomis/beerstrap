@@ -47,12 +47,11 @@
 
 			<button type="submit" name="submit" class="btn btn-info btn-block">
             <i class="icon-lock icon-white"></i>
-            Log in
+            <g:message code="app.security.login.login"></g:message>
             </button>
             <hr>
-            <p>Don't have Account? <g:link controller="register" action="index">Register</g:link></p>
-            <p>Forgot your password? <g:link controller="register" action="forgotPassword">Recover</g:link></p>
-            
+            <p><g:link controller="register" action="index"><g:message code="app.security.login.register"></g:message></g:link> | <g:link controller="register" action="forgotPassword"><g:message code="app.security.login.forgotPassword"></g:message></g:link></p>
+
 		</div>
 	</div>
 	

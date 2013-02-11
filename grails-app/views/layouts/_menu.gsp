@@ -1,6 +1,6 @@
 
 <div class="navbar navbar-fixed-top">
-	<%-- 
+	<%--
 	<g:if env="development">
 		<div class="ribbon">
 			<a href="#">Desarrollo</a>
@@ -71,7 +71,7 @@
 				
 				<g:form class="navbar-search pull-right" method="post"
 					controller="search">
-					<input type="text" name="q" placeholder="Texto a buscar"
+					<input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}"
 						value="${params.q}" class="input-large search-query">
 				</g:form>
 

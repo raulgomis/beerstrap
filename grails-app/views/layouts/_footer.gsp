@@ -26,7 +26,7 @@
 				</div>
 				 -->
 				<div>
-					<strong>CONTACTO</strong>
+					<strong><g:message code="app.footer.contact.label"></g:message></strong>
 					<ul class="unstyled">
 						<li>Twitter: <a href="http://www.twitter.com/rgomis">@rgomis</a></li>
 						<li>Linkedin: <a href="http://linkd.in/11eyTDE">http://linkd.in/11eyTDE</a></li>

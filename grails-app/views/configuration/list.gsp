@@ -15,13 +15,13 @@
 
             <g:form action="update">
 				<ul class="nav nav-tabs" data-tabs="tabs">
-				  <li class="active"><a href="#site" data-toggle="tab">Site</a></li>
-				  <li><a href="#server" data-toggle="tab">Server</a></li>
-				  <li><a href="#system" data-toggle="tab">System</a></li>
-				  <li><a href="#notifications" data-toggle="tab">Notifications</a></li>
-				  <li><a href="#security" data-toggle="tab">Security</a></li>
-				  <li><a href="#jobs" data-toggle="tab">Jobs</a></li>
-				  <li><a href="#grails" data-toggle="tab">Grails</a></li>
+				  <li class="active"><a href="#site" data-toggle="tab"><g:message code="app.configuration.site.label" /></a></li>
+				  <li><a href="#server" data-toggle="tab"><g:message code="app.configuration.server.label" /></a></li>
+				  <li><a href="#system" data-toggle="tab"><g:message code="app.configuration.system.label" /></a></li>
+				  <li><a href="#notifications" data-toggle="tab"><g:message code="app.configuration.notifications.label" /></a></li>
+				  <li><a href="#security" data-toggle="tab"><g:message code="app.configuration.security.label" /></a></li>
+				  <li><a href="#jobs" data-toggle="tab"><g:message code="app.configuration.jobs.label" /></a></li>
+				  <li><a href="#grails" data-toggle="tab"><g:message code="app.configuration.grails.label" /></a></li>
 				</ul>
 				
 				<div class="tab-content">
@@ -56,7 +56,7 @@
 					</button>
 					<button type="reset" class="btn">
 						<i class="icon-chevron-down"></i>
-						Reset
+                        <g:message code="app.default.button.reset.label" />
 					</button>
 				</div>
             </g:form>

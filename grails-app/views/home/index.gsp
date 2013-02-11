@@ -10,7 +10,7 @@
 		<h1>
 			<i class="icon-dashboard"></i>
 			<bs:config key="BT_SITE_NAME" />
-			<small> Agilize your projects</small>
+			<small><g:message code="app.home.description.label"></g:message></small>
 		</h1>
 		<!--
 		<ul class="breadcrumb">
@@ -23,7 +23,6 @@
 	<div class="span8">
     <div id="d3" style="width: 100%">
         <img src="http://demandware.edgesuite.net/aagl_prd/on/demandware.static/Sites-adidas-CO-Site/-/es_CO/v1358302772225/images/loading-small.gif" class="pull-right" />
-
     </div>
 	</div>
 	<div class="span4">

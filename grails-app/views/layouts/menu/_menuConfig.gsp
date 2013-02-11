@@ -7,13 +7,13 @@
 	<li class='controller ${pageProperty(name:"page.menu_Profile")}'>
 		<g:link controller="profile" action="index">
 		<i class="icon-user"></i>
-		<g:message code="menu.administracion.profile.label" default="Mi perfil" />
+		<g:message code="app.menu.profile.label" />
 		</g:link>
 	</li>
 	
 	<sec:access url="/admin/**">
 		<li class="divider"></li>
-		<li class="nav-header">Management</li>
+		<li class="nav-header"><g:message code="app.menu.management.label" /></li>
 		<%-- 
 		<li><g:link controller="news"><g:message code="menu.administracion.noticias.label" default="Noticias" /></g:link></li>
 		<li><g:link controller="user" action="list"><g:message code="menu.administracion.usuarios.label" default="Usuarios" /></g:link></li>
@@ -25,7 +25,7 @@
 				<li class='controller ${pageProperty(name:"page.menu_"+c.name)}'>
 					<g:link controller="${c.logicalPropertyName}">
 					<i class="icon-briefcase"></i>
-					<g:message code="menu.administracion.${c.name}.label" default="${c.name}" />
+					<g:message code="app.menu.${c.name}.label" default="${c.name}" />
 					</g:link>
 				</li>
 			</g:if>
@@ -34,7 +34,7 @@
 		<li class='controller ${pageProperty(name:"page.menu_Configuration")}'>
 			<g:link controller="configuration" action="list">
 				<i class="icon-cog"></i>
-				<g:message code="menu.administracion.configuration.label" default="Configuration" />
+				<g:message code="app.menu.configuration.label" />
 			</g:link>
 		</li>
 	</sec:access>
@@ -42,13 +42,13 @@
 	<li class='controller ${pageProperty(name:"page.menu_Help")}'>
 		<g:link controller="help" action="index">
 			<i class="icon-question-sign"></i>
-			<g:message code="menu.usuario.ayuda.label" default="Ayuda" />
+			<g:message code="app.menu.help.label" />
 		</g:link>
 	</li>
 	<li>
 		<g:link controller="logout">
 		<i class="icon-off"></i>
-		<g:message code="menu.usuario.cerrarSesion.label" default="Cerrar sesión" />
+		<g:message code="app.menu.signout.label" />
 		</g:link>
 	</li>
 	

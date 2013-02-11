@@ -32,7 +32,7 @@
 								src="https://www.youtube.com/watch?feature=player_embedded&v=kUBCUUBQUcU#"></video>
 						</div>
 						<p>
-							Descargar: <a
+							Download: <a
 								href="https://www.youtube.com/watch?feature=player_embedded&v=kUBCUUBQUcU#">MP4</a>
 							| <a href="#">WMV</a>
 						</p>
@@ -45,12 +45,11 @@
 					<td>
 
 						<h2>
-							<span class="label label-success">Nuevo</span> Vídeo 1: Título
-							del video
+							<span class="label label-success">New</span> Tutorial 1: Title
 						</h2>
 
 						<p>
-							<strong>Descripción del video</strong>
+							<strong>Description</strong>
 						</p>
 
 					</td>

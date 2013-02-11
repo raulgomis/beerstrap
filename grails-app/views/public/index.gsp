@@ -56,11 +56,7 @@
 					<i class="icon-money"></i> Earn <span class="publicprice">2323$</span>
 				</h2>
 				<p>Earn 500$ each time you download it. It is the money that would cost to you to develop the features in Grails Bootstrap, features presented in almost every management web application.</p>
-
-
 			</div>
-
-
 		</div>
 	</section>
 

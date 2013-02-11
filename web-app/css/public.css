@@ -16,6 +16,8 @@
       .jumbotron {
         margin: 80px 0;
         text-align: center;
+        /*background: -webkit-linear-gradient(45deg, #CCC 0%,#6d3353 100%);
+        padding: 70px 0 80px;     */
       }
       .jumbotron h1 {
         font-size: 100px;

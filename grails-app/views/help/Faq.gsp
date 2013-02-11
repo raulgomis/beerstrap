@@ -19,7 +19,5 @@
 		<bs:config key="BT_HELP_FAQ"></bs:config>
 	</div>
 
-
-
 </body>
 </html>
