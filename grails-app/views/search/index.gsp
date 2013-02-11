@@ -8,18 +8,13 @@
 	<div class="page-header">
 		<h1>
 			<i class="icon-search"></i>
-			Search
+			<g:message code="app.search.label"/>
 			<small>${params.q}</small>
 		</h1>
-		<%-- 
-		<ul class="breadcrumb">
-		  <li><a href="#">Home</a> <span class="divider">/</span></li>
-		  <li class="active">You are here</li>
-		</ul>
-		--%>
+
 	</div>
 	<div class="body">
-	Search results go here
+        <g:message code="app.search.description"/>
 	</div>
 </body>
 </html>

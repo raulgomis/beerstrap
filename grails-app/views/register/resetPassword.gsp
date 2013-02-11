@@ -8,7 +8,7 @@
 <body>
 
 	<h2 class="section_header">
-		<span><i class="icon-info-sign"></i> Password recovery <small>Introduce your new password</small></span>
+		<span><i class="icon-info-sign"></i> <g:message code="app.security.forgotPassword.header" /> <small><g:message code="app.security.forgotPassword.description" /></small></span>
 		<hr class="right visible-desktop">
 	</h2>
 
@@ -17,8 +17,7 @@
 		<div class="alert-message block-message error">
 			<a class="close" href="#">×</a>
 			<p>
-				<strong>Oh snap! You got an error!</strong> Change this and that and
-				try again.
+				<strong>Oh snap! You got an error!</strong> Change this and that and try again.
 			</p>
 			<g:renderErrors bean="${command}" as="list" />
 			<!--  <div class="alert-actions">

@@ -14,12 +14,8 @@
            
 				<div class="row">
 					<div class="span3">
-				      <h2>Account</h2>
-				      <p>
-				      	¡Sé astuto! Tu contraseña debe tener al menos 6 caracteres y no ser una palabra del diccionario o un nombre común. 
-				      	Por favor, usa una contraseña que no uses para otras cosas y cámbiala ocasionalmente.
-						Nunca escribas tu contraseña en un servicio o software que parezca sospechoso.
-						</p>
+				      <h2><g:message code="app.profile.account.label"></g:message></h2>
+				      <p><g:message code="app.profile.account.description"></g:message></p>
 				    </div>
 					<div class="span9">
 					
@@ -60,7 +56,7 @@
 					</button>
 					<!--  
 					<button type="reset" class="btn">
-						<g:message code="default.button.clear.label" default="Clear"/>
+						<g:message code="default.button.reset.label" default="Reset"/>
 					</button>
 					-->
 				</div>

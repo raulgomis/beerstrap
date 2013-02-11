@@ -19,8 +19,7 @@
 		<div class="alert alert-block alert-error" data-alert="alert">
 			<a class="close" href="#" data-dismiss="alert">×</a>
 			<p>
-				<strong>Oh snap! You got an error!</strong> Change this and that and
-				try again.
+				<strong>Oh snap! You got an error!</strong> Change this and that and try again.
 			</p>
 			<g:renderErrors bean="${command}" as="list" />
 			<!--  <div class="alert-actions">

@@ -105,7 +105,7 @@
 				<h4>
 					<i class="icon-beaker"></i> Made with Grails
 				</h4>
-				<p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.2.0</a>: a rapid, dynamic & robust
+				<p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.3.0</a>: a rapid, dynamic & robust
 					framework which uses the Groovy programming language (based on the Java platform).
                 </p>
 			</div>
@@ -146,9 +146,11 @@
 			</div>
 			<div class="span3">
 				<h4>
-					<i class="icon-tint"></i> Designer Friendly
+					<i class="icon-tasks"></i> Testing <small>Coming soon!</small>
 				</h4>
-				<p></p>
+				<p>
+                    Use <a href="http://code.google.com/p/spock/">Spock</a> to test the features provided and to test also your new features.
+				</p>
 			</div>
 		</div>
 	</section>

@@ -17,16 +17,12 @@
 
 				<div class="row">
 					<div class="span3">
-						<h2>Preferences</h2>
-						<p>¡Sé astuto! Tu contraseña debe tener al menos 6 caracteres
-							y no ser una palabra del diccionario o un nombre común. Por
-							favor, usa una contraseña que no uses para otras cosas y cámbiala
-							ocasionalmente. Nunca escribas tu contraseña en un servicio o
-							software que parezca sospechoso.</p>
+						<h2><g:message code="app.profile.password.label"></g:message></h2>
+                        <p><g:message code="app.profile.preferences.description"></g:message></p>
 					</div>
 					<div class="span9">
 						<fieldset>
-							<legend>Culture preferences</legend>
+							<legend><g:message code="app.profile.preferences.culture.label"></g:message></legend>
 							<div class="clearfix">
                                 <div class="control-group">
                                     <label class="control-label">Country</label>
@@ -58,7 +54,7 @@
 
 
 						<fieldset>
-							<legend>Messages</legend>
+							<legend><g:message code="app.profile.preferences.messages.label"/></legend>
 							<div class="clearfix">
 								<label id="optionsCheckboxes">Send me an email when</label>
 								<div class="controls">
@@ -72,7 +68,7 @@
                                     <label> <g:checkBox name="email_mention" value="${userPreferencesInstance?.email_mention}" class="checkbox" />
                                         <span>Someone mentions me</span>
 									</label>
-                                    <span class="help-block"> <strong>Note:</strong> Labels
+                                    <span class="help-block"> <strong><g:message code="app.default.note.label"/>:</strong> Labels
 										surround all the options for much larger click areas and a
 										more usable form.
 									</span>
@@ -82,7 +78,7 @@
 						</fieldset>
 
 						<fieldset>
-							<legend>Alerts</legend>
+							<legend><g:message code="app.profile.preferences.alerts.label"/></legend>
 							<div class="clearfix">
 								<label id="optionsCheckboxes">Send me an email when</label>
 								<div class="controls">
@@ -98,7 +94,7 @@
                                         <g:checkBox name="email_alert_type3" value="${userPreferencesInstance?.email_alert_type3}" class="checkbox" />
                                         <span>Email Alert 3</span>
                                     </label>
-                                    <span class="help-block"> <strong>Note:</strong> Labels
+                                    <span class="help-block"> <strong><g:message code="app.default.note.label"/>:</strong> Labels
 										surround all the options for much larger click areas and a
 										more usable form.
 									</span>
