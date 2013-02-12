@@ -23,9 +23,8 @@
 		<h1>
 			<bs:config key="BT_SITE_NAME" />
 		</h1>
-		<p class="lead">Productivity booster. Kick-start your project with
-			the combined knowledge and effort of 100s of developers, all in one
-			little package. Web development never has been so fast!</p>
+		<p class="lead">Productivity booster. Kick-start your project and start to develop with
+			the combined knowledge and effort of 100s of experts, all in a startup project. <br> Software development never has been so fast!</p>
 		<g:link class="btn btn-large btn-success" controller="home">Get started now</g:link>
 		<g:link class="btn btn-large btn-info" controller="home"><i class="icon-github"></i>GitHub project</g:link>
 
@@ -40,14 +39,13 @@
 				<h2>
 					<i class="icon-dashboard"></i> Productivity
 				</h2>
-				<p>Don't waste your time configuring your initial project, BE PRODUCTIVE MY
-					FRIEND! Download it and start to develop. Start from a good base: Security ready, Beautiful UI, Code generation, etc.</p>
+				<p><strong>Don't waste your time</strong> in common stuff such as configuring your project: just focus on the specific ENGINEERING SOLUTION! Download it and start to develop. Start from a good base: Security ready, Testing ready, Beautiful UI, Code generation, etc.</p>
 			</div>
 			<div class="span4">
 				<h2>
-					<i class="icon-magic"></i> Scaffolding
+					<i class="icon-magic"></i> Code generation
 				</h2>
-				<p>Best scaffolding templates for rapid prototyping. Generate
+				<p><strong>Best scaffolding templates</strong> for rapid prototyping. Generate
 					CRUD functionality based on client's requirements and show a
 					functional version to your client within 15 minutes.</p>
 			</div>
@@ -55,7 +53,7 @@
 				<h2>
 					<i class="icon-money"></i> Earn <span class="publicprice">2323$</span>
 				</h2>
-				<p>Earn 500$ each time you download it. It is the money that would cost to you to develop the features in Grails Bootstrap, features presented in almost every management web application.</p>
+				<p>Grails bootstrap will <strong>give you money</strong> (Yes, you heard right!): earn more than 500$ each time you start a project. It is the money that would cost to develop the features presented in Grails Bootstrap.</p>
 			</div>
 		</div>
 	</section>
@@ -149,7 +147,8 @@
 					<i class="icon-tasks"></i> Testing <small>Coming soon!</small>
 				</h4>
 				<p>
-                    Use <a href="http://www.spockframework.org">Spock</a> to test the features provided and to test also your new features.
+                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
+                    also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
 				</p>
 			</div>
 		</div>
@@ -227,8 +226,26 @@
 
 
 <section id="whoami" class="clearfix">
-    <h2 class="page-header">Who am I</h2>
-
+    <h2 class="page-header">About</h2>
+    <div class="media">
+        <a class="pull-left" href="#">
+            <img class="media-object" src="https://si0.twimg.com/profile_images/3151598109/0a7b070b4700c24c41e21a9efd5dfe07.png" height="75" width="75" />
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">Raúl Gomis</h4>
+            <p>Raúl Gomis is a software engineer who has been developing with Grails for three years and with Java for almost five. He has
+            contributed to improve the methodology and quality of software development
+            through the analysis, implementation and training in Grails at several companies/startups.
+            </p>
+            <p>
+            He is a Grails/Java lover and he strongly believes that Grails can radically improve the productivity of the software development process
+            and Grails Bootstrap could improve much more the agility and quality of this awesome framework.
+            </p>
+            <p>
+            If you are interested in using Grails Bootstrap for your company or as a freelance contact me on <a href="mailto:contact@raulgomis.com">contact@raulgomis.com</a>
+            </p>
+        </div>
+    </div>
 
 </section>
 

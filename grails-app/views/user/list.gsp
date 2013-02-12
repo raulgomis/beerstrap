@@ -164,7 +164,7 @@
                             <tr class="${(userInstance.enabled == false)?'error':''}">
 
                                 <td>
-                                    <img src="http://en.opensuse.org/images/0/0b/Icon-user.png" height="50" width="50" alt="Image user" />
+                                    <img src="http://en.opensuse.org/images/0/0b/Icon-user.png" height="28" width="28" alt="Image user" />
                                     <g:link action="show" id="${userInstance.id}">${fieldValue(bean: userInstance, field: "username")}</g:link>
                                 </td>
 
