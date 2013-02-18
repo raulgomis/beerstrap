@@ -190,3 +190,13 @@ grails {
  grails.plugins.twitterbootstrap.fixtaglib = true
 
 
+//************************************************************
+//FILE UPLOADER
+//************************************************************
+docs {
+    maxSize = "1000000" //10 mbytes
+    //allowedExtensions = ["doc", "docx", "pdf", "rtf"]
+    allowedExtensions = "*"
+    path = new File(System.getProperty('user.home'), appName).canonicalPath
+    //pathPics = new File(System.getProperty('user.home'), appName).canonicalPath + File.separator + "pics"
+}

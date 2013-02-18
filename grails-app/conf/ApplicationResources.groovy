@@ -72,4 +72,10 @@ modules = {
 		resource url:'js/graph/jquery.flot.js'
     }
 
+    jqueryfileuploader {
+        resource url:'js/jquery-file-uploader/js/vendor/jquery.ui.widget.js'
+        resource url:'js/jquery-file-uploader/js/jquery.iframe-transport.js'
+        resource url:'js/jquery-file-uploader/js/jquery.fileupload.js'
+    }
+
 }

@@ -8,27 +8,25 @@ class BootStrap {
         environments {
 
             development {
-				
-	            bootstrapService.cargarRequestMapInicial()
-	            bootstrapService.cargarPermisos()
-	            bootstrapService.cargarRolesyUsuarios()
-	            bootstrapService.loadInitialData()
-	            bootstrapService.cargarDatosEjemplo()
-            
+                bootstrapService.loadRequestMap()
+                bootstrapService.loadPermissions()
+                bootstrapService.loadInitialUsers()
+                bootstrapService.loadInitialData()
+                bootstrapService.loadExampleData()
             }
 
             test {
-                bootstrapService.cargarRequestMapInicial()
-                bootstrapService.cargarPermisos()
-                bootstrapService.cargarRolesyUsuarios()
+                bootstrapService.loadRequestMap()
+                bootstrapService.loadPermissions()
+                bootstrapService.loadInitialUsers()
             }
 
             production {
-				bootstrapService.cargarRequestMapInicial()
-				bootstrapService.cargarPermisos()
-				bootstrapService.cargarRolesyUsuarios()
-				bootstrapService.loadInitialData()
-				bootstrapService.cargarDatosEjemplo()
+                bootstrapService.loadRequestMap()
+                bootstrapService.loadPermissions()
+                bootstrapService.loadInitialUsers()
+                bootstrapService.loadInitialData()
+                bootstrapService.loadExampleData()
             }
         }
 		println "Fin bootstrap"

@@ -19,6 +19,7 @@
 		</ul>
 		-->
 	</div>
+
 <div class="row-fluid">
 	<div class="span8">
     <div id="d3" style="width: 100%">
