@@ -1,7 +1,7 @@
 package com.app.domain.configuration
 
 import com.app.domain.security.User
-
+/*
 class UserPreferences2 {
 
     String country = "esp"; //Change it and write your country code :)
@@ -31,3 +31,4 @@ class UserPreferences2 {
         country
     }
 }
+  */

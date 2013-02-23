@@ -73,6 +73,7 @@ modules = {
     }
 
     jqueryfileuploader {
+        resource url:'js/jquery-file-uploader/css/jquery.fileupload-ui.css'
         resource url:'js/jquery-file-uploader/js/vendor/jquery.ui.widget.js'
         resource url:'js/jquery-file-uploader/js/jquery.iframe-transport.js'
         resource url:'js/jquery-file-uploader/js/jquery.fileupload.js'
