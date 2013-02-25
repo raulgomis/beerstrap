@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main">
-    <g:set var="entityName" value="${message(code: 'file.label', default: 'File')}" />
+    <g:set var="entityName" value="${message(code: 'document.label', default: 'Document')}" />
     <title><g:message code="default.list.label" args="[entityName]" /></title>
     <parameter name="menu_FileUploader" value="active" />
 </head>
@@ -26,7 +26,7 @@
             <div id="options_bar" class="rowbar-right pull-right">
                 <a href="#myModal" class="btn btn-success" data-toggle="modal">
                     <i class="icon-plus icon-white"></i>
-                    <g:message code="default.upload.label" args="[entityName]" />
+                    <g:message code="default.button.upload.label" args="[entityName]" />
                 </a>
             </div>
         </div>

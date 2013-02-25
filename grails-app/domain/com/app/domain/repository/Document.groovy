@@ -1,10 +1,8 @@
 package com.app.domain.repository
 
-import java.io.File
-
 class Document implements Comparable {
 
-
+    transient documentService
 
     String title
     String description
@@ -34,11 +32,13 @@ class Document implements Comparable {
     static belongsTo = []
 
     static constraints = {
-        title(nullable:true)
+        //medatada
+        title()
         category(nullable:true)
         description(maxSize:1000,nullable:true)
-        downloads(nullable:true)
+        downloads()
 
+        //fileinfo
         url(nullable:false)
         name(nullable:false)
         rename(nullable:false)
@@ -63,18 +63,7 @@ class Document implements Comparable {
     }
 
     def afterDelete() {
-        try {
-            File f = new File(url+ File.separator + rename)
-            if (f.delete()) {
-                log.debug "file [${url}] deleted"
-            }
-            else {
-                log.error "could not delete file: ${f}"
-            }
-        }
-        catch (Exception e) {
-            log.error "Error deleting file: ${e.message}"
-        }
+        documentService.deleteDocumentFromDisk(this)
     }
 }
-}
+

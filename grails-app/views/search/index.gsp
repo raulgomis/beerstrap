@@ -9,8 +9,15 @@
 		<h1>
 			<i class="icon-search"></i>
 			<g:message code="app.search.label"/>
-			<small>${params.q}</small>
+			<small>
+
+            </small>
 		</h1>
+        <g:form class="form-inline" method="post" controller="search">
+            <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}"
+                   value="${params.q}" class="input-xxlarge"  />
+            <button class="btn btn-primary">Search</button>
+        </g:form>
 
 	</div>
 	<div class="body">
