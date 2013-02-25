@@ -55,19 +55,19 @@
             <li class="nav-header">Sort by</li>
             <li class="${(params.sortFilter == "sort1")?('active'):('')}">
                 <g:link action="index" params="${params + [sortFilter: "sort1"]}" title="Yesterday">
-                    <i class="icon-time"></i>
+                    <i class="icon-filter"></i>
                     Sort 1
                 </g:link>
             </li>
             <li class="${(params.sortFilter == "sort2")?('active'):('')}">
                 <g:link action="index" params="${params + [sortFilter: "sort2"]}" title="Yesterday">
-                    <i class="icon-time"></i>
+                    <i class="icon-filter"></i>
                     Sort 2
                 </g:link>
             </li>
             <li class="${(params.sortFilter == "sort3")?('active'):('')}">
                 <g:link action="index" params="${params + [sortFilter: "sort3"]}" title="Yesterday">
-                    <i class="icon-time"></i>
+                    <i class="icon-filter"></i>
                     Sort 3
                 </g:link>
             </li>
