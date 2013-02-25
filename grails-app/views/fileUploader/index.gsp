@@ -78,14 +78,17 @@
 
         $('#fileupload').fileupload({
             dataType: 'json',
-            /*add: function (e, data) {
-                //alert(data.files)
+            //maxFileSize: 5000000,       //5MB
+            //acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+
+            add: function (e, data) {
                 $.each(data.files, function (index, file) {
-                    //$('<p/>').text(file.name + " ("+file.size+")").appendTo("#fileUploader");
-                    $('#fileUploader').append('<tr><td>'+file.name + ' ('+file.size+')'+'</td></tr>');
+                    $('#fileUploader').append('<tr data-file="'+file.name+'"><td>'+file.name + ' ('+file.size+')'+'</td></tr>');
+                    //data.context = $('#fileUploader').append('<tr data-file="'+file.name+'"><td>'+file.name + ' ('+file.size+')'+'</td></tr>');
                 });
-            },*/
-            send: function (e, data) {
+                data.submit();
+            },
+            /*send: function (e, data) {
                 if (data.context && data.dataType && data.dataType.substr(0, 6) === 'iframe') {
                      // Iframe Transport does not support progress events.
                      // In lack of an indeterminate progress bar, we set
@@ -100,27 +103,64 @@
                      '100%'
                      );
                  }
-            },
+            },*/
             done: function (e, data) {
+                /*
+                if (data.context) {
+                    data.context.each(function (index) {
+                        var file = files[index]
+                        alert(file);
+                        data.context
+                                .addClass('success')
+                                .html('<td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="icon-ok"></i></span></td>')
+                    }
+                }
+                else {
+                    $.each(data.result, function (index, file) {
+                        $('#fileUploader tr[data-file="'+file.name+'"]')
+                                .addClass('success')
+                                .html('<td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="icon-ok"></i></span></td>')
+
+                    });
+                }
+                */
                 $.each(data.result, function (index, file) {
-                    //$('<p/>').text(file.name + " ("+file.size+")").appendTo("#fileUploader");
-                    $('#fileUploader').append('<tr class="success"><td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="icon-ok"></i></span></td></tr>');
+                    $('#fileUploader tr[data-file="'+file.name+'"]')
+                        .addClass('success')
+                        .html('<td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="icon-ok"></i></span></td>')
+
                 });
             },
+            /*progress: function (e, data) {
+
+                if (data.context) {
+
+                    var progress = parseInt(data.loaded / data.total * 100, 10);
+                    data.context.find('.progress')
+                            .attr('aria-valuenow', progress)
+                            .find('.bar').css(
+                                    'width',
+                                    progress + '%'
+                            );
+                }
+            }, */
             progressall: function (e, data) {
                 var progress = parseInt(data.loaded / data.total * 100, 10);
-                $('#progress .bar').css(
-                        'width',
-                        progress + '%'
-                );
+                $('#progress')
+                    .attr('aria-valuenow', progress)
+                    .find('.bar').css(
+                            'width',
+                            progress + '%'
+                    );
             }
-        });
 
+        });
+        /*
         $('#fileupload').fileupload('option', {
             maxFileSize: 5000000,       //5MB
             acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
         });
-
+         */
 
     });
 

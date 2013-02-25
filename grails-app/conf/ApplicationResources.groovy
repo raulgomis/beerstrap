@@ -77,6 +77,8 @@ modules = {
         resource url:'js/jquery-file-uploader/js/vendor/jquery.ui.widget.js'
         resource url:'js/jquery-file-uploader/js/jquery.iframe-transport.js'
         resource url:'js/jquery-file-uploader/js/jquery.fileupload.js'
+        //resource url:'js/jquery-file-uploader/js/jquery.fileupload-ui.js'
+
     }
 
 }
