@@ -64,78 +64,94 @@
                     </g:each>
 
                     <li class="nav-header">Filter by account status</li>
-
                     <li class="${(params.enabled == "true")?('active'):('')}">
-                        <g:link action="list" params="[enabled: true]" title="Enabled">
+                        <g:link action="list" params="${params + [enabled: true]}" title="Enabled">
+                            <i class="icon-filter"></i>
+                            All
+                        </g:link>
+                    </li>
+                    <li class="${(params.enabled == "true")?('active'):('')}">
+                        <g:link action="list" params="${params + [enabled: true]}" title="Enabled">
                             <i class="icon-filter"></i>
                             Enabled
                         </g:link>
                     </li>
                     <li class="${(params.enabled == "false")?('active'):('')}">
-                        <g:link action="list" params="[enabled: false]" title="Disabled">
+                        <g:link action="list" params="${params + [enabled: false]}" title="Disabled">
                             <i class="icon-filter"></i>
                             Disabled
                         </g:link>
                     </li>
                     <li class="${(params.accountExpired == "true")?('active'):('')}">
-                        <g:link action="list" params="[accountExpired: true]" title="Account expired">
+                        <g:link action="list" params="${params + [accountExpired: true]}" title="Account expired">
                             <i class="icon-filter"></i>
                             Account expired
                         </g:link>
                     </li>
                     <li class="${(params.accountLocked == "true")?('active'):('')}">
-                        <g:link action="list" params="[accountLocked: true]" title="Account locked">
+                        <g:link action="list" params="${params + [accountLocked: true]}" title="Account locked">
                             <i class="icon-filter"></i>
                             Account locked
                         </g:link>
                     </li>
                     <li class="${(params.passwordExpired == "true")?('active'):('')}">
-                        <g:link action="list" params="[passwordExpired: true]" title="Password expired">
+                        <g:link action="list" params="${params + [passwordExpired: true]}" title="Password expired">
                             <i class="icon-filter"></i>
                             Password expired
                         </g:link>
                     </li>
 
                     <li class="nav-header">Filter by registration date</li>
+                    <li class="${(params.dateCreated == '' || params.dateCreated == null)?('active'):('')}">
+                        <g:link action="list" params="${params + [dateCreated: '']}" title="All time">
+                            <i class="icon-time"></i>
+                            All time
+                        </g:link>
+                    </li>
                     <li class="${(params.dateCreated == "1")?('active'):('')}">
-                        <g:link action="list" params="[dateCreated: 1]" title="Yesterday">
+                        <g:link action="list" params="${params + [dateCreated: 1]}" title="Yesterday">
                             <i class="icon-time"></i>
                             Today
                         </g:link>
                     </li>
                     <li class="${(params.dateCreated == "7")?('active'):('')}">
-                        <g:link action="list" params="[dateCreated: 7]" title="Last week">
+                        <g:link action="list" params="${params + [dateCreated: 7]}" title="Last week">
                             <i class="icon-time"></i>
                             Last week
                         </g:link>
                     </li>
                     <li class="${(params.dateCreated == "30")?('active'):('')}">
-                        <g:link action="list" params="[dateCreated: 30]" title="Last month">
+                        <g:link action="list" params="${params + [dateCreated: 30]}" title="Last month">
                             <i class="icon-time"></i>
                             Last month
                         </g:link>
                     </li>
 
                     <li class="nav-header">Filter by last login</li>
-                    <li class="${(params.lastUpdated == "1")?('active'):('')}">
-                        <g:link action="list" params="[lastUpdated: 1]" title="Yesterday">
+                    <li class="${(params.lastUpdated == '' || params.lastUpdated == null)?('active'):('')}">
+                        <g:link action="list" params="${params + [lastUpdated: '']}" title="All time">
                             <i class="icon-time"></i>
-                            Today
-                        </g:link>
-                    </li>
-                    <li class="${(params.lastUpdated == "7")?('active'):('')}">
-                        <g:link action="list" params="[lastUpdated: 7]" title="Last week">
-                            <i class="icon-time"></i>
-                            Last week
+                            All time
                         </g:link>
                     </li>
                     <li class="${(params.lastUpdated == "30")?('active'):('')}">
-                        <g:link action="list" params="[lastUpdated: 30]" title="Last month">
+                        <g:link action="list" params="${params + [lastUpdated: 30]}" title="Last month">
                             <i class="icon-time"></i>
                             Last month
                         </g:link>
                     </li>
-
+                    <li class="${(params.lastUpdated == "7")?('active'):('')}">
+                        <g:link action="list" params="${params + [lastUpdated: 7]}" title="Last week">
+                            <i class="icon-time"></i>
+                            Last week
+                        </g:link>
+                    </li>
+                    <li class="${(params.lastUpdated == "1")?('active'):('')}">
+                        <g:link action="list" params="${params + [lastUpdated: 1]}" title="Yesterday">
+                            <i class="icon-time"></i>
+                            Today
+                        </g:link>
+                    </li>
                 </ul>
 
 

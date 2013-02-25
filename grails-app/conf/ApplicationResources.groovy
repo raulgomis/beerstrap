@@ -81,4 +81,9 @@ modules = {
 
     }
 
+    //For prototyping
+    holder {
+        resource url:'http://twitter.github.com/bootstrap/assets/js/holder/holder.js'
+    }
+
 }
