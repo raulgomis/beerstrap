@@ -11,12 +11,12 @@ class UserController {
         redirect(action: "list", params: params)
     }
 
-    def list(Integer max, String q, Long roleID,String disabled,Integer dateCreatedDays,Integer lastUpdatedDays) {
+    def list(Integer max, String q, Long roleID,String filter,Integer dateCreatedDays,Integer lastUpdatedDays) {
 
         params.max = Math.min(max ?: 10, 100)
 
         def now = new Date()
-        List listFilters = ["enabled","accountExpired","accountLocked","passwordExpired"]
+        //List listFilters = ["enabled","accountExpired","accountLocked","passwordExpired"]
 
         def userInstanceList = []
 
@@ -28,12 +28,19 @@ class UserController {
                         ilike("name","%"+q+"%")
                     }
                 }
-                for(String filter : listFilters){
-                    if (params[filter] != null){
-                        eq(filter,Boolean.parseBoolean(params[filter]))
-                    }
+                if(filter.equals("enabled")){
+                    eq("enabled",true)
                 }
-                if(disabled != null){
+                if(filter.equals("accountExpired")){
+                    eq("accountExpired",true)
+                }
+                if(filter.equals("accountLocked")){
+                    eq("accountLocked",true)
+                }
+                if(filter.equals("passwordExpired")){
+                    eq("passwordExpired",true)
+                }
+                if(filter.equals("disabled")){
                     eq("enabled",false)
                 }
                 if (dateCreatedDays != null){

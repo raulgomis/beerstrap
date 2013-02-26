@@ -1,7 +1,7 @@
 modules = {
 	
 	jquery {
-		resource url:'js/jquery/jquery-1.8.3.min.js'
+		resource url:'js/jquery/jquery-1.9.1.min.js'
 	}
 	
     application {
@@ -25,7 +25,10 @@ modules = {
 		resource url:'css/pricing.css'
 		resource url:'css/bootstrap/js/bootstrap.min.js'
 		resource url:'css/fontawesome/css/font-awesome.min.css'
-		resource url:'css/fontawesome/css/font-awesome-ie7.min.css' 
+		resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
+
+        resource url:'http://pagedown.googlecode.com/hg/Markdown.Converter.js'
+        resource url:'http://pagedown.googlecode.com/hg/Markdown.Sanitizer.js'
 	}
 
 	jquerycookie {
@@ -79,6 +82,11 @@ modules = {
         resource url:'js/jquery-file-uploader/js/jquery.fileupload.js'
         //resource url:'js/jquery-file-uploader/js/jquery.fileupload-ui.js'
 
+    }
+
+    pagedown {
+        resource url:'http://pagedown.googlecode.com/hg/Markdown.Converter.js'
+        resource url:'http://pagedown.googlecode.com/hg/Markdown.Sanitizer.js'
     }
 
     //For prototyping

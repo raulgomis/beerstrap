@@ -41,7 +41,7 @@ textarea.editor-html {
 }
 
 body {
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
  }
 
 /* ============== peity ============== */
@@ -61,7 +61,8 @@ body {
 
 /* ============== knobs ============== */
 .knob {
-    text-align: center; }
+    text-align: center;
+}
 
 /*******************************************************************
 * TWITTERBSPAGINATION 

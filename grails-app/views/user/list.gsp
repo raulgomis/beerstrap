@@ -64,38 +64,38 @@
                     </g:each>
 
                     <li class="nav-header">Filter by account status</li>
-                    <li class="${(params.enabled == "true")?('active'):('')}">
-                        <g:link action="list" params="${params + [enabled: true]}" title="Enabled">
+                    <li class="${(params.filter == '' || params.filter==null)?('active'):('')}">
+                        <g:link action="list" params="${params + [filter:'']}" title="All">
                             <i class="icon-filter"></i>
                             All
                         </g:link>
                     </li>
-                    <li class="${(params.enabled == "true")?('active'):('')}">
-                        <g:link action="list" params="${params + [enabled: true]}" title="Enabled">
+                    <li class="${(params.filter == "enabled")?('active'):('')}">
+                        <g:link action="list" params="${params + [filter:"enabled"]}" title="Enabled">
                             <i class="icon-filter"></i>
                             Enabled
                         </g:link>
                     </li>
-                    <li class="${(params.enabled == "false")?('active'):('')}">
-                        <g:link action="list" params="${params + [enabled: false]}" title="Disabled">
+                    <li class="${(params.filter == "disabled")?('active'):('')}">
+                        <g:link action="list" params="${params + [filter:"disabled"]}" title="Disabled">
                             <i class="icon-filter"></i>
                             Disabled
                         </g:link>
                     </li>
-                    <li class="${(params.accountExpired == "true")?('active'):('')}">
-                        <g:link action="list" params="${params + [accountExpired: true]}" title="Account expired">
+                    <li class="${(params.filter == "accountExpired")?('active'):('')}">
+                        <g:link action="list" params="${params + [filter:"accountExpired"]}" title="Account expired">
                             <i class="icon-filter"></i>
                             Account expired
                         </g:link>
                     </li>
-                    <li class="${(params.accountLocked == "true")?('active'):('')}">
-                        <g:link action="list" params="${params + [accountLocked: true]}" title="Account locked">
+                    <li class="${(params.filter == "accountLocked")?('active'):('')}">
+                        <g:link action="list" params="${params + [filter:"accountLocked"]}" title="Account locked">
                             <i class="icon-filter"></i>
                             Account locked
                         </g:link>
                     </li>
-                    <li class="${(params.passwordExpired == "true")?('active'):('')}">
-                        <g:link action="list" params="${params + [passwordExpired: true]}" title="Password expired">
+                    <li class="${(params.filter == "passwordExpired")?('active'):('')}">
+                        <g:link action="list" params="${params + [filter:"passwordExpired"]}" title="Password expired">
                             <i class="icon-filter"></i>
                             Password expired
                         </g:link>
