@@ -15,7 +15,7 @@
 
 
 
-<div class="documentation" style="visibility: hidden">
+<div class="documentation" style="display: none">
 
 Just write in the comment box *the same way it's shown in this file*, it's
 really that simple.
@@ -361,36 +361,21 @@ Apple Touch Icon
 PSD-Template](http://drublic.de/blog/html5-boilerplate-favicons-psd-template/).
 </div>
 
-<textarea autofocus="">This is a **test**.</textarea>
-<div id="preview"></div>
 
-
-<!--
-<script src="https://raw.github.com/coreyti/showdown/master/src/showdown.js" type="text/javascript"></script>
--->
-<r:require modules="jquery"></r:require>
-<script src="http://pagedown.googlecode.com/hg/Markdown.Converter.js"></script>
-<script src="http://pagedown.googlecode.com/hg/Markdown.Sanitizer.js"></script>
-
-<script type="text/javascript">
+<r:script>
     $(function() {
         // When using more than one `textarea` on your page, change the following line to match the one you’re after
-        var $textarea = $('textarea'),
-                $preview = $('<div id="preview" />').insertAfter($textarea),
-                convert = new Markdown.getSanitizingConverter().makeHtml;
+        var convert = new Markdown.getSanitizingConverter().makeHtml;
 
         $('.documentation').html(convert($('.documentation').html()));
-        $('.documentation').css("visibility","visible");
-        // instead of `keyup`, consider using `input` using this plugin: http://mathiasbynens.be/notes/oninput#comment-1
+        $('.documentation').show();
 
-        /*
-        $textarea.keyup(function() {
-            $preview.html(convert($textarea.val()));
-        }).trigger('keyup');
-        */
     });
-</script>
+</r:script>
+
 
 
 </body>
+
+
 </html>

@@ -51,7 +51,7 @@
 			</div>
 			<div class="span4">
 				<h2>
-					<i class="icon-money"></i> Earn <span class="publicprice">2323$</span>
+					<i class="icon-money"></i> Money, money...
 				</h2>
 				<p>Grails bootstrap will <strong>give you money</strong> (Yes, you heard right!): earn more than 500$ each time you start a project. It is the money that would cost to develop the features presented in Grails Bootstrap.</p>
 			</div>
@@ -103,7 +103,7 @@
 				<h4>
 					<i class="icon-beaker"></i> Made with Grails
 				</h4>
-				<p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.3.0</a>: a rapid, dynamic & robust
+				<p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.2.1</a>: a rapid, dynamic & robust
 					framework which uses the Groovy programming language (based on the Java platform).
                 </p>
 			</div>
@@ -117,7 +117,7 @@
 				<h4>
 					<i class="icon-eye-open"></i> User interface
 				</h4>
-				<p>Catching user's eye with a extremely good looking interface using <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap 2.2.2</a> and <a href="http://fortawesome.github.com/Font-Awesome/">Font awesome 3.0</a>.</p> 
+				<p>Catching user's eye with a extremely good looking interface using <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap 2.3.0</a> and <a href="http://fortawesome.github.com/Font-Awesome/">Font awesome 3.0</a>.</p>
 			</div>
 		</div>
 		<br>
@@ -139,22 +139,65 @@
 					<i class="icon-copy"></i> Documentation
 				</h4>
 				<p>
-                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use the more productive you will be at work.
+                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use, the more productive you will be at work.
 				</p>
 			</div>
 			<div class="span3">
 				<h4>
-					<i class="icon-tasks"></i> Testing <small>Coming soon!</small>
+					<i class="icon-tasks"></i> File management <small></small>
 				</h4>
 				<p>
-                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
-                    also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
+                    Upload your files using a dropbox-style file uploader via AJAX and manage them with a fully-featured interface.
 				</p>
 			</div>
 		</div>
 	</section>
 
 	<hr>
+
+    <section id="roadmap" class="clearfix">
+        <h2 class="page-header">Roadmap</h2>
+
+        <div class="row-fluid">
+            <div class="span3">
+                <h4>
+                    <i class="icon-tasks"></i> Testing <small>Coming soon!</small>
+                </h4>
+                <p>
+                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
+                also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
+                </p>
+            </div>
+            <div class="span3">
+                <h4>
+                    <i class="icon-tasks"></i> Testing <small>Coming soon!</small>
+                </h4>
+                <p>
+                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
+                also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
+                </p>
+            </div>
+            <div class="span3">
+                <h4>
+                    <i class="icon-copy"></i> Documentation
+                </h4>
+                <p>
+                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use the more productive you will be at work.
+                </p>
+            </div>
+            <div class="span3">
+                <h4>
+                    <i class="icon-tasks"></i> Testing <small>Coming soon!</small>
+                </h4>
+                <p>
+                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
+                also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
 
 	<section id="testimonials" class="clearfix">
 		<h2 class="page-header">Testimonials</h2>
