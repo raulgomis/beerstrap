@@ -1,7 +1,5 @@
 package com.app.domain.security
 
-import com.app.domain.configuration.UserPreferences2
-
 class User {
 
 	transient springSecurityService

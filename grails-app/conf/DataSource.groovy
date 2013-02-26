@@ -49,3 +49,15 @@ environments {
         }
     }
 }
+
+/*
+grails {
+    mongo {
+        host = "ds045297.mongolab.com"
+        port = 45297
+        username = "user1987"
+        password = "user1987"
+        databaseName = "fuckfriends"
+    }
+}
+*/

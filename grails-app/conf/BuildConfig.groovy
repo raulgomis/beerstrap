@@ -36,10 +36,14 @@ grails.project.dependency.resolution = {
 
         //runtime 'mysql:mysql-connector-java:5.1.20'
         //test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
+        compile 'org.mongodb:mongo-java-driver:2.10.1'
+
     }
 
     plugins {
         runtime ":hibernate:$grailsVersion"
+        //compile ':mongodb:1.0.0.GA'
+
         //runtime ":jquery:1.8.0"
         runtime ":resources:1.2.RC2"
 

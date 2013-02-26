@@ -9,6 +9,7 @@ class Document implements Comparable {
     String category
     Integer downloads = 0
 
+    byte[] data //see if it is the best option
     String url
     String name
     String rename
@@ -49,6 +50,7 @@ class Document implements Comparable {
 
     static mapping = {
         sort name:"asc"
+        data lazy: true
     }
 
     static namedQueries = {

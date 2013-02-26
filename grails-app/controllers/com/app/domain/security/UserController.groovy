@@ -54,12 +54,16 @@ class UserController {
             }
         }
         else{
-            def users = UserRole.withCriteria {
+            //userInstanceList = UserRole.getUsers(roleID)
+            // GRAILS BUG: http://jira.grails.org/browse/GRAILS-9877
+            userInstanceList = UserRole.createCriteria().list(params){
+                eq("role",Role.get(roleID))
                 projections{
                     property 'user'
                 }
             }
-            //println users
+
+
         }
 
 

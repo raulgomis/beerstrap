@@ -17,7 +17,7 @@
 				<div id="search_bar" class="rowbar-left pull-left">
 					<g:form action="list" class="form-inline" method="GET">
 						<div class="input-append">
-						<g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="span2" />
+						<g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="span3" />
 						<button class="btn" type="submit">Search</button>
 						</div>
                         <!--
@@ -46,14 +46,14 @@
 
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
-                    <li class="">
-                        <g:link action="list">
-                            <i class="icon-inbox"></i>
-                            All
-                        </g:link>
-                    </li>
 
                     <li class="nav-header">Filter by role</li>
+                    <li class="${(params.roleID == null || params.roleID == '')?('active'):('')}">
+                        <g:link action="list" params="${params + [roleID:'']}" title="All roles">
+                            <i class="icon-group"></i>
+                            All roles
+                        </g:link>
+                    </li>
                     <g:each in="${roleInstanceList}" var="roleInstance">
                         <li class="${(params.roleID == roleInstance.id.toString())?('active'):('')}">
                             <g:link action="list" params="[roleID: roleInstance.id]" title="${roleInstance.authority}">
@@ -67,7 +67,7 @@
                     <li class="${(params.filter == '' || params.filter==null)?('active'):('')}">
                         <g:link action="list" params="${params + [filter:'']}" title="All">
                             <i class="icon-filter"></i>
-                            All
+                            All statuses
                         </g:link>
                     </li>
                     <li class="${(params.filter == "enabled")?('active'):('')}">
