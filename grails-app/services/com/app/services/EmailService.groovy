@@ -10,7 +10,6 @@ class EmailService {
 	def mailService
 	
     def register(Map opt) {
-		
 		String email = opt.email
 		String sub = (opt.subject)?(opt.subject):"${emailPrefixDefault} Please, confirm your account"
 		String text = (opt.body)?(opt.body):"""Here is your confirmation code <a href="${opt.urlToken}">${opt.urlToken}</a>"""
@@ -26,7 +25,6 @@ class EmailService {
     }
 	
 	def forgotPassword(Map opt){
-	
 		String email = opt.email
 		String sub = (opt.subject)?(opt.subject):"${emailPrefixDefault} Password recovery"
 		String text = (opt.body)?(opt.body):"Hello, Here is your url to create a new password <a href=${opt.urlToken}>Link</a>"
@@ -39,8 +37,6 @@ class EmailService {
 				html text
 			 }
 		}
-		
-		
 	}
 	
 	def general(Map opt){

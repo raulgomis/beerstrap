@@ -11,12 +11,11 @@ class UserController {
         redirect(action: "list", params: params)
     }
 
-    def list(Integer max, String q, Long roleID,String filter,Integer dateCreatedDays,Integer lastUpdatedDays) {
+    def list(Integer max, String q, Long roleID, String filter, Integer dateCreatedDays, Integer lastUpdatedDays) {
 
         params.max = Math.min(max ?: 10, 100)
 
         def now = new Date()
-        //List listFilters = ["enabled","accountExpired","accountLocked","passwordExpired"]
 
         def userInstanceList = []
 

@@ -194,7 +194,7 @@ grails {
 //FILE UPLOADER
 //************************************************************
 docs {
-    maxSize = "1000000" //10 mbytes
+    maxSize = "10000000" //10 mbytes
     //allowedExtensions = ["doc", "docx", "pdf", "rtf"]
     allowedExtensions = "*"
     path = new File(System.getProperty('user.home'), appName).canonicalPath

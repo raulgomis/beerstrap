@@ -17,7 +17,7 @@
 				<div id="search_bar" class="rowbar-left pull-left">
 					<g:form action="list" class="form-inline" method="GET">
 						<div class="input-append">
-						<g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="span2" />
+						<g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="span3" />
 						<button class="btn" type="button">Search</button>
 						</div>
 					</g:form>

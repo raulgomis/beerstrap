@@ -51,7 +51,7 @@ jQuery(function () {
     }
     // ------------------- FIN TAB COOKIE
 
-    $('select').select2();
+    $('select').select2({ width: 'resolve' });
 
     $(".pbar").peity("bar", {
         colours: ["#EA494A"],
@@ -89,7 +89,7 @@ jQuery(function () {
 				grid: { hoverable: true, 
 						   clickable: true, 
 						   tickColor: "#f6f6f6",
-						   borderWidth: 0,
+						   borderWidth: 0
 						},
 				colors: ["#CBE968"],
 				xaxis: {ticks:0, tickDecimals: 0, tickFormatter: function(v, a) {return v }},

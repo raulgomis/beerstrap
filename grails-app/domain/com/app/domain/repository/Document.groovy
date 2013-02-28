@@ -3,28 +3,29 @@ package com.app.domain.repository
 class Document implements Comparable {
 
     transient documentService
-
+    //metadata
     String title
     String description
-    String category
+    DocumentCategory category
     Integer downloads = 0
-
-    byte[] data //see if it is the best option
-    String url
-    String name
-    String rename
-    String type
-    Long size
-    String extension
 
     Date dateCreated
     Date lastUpdated
+    String uuid = UUID.randomUUID().toString()
+
+    //fileinfo
+    String url
+    String originalName //user's name
+    String name //after rename
+    String type
+    Long size
+    String extension
 
     Boolean available
     static transients = ['available']
 
     Boolean getAvailable() {
-        File f = new File(url+ File.separator + rename)
+        File f = new File(url+ File.separator + name)
         return f.exists()
     }
 
@@ -38,11 +39,13 @@ class Document implements Comparable {
         category(nullable:true)
         description(maxSize:1000,nullable:true)
         downloads()
+        dateCreated()
+        lastUpdated()
 
         //fileinfo
         url(nullable:false)
+        originalName(nullable:false)
         name(nullable:false)
-        rename(nullable:false)
         type()
         size(min:0L)
         extension(nullable:true)
@@ -50,22 +53,39 @@ class Document implements Comparable {
 
     static mapping = {
         sort name:"asc"
-        data lazy: true
     }
 
     static namedQueries = {
     }
 
     int compareTo(obj) {
-        name.compareTo(obj.name)
+        title.compareTo(obj.title)
     }
 
     String toString(){
         title
     }
-
+    /*
+    def beforeInsert() {
+        uuid = UUID.randomUUID().toString()
+    }
+    */
     def afterDelete() {
         documentService.deleteDocumentFromDisk(this)
     }
 }
 
+
+public enum DocumentCategory {
+    Category1(1),Category2(2),Category3(3),Category4(4)
+
+    final Integer id
+
+    DocumentCategory(Integer id) {
+        this.id = id
+    }
+
+    public static list() {
+        return [Category1,Category2,Category3,Category4]
+    }
+}
