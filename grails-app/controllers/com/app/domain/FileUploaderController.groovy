@@ -1,6 +1,8 @@
 package com.app.domain
 
+import com.app.domain.repository.Document
 import grails.converters.JSON
+import grails.validation.ValidationException
 import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.multipart.MultipartHttpServletRequest
 
@@ -8,6 +10,7 @@ class FileUploaderController {
     static admin = true
 
     def fileUploaderService
+    def documentService
 
     def index() {
 
@@ -50,18 +53,30 @@ class FileUploaderController {
     }
 
     def fileupload() {
+        def documentInstance = new Document(params)
         def results = []
         if (request instanceof MultipartHttpServletRequest){
             for(filename in request.getFileNames()){
-                MultipartFile file = request.getFile(filename)
+                MultipartFile f = request.getFile(filename)
+                try{
+                    if(f){
+                        documentInstance = documentService.saveFile(f, documentInstance,null)
+                    }
+                }
+                catch (ValidationException ex){
+                    log.error(ex)
+                }
+                catch(Exception ex){
+                    log.error(ex)
+                }
 
-                String newFileName = UUID.randomUUID().toString() + file.originalFilename.substring(file.originalFilename.lastIndexOf("."))
+                /*String newFileName = UUID.randomUUID().toString() + file.originalFilename.substring(file.originalFilename.lastIndexOf("."))
                 File filePath = getUploadDirectory("/tmp/$newFileName")
-                file.transferTo(filePath)
+                file.transferTo(filePath)  */
 
                 results << [
-                        name: file.originalFilename,
-                        size: file.size,
+                        name: documentInstance.originalName,
+                        size: documentInstance.size,
                         url: createLink(controller: 'home', action: 'fileGetUpload'),
                         thumbnail_url: createLink(controller: 'home', action: 'fileGetUpload'),
                         delete_url: createLink(controller: 'home', action: 'fileGetUpload'),
@@ -77,9 +92,6 @@ class FileUploaderController {
         def results = []
         render results as JSON
     }
-
-
-
 
     def upload() {
         try{

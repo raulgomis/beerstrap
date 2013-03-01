@@ -83,15 +83,19 @@
 				</tr>
 			</g:each>
 			</tbody>
+            <tfooter>
+                <tr>
+                    <td colspan="100%">
+                        <div class="pull-right">
+                        <strong>Showing \${${propertyName}List?.size()} of \${${propertyName}Total}</strong>
+                        </div>
+                    </td>
+                </tr>
+            </tfooter>
 		</table>
-		<div id="grailsbspag" class="row">
-			<div class="span4">
-				<div class="pagination grailsbspag-left">
-					Mostrando \${${propertyName}List?.size()} de \${${propertyName}Total}
-				</div>
-			</div>
-			<div class="span8">
-				<div class="pagination grailsbspag-right">
+		<div class="row">
+			<div class="span12">
+				<div class="pagination pagination-centered">
 					<g:paginate total="\${${propertyName}Total}" maxsteps="4" params="['q':params?.q]" />
 				</div>
 			</div>

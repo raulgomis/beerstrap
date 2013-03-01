@@ -7,7 +7,7 @@
     </div>
     <div class="span4">
         <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">5,3,8,7,9,1,2,6,5,8</span>
-            <h4>71 </h4>
+            <h4>${com.app.domain.security.User.count()} </h4>
             <h4 class="sub">signups</h4>
         </div>
         <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">2,7,6,2,9,8,6,0,1,3</span>
@@ -30,19 +30,19 @@
 
 <div class="row-fluid">
     <div class="span3 knob">
-        <h4>JOBS</h4>
+        <h4>INDICATOR 1</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#14B8D4" data-width="120" />
     </div>
     <div class="span3 knob">
-        <h4>JOBS</h4>
+        <h4>INDICATOR 2</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#EA494A" data-width="120" />
     </div>
     <div class="span3 knob">
-        <h4>JOBS</h4>
+        <h4>INDICATOR 3</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#FFA93C" data-width="120" />
     </div>
     <div class="span3 knob">
-        <h4>JOBS</h4>
+        <h4>INDICATOR 4</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
     </div>
 </div>

@@ -16,7 +16,7 @@ class DocumentController {
     }
 
     def list(Integer max, String q, Integer dateCreatedDays, Integer lastUpdatedDays, String category) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 30, 100)
 
         def now = new Date()
 
@@ -57,7 +57,7 @@ class DocumentController {
                         documentInstance = documentService.saveFile(f, documentInstance,null)
 
                         flash.message = message(code: 'default.created.message', args: [message(code: 'document.label', default: 'Document'), documentInstance.id])
-                        redirect(action: "show", id: documentInstance.id)
+                        redirect(action: "list")
                         return
                     }
                 }

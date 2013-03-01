@@ -1,6 +1,14 @@
 <%@ page import="com.app.domain.repository.Document" %>
 
 
+<div class="control-group ${hasErrors(bean: documentInstance, field: 'file', 'error')} ">
+    <label class="control-label" for="file">
+        <g:message code="document.file.label" default="File" />
+    </label>
+    <div class="controls">
+        <input type="file" name="file" id="file" />
+    </div>
+</div>
 
 <div class="control-group ${hasErrors(bean: documentInstance, field: 'title', 'error')} ">
 	<label class="control-label" for="title">
@@ -33,11 +41,3 @@
 </div>
 
 
-<div class="control-group ${hasErrors(bean: documentInstance, field: 'file', 'error')} ">
-    <label class="control-label" for="file">
-        <g:message code="document.file.label" default="File" />
-    </label>
-    <div class="controls">
-        <input type="file" name="file" id="file" />
-    </div>
-</div>

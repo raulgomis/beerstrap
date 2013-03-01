@@ -13,6 +13,28 @@
 		<div class="page-header">
 			<h1><i class="icon-briefcase"></i>${entityName} management <small><g:message code="default.show.label" args="[entityName]" /></small></h1>
 		</div>
+        <div class="row rowbar">
+            <div class="span12">
+                <div class="pull-right">
+                    <g:form action="delete">
+                        <g:hiddenField name="id" value="${userInstance?.id}" />
+                        <g:link class="btn" action="edit" id="${userInstance?.id}">
+                            <i class="icon-pencil"></i>
+                            <g:message code="default.button.edit.label" default="Edit" />
+                        </g:link>
+                        <button class="btn" type="submit" name="_action_delete" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
+                            <i class="icon-trash"></i>
+                            <g:message code="default.button.delete.label" default="Delete" />
+                        </button>
+                        <g:link class="btn" action="list">
+                            <i class="icon-th-list"></i>
+                            <g:message code="default.button.list.label" default="List" />
+                        </g:link>
+                    </g:form>
+                </div>
+            </div>
+        </div>
+
 		<table class="table table-striped property-list user">
 		
 			<g:if test="${userInstance?.username}">
@@ -124,25 +146,7 @@
 			</g:if>
 		
 		</table>
-		<g:form action="delete">
-		<fieldset>
-			<g:hiddenField name="id" value="${userInstance?.id}" />
-			<div class="form-actions">
-				<g:link class="btn" action="edit" id="${userInstance?.id}">
-					<i class="icon-pencil"></i>
-					<g:message code="default.button.edit.label" default="Edit" />
-				</g:link>					
-				<button class="btn" type="submit" name="_action_delete" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
-					<i class="icon-trash"></i>
-					<g:message code="default.button.delete.label" default="Delete" />
-				</button>
-				<g:link class="btn" action="list">
-					<i class="icon-th-list"></i>
-					<g:message code="default.button.list.label" default="List" />
-				</g:link>
-			</div>
-		</fieldset>
-		</g:form>
+
 
 	</body>
 </html>

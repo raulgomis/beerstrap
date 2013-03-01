@@ -163,7 +163,6 @@
                     <table class="table table-striped table-condensed">
                         <thead>
                         <tr>
-
                             <g:sortableColumn property="username" title="${message(code: 'user.username.label', default: 'Username')}" />
 
                             <g:sortableColumn property="name" title="${message(code: 'user.name.label', default: 'Name')}" />
@@ -210,18 +209,20 @@
                             </tr>
                         </g:each>
                         </tbody>
+                        <tfooter>
+                            <tr>
+                                <td colspan="100%">
+                                    <div class="pull-right">
+                                        <strong>Showing ${userInstanceList?.size()} of ${userInstanceTotal}</strong>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfooter>
                     </table>
-                    <div id="grailsbspag" class="row">
-                        <div class="span4">
-                            <div class="pagination grailsbspag-left">
-                                Mostrando ${userInstanceList?.size()} de ${userInstanceTotal}
-                            </div>
-                        </div>
-                        <div class="span8">
-                            <div class="pagination grailsbspag-right">
-                                <g:paginate total="${userInstanceTotal}" maxsteps="4" params="${params}" />
-                            </div>
-                        </div>
+
+                    <div class="pagination pagination-centered">
+                        <g:paginate total="${userInstanceTotal}" maxsteps="4" params="${params}" />
+                    </div>
                     </div>
                 </g:if>
                 <g:else>

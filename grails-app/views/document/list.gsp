@@ -118,11 +118,8 @@
 		<table class="table table-striped table-condensed">
 			<thead>
 				<tr>
-				
 					<g:sortableColumn property="title" title="${message(code: 'document.title.label', default: 'Title')}" />
 
-					<g:sortableColumn property="downloads" title="${message(code: 'document.downloads.label', default: 'Downloads')}" />
-				
 					<g:sortableColumn property="dateCreated" title="${message(code: 'document.dateCreated.label', default: 'Date Created')}" />
 				
 					<g:sortableColumn property="lastUpdated" title="${message(code: 'document.lastUpdated.label', default: 'Last Updated')}" />
@@ -135,11 +132,11 @@
 				<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 				
 					<td>
+                        <i class="icon-file"></i>
                         <g:link action="show" id="${documentInstance.id}">${fieldValue(bean: documentInstance, field: "title")}</g:link>
 
                     </td>
 
-					<td>${fieldValue(bean: documentInstance, field: "downloads")}</td>
 				
 					<td><g:formatDate date="${documentInstance.dateCreated}" /></td>
 				
@@ -148,6 +145,10 @@
 					<td>
 						<div class="list-actions pull-right">
                             <span class="label">${fieldValue(bean: documentInstance, field: "category")}</span>
+
+                            <g:link class="btn btn-mini" action="download" id="${documentInstance?.uuid}" title="${message(code: 'default.button.download.label', default: 'Download')}" rel="tooltip">
+                                <i class="icon-download-alt"></i>
+                            </g:link>
 							<g:link class="btn btn-mini" action="show" id="${documentInstance?.id}" title="${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
 								<i class="icon-search"></i>
 							</g:link>
@@ -165,11 +166,16 @@
 				</tr>
 			</g:each>
 			</tbody>
+            <tfooter>
+                <tr>
+                    <td colspan="100%">Showing ${documentInstanceList?.size()} de ${documentInstanceTotal}</td>
+                </tr>
+            </tfooter>
 		</table>
 		<div id="grailsbspag" class="row">
 			<div class="span4">
 				<div class="pagination grailsbspag-left">
-					Mostrando ${documentInstanceList?.size()} de ${documentInstanceTotal}
+
 				</div>
 			</div>
 			<div class="span8">
