@@ -43,10 +43,8 @@
 		</div>
         <div class="row">
             <div class="span3">
-
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
-
                     <li class="nav-header">Filter by role</li>
                     <li class="${(params.roleID == null || params.roleID == '')?('active'):('')}">
                         <g:link action="list" params="${params + [roleID:'']}" title="All roles">
@@ -219,10 +217,8 @@
                             </tr>
                         </tfooter>
                     </table>
+                    <g:paginate total="${userInstanceTotal}" maxsteps="4" params="${params}" class="pagination pagination-centered" />
 
-                    <div class="pagination pagination-centered">
-                        <g:paginate total="${userInstanceTotal}" maxsteps="4" params="${params}" />
-                    </div>
                     </div>
                 </g:if>
                 <g:else>

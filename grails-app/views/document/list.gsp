@@ -168,21 +168,17 @@
 			</tbody>
             <tfooter>
                 <tr>
-                    <td colspan="100%">Showing ${documentInstanceList?.size()} de ${documentInstanceTotal}</td>
+                    <td colspan="100%">
+                        <div class="pull-right">
+                            <strong>Showing ${documentInstanceList?.size()} de ${documentInstanceTotal}</strong>
+                        </div>
+                    </td>
                 </tr>
             </tfooter>
 		</table>
-		<div id="grailsbspag" class="row">
-			<div class="span4">
-				<div class="pagination grailsbspag-left">
+        <g:paginate total="${documentInstanceTotal}" maxsteps="4" params="['q':params?.q]" class="pagination-centered" />
 
-				</div>
-			</div>
-			<div class="span8">
-				<div class="pagination grailsbspag-right">
-					<g:paginate total="${documentInstanceTotal}" maxsteps="4" params="['q':params?.q]" />
-				</div>
-			</div>
+
 		</div>
 		</g:if>
 		<g:else>

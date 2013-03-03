@@ -8,9 +8,18 @@ class ${className}Controller {
         redirect(action: "list", params: params)
     }
 
-    def list(Integer max) {
+    def list(Integer max, String q) {
         params.max = Math.min(max ?: 10, 100)
-        [${propertyName}List: ${className}.list(params), ${propertyName}Total: ${className}.count()]
+
+        def ${propertyName}List = ${className}.createCriteria().list(params) {
+            //add here your where conditions
+            //uncomment to implement search
+            //if(q != null) { ilike("name","%"+q+"%") }
+        }
+        def ${propertyName}Total = ${propertyName}List.totalCount
+
+
+        [${propertyName}List: ${propertyName}List, ${propertyName}Total: ${propertyName}Total]
     }
 
     def create() {
