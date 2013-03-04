@@ -205,26 +205,41 @@
     }
 
     private renderDateEditor(domainClass, property) {
-        def precision = (property.type == Date || property.type == java.sql.Date || property.type == Calendar) ? "day" : "minute";
-        if (!cp) {
-            return "<g:datePicker name=\"${property.name}\" precision=\"${precision}\" value=\"\${${domainInstance}?.${property.name}}\" />"
-        } else {
-            if (!cp.editable) {
-                return "\${${domainInstance}?.${property.name}?.toString()}"
+        if ("string" != cp.widget) {
+            def precision = (property.type == Date || property.type == java.sql.Date || property.type == Calendar) ? "day" : "minute";
+            if (!cp) {
+                return "<g:datePicker name=\"${property.name}\" precision=\"${precision}\" value=\"\${${domainInstance}?.${property.name}}\" />"
             } else {
-                def sb = new StringBuilder("<g:datePicker name=\"${property.name}\" ")
-                if (cp.format) sb << "format=\"${cp.format}\" "
-                if (cp.widget) sb << "widget=\"${cp.widget}\" "
-                cp.attributes.each { k, v ->
-                    sb << "${k}=\"${v}\" "
-                }
-                if (!cp.attributes.precision){
-                    sb << "precision=\"${precision}\" "
-                }
-                sb << " value=\"\${${domainInstance}?.${property.name}}\" ${renderNoSelection(property)} />"
+                if (!cp.editable) {
+                    return "\${${domainInstance}?.${property.name}?.toString()}"
+                } else {
+                    def sb = new StringBuilder("<g:datePicker name=\"${property.name}\" ")
+                    if (cp.format) sb << "format=\"${cp.format}\" "
+                    if (cp.widget) sb << "widget=\"${cp.widget}\" "
+                    cp.attributes.each { k, v ->
+                        sb << "${k}=\"${v}\" "
+                    }
+                    if (!cp.attributes.precision){
+                        sb << "precision=\"${precision}\" "
+                    }
+                    sb << " value=\"\${${domainInstance}?.${property.name}}\" ${renderNoSelection(property)} />"
 
-                return sb.toString()
+                    return sb.toString()
+                }
             }
+        }
+        else{
+            //Change format, default is yyyy/MM/dd
+            String formatDate = "yyyy/MM/dd"
+            def sb = new StringBuilder("<g:textField name=\"${property.name}\" ")
+            sb << ' datadatepicker=""'
+            if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
+            if (!cp.editable) sb << ' readonly="readonly"'
+            //if (cp.matches) sb << ' pattern="${' << "${domainInstance}.constraints.${property.name}.matches" << '}"'
+            if (isRequired()) sb << ' required=""'
+            sb << ' value="${' << "(${domainInstance}?.${property.name}).format(\"" << formatDate << "\")" << '}"'
+            sb << '/><span class="help-inline">Format: ' << formatDate << '</span>'
+            return sb.toString()
         }
     }
 

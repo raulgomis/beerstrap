@@ -42,7 +42,7 @@
 
 				<ul class="nav pull-right">
 					<li class="dropdown">
-						<g:render template="/layouts/menu/menuConfig" /></li>
+						<g:render template="/layouts/menuAdmin" /></li>
 				</ul>
 				
 				<g:form class="navbar-search pull-right" method="post"

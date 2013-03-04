@@ -25,7 +25,7 @@ jQuery(function () {
     });
     
     $('input[datadatepicker]').datepicker({
-        format: 'dd/mm/yyyy', autoclose: "true", language: "es"
+        format: 'yyyy/mm/dd', autoclose: "true", language: "en"
     })
     .on('show', function (ev) {
         var today = new Date();

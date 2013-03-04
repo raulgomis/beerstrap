@@ -17,7 +17,7 @@
 
 				<div class="row">
 					<div class="span3">
-						<h2><g:message code="app.profile.password.label"></g:message></h2>
+						<h2><g:message code="app.profile.preferences.label"></g:message></h2>
                         <p><g:message code="app.profile.preferences.description"></g:message></p>
 					</div>
 					<div class="span9">
