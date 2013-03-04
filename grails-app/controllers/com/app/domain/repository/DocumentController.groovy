@@ -1,6 +1,8 @@
 package com.app.domain.repository
 
+import grails.converters.JSON
 import org.springframework.dao.DataIntegrityViolationException
+import org.springframework.web.multipart.MultipartFile
 import org.springframework.web.multipart.MultipartHttpServletRequest
 import grails.validation.ValidationException
 
@@ -134,7 +136,8 @@ class DocumentController {
         }
 
         flash.message = message(code: 'default.updated.message', args: [message(code: 'document.label', default: 'Document'), documentInstance.id])
-        redirect(action: "show", id: documentInstance.id)
+        redirect(action: "list")
+        //redirect(action: "show", id: documentInstance.id)
     }
 
     def delete(Long id) {
@@ -173,4 +176,55 @@ class DocumentController {
         }
 
     }
+
+
+    def ajaxGetFiles(){
+        def results = []
+        List<Document> listOfFiles = Document.list()
+        listOfFiles.each { Document file ->
+                results << [
+                        name: file.originalName,
+                        size: file.size,
+                        url: createLink(controller: 'document', action: 'ajaxGetFiles'),
+                        thumbnail_url: createLink(controller: 'document', action: 'ajaxGetFiles'),
+                        delete_url: createLink(controller: 'document', action: 'ajaxGetFiles'),
+                        delete_type: "DELETE"
+                ]
+        }
+        render results as JSON
+    }
+
+    def fileupload() {
+        def documentInstance = new Document(params)
+        def results = []
+        if (request instanceof MultipartHttpServletRequest){
+            for(filename in request.getFileNames()){
+                MultipartFile f = request.getFile(filename)
+                try{
+                    if(f){
+                        documentInstance = documentService.saveFile(f, documentInstance,null)
+                    }
+                }
+                catch (ValidationException ex){
+                    log.error(ex)
+                }
+                catch(Exception ex){
+                    log.error(ex)
+                }
+
+                results << [
+                        name: documentInstance.originalName,
+                        size: documentInstance.size,
+                        url: createLink(controller: 'document', action: 'ajaxGetFiles'),
+                        thumbnail_url: createLink(controller: 'document', action: 'ajaxGetFiles'),
+                        delete_url: createLink(controller: 'document', action: 'ajaxGetFiles'),
+                        delete_type: "DELETE"
+                ]
+            }
+        }
+
+        render results as JSON
+    }
+
+
 }

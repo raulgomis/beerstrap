@@ -26,6 +26,10 @@
 			</div>
 			<div class="span6">
 				<div id="options_bar" class="rowbar-right pull-right">
+                    <a href="#myModal" class="btn btn-success" data-toggle="modal">
+                        <i class="icon-plus icon-white"></i>
+                        <g:message code="default.button.upload.label" args="[entityName]" />
+                    </a>
 					<g:link class="btn btn-success" action="create">
 						<i class="icon-plus icon-white"></i>
 						<g:message code="default.create.label" args="[entityName]" />
@@ -107,10 +111,7 @@
                         </g:link>
                     </li>
                 </ul>
-
-
             </div>
-
         </div>
         <div class="span9">
 
@@ -120,10 +121,6 @@
 				<tr>
 					<g:sortableColumn property="title" title="${message(code: 'document.title.label', default: 'Title')}" />
 
-					<g:sortableColumn property="dateCreated" title="${message(code: 'document.dateCreated.label', default: 'Date Created')}" />
-				
-					<g:sortableColumn property="lastUpdated" title="${message(code: 'document.lastUpdated.label', default: 'Last Updated')}" />
-				
 					<th class="span3"></th>
 				</tr>
 			</thead>
@@ -133,15 +130,13 @@
 				
 					<td>
                         <i class="icon-file"></i>
-                        <g:link action="show" id="${documentInstance.id}">${fieldValue(bean: documentInstance, field: "title")}</g:link>
-
+                        <g:link action="show" id="${documentInstance.id}">${fieldValue(bean: documentInstance, field: "title")}</g:link>  <br/>
+                        <span class="muted">
+                            ${message(code: 'document.dateCreated.label', default: 'Date Created')}: <g:formatDate date="${documentInstance.dateCreated}" /> |
+                            ${message(code: 'document.lastUpdated.label', default: 'Last Updated')}: <g:formatDate date="${documentInstance.lastUpdated}" />
+                        </span>
                     </td>
 
-				
-					<td><g:formatDate date="${documentInstance.dateCreated}" /></td>
-				
-					<td><g:formatDate date="${documentInstance.lastUpdated}" /></td>
-				
 					<td>
 						<div class="list-actions pull-right">
                             <span class="label">${fieldValue(bean: documentInstance, field: "category")}</span>
@@ -178,7 +173,6 @@
 		</table>
         <g:paginate total="${documentInstanceTotal}" maxsteps="4" params="['q':params?.q]" class="pagination-centered" />
 
-
 		</div>
 		</g:if>
 		<g:else>
@@ -186,5 +180,6 @@
 		</g:else>
         </div>
     </div>
+    <g:render template="modalUpload"></g:render>
 	</body>
 </html>

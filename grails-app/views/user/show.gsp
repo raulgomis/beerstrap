@@ -15,6 +15,12 @@
 		</div>
         <div class="row rowbar">
             <div class="span12">
+                <div class="pull-left">
+                    <g:link class="btn" action="list">
+                        <i class="icon-th-list"></i>
+                        <g:message code="default.button.list.label" default="List" />
+                    </g:link>
+                </div>
                 <div class="pull-right">
                     <g:form action="delete">
                         <g:hiddenField name="id" value="${userInstance?.id}" />
@@ -26,10 +32,6 @@
                             <i class="icon-trash"></i>
                             <g:message code="default.button.delete.label" default="Delete" />
                         </button>
-                        <g:link class="btn" action="list">
-                            <i class="icon-th-list"></i>
-                            <g:message code="default.button.list.label" default="List" />
-                        </g:link>
                     </g:form>
                 </div>
             </div>

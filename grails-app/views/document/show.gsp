@@ -15,6 +15,12 @@
 		</div>
         <div class="row rowbar">
             <div class="span12">
+                <div class="pull-left">
+                    <g:link class="btn" action="list">
+                        <i class="icon-th-list"></i>
+                        <g:message code="default.button.list.label" default="List" />
+                    </g:link>
+                </div>
                 <div class="pull-right">
                     <g:form action="delete">
                         <g:hiddenField name="id" value="${documentInstance?.id}" />
@@ -26,10 +32,6 @@
                             <i class="icon-trash"></i>
                             <g:message code="default.button.delete.label" default="Delete" />
                         </button>
-                        <g:link class="btn" action="list">
-                            <i class="icon-th-list"></i>
-                            <g:message code="default.button.list.label" default="List" />
-                        </g:link>
                     </g:form>
                 </div>
             </div>
@@ -146,7 +148,11 @@
                 <tr>
                     <td><span id="size-label" class="property-label"><g:message code="document.size.label" default="Size" /></span></td>
 
-                    <td><span class="property-value" aria-labelledby="size-label"><g:fieldValue bean="${documentInstance}" field="size"/></span></td>
+                    <td>
+                        <span class="property-value" aria-labelledby="size-label">
+                        <bs:byteCountToDisplaySize size="${documentInstance.size}"></bs:byteCountToDisplaySize>
+                        </span>
+                    </td>
 
                 </tr>
             </g:if>

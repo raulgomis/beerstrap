@@ -7,7 +7,7 @@
     </div>
     <div class="span4">
         <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">5,3,8,7,9,1,2,6,5,8</span>
-            <h4>${com.app.domain.security.User.count()} </h4>
+            <h4>2 </h4>
             <h4 class="sub">signups</h4>
         </div>
         <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">2,7,6,2,9,8,6,0,1,3</span>
