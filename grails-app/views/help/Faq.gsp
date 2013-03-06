@@ -16,7 +16,7 @@
 	<g:render template="top" model="['selected':'faq']" />
 
 	<div id="faq">
-		<bs:config key="BT_HELP_FAQ"></bs:config>
+		<bs:config key="grailsbs.BT_HELP_FAQ"></bs:config>
 	</div>
 
 </body>

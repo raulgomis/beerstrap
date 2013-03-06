@@ -1,5 +1,6 @@
 package com.app.domain
 
+import com.app.services.ConfigurationService
 
 import java.io.*
 import java.io.FileInputStream
@@ -9,6 +10,8 @@ import com.mongodb.gridfs.*
 class HomeController {
 	
 	static user = true
+
+    def configurationService
 
     public static byte[] LoadImage(String filePath) throws Exception {
         File file = new File(filePath);
@@ -56,7 +59,7 @@ class HomeController {
     }
 
     def index() {
-
+        println "NAME: "+configurationService.getSiteName()
 		
 	}
 

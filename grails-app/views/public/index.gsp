@@ -21,7 +21,7 @@
 <body>
 	<div class="jumbotron">
 		<h1>
-			<bs:config key="BT_SITE_NAME" />
+			<bs:config key="grailsbs.BT_SITE_NAME" />
 		</h1>
 		<p class="lead">Productivity booster. Kick-start your project and start to develop with
 			the combined knowledge and effort of 100s of experts, all in a startup project. <br> Software development never has been so fast!</p>

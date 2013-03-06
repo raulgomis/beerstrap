@@ -35,6 +35,7 @@
 				  </div>
 				  <div class="tab-pane" id="system">
 				  	<h2>${message(code: 'app.configuration.system.label')}</h2>
+
 				  </div>
 				  <div class="tab-pane" id="notifications">
 				  	<h2>${message(code: 'app.configuration.notifications.label')}</h2>

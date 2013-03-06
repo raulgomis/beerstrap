@@ -21,7 +21,7 @@
 
       <div class="masthead">
           <!--
-        <h3 class="muted"><bs:config key="BT_SITE_NAME" /></h3>
+        <h3 class="muted"><bs:config key="grailsbs.BT_SITE_NAME" /></h3>
         -->
         <div class="navbar">
           <div class="navbar-inner">

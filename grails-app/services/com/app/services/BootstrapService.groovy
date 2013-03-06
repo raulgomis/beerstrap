@@ -86,26 +86,31 @@ class BootstrapService {
 
     def loadInitialData(){
 
+
+
+
+
+
         def configMap = []
 
         configMap = [
-                "BT_SERVER_ACTIVO":"true",
+
                 /*"BT_SERVER_FROM":"sistemas@eltallerdigital.com",
                 "BT_SERVER_PORT":"25",
                 "BT_SERVER_USERNAME":"sistemas@eltallerdigital.com",
                 "BT_SERVER_PASSWORD":"password",*/
+                "grailsbs.BT_SITE_NAME":"Grails Bootstrap",
+                "grailsbs.BT_SITE_OFFLINE":"False",
+                "grailsbs.BT_SITE_MAXLISTHOME":"5",
+                "grailsbs.BT_SITE_MAXLIST":"30",
+                "grailsbs.BT_HELP_FAQ":"FAQ text goes here",
 
-                "BT_SITE_NAME":"Grails Bootstrap",
-                "BT_SITE_OFFLINE":"False",
-                "BT_SITE_MAXLISTHOME":"5",
-                "BT_SITE_MAXLIST":"30",
-                "BT_HELP_FAQ":"FAQ text goes here",
-
-                "grails.mail.default.from":"grailsbs@gmail.com",
+                /*"grails.mail.default.from":"grailsbs@gmail.com",
                 "grails.mail.host":"smtp.gmail.com",
                 "grails.mail.port":"465",
                 "grails.mail.username":"grailsbs@gmail.com",
                 "grails.mail.password":"bsgrails",
+                 */
                 /*"grails.mail.props.mail.smtp.auth":"true",
                 "grails.mail.props.mail.smtp.socketFactory.port":"465",
                 "grails.mail.props.mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",

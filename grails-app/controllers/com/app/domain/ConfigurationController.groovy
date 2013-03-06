@@ -33,10 +33,10 @@ class ConfigurationController {
 		
         for(Configuration config in listConfig){
             def key = config.key
-            if(key.startsWith('BT_SITE_') || key.startsWith('BT_HELP_')){
+            if(key.startsWith('grailsbs.BT_SITE_') || key.startsWith('grailsbs.BT_HELP_')){
                 listSite.add(config)
             }
-            else if(key.startsWith('BT_SERVER_') || key.startsWith('grails.mail.')){
+            else if(key.startsWith('grailsbs.BT_SERVER_') || key.startsWith('grails.mail.')){
                 listServer.add(config)
             }
 			else{

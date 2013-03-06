@@ -5,18 +5,15 @@ import com.app.domain.security.User;
 
 class ConfigurationTagLib {
 	static namespace = 'bs'
-	
-	def springSecurityService
-	private User getCurrentUser() {springSecurityService.currentUser}
+
+    def configurationService
 	
 	def config = { attrs, body ->
-		
 		String key = attrs.key
-		
 		if(key){
-			Configuration c = Configuration.findByKey(key)
-			if(c){
-				out << c?.value
+			String value = configurationService.getStringValue(key)
+			if(value != null){
+				out << value
 			}
 		}
 	}
