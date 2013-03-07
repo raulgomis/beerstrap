@@ -1,6 +1,6 @@
 
 <%@ page import="com.app.domain.repository.Document" %>
-<%@ page import="com.app.domain.repository.DocumentCategory" %>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div class="page-header">
-			<h1><i class="icon-briefcase"></i>${entityName} management <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
+			<h1><i class="icon-briefcase"></i><g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
 		</div>
 		<div class="row rowbar">
 			<div class="span6">
@@ -19,7 +19,7 @@
 					<g:form action="list" class="form-inline" method="GET">
 						<div class="input-append">
 						<g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="span3" />
-						<button class="btn" type="button">Search</button>
+						<button class="btn" type="button"><g:message code="default.search.label"/></button>
 						</div>
 					</g:form>
 				</div>
@@ -39,79 +39,7 @@
 		</div>
     <div class="row">
         <div class="span3">
-
-            <div class="well sidebar-nav">
-                <ul class="nav nav-list">
-
-                    <li class="nav-header">Filter by category</li>
-                    <li class="${(params.category == null || params.category == '')?('active'):('')}">
-                        <g:link action="list" params="${params + [category:'']}" title="All categories">
-                            <i class="icon-group"></i>
-                            All categories
-                        </g:link>
-                    </li>
-                    <g:each in="${DocumentCategory.list()}" var="category">
-                        <li class="${(params.category == category.toString())?('active'):('')}">
-                            <g:link action="list" params="[category: category.toString()]" title="${category.toString()}">
-                                <i class="icon-group"></i>
-                                ${category.toString()}
-                            </g:link>
-                        </li>
-                    </g:each>
-
-                    <li class="nav-header">Filter by date created</li>
-                    <li class="${(params.dateCreated == '' || params.dateCreated == null)?('active'):('')}">
-                        <g:link action="list" params="${params + [dateCreated: '']}" title="All time">
-                            <i class="icon-time"></i>
-                            All time
-                        </g:link>
-                    </li>
-                    <li class="${(params.dateCreated == "1")?('active'):('')}">
-                        <g:link action="list" params="${params + [dateCreated: 1]}" title="Yesterday">
-                            <i class="icon-time"></i>
-                            Today
-                        </g:link>
-                    </li>
-                    <li class="${(params.dateCreated == "7")?('active'):('')}">
-                        <g:link action="list" params="${params + [dateCreated: 7]}" title="Last week">
-                            <i class="icon-time"></i>
-                            Last week
-                        </g:link>
-                    </li>
-                    <li class="${(params.dateCreated == "30")?('active'):('')}">
-                        <g:link action="list" params="${params + [dateCreated: 30]}" title="Last month">
-                            <i class="icon-time"></i>
-                            Last month
-                        </g:link>
-                    </li>
-
-                    <li class="nav-header">Filter by last updated</li>
-                    <li class="${(params.lastUpdated == '' || params.lastUpdated == null)?('active'):('')}">
-                        <g:link action="list" params="${params + [lastUpdated: '']}" title="All time">
-                            <i class="icon-time"></i>
-                            All time
-                        </g:link>
-                    </li>
-                    <li class="${(params.lastUpdated == "30")?('active'):('')}">
-                        <g:link action="list" params="${params + [lastUpdated: 30]}" title="Last month">
-                            <i class="icon-time"></i>
-                            Last month
-                        </g:link>
-                    </li>
-                    <li class="${(params.lastUpdated == "7")?('active'):('')}">
-                        <g:link action="list" params="${params + [lastUpdated: 7]}" title="Last week">
-                            <i class="icon-time"></i>
-                            Last week
-                        </g:link>
-                    </li>
-                    <li class="${(params.lastUpdated == "1")?('active'):('')}">
-                        <g:link action="list" params="${params + [lastUpdated: 1]}" title="Yesterday">
-                            <i class="icon-time"></i>
-                            Today
-                        </g:link>
-                    </li>
-                </ul>
-            </div>
+            <g:render template="sidebar" ></g:render>
         </div>
         <div class="span9">
 
@@ -165,7 +93,7 @@
                 <tr>
                     <td colspan="100%">
                         <div class="pull-right">
-                            <strong>Showing ${documentInstanceList?.size()} de ${documentInstanceTotal}</strong>
+                            <strong><g:message code="default.paginate.number" args="${[documentInstanceList?.size(),documentInstanceTotal]}"/></strong>
                         </div>
                     </td>
                 </tr>

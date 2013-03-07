@@ -1,17 +1,8 @@
 <html>
 
 <head>
-		<meta name="layout" content="public" />
-		<parameter name="menu_Home" value="active" />
-    <style>
-
-    .publicprice {
-        color: #999999;
-        font-size: 37px;
-        margin: 0;
-        padding: 5px ;
-    }
-    </style>
+    <meta name="layout" content="public" />
+    <parameter name="menu_Home" value="active" />
     <!--
     <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://jquerytools.org/media/css/standalone2.css">
@@ -21,7 +12,7 @@
 <body>
 	<div class="jumbotron">
 		<h1>
-			<bs:config key="grailsbs.BT_SITE_NAME" />
+			<bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}" />
 		</h1>
 		<p class="lead">Productivity booster. Kick-start your project and start to develop with
 			the combined knowledge and effort of 100s of experts, all in a startup project. <br> Software development never has been so fast!</p>

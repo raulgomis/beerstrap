@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="page-header">
-			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
+			<h1><i class="icon-briefcase"></i><g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
 		</div>
 		<div class="row rowbar">
 			<div class="span6">
@@ -18,7 +18,7 @@
 					<g:form action="list" class="form-inline" method="GET">
 						<div class="input-append">
 						<g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="span3" />
-						<button class="btn" type="submit">Search</button>
+						<button class="btn" type="submit"><g:message code="default.search.label"/></button>
 						</div>
 					</g:form>
 				</div>
@@ -34,18 +34,7 @@
 		</div>
         <div class="row">
             <div class="span3">
-                <div class="well sidebar-nav">
-                    <ul class="nav nav-list">
-                        <li class="nav-header">Filter by property</li>
-                        <li class="\${(params.filter == '' || params.filter==null)?('active'):('')}">
-                            <g:link action="list" params="\${params + [filter:'']}" title="All">
-                                <i class="icon-filter"></i>
-                                All items
-                            </g:link>
-                        </li>
-
-                    </ul>
-                </div>
+                <g:render template="sidebar" />
             </div>
             <div class="span9">
                 <g:if test="\${${propertyName}List}">
@@ -103,14 +92,13 @@
                         <tr>
                             <td colspan="100%">
                                 <div class="pull-right">
-                                    <strong>Showing \${${propertyName}List?.size()} of \${${propertyName}Total}</strong>
+                                    <strong><g:message code="default.paginate.number" args="\${[${propertyName}List?.size(),${propertyName}Total]}"/></strong>
                                 </div>
                             </td>
                         </tr>
                     </tfooter>
                 </table>
                 <g:paginate total="\${${propertyName}Total}" maxsteps="4" params="['q':params?.q]" class="pagination-centered" />
-
 
                 </div>
                 </g:if>

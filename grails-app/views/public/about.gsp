@@ -8,13 +8,14 @@
 <body>
 
     <h2 class="section_header">
-        <span><i class="icon-info-sign"></i> About <small> See all plan details here</small></span>
+        <span><i class="icon-info-sign"></i> About <small> See all the people involved in the project</small></span>
         <hr class="right visible-desktop">
     </h2>
-    <section id="whoami" class="clearfix">
+    <section id="about" class="clearfix">
+        <h3>Project lead</h3>
         <div class="media">
             <a class="pull-left" href="#">
-                <img class="media-object" src="https://si0.twimg.com/profile_images/3151598109/0a7b070b4700c24c41e21a9efd5dfe07.png" height="175" width="175" />
+                <img class="media-object" src="https://si0.twimg.com/profile_images/3151598109/0a7b070b4700c24c41e21a9efd5dfe07.png" height="125" width="125" />
             </a>
             <div class="media-body">
                 <h4 class="media-heading">Raúl Gomis</h4>
@@ -31,7 +32,28 @@
                 </p>
             </div>
         </div>
-
+        <hr>
+        <h3>Contributors</h3>
+        <div class="media">
+            <a class="pull-left" href="#">
+                <img data-src="holder.js/75x75">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Contributor 1</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales ligula eu orci pulvinar gravida. Quisque et blandit est. Pellentesque vehicula sapien in tortor eleifend mollis scelerisque lectus tincidunt. Aliquam erat volutpat. Maecenas et quam elit. Pellentesque sit amet tristique ipsum. Sed ac nulla vel ipsum pulvinar sollicitudin quis dignissim dui.
+                </p>
+            </div>
+        </div>
+        <div class="media">
+            <a class="pull-left" href="#">
+                <img data-src="holder.js/75x75">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Contributor 1</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales ligula eu orci pulvinar gravida. Quisque et blandit est. Pellentesque vehicula sapien in tortor eleifend mollis scelerisque lectus tincidunt. Aliquam erat volutpat. Maecenas et quam elit. Pellentesque sit amet tristique ipsum. Sed ac nulla vel ipsum pulvinar sollicitudin quis dignissim dui.
+                </p>
+            </div>
+        </div>
     </section>
 </body>
 </html>

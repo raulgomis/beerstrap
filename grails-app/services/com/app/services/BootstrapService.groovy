@@ -86,11 +86,6 @@ class BootstrapService {
 
     def loadInitialData(){
 
-
-
-
-
-
         def configMap = []
 
         configMap = [

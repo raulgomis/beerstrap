@@ -1,5 +1,37 @@
 
 <div class="row-fluid">
+    <div class="span12">
+    <a class="quick-button span2">
+        <i class="icon-group"></i>
+        <p>Users</p>
+        <span class="notification">1.367</span>
+    </a>
+    <a class="quick-button span2" style="position: relative;">
+        <i class="icon-comments-alt"></i>
+        <p>Comments</p>
+        <span class="notification green">167</span>
+    </a>
+    <a class="quick-button span2">
+        <i class="icon-shopping-cart"></i>
+        <p>Orders</p>
+    </a>
+    <a class="quick-button span2">
+        <i class="icon-barcode"></i>
+        <p>Products</p>
+    </a>
+    <a class="quick-button span2">
+        <i class="icon-envelope"></i>
+        <p>Messages</p>
+    </a>
+    <a class="quick-button span2">
+        <i class="icon-calendar"></i>
+        <p>Calendar</p>
+        <span class="notification red">68</span>
+    </a>
+    </div>
+</div>
+<hr>
+<div class="row-fluid">
     <div class="span8">
         <div id="d3" style="width: 100%">
             <img src="http://demandware.edgesuite.net/aagl_prd/on/demandware.static/Sites-adidas-CO-Site/-/es_CO/v1358302772225/images/loading-small.gif" class="pull-right" />

@@ -77,11 +77,11 @@ class Document implements Comparable {
 
 
 public enum DocumentCategory {
-    Category1(1),Category2(2),Category3(3),Category4(4)
+    Category1("Category1"),Category2("Category2"),Category3("Category3"),Category4("Category4")
 
-    final Integer id
+    final String id
 
-    DocumentCategory(Integer id) {
+    DocumentCategory(String id) {
         this.id = id
     }
 
