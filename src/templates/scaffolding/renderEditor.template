@@ -205,7 +205,7 @@
     }
 
     private renderDateEditor(domainClass, property) {
-        if ("string" != cp.widget) {
+        if (!cp || (cp && "string" == cp.widget)) {
             def precision = (property.type == Date || property.type == java.sql.Date || property.type == Calendar) ? "day" : "minute";
             if (!cp) {
                 return "<g:datePicker name=\"${property.name}\" precision=\"${precision}\" value=\"\${${domainInstance}?.${property.name}}\" />"
