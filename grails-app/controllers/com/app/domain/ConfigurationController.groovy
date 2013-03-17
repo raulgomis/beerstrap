@@ -1,6 +1,7 @@
 package com.app.domain
 
-import com.app.domain.configuration.Configuration;
+import com.app.domain.configuration.Configuration
+import org.codehaus.groovy.grails.scaffolding.DefaultGrailsTemplateGenerator;
 
 class ConfigurationController {
 
@@ -124,6 +125,47 @@ class ConfigurationController {
 
     def grails() {
 
+    }
+
+    def grailsGenerate(String domainClassName,String artifact){
+        DefaultGrailsTemplateGenerator templateGenerator = new DefaultGrailsTemplateGenerator();
+        templateGenerator.grailsApplication = grailsApplication
+        Writer out = new StringWriter()
+        if (domainClassName){
+
+            def domainClass = grailsApplication.getDomainClass(domainClassName)
+            switch (artifact){
+                case "controller":
+                    templateGenerator.generateController(domainClass,out)
+                    break;
+                case "view-create":
+                    templateGenerator.generateView(domainClass, "create", out)
+                    break;
+                case "view-edit":
+                    templateGenerator.generateView(domainClass, "edit", out)
+                    break;
+                case "view-list":
+                    templateGenerator.generateView(domainClass, "list", out)
+                    break;
+                case "view-show":
+                    templateGenerator.generateView(domainClass, "show", out)
+                    break;
+                case "view-form":
+                    templateGenerator.generateView(domainClass, "_form", out)
+                    break;
+                case "view-sidebar":
+                    templateGenerator.generateView(domainClass, "_sidebar", out)
+                    break;
+            }
+
+        }
+
+        String data = out.toString()
+
+        render """
+            <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+            <pre class="prettyprint">${data.encodeAsHTML()}</pre>
+        """
     }
 
     def update() {

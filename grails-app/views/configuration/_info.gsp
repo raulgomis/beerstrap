@@ -3,14 +3,6 @@
 	<div class="span12">
 		<div id="page-body" role="main">
 
-			<h2>Welcome to Grails Bootstrap</h2>
-			<p>Congratulations, you have successfully started your first
-				Grails application! At the moment this is the default page, feel
-				free to modify it to either redirect to a controller or display
-				whatever content you may choose. Below is a list of controllers that
-				are currently deployed in this application, click on each to execute
-				its default action:</p>
-
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
 				<ul>
@@ -51,19 +43,29 @@
 	</div>
 </div>
 
-
-<g:each var="c"
-	in="${grailsApplication.config.grails.mail}">
-	<li class="controller">${c}</li>
-</g:each>
-
-private void setConfigValue(String pathString, def newValue) {
-def config = grailsApplication.config /* hope you have injected grailsApplication bean */
-List paths = pathString.tokenize(“.”)
-String lastVar = paths.last()
-paths = paths – lastVar
-paths.each {path ->
-config = config.”${path}”
-}
-config.”$lastVar” = newValue
-}
+<h2>Code generation</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+          <g:each in="${grailsApplication.domainClasses}" var="domainClass">
+              <tr>
+                  <td>${domainClass.shortName} (${domainClass.fullName})</td>
+                  <td>
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'controller']">Controller</g:link> |
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'view-create']">Create view</g:link> |
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'view-edit']">Edit view</g:link> |
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'view-list']">List view</g:link> |
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'view-show']">Show view</g:link> |
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'view-form']">Form</g:link> |
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'view-sidebar']">Sidebar</g:link> |
+                      <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'test']">Test controller</g:link>
+                  </td>
+              </tr>
+          </g:each>
+    </tbody>
+</table>
