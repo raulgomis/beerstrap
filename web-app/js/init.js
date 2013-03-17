@@ -20,7 +20,7 @@ jQuery(function () {
         $(this).button('loading')
     });*/
 
-    $("a[rel=tooltip]").tooltip({
+    $("a[rel=tooltip], span[rel=tooltip]").tooltip({
         placement: 'top'
     });
     

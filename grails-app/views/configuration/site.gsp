@@ -9,11 +9,10 @@
 
 <body>
 
-<g:render template="sidebar"></g:render>
+<g:render template="sidebar" model="['selected':'sb_site']"></g:render>
 
 <g:form action="update">
 
-    <g:render template="info"></g:render>
 
     <div class="form-actions">
         <button type="submit" class="btn btn-primary">

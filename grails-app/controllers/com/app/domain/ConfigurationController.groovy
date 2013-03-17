@@ -8,6 +8,7 @@ class ConfigurationController {
     //static admin = true
 
     def configurationService
+    def grailsApplication
 
     def index() {
         redirect(action: "list", params: params)
@@ -48,6 +49,69 @@ class ConfigurationController {
 
     def server() {
 
+
+        def configurationEmailInstanceList = []
+
+        def configurationDocsInstanceList = []
+
+        def configurationDBInstanceList = []
+
+        Map configEmail = [
+                "grails.mail.default.from":"${grailsApplication.config.grails.mail.default.from}",
+                "grails.mail.host":"${grailsApplication.config.grails.mail.host}",
+                "grails.mail.port":"${grailsApplication.config.grails.mail.port}",
+                "grails.mail.username":"${grailsApplication.config.grails.mail.username}",
+                "grails.mail.password":"${grailsApplication.config.grails.mail.password}",
+                "grails.mail.props":"${grailsApplication.config.grails.mail.props}"
+        ]
+
+        Map configDocs = [
+                "docs.maxSize":"${grailsApplication.config.docs.maxSize}",
+                "docs.allowedExtensions":"${grailsApplication.config.docs.allowedExtensions}",
+                "docs.path":"${grailsApplication.config.docs.path}",
+        ]
+
+        Map configDB = [
+            "dataSource.url":"${grailsApplication.config.dataSource.url}",
+            "dataSource.driverClassName":"${grailsApplication.config.dataSource.driverClassName}",
+            "dataSource.username":"${grailsApplication.config.dataSource.username}",
+            "dataSource.password":"${grailsApplication.config.dataSource.password}",
+            "dataSource.pooled":"${grailsApplication.config.dataSource.pooled}",
+            "dataSource.dbCreate":"${grailsApplication.config.dataSource.dbCreate}"
+        ]
+
+
+        configEmail.each{ key,value ->
+            configurationEmailInstanceList << new Configuration(key:key,value:value)
+        }
+
+        configDocs.each{ key,value ->
+            configurationDocsInstanceList << new Configuration(key:key,value:value)
+        }
+
+        configDB.each{ key,value ->
+            configurationDBInstanceList << new Configuration(key:key,value:value)
+        }
+
+        /*
+        grails.mail.default.from="grailsbs@gmail.com"
+        grails {
+            mail {
+                host = "smtp.gmail.com"
+                port = 465
+                username = "grailsbs@gmail.com"
+                password = "bsgrails"
+                props = ["mail.smtp.auth":"true",
+                        "mail.smtp.socketFactory.port":"465",
+                        "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+                        "mail.smtp.socketFactory.fallback":"false"]
+            }
+        }
+           */
+
+        [configurationEmailInstanceList:configurationEmailInstanceList,
+                configurationDocsInstanceList:configurationDocsInstanceList,
+                configurationDBInstanceList:configurationDBInstanceList]
     }
 
     def system() {
@@ -77,8 +141,6 @@ class ConfigurationController {
                 configurationInstance.value = params[name]
                 configurationInstance.save()
                 if (name.startsWith("grails.mail.")) {
-                    println name
-                    println value
                     configurationService.setConfigValue("${name}", configurationInstance.value)
                 }
             }

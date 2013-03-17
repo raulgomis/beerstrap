@@ -121,10 +121,10 @@ class BootstrapService {
         assert Configuration.list().size() == configMap.size()
 
         //set grails const
-        List configurationInstanceList = Configuration.findAllByKeyLike("grails.%")
+        /*List configurationInstanceList = Configuration.findAllByKeyLike("grails.%")
         for(Configuration c in configurationInstanceList){
             configurationService.setConfigValue("${c.key}",c.value)
-        }
+        }*/
 
         log.info("Initial data loaded")
     }

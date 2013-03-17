@@ -285,9 +285,6 @@
         <g:render template="admin"></g:render>
     </sec:ifAnyGranted>
 
-    <pre>
-        ${data}
-    </pre>
 
 </body>
 </html>

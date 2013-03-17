@@ -63,7 +63,6 @@ grails{
 		password = "*****"
 	}
 }*/
-
 grails.mail.default.from="grailsbs@gmail.com"
 grails {
     mail {
@@ -75,18 +74,9 @@ grails {
                 "mail.smtp.socketFactory.port":"465",
                 "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
                 "mail.smtp.socketFactory.fallback":"false"]
-        /*props {
-            mail {
-                smtp {
-                    auth = "true"
-                    socketFactory.port = "465"
-                    socketFactory.class = "javax.net.ssl.SSLSocketFactory"
-                    socketFactory.fallback = "false"
-                }
-            }
-        }*/
     }
 }
+
 
 /*props = ["mail.smtp.auth":"true",
  "mail.smtp.socketFactory.port":"465",

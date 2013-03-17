@@ -9,7 +9,7 @@
 
 <body>
 
-<g:render template="sidebar"></g:render>
+<g:render template="sidebar" model="['selected':'sb_system']"></g:render>
 
 <g:form action="update">
 

@@ -35,11 +35,8 @@ class RegisterController {
         //create registration code
 		def registrationCode = new RegisterCode(username: user.username).save()
 
-        //generate url to verify token
-        String url = g.createLink(action:'verifyRegistration',absolute:true,params:[t:registrationCode?.token])
-
         //sent an email
-		emailService.register(['urlToken':url,'email':command.email])
+		emailService.register(command.email,registrationCode?.token)
 		
 		flash.message = message(code: 'app.security.register.sent')
 		redirect(controller:"home")
@@ -111,10 +108,9 @@ class RegisterController {
 
         //create registration code
 		def registrationCode = new RegisterCode(username: user.username).save()
-		String url = g.createLink(action:'resetPassword',absolute:true,params:[t:registrationCode?.token])
 
         //send email
-		emailService.forgotPassword(['urlToken':url,'email':user.email])
+        emailService.forgotPassword(user.email,registrationCode?.token)
 				
 		flash.message = message(code: 'app.security.register.complete')
 		[emailSent: true]
