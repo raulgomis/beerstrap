@@ -12,7 +12,7 @@ class ConfigurationController {
     def grailsApplication
 
     def index() {
-        redirect(action: "list", params: params)
+        redirect(action: "site", params: params)
     }
 
     def list() {

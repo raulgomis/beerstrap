@@ -1,7 +1,7 @@
 <div class="page-header">
     <h1><i class="icon-cog"></i>${entityName}</h1>
 </div>
-<ul class="nav nav-tabs">
+<ul class="nav nav-pills">
     <li class="${selected == 'sb_site' ? 'active' : ''}">
         <g:link action="site"><g:message code="app.configuration.site.label"/></g:link>
     </li>
@@ -10,5 +10,8 @@
     </li>
     <li class="${selected == 'sb_system' ? 'active' : ''}">
         <g:link action="system"><g:message code="app.configuration.system.label"/></g:link>
+    </li>
+    <li class="${selected == 'sb_grails' ? 'active' : ''}">
+        <g:link action="grails"><g:message code="app.configuration.grails.label"/></g:link>
     </li>
 </ul>
