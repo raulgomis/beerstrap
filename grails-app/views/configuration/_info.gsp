@@ -1,22 +1,5 @@
 
 <div class="row">
-	<div class="span12">
-		<div id="page-body" role="main">
-
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c"
-						in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link
-								controller="${c.logicalPropertyName}">
-								${c.fullName}
-							</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<div class="span4">
 		<div id="status" role="complementary">
 			<h2>Application Status</h2>
@@ -43,18 +26,38 @@
 	</div>
 </div>
 
-<h2>Code generation</h2>
-<table class="table">
+
+<h2>Controllers (${grailsApplication.controllerClasses.size()})</h2>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+        <tr>
+            <td>
+                <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+            </td>
+        </tr>
+    </g:each>
+    </tbody>
+</table>
+
+
+<h2>Domain classes (${grailsApplication.domainClasses.size()})</h2>
+<table class="table table-condensed">
     <thead>
         <tr>
-            <th></th>
-            <th></th>
+            <th>Name</th>
+            <th>Code generation</th>
         </tr>
     </thead>
     <tbody>
-          <g:each in="${grailsApplication.domainClasses}" var="domainClass">
+          <g:each in="${grailsApplication.domainClasses.sort {it.shortName}}" var="domainClass">
               <tr>
-                  <td>${domainClass.shortName} (${domainClass.fullName})</td>
+                  <td><strong>${domainClass.shortName}</strong> (${domainClass.fullName})</td>
                   <td>
                       <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'controller']">Controller</g:link> |
                       <g:link action="grailsGenerate" params="['domainClassName':domainClass.fullName,'artifact':'view-create']">Create view</g:link> |
@@ -67,5 +70,24 @@
                   </td>
               </tr>
           </g:each>
+    </tbody>
+</table>
+
+
+<h2>Controllers (${grailsApplication.serviceClasses.size()})</h2>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <g:each var="c" in="${grailsApplication.serviceClasses.sort { it.fullName } }">
+        <tr>
+            <td>
+                ${c.fullName}
+            </td>
+        </tr>
+    </g:each>
     </tbody>
 </table>

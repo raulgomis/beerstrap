@@ -32,7 +32,7 @@
 		</g:each>
 		
 		<li class='controller ${pageProperty(name:"page.menu_Configuration")}'>
-			<g:link controller="configuration" action="list">
+			<g:link controller="configuration">
 				<i class="icon-cog"></i>
 				<g:message code="app.menu.configuration.label" />
 			</g:link>

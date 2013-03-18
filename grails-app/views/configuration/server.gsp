@@ -82,7 +82,7 @@
     <pre class="prettyprint">${grailsApplication.config.docs}</pre>
     --%>
 
-    <h2>Database</h2><g:link controller="dbconsole" class="btn btn-mini btn-info"><i class="icon-hdd"></i> Go to the Database</g:link>
+    <h2>Database</h2><g:link controller="dbconsole" class="btn btn-mini btn-info" target="_blank"><i class="icon-hdd"></i> Database Console</g:link>
     <table class="table" summary="configuration table">
         <thead>
         <tr>
@@ -125,6 +125,9 @@
         </button>
     </div>
     --%>
+
+
+    <pre class="prettyprint">${grailsApplication.config}</pre>
 
 </g:form>
 

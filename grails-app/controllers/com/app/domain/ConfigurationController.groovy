@@ -73,6 +73,8 @@ class ConfigurationController {
         ]
 
         Map configDB = [
+            "grails.dbconsole.enabled":"${grailsApplication.config.grails.dbconsole.enabled}",
+            "grails.dbconsole.urlRoot":"${grailsApplication.config.grails.dbconsole.urlRoot}",
             "dataSource.url":"${grailsApplication.config.dataSource.url}",
             "dataSource.driverClassName":"${grailsApplication.config.dataSource.driverClassName}",
             "dataSource.username":"${grailsApplication.config.dataSource.username}",
