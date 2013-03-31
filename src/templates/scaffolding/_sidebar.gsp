@@ -7,6 +7,5 @@
                 All items
             </g:link>
         </li>
-
     </ul>
 </div>

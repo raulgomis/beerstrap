@@ -1,7 +1,5 @@
 <%@ page import="com.app.domain.security.User" %>
 
-
-
 <div class="control-group ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
 	<label class="control-label" for="username">
 		<g:message code="user.username.label" default="Username" />
