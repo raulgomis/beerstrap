@@ -17,7 +17,7 @@
     <div class="row-fluid">
         <div class="span4">
             <address>
-                <h3>San Francisco, USA</h3>
+                <h3>Alicante, Spain</h3>
                 <i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
                 San Francisco, CA 94107<br>
                 <i class="icon-phone"></i> (123) 456-7890<br>
@@ -25,7 +25,7 @@
         </div>
         <div class="span4">
             <address>
-                <h3>Alicante, Spain</h3>
+                <h3>San Francisco, USA</h3>
                 <i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
                 San Francisco, CA 94107<br>
                 <i class="icon-phone"></i> (123) 456-7890<br>
@@ -42,10 +42,44 @@
         </div>
     </div>
 
+<div id="map_canvas" style="width: 100%; height: 400px"></div>
 
-    <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=alicante&amp;aq=&amp;sll=39.316265,-0.418859&amp;sspn=7.570827,16.907959&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Alicante,+Comunidad+Valenciana&amp;ll=38.345996,-0.490686&amp;spn=0.007497,0.016512&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=alicante&amp;aq=&amp;sll=39.316265,-0.418859&amp;sspn=7.570827,16.907959&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Alicante,+Comunidad+Valenciana&amp;ll=38.345996,-0.490686&amp;spn=0.007497,0.016512&amp;z=14" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small></body>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    var markers = [
+        ['Alicante, Spain', 38.345203, -0.481006],
+        ['San Francisco, USA', 37.77493, -122.419415],
+        ['London, UK', 51.500152, -0.126236]
+    ];
 
+    function initializeMaps() {
+        var myOptions = {
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+        var infowindow = new google.maps.InfoWindow();
+        var marker, i;
+        var bounds = new google.maps.LatLngBounds();
 
+        for (i = 0; i < markers.length; i++) {
+            var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);
+            bounds.extend(pos);
+            marker = new google.maps.Marker({
+                position: pos,
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(markers[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+        map.fitBounds(bounds);
+    }
+    initializeMaps();
+</script>
 
-
+</body>
 </html>
