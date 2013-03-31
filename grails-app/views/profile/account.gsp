@@ -25,7 +25,7 @@
 							<span class="required-indicator">*</span>
 						</label>
 						<div class="input">
-						<g:textField name="username" required="" value="${userInstance?.username}"/>
+						<g:textField name="username" required="" readonly="" value="${userInstance?.username}"/>
 						</div>
 					</div>
 					
@@ -48,6 +48,7 @@
 						<g:field type="email" name="email" required="" value="${userInstance?.email}"/>
 						</div>
 					</div>
+
            
 				<div class="form-actions">
 					<button class="btn btn-primary">
@@ -60,6 +61,9 @@
 					</button>
 					-->
 				</div>
+                        <p>
+                            <g:link action="deactivate" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">Deactivate my account</g:link>
+                        </p>
 				
 				</div>
 				</div>
