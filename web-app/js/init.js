@@ -84,7 +84,7 @@ jQuery(function () {
 							align: "center",
 							lineWidth: 5,
 							fillColor: { colors: [ { opacity: 1 }, { opacity: 0.5 } ] }
-						},
+						}
 	            },
 				grid: { hoverable: true, 
 						   clickable: true, 
@@ -93,8 +93,7 @@ jQuery(function () {
 						},
 				colors: ["#CBE968"],
 				xaxis: {ticks:0, tickDecimals: 0, tickFormatter: function(v, a) {return v }},
-				yaxis: {ticks:5, tickDecimals: 0, tickFormatter: function (v) { return v }},
-	
+				yaxis: {ticks:5, tickDecimals: 0, tickFormatter: function (v) { return v }}
 	        });
 	    }
 	
@@ -106,7 +105,7 @@ jQuery(function () {
 });
 
 
-/*
+
     tinyMCE.init({
         mode: "textareas",
         theme: "advanced",
@@ -125,7 +124,7 @@ jQuery(function () {
         theme_advanced_resizing: false
 
     });
-*/
+
 
 
     function updateDatepicker() {
