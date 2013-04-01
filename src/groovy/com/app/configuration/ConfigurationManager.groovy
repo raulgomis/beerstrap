@@ -13,7 +13,7 @@ public class ConfigurationManager {
     static configurationService
 
     public final static String BT_SITE_NAME = "grailsbs.BT_SITE_NAME",
-                         BT_SITE_OFFLINE = "grailsbs.BT_SITE_NAME",
+                         BT_SITE_OFFLINE = "grailsbs.BT_SITE_OFFLINE",
                          BT_SITE_MAXLISTHOME = "grailsbs.BT_SITE_MAXLISTHOME",
                          BT_SITE_MAXLIST = "grailsbs.BT_SITE_MAXLIST",
                          BT_HELP_FAQ = "grailsbs.BT_HELP_FAQ"

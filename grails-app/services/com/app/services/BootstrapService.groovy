@@ -90,10 +90,6 @@ class BootstrapService {
 
         configMap = [
 
-                /*"BT_SERVER_FROM":"sistemas@eltallerdigital.com",
-                "BT_SERVER_PORT":"25",
-                "BT_SERVER_USERNAME":"sistemas@eltallerdigital.com",
-                "BT_SERVER_PASSWORD":"password",*/
                 "grailsbs.BT_SITE_NAME":"Grails Bootstrap",
                 "grailsbs.BT_SITE_OFFLINE":"False",
                 "grailsbs.BT_SITE_MAXLISTHOME":"5",

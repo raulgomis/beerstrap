@@ -8,9 +8,6 @@
     <li class="${selected == 'sb_server' ? 'active' : ''}">
         <g:link action="server"><g:message code="app.configuration.server.label"/></g:link>
     </li>
-    <li class="${selected == 'sb_system' ? 'active' : ''}">
-        <g:link action="system"><g:message code="app.configuration.system.label"/></g:link>
-    </li>
     <li class="${selected == 'sb_grails' ? 'active' : ''}">
         <g:link action="grails"><g:message code="app.configuration.grails.label"/></g:link>
     </li>
