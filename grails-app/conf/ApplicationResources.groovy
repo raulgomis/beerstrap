@@ -8,6 +8,7 @@ modules = {
 		dependsOn 'jquery'
 		resource url:'css/bootstrap-overrides.css'
 		resource url:'css/app.css'
+        resource url:'css/app-boxes.css'
 		resource url:'js/ajax.js'
     }
 	
