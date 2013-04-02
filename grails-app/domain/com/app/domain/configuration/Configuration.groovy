@@ -12,6 +12,7 @@ class Configuration {
 	
 	static mapping = {
 		cache true
+        version false
 	}
 
     String toString(){
