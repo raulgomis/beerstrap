@@ -4,7 +4,7 @@ class PublicController {
 
     def index() { }
 	
-	def docs() { }
+	def docs() {}
 	
 	def pricing() { }
 	
