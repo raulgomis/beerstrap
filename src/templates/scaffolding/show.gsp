@@ -13,36 +13,36 @@
 		<div class="page-header">
 			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.show.label" args="[entityName]" /></small></h1>
 		</div>
-        <div class="row rowbar">
-            <div class="span12">
-                <div class="pull-left">
-                    <g:link class="btn" action="list">
-                        <i class="icon-th-list"></i>
-                        <g:message code="default.button.list.label" default="List" />
-                    </g:link>
-                </div>
-                <div class="pull-right">
-                    <g:form action="delete">
-                        <g:hiddenField name="id" value="\${${propertyName}?.id}" />
-                        <g:link class="btn" action="edit" id="\${${propertyName}?.id}">
-                            <i class="icon-pencil"></i>
-                            <g:message code="default.button.edit.label" default="Edit" />
-                        </g:link>
-                        <button class="btn" type="submit" name="_action_delete" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
-                            <i class="icon-trash"></i>
-                            <g:message code="default.button.delete.label" default="Delete" />
-                        </button>
-                    </g:form>
-                </div>
-            </div>
-        </div>
-		<table class="table table-striped property-list ${domainClass.propertyName}">
+		<div class="row rowbar">
+			<div class="span12">
+				<div class="pull-left">
+					<g:link class="btn" action="list">
+						<i class="icon-th-list"></i>
+						<g:message code="default.button.list.label" default="List" />
+					</g:link>
+				</div>
+				<div class="pull-right">
+					<g:form action="delete">
+						<g:hiddenField name="id" value="\${${propertyName}?.id}" />
+						<g:link class="btn" action="edit" id="\${${propertyName}?.id}">
+							<i class="icon-pencil"></i>
+							<g:message code="default.button.edit.label" default="Edit" />
+						</g:link>
+						<button class="btn" type="submit" name="_action_delete" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
+							<i class="icon-trash"></i>
+							<g:message code="default.button.delete.label" default="Delete" />
+						</button>
+					</g:form>
+				</div>
+			</div>
+		</div>
+		<table class="table table-striped property-list">
 		<%  excludedProps = Event.allEvents.toList() << 'id' << 'version'
 			allowedNames = domainClass.persistentProperties*.name << 'dateCreated' << 'lastUpdated'
 			props = domainClass.properties.findAll { allowedNames.contains(it.name) && !excludedProps.contains(it.name) }
 			Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 			props.each { p -> %>
-			<g:if test="\${${propertyName}?.${p.name}}">
+			<g:if test="\${${propertyName}?.${p.name} != null}">
 				<tr>
 				<td><span id="${p.name}-label" class="property-label"><g:message code="${domainClass.propertyName}.${p.name}.label" default="${p.naturalName}" /></span></td>
 				<%  if (p.isEnum()) { %>
