@@ -78,3 +78,6 @@ body {
 #grailsbspag .grailsbspag-right {}
 
 
+.property-label {
+    font-weight: bold;
+}
