@@ -28,8 +28,8 @@ modules = {
 		resource url:'css/fontawesome/css/font-awesome.min.css'
 		resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
 
-        resource url:'http://pagedown.googlecode.com/hg/Markdown.Converter.js'
-        resource url:'http://pagedown.googlecode.com/hg/Markdown.Sanitizer.js'
+        resource url:'js/pagedown/Markdown.Converter.js'
+        resource url:'js/pagedown/Markdown.Sanitizer.js'
 	}
 
 	jquerycookie {
