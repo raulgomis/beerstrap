@@ -1,10 +1,6 @@
-﻿
-
-.list-actions form {
-	display:inline;
+﻿.list-actions form {
+    display: inline;
 }
-
-
 
 .datepicker {
     z-index: 9999;
@@ -18,20 +14,18 @@
 }
 
 .editor {
-  width: 100%;
-  height: 100px;
-  padding: 5px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-          box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 textarea.editor-html {
-  visibility: hidden;
+    visibility: hidden;
 }
-
-
 
 .myalert {
     position: fixed;
@@ -42,18 +36,24 @@ textarea.editor-html {
 
 body {
     /*background-color: #f6f6f6;*/
- }
+}
 
 /* ============== peity ============== */
 .peity {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+}
+
 .peity canvas {
-    margin-right: 10px; }
+    margin-right: 10px;
+}
+
 .peity h4 {
     display: inline-block;
     font-weight: 600;
     min-width: 30px;
-    margin: 0; }
+    margin: 0;
+}
+
 .peity h4.sub {
     font-weight: 300;
     color: #999;
@@ -64,20 +64,47 @@ body {
     text-align: center;
 }
 
-/*******************************************************************
-* TWITTERBSPAGINATION 
-*******************************************************************/
+/* ============== pagination grailsbootstrap ============== */
 
-#grailsbspag {}
-
-
-#grailsbspag .grailsbspag-left {
-	font-weight: bold;
+#grailsbspag {
 }
 
-#grailsbspag .grailsbspag-right {}
+#grailsbspag .grailsbspag-left {
+    font-weight: bold;
+}
 
+#grailsbspag .grailsbspag-right {
+}
 
+/* ============== ribbon ============== */
+
+.ribbon {
+    background-color: #a00;
+    overflow: hidden;
+    /* top left corner */
+    position: absolute;
+    left: -2.5em;
+    top: 1.8em;
+    /* 45 deg ccw rotation */
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-box-shadow: 0 0 1em #888;
+    -webkit-box-shadow: 0 0 1em #888;
+}
+
+.ribbon a {
+    border: 1px solid #faa;
+    color: #fff;
+    display: block;
+    font: bold 81.25% 'Helvetiva Neue', Helvetica, Arial, sans-serif;
+    margin: 0.05em 0 0.075em 0;
+    padding: 0.5em 3.5em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 0.5em #444;
+}
+
+/* ============== scaffolding view show ============== */
 .property-label {
     font-weight: bold;
 }
