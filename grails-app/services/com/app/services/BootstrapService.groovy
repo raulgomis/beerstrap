@@ -127,25 +127,25 @@ class BootstrapService {
 
     def loadExampleData() {
 
-		def userRole = Role.findByAuthority(Role.USER) ?: new Role(authority: Role.USER).save(failOnError: true)
-		def adminRole = Role.findByAuthority(Role.ADMIN) ?: new Role(authority: Role.ADMIN).save(failOnError: true)
+        def userRole = Role.findByAuthority(Role.USER) ?: new Role(authority: Role.USER).save(failOnError: true)
+        def adminRole = Role.findByAuthority(Role.ADMIN) ?: new Role(authority: Role.ADMIN).save(failOnError: true)
 
-		if(!User.findByUsername('user')){
-		def user = new User( username:"user",
-										password:"user",
-										name:"User 1",
-										email:"raulgomis@hotmail.com",
-										enabled:true,
+        if(!User.findByUsername('user')){
+        def user = new User( username:"user",
+                                        password:"user",
+                                        name:"User 1",
+                                        email:"raulgomis@hotmail.com",
+                                        enabled:true,
                                         preferences: new UserPreferences(),
-										accountExpired:false,
-										accountLocked:false,
-										passwordExpired:false).save(failOnError: true)
-			UserRole.create user, userRole
-		}
-		
-		assert User.findByUsername('user')!=null
+                                        accountExpired:false,
+                                        accountLocked:false,
+                                        passwordExpired:false).save(failOnError: true)
+            UserRole.create user, userRole
+        }
+
+        assert User.findByUsername('user')!=null
 
         log.info("Example data loaded")
     }
-	
+
 }

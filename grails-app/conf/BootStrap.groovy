@@ -1,10 +1,10 @@
 class BootStrap {
-	
-	def bootstrapService
+
+    def bootstrapService
 
     def init = { servletContext ->
-		
-		println "Init bootstrap"
+
+        println "Init bootstrap"
         environments {
 
             development {
@@ -29,8 +29,8 @@ class BootStrap {
                 bootstrapService.loadExampleData()
             }
         }
-		println "End bootstrap"
-		
+        println "End bootstrap"
+
     }
     def destroy = {
     }

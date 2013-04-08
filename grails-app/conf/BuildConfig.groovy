@@ -55,9 +55,9 @@ grails.project.dependency.resolution = {
         build ":tomcat:$grailsVersion"
 
         runtime ":database-migration:1.2.2"
-		
-		compile ":spring-security-core:1.2.7.3"
-		compile ":mail:1.0.1"
+
+        compile ":spring-security-core:1.2.7.3"
+        compile ":mail:1.0.1"
         compile ':cache:1.0.1'
 
         //Uncomment these if you have good support for testing

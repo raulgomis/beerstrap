@@ -8,7 +8,7 @@ class TwitterBootstrapTagLib {
      * This g:paginate tag fix is based on:  
      * https://github.com/grails/grails-core/blob/master/grails-plugin-gsp/src/main/groovy/org/codehaus/groovy/grails/plugins/web/taglib/RenderTagLib.groovy 
      */
-    
+
     /**
     * Creates next/previous links to support pagination for the current controller.<br/>
     *
@@ -29,14 +29,14 @@ class TwitterBootstrapTagLib {
     * @attr fragment The link fragment (often called anchor tag) to use
     */
     def paginate = { attrs ->
-        
+
         def configTabLib = grailsApplication.config.grails.plugins.twitterbootstrap.fixtaglib
         if (!configTabLib) {
             def renderTagLib = grailsApplication.mainContext.getBean('org.codehaus.groovy.grails.plugins.web.taglib.RenderTagLib')
             renderTagLib.paginate.call(attrs)
             return
         }
-        
+
         def writer = out
         if (attrs.total == null) {
             throwTagError("Tag [paginate] is missing required attribute [total]")
@@ -139,7 +139,7 @@ class TwitterBootstrapTagLib {
             (beginstep..endstep).each { i ->
                 if (currentstep == i) {
                     writer << "<li class=\"active\">"
-		    writer << "<span>${i}</span>"
+            writer << "<span>${i}</span>"
                     writer << "</li>";
                 }
                 else {
@@ -180,5 +180,5 @@ class TwitterBootstrapTagLib {
 
         writer << '</ul></div>'
     }
-    
+
 }

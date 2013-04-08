@@ -1,63 +1,63 @@
 modules = {
-	
-	jquery {
-		resource url:'js/jquery/jquery-1.9.1.min.js'
-	}
-	
-    application {
-		dependsOn 'jquery'
-		resource url:'css/bootstrap-overrides.css'
-		resource url:'css/app.css'
-        resource url:'css/app-boxes.css'
-		resource url:'js/ajax.js'
+
+    jquery {
+        resource url:'js/jquery/jquery-1.9.1.min.js'
     }
-	
-	login {
-		resource url:'css/bootstrap/css/bootstrap.min.css'
-		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
-		resource url:'css/login.css'
-	}
-	
-	publicpart {
-		dependsOn 'jquery'
-		resource url:'css/bootstrap/css/bootstrap.min.css'
-		resource url:'css/public.css'
-		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
-		resource url:'css/pricing.css'
-		resource url:'css/bootstrap/js/bootstrap.min.js'
-		resource url:'css/fontawesome/css/font-awesome.min.css'
-		resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
+
+    application {
+        dependsOn 'jquery'
+        resource url:'css/bootstrap-overrides.css'
+        resource url:'css/app.css'
+        resource url:'css/app-boxes.css'
+        resource url:'js/ajax.js'
+    }
+
+    login {
+        resource url:'css/bootstrap/css/bootstrap.min.css'
+        resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+        resource url:'css/login.css'
+    }
+
+    publicpart {
+        dependsOn 'jquery'
+        resource url:'css/bootstrap/css/bootstrap.min.css'
+        resource url:'css/public.css'
+        resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+        resource url:'css/pricing.css'
+        resource url:'css/bootstrap/js/bootstrap.min.js'
+        resource url:'css/fontawesome/css/font-awesome.min.css'
+        resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
 
         resource url:'js/pagedown/Markdown.Converter.js'
         resource url:'js/pagedown/Markdown.Sanitizer.js'
-	}
+    }
 
-	jquerycookie {
-		dependsOn 'jquery'
-	}
-	
-	init {
-		dependsOn 'jquery'
-		resource url:'js/init.js'
-		resource url:'js/jquery/jquery.cookie.js'
-	}
-	
-	bootstrap {
-		dependsOn 'jquery'
-		resource url:'css/bootstrap/css/bootstrap.min.css'
-		resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
-		resource url:'css/bootstrap/js/bootstrap.min.js'
-	}
-	
-	fontawesome {
-		resource url:'css/fontawesome/css/font-awesome.min.css'
-		resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
-	}
-	
-	datepicker {
-		resource url:'js/bootstrap-datepicker/css/datepicker.css'
-		resource url:'js/bootstrap-datepicker/js/bootstrap-datepicker.js'
-	}
+    jquerycookie {
+        dependsOn 'jquery'
+    }
+
+    init {
+        dependsOn 'jquery'
+        resource url:'js/init.js'
+        resource url:'js/jquery/jquery.cookie.js'
+    }
+
+    bootstrap {
+        dependsOn 'jquery'
+        resource url:'css/bootstrap/css/bootstrap.min.css'
+        resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+        resource url:'css/bootstrap/js/bootstrap.min.js'
+    }
+
+    fontawesome {
+        resource url:'css/fontawesome/css/font-awesome.min.css'
+        resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
+    }
+
+    datepicker {
+        resource url:'js/bootstrap-datepicker/css/datepicker.css'
+        resource url:'js/bootstrap-datepicker/js/bootstrap-datepicker.js'
+    }
 
     select2 {
         resource url:'js/select2/select2.css'
@@ -73,7 +73,7 @@ modules = {
     peity {
         resource url:'js/graph/jquery.peity.min.js'
         resource url:'js/graph/jquery.knob.js'
-		resource url:'js/graph/jquery.flot.js'
+        resource url:'js/graph/jquery.flot.js'
     }
 
     jqueryfileuploader {

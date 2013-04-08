@@ -23,7 +23,7 @@ jQuery(function () {
     $("a[rel=tooltip], span[rel=tooltip]").tooltip({
         placement: 'top'
     });
-    
+
     $('input[datadatepicker]').datepicker({
         format: 'yyyy/mm/dd', autoclose: "true", language: "en"
     })
@@ -65,46 +65,44 @@ jQuery(function () {
 
     $(".dial").knob();
 
-	if($("#activeUsers").length) {
-	    var d1 = [];
-	    
-	    for (var i = 0; i <= 160; i += 1) {
-	        d1.push([i, parseInt(Math.random() * 123123)]);
-		}	
+    if($("#activeUsers").length) {
+        var d1 = [];
 
-	    var stack = 0, bars = true, lines = false, steps = false;
+        for (var i = 0; i <= 160; i += 1) {
+            d1.push([i, parseInt(Math.random() * 123123)]);
+        }
 
-	    function plotWithOptions2() {
-					
-	        $.plot($("#activeUsers"), [ d1 ], {
-	            series: {
-	                bars: { show: bars, 
-							fill: true, 
-							barWidth: 0.1, 
-							align: "center",
-							lineWidth: 5,
-							fillColor: { colors: [ { opacity: 1 }, { opacity: 0.5 } ] }
-						}
-	            },
-				grid: { hoverable: true, 
-						   clickable: true, 
-						   tickColor: "#f6f6f6",
-						   borderWidth: 0
-						},
-				colors: ["#CBE968"],
-				xaxis: {ticks:0, tickDecimals: 0, tickFormatter: function(v, a) {return v }},
-				yaxis: {ticks:5, tickDecimals: 0, tickFormatter: function (v) { return v }}
-	        });
-	    }
-	
-	    plotWithOptions2();
+        var stack = 0, bars = true, lines = false, steps = false;
 
-	}
-	
-	
+        function plotWithOptions2() {
+
+            $.plot($("#activeUsers"), [ d1 ], {
+                series: {
+                    bars: { show: bars,
+                            fill: true,
+                            barWidth: 0.1,
+                            align: "center",
+                            lineWidth: 5,
+                            fillColor: { colors: [ { opacity: 1 }, { opacity: 0.5 } ] }
+                        }
+                },
+                grid: { hoverable: true,
+                           clickable: true,
+                           tickColor: "#f6f6f6",
+                           borderWidth: 0
+                        },
+                colors: ["#CBE968"],
+                xaxis: {ticks:0, tickDecimals: 0, tickFormatter: function(v, a) {return v }},
+                yaxis: {ticks:5, tickDecimals: 0, tickFormatter: function (v) { return v }}
+            });
+        }
+
+        plotWithOptions2();
+
+    }
+
+
 });
-
-
 
     tinyMCE.init({
         mode: "textareas",
@@ -124,8 +122,6 @@ jQuery(function () {
         theme_advanced_resizing: false
 
     });
-
-
 
     function updateDatepicker() {
         $('input[datadatepicker]').datepicker({

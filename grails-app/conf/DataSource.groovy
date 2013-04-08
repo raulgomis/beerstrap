@@ -27,16 +27,16 @@ environments {
     }
     production {
         dataSource {
-			
-			dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-			url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
-			driverClassName= 'com.mysql.jdbc.Driver'
-			dbCreate = "update"
-			//dialect= org.hibernate.dialect.MySQLInnoDBDialect
-			//url = 'jdbc:mysql://127.0.0.1:10100/d1d9f3dd1e2d24c2b85028ceedc00ca5b'
-			//username= 'uZK9mqij2AHDd'
-			//password= 'po5kUdcH7hJO6'
-			
+
+            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            driverClassName= 'com.mysql.jdbc.Driver'
+            dbCreate = "update"
+            //dialect= org.hibernate.dialect.MySQLInnoDBDialect
+            //url = 'jdbc:mysql://127.0.0.1:10100/d1d9f3dd1e2d24c2b85028ceedc00ca5b'
+            //username= 'uZK9mqij2AHDd'
+            //password= 'po5kUdcH7hJO6'
+
             pooled = true
             properties {
                maxActive = -1

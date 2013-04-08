@@ -3,10 +3,10 @@ package com.app.services
 import com.app.domain.configuration.Configuration
 
 class ConfigurationService {
-	
-	static transactional = false
 
-	def grailsApplication
+    static transactional = false
+
+    def grailsApplication
 
     //KEY/VALUE database store
     public String getStringValue(String key){

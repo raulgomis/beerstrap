@@ -4,7 +4,7 @@ import com.app.utils.*
 
 beans = {
     //Custom UserDetailsService
-	userDetailsService(CustomUserDetailsService)
+    userDetailsService(CustomUserDetailsService)
 
     //Access to grailsApplication in the groovy class ApplicationSupport
     ApplicationSupport(com.app.utils.ApplicationSupport) {

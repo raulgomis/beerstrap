@@ -56,12 +56,12 @@ grails.project.war.file = "myapp.war"
 /*grails.mail.default.from="usuario@eltallerdigital.com"
 
 grails{
-	mail{
-		host = "eltallerdigital.com"
-		port = 25
-		username = "usuario@eltallerdigital.com"
-		password = "*****"
-	}
+    mail{
+        host = "eltallerdigital.com"
+        port = 25
+        username = "usuario@eltallerdigital.com"
+        password = "*****"
+    }
 }*/
 grails.mail.default.from="grailsbs@gmail.com"
 grails {
