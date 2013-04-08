@@ -1,19 +1,17 @@
-<%@ page contentType="text/html"%>
+<%@ page contentType="text/html" %>
 <html>
 <head>
-		<meta name="layout" content="public" />
-		<parameter name="menu_Docs" value="active" />
-		<title>Docs</title>
+    <meta name="layout" content="public"/>
+    <parameter name="menu_Docs" value="active"/>
+    <title>Docs</title>
 </head>
+
 <body>
-	<h2 class="section_header">
-		<span><i class="icon-file-alt"></i> Docs <small> See all plan details here</small>
-		</span>
-		<hr class="right visible-desktop"></hr>
-	</h2>
-
-
-
+<h2 class="section_header">
+    <span><i class="icon-file-alt"></i> Docs <small>See all plan details here</small>
+    </span>
+    <hr class="right visible-desktop"></hr>
+</h2>
 
 <div class="documentation" style="display: none">
 
@@ -38,8 +36,8 @@ Reference Links
 
 You can also put the [link URL][1] below the current paragraph like [this][2].
 
-   [1]: http://url
-   [2]: http://another.url "A funky title"
+[1]: http://url
+[2]: http://another.url "A funky title"
 
 Here the text "link URL" gets linked to "http://url", and the lines showing
 "[1]: http://url" won't show anything.
@@ -48,7 +46,7 @@ Here the text "link URL" gets linked to "http://url", and the lines showing
 Or you can use a [shortcut][] reference, which links the text "shortcut"
 to the link named "[shortcut]" on the next paragraph.
 
-   [shortcut]: http://goes/with/the/link/name/text
+[shortcut]: http://goes/with/the/link/name/text
 
 
 
@@ -92,21 +90,21 @@ Preformatted Text
 If you want some text to show up exactly as you write it, without Markdown
 doing anything to it, just indent every line by at least 4 spaces (or 1 tab).
 
-    This line won't *have any markdown* formatting applied.
-    I can even write <b>HTML</b> and it will show up as text.
-    This is great for showing program source code, or HTML or even Markdown.
-    <b>this won't show up as HTML</b> but exactly <i>as you see it in
-    this text file</i>.
+This line won't *have any markdown* formatting applied.
+I can even write <b>HTML</b> and it will show up as text.
+This is great for showing program source code, or HTML or even Markdown.
+<b>this won't show up as HTML</b> but exactly <i>as you see it in
+this text file</i>.
 
 (In a normal paragraph, <b>this will show up in bold</b> just like normal HTML.)
 
-   Remember, you have to indent by *at least 4 spaces* to do it.  This paragraph
-   won't be preformatted.
+Remember, you have to indent by *at least 4 spaces* to do it.  This paragraph
+won't be preformatted.
 
 And if you use [reference][] links, make sure the links are indented
 by *fewer than* 4 spaces.
 
-    [reference]: http://example.com/blah
+[reference]: http://example.com/blah
 
 (woops, that link didn't work, see? It just got displayed as preformatted text.)
 
@@ -127,9 +125,9 @@ To start an ordered list, write this:
 +  this will show as number "2"
 *  this will show as number "3."
 9. any number, +, -, or * will keep the list going.
-    * just indent by 4 spaces (or tab) to make a sub-list
-        1. keep indenting for more sub lists
-    * here i'm back to the second level
+* just indent by 4 spaces (or tab) to make a sub-list
+1. keep indenting for more sub lists
+* here i'm back to the second level
 
 
 Headers
@@ -232,7 +230,7 @@ About
 This text file shows you how to use [Markdown][] instead of crappy HTML when
 writing posts or comments.
 
-   [Markdown]: http://daringfireball.net/projects/markdown/syntax
+[Markdown]: http://daringfireball.net/projects/markdown/syntax
 
 Markdown is an easier way of making HTML pages from text, rather than having to
 know HTML.
@@ -240,8 +238,8 @@ know HTML.
 * See this file as it looks when [rendered with Markdown][].
 * See the [original text file][].
 
-   [rendered with Markdown]: http://greg.vario.us/doc/markdown.text
-   [original text file]: http://greg.vario.us/doc/markdown.txt
+[rendered with Markdown]: http://greg.vario.us/doc/markdown.text
+[original text file]: http://greg.vario.us/doc/markdown.txt
 
 Thanks
 ---------
@@ -363,7 +361,7 @@ PSD-Template](http://drublic.de/blog/html5-boilerplate-favicons-psd-template/).
 
 
 <r:script>
-    $(function() {
+    $(function () {
         // When using more than one `textarea` on your page, change the following line to match the one you’re after
         var convert = new Markdown.getSanitizingConverter().makeHtml;
 
@@ -373,9 +371,6 @@ PSD-Template](http://drublic.de/blog/html5-boilerplate-favicons-psd-template/).
     });
 </r:script>
 
-
-
 </body>
-
 
 </html>

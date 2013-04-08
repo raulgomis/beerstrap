@@ -9,11 +9,11 @@ class Configuration {
         key(nullable:false, blank:false, unique:true)
         value(nullable:false)
     }
-	
-	static mapping = {
-		cache true
+
+    static mapping = {
+        cache true
         version false
-	}
+    }
 
     String toString(){
         key+":"+value

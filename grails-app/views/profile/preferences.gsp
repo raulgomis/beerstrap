@@ -4,26 +4,26 @@
 <parameter name="menu_Profile" value="active" />
 <meta name="layout" content="main" />
 <g:set var="entityName"
-	value="${message(code: 'profile.label', default: 'Profile')}" />
+    value="${message(code: 'profile.label', default: 'Profile')}" />
 <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body>
-	<div class="row">
-		<div class="span16">
+    <div class="row">
+        <div class="span16">
 
-			<g:render template="sidebar" model="['selected':'sb_preferences']" />
+            <g:render template="sidebar" model="['selected':'sb_preferences']" />
 
-			<g:form action="updatePreferences" class="form-horizontal" method="POST">
+            <g:form action="updatePreferences" class="form-horizontal" method="POST">
 
-				<div class="row">
-					<div class="span3">
-						<h2><g:message code="app.profile.preferences.label"></g:message></h2>
+                <div class="row">
+                    <div class="span3">
+                        <h2><g:message code="app.profile.preferences.label"></g:message></h2>
                         <p><g:message code="app.profile.preferences.description"></g:message></p>
-					</div>
-					<div class="span9">
-						<fieldset>
-							<legend><g:message code="app.profile.preferences.culture.label"></g:message></legend>
-							<div class="clearfix">
+                    </div>
+                    <div class="span9">
+                        <fieldset>
+                            <legend><g:message code="app.profile.preferences.culture.label"></g:message></legend>
+                            <div class="clearfix">
                                 <div class="control-group">
                                     <label class="control-label">Country</label>
                                     <div class="controls">
@@ -49,39 +49,38 @@
                                     </div>
                                 </div>
                             </div>
-							<!-- /clearfix -->
-						</fieldset>
+                            <!-- /clearfix -->
+                        </fieldset>
 
-
-						<fieldset>
-							<legend><g:message code="app.profile.preferences.messages.label"/></legend>
-							<div class="clearfix">
-								<label id="optionsCheckboxes">Send me an email when</label>
-								<div class="controls">
-									<label>
+                        <fieldset>
+                            <legend><g:message code="app.profile.preferences.messages.label"/></legend>
+                            <div class="clearfix">
+                                <label id="optionsCheckboxes">Send me an email when</label>
+                                <div class="controls">
+                                    <label>
                                         <g:checkBox name="email_directmessage" value="${userPreferencesInstance?.email_subscription}" class="checkbox" />
                                         <span>Email Subscription</span>
-									</label>
+                                    </label>
                                     <label> <g:checkBox name="email_directmessage" value="${userPreferencesInstance?.email_directmessage}" class="checkbox" />
                                         <span>Someone send me a direct message</span>
                                     </label>
                                     <label> <g:checkBox name="email_mention" value="${userPreferencesInstance?.email_mention}" class="checkbox" />
                                         <span>Someone mentions me</span>
-									</label>
+                                    </label>
                                     <span class="help-block"> <strong><g:message code="app.default.note.label"/>:</strong> Labels
-										surround all the options for much larger click areas and a
-										more usable form.
-									</span>
-								</div>
-							</div>
-							<!-- /clearfix -->
-						</fieldset>
+                                        surround all the options for much larger click areas and a
+                                        more usable form.
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- /clearfix -->
+                        </fieldset>
 
-						<fieldset>
-							<legend><g:message code="app.profile.preferences.alerts.label"/></legend>
-							<div class="clearfix">
-								<label id="optionsCheckboxes">Send me an email when</label>
-								<div class="controls">
+                        <fieldset>
+                            <legend><g:message code="app.profile.preferences.alerts.label"/></legend>
+                            <div class="clearfix">
+                                <label id="optionsCheckboxes">Send me an email when</label>
+                                <div class="controls">
                                     <label>
                                         <g:checkBox name="email_alert_type1" value="${userPreferencesInstance?.email_alert_type1}" class="checkbox" />
                                         <span>Email Alert 1</span>
@@ -95,28 +94,26 @@
                                         <span>Email Alert 3</span>
                                     </label>
                                     <span class="help-block"> <strong><g:message code="app.default.note.label"/>:</strong> Labels
-										surround all the options for much larger click areas and a
-										more usable form.
-									</span>
-								</div>
-							</div>
-							<!-- /clearfix -->
-						</fieldset>
+                                        surround all the options for much larger click areas and a
+                                        more usable form.
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- /clearfix -->
+                        </fieldset>
 
+                        <div class="form-actions">
+                            <button class="btn btn-primary">
+                                <i class="icon-ok"></i>
+                                <g:message code="default.button.update.label" default="Update" />
+                            </button>
+                        </div>
 
+                    </div>
+                </div>
 
-						<div class="form-actions">
-							<button class="btn btn-primary">
-								<i class="icon-ok"></i>
-								<g:message code="default.button.update.label" default="Update" />
-							</button>
-						</div>
-
-					</div>
-				</div>
-
-			</g:form>
-		</div>
-	</div>
+            </g:form>
+        </div>
+    </div>
 </body>
 </html>

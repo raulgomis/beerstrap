@@ -7,31 +7,31 @@
 </head>
 <body>
 
-	<g:render template="top" model="['selected':'videos']" />
+    <g:render template="top" model="['selected':'videos']" />
 
-	<div id="tutorial">
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th style="width: 300px"></th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
+    <div id="tutorial">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 300px"></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
                         <iframe width="416" height="234" src="https://www.youtube.com/embed/PXHxo43hn34" frameborder="0" allowfullscreen></iframe>
-						<p>
-							Download: <a
-								href="https://www.youtube.com/embed/PXHxo43hn34">MP4</a>
-							| <a href="https://www.youtube.com/embed/PXHxo43hn34">WMV</a>
-						</p>
-						<p>
-							<span class="muted">Some extra details</span>
-						</p>
-					</td>
+                        <p>
+                            Download: <a
+                                href="https://www.youtube.com/embed/PXHxo43hn34">MP4</a>
+                            | <a href="https://www.youtube.com/embed/PXHxo43hn34">WMV</a>
+                        </p>
+                        <p>
+                            <span class="muted">Some extra details</span>
+                        </p>
+                    </td>
 
-					<td>
+                    <td>
 
                         <h2>
                             <span class="label label-success">New</span> Tutorial 1: Getting Started with Grails Part 1
@@ -44,8 +44,8 @@
                         </p>
 
 
-					</td>
-				</tr>
+                    </td>
+                </tr>
             <tr>
 
                 <td>
@@ -94,21 +94,16 @@
                         <span class="label label-success">New</span> Tutorial 3: Getting Started with Grails - Part 3
                     </h2>
                     <p>
-                        In this third screencast, learn about custom GSP tags and how they can promote reuse between your views.                    <p>
+                        In this third screencast, learn about custom GSP tags and how they can promote reuse between your views.<p>
                     <p>
                         The source code for the sample application developed in this series can be found on GitHub: <a href="https://github.com/grails-samples/grails-pomodoro">https://github.com/grails-samples/grails-pomodoro</a>
                     </p>
 
                 </td>
             </tr>
-
-			</tbody>
-
-		</table>
-
-
-	</div>
-
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>

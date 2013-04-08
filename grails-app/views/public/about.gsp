@@ -1,9 +1,9 @@
 <%@ page contentType="text/html"%>
 <html>
 <head>
-		<meta name="layout" content="public" />
-		<parameter name="menu_About" value="active" />
-		<title>About</title>
+        <meta name="layout" content="public" />
+        <parameter name="menu_About" value="active" />
+        <title>About</title>
 </head>
 <body>
 

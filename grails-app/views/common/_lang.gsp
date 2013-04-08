@@ -1,4 +1,3 @@
-
 <g:link controller="${params.controller}" action="${params.action}"
     params="${params+[lang:'en']}" class="menuButton">English</g:link>
 |

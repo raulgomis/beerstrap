@@ -7,75 +7,75 @@
 
 <body>
 
-	<h2 class="section_header">
-		<i class="icon-signin"></i>
+    <h2 class="section_header">
+        <i class="icon-signin"></i>
         <g:message code="app.security.register.title" /> <small><g:message code="app.security.register.description" /></small>
-		
-		<hr class="right visible-desktop">
-	</h2>
 
-	<g:hasErrors bean="${command}">
-		<div class="alert alert-block alert-error">
-			<a class="close" href="#">×</a>
-			<p>
-				<strong>Oh snap! You got an error!</strong> Change this and that and try again.
-			</p>
-			<g:renderErrors bean="${command}" as="list" />
-			<!--  <div class="alert-actions">
-		          <a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
-		        </div>-->
-		</div>
-	</g:hasErrors>
-	
-	<div class="form-register">
-		<g:form action="register" class="form-horizontal">
-			<div class="control-group">
-				<label class="control-label" for="name"><g:message code="app.registerCommand.name.label"/></label>
-				<div class="controls">
-					<input type="text" name="name" placeholder="${message(code:'app.registerCommand.name.label')}"
-						value="${command?.name }" />
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label" for="username"><g:message code="app.registerCommand.username.label"/></label>
-				<div class="controls">
-					<input type="text" name="username" placeholder="${message(code:'app.registerCommand.username.label')}"
-						value="${command?.username }" />
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label" for="email"><g:message code="app.registerCommand.email.label"/></label>
-				<div class="controls">
-					<input type="text" name="email" placeholder="${message(code:'app.registerCommand.email.label')}"
-						value="${command?.email}" />
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label" for="password"><g:message code="app.registerCommand.password.label"/></label>
-				<div class="controls">
-					<input type="password" name="password" placeholder="${message(code:'app.registerCommand.password.label')}"
-						value="${command?.password}" />
-				</div>
-			</div>
+        <hr class="right visible-desktop">
+    </h2>
 
-			<div class="control-group">
-				<div class="controls">
-					<label class="checkbox"> <g:checkBox name="terms"
-							value="${true}" checked="${command?.terms}" />
+    <g:hasErrors bean="${command}">
+        <div class="alert alert-block alert-error">
+            <a class="close" href="#">×</a>
+            <p>
+                <strong>Oh snap! You got an error!</strong> Change this and that and try again.
+            </p>
+            <g:renderErrors bean="${command}" as="list" />
+            <!--  <div class="alert-actions">
+                  <a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+                </div>-->
+        </div>
+    </g:hasErrors>
+
+    <div class="form-register">
+        <g:form action="register" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="name"><g:message code="app.registerCommand.name.label"/></label>
+                <div class="controls">
+                    <input type="text" name="name" placeholder="${message(code:'app.registerCommand.name.label')}"
+                        value="${command?.name }" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="username"><g:message code="app.registerCommand.username.label"/></label>
+                <div class="controls">
+                    <input type="text" name="username" placeholder="${message(code:'app.registerCommand.username.label')}"
+                        value="${command?.username }" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="email"><g:message code="app.registerCommand.email.label"/></label>
+                <div class="controls">
+                    <input type="text" name="email" placeholder="${message(code:'app.registerCommand.email.label')}"
+                        value="${command?.email}" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password"><g:message code="app.registerCommand.password.label"/></label>
+                <div class="controls">
+                    <input type="password" name="password" placeholder="${message(code:'app.registerCommand.password.label')}"
+                        value="${command?.password}" />
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <label class="checkbox"> <g:checkBox name="terms"
+                            value="${true}" checked="${command?.terms}" />
                         <g:message code="app.registerCommand.agree.label"/>
                         <a href="#" role="button" data-toggle="modal" data-target="#modalTerms"><g:message code="app.registerCommand.terms.label"/></a>
-					</label>
+                    </label>
 
 
-				</div>
-			</div>
+                </div>
+            </div>
 
-			<div class="form-actions">
-				<button type="submit" class="btn btn-primary"><g:message code="app.security.register.submit" /></button>
-			</div>
-		</g:form>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary"><g:message code="app.security.register.submit" /></button>
+            </div>
+        </g:form>
 
-	</div>
+    </div>
 
 <!-- Modal Terms and Conditions -->
 <div id="modalTerms" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="ModalTermsLabel" aria-hidden="true">

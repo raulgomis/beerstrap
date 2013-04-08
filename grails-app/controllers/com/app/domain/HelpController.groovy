@@ -3,14 +3,14 @@ package com.app.domain
 class HelpController {
 
     def index() {
-		redirect(action:"Faq")
-	}
-	
-	def Faq(){
+        redirect(action:"Faq")
+    }
 
-	}
-	
-	def Videos(){
-		
-	}
+    def Faq(){
+
+    }
+
+    def Videos(){
+
+    }
 }

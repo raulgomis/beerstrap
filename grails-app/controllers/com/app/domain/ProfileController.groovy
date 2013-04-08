@@ -2,16 +2,15 @@ package com.app.domain
 import com.app.domain.security.*
 
 class ProfileController {
-	
-	
-	def springSecurityService
-	private User getCurrentUser() {springSecurityService.currentUser}
+
+    def springSecurityService
+    private User getCurrentUser() {springSecurityService.currentUser}
 
     def index() { 
-		redirect(action:"account")
-	}
-	
-	def account() {
+        redirect(action:"account")
+    }
+
+    def account() {
         def userInstance = getCurrentUser()
         if (!userInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
@@ -20,12 +19,12 @@ class ProfileController {
         }
 
         [userInstance: userInstance]
-	}
-	
+    }
+
     def updateAccount() {
         def userInstance = getCurrentUser()
-		String redirectTo = "account"
-		
+        String redirectTo = "account"
+
         if (!userInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
             redirect(action: redirectTo)
@@ -39,7 +38,7 @@ class ProfileController {
             return
         }
 
-		flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+        flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(action: redirectTo)
     }
 
@@ -62,37 +61,35 @@ class ProfileController {
 
         redirect(controller: "logout")
     }
-	
-	def password() {
-		
-	}
-	
-	def updatePassword(String password, String passwordNew, String passwordRepeat) {
-		
-		String redirectTo = "password"
-		
-		if(!passwordNew.equals(passwordRepeat)){
+
+    def password() {
+    }
+
+    def updatePassword(String password, String passwordNew, String passwordRepeat) {
+
+        String redirectTo = "password"
+
+        if(!passwordNew.equals(passwordRepeat)){
             //TODO: I18n in profile
             flash.message = "Los password deben de coincidir"
             redirect(action: redirectTo)
             return
-		}
-		
+        }
+
         def userInstance = getCurrentUser()
         if (!userInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
             redirect(action: redirectTo)
             return
         }
-		
-		
-		String passwordCurrentSec = springSecurityService.encodePassword(password)
-		if(!passwordCurrentSec.equals(userInstance.password)){
+
+        String passwordCurrentSec = springSecurityService.encodePassword(password)
+        if(!passwordCurrentSec.equals(userInstance.password)){
             flash.message = "Su password actual está mal introducido"
             redirect(action: redirectTo)
             return
-		}
-		
+        }
+
         userInstance.password = passwordNew
 
         if (!userInstance.save(flush: true)) {
@@ -100,14 +97,14 @@ class ProfileController {
             return
         }
 
-		flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+        flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(action: redirectTo)
-	}
-	
-	def preferences() {
+    }
+
+    def preferences() {
         User userInstance = getCurrentUser()
         [userPreferencesInstance: userInstance.preferences]
-	}
+    }
 
     def updatePreferences() {
         User userInstance = getCurrentUser()
@@ -129,7 +126,5 @@ class ProfileController {
         redirect(action: redirectTo)
 
     }
-	
 
-	
 }

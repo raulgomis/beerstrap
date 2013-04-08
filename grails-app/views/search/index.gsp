@@ -5,15 +5,15 @@
 <meta name="layout" content="main" />
 </head>
 <body>
-	<div class="page-header">
-		<h1>
-			<i class="icon-search"></i>
-			<g:message code="app.search.label"/>
-			<small>
+    <div class="page-header">
+        <h1>
+            <i class="icon-search"></i>
+            <g:message code="app.search.label"/>
+            <small>
             Quick find your data
             </small>
-		</h1>
-	</div>
+        </h1>
+    </div>
 
 <div class="row rowbar">
     <div class="offset2 span10">
@@ -92,7 +92,6 @@
            <g:render template="/common/empty" />
        </g:else>
    </div>
-
 </div>
 </body>
 </html>

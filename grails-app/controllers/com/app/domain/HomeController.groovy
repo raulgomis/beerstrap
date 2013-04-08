@@ -16,7 +16,7 @@ import org.codehaus.groovy.grails.scaffolding.*
 
 class HomeController {
 
-	static user = true
+    static user = true
 
     def index() {
 
