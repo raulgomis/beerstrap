@@ -1,10 +1,10 @@
 <div class="well sidebar-nav">
     <ul class="nav nav-list">
-        <li class="nav-header">Filter by role</li>
+        <li class="nav-header"><g:message code="app.default.filters.role.label" /></li>
         <li class="${(params.roleID == null || params.roleID == '')?('active'):('')}">
-            <g:link action="list" params="${params + [roleID:'']}" title="All roles">
+            <g:link action="list" params="${params + [roleID:'']}" title="${message(code:'app.default.filters.role.allRoles.label')}">
                 <i class="icon-group"></i>
-                All roles
+                <g:message code="app.default.filters.role.allRoles.label" />
             </g:link>
         </li>
         <g:each in="${roleInstanceList}" var="roleInstance">
@@ -16,93 +16,93 @@
             </li>
         </g:each>
 
-        <li class="nav-header">Filter by account status</li>
+        <li class="nav-header"><g:message code="app.default.filters.accountStatus.label" /></li>
         <li class="${(params.filter == '' || params.filter==null)?('active'):('')}">
-            <g:link action="list" params="${params + [filter:'']}" title="All">
+            <g:link action="list" params="${params + [filter:'']}" title="${message(code:'app.default.filters.accountStatus.allStatuses.label')}">
                 <i class="icon-filter"></i>
-                All statuses
+                <g:message code="app.default.filters.accountStatus.allStatuses.label" />
             </g:link>
         </li>
         <li class="${(params.filter == "enabled")?('active'):('')}">
-            <g:link action="list" params="${params + [filter:"enabled"]}" title="Enabled">
+            <g:link action="list" params="${params + [filter:"enabled"]}" title="${message(code:'app.default.filters.enabled.label')}">
                 <i class="icon-filter"></i>
-                Enabled
+                <g:message code="app.default.filters.enabled.label" />
             </g:link>
         </li>
         <li class="${(params.filter == "disabled")?('active'):('')}">
-            <g:link action="list" params="${params + [filter:"disabled"]}" title="Disabled">
+            <g:link action="list" params="${params + [filter:"disabled"]}" title="${message(code:'app.default.filters.disabled.label')}">
                 <i class="icon-filter"></i>
-                Disabled
+                <g:message code="app.default.filters.disabled.label" />
             </g:link>
         </li>
         <li class="${(params.filter == "accountExpired")?('active'):('')}">
-            <g:link action="list" params="${params + [filter:"accountExpired"]}" title="Account expired">
+            <g:link action="list" params="${params + [filter:"accountExpired"]}" title="${message(code:'app.default.filters.accountExpired.label')}">
                 <i class="icon-filter"></i>
-                Account expired
+                <g:message code="app.default.filters.accountExpired.label" />
             </g:link>
         </li>
         <li class="${(params.filter == "accountLocked")?('active'):('')}">
-            <g:link action="list" params="${params + [filter:"accountLocked"]}" title="Account locked">
+            <g:link action="list" params="${params + [filter:"accountLocked"]}" title="${message(code:'app.default.filters.accountLocked.label')}">
                 <i class="icon-filter"></i>
-                Account locked
+                <g:message code="app.default.filters.accountLocked.label" />
             </g:link>
         </li>
         <li class="${(params.filter == "passwordExpired")?('active'):('')}">
-            <g:link action="list" params="${params + [filter:"passwordExpired"]}" title="Password expired">
+            <g:link action="list" params="${params + [filter:"passwordExpired"]}" title="${message(code:'app.default.filters.passwordExpired.label')}">
                 <i class="icon-filter"></i>
-                Password expired
+                <g:message code="app.default.filters.passwordExpired.label" />
             </g:link>
         </li>
 
-        <li class="nav-header">Filter by registration date</li>
+        <li class="nav-header"><g:message code="app.default.filters.registrationDate.label" /></li>
         <li class="${(params.dateCreated == '' || params.dateCreated == null)?('active'):('')}">
-            <g:link action="list" params="${params + [dateCreated: '']}" title="All time">
+            <g:link action="list" params="${params + [dateCreated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                 <i class="icon-time"></i>
-                All time
+                <g:message code="app.default.filters.date.allTime.label" />
             </g:link>
         </li>
         <li class="${(params.dateCreated == "1")?('active'):('')}">
-            <g:link action="list" params="${params + [dateCreated: 1]}" title="Yesterday">
+            <g:link action="list" params="${params + [dateCreated: 1]}" title="${message(code:'app.default.filters.date.today.label')}">
                 <i class="icon-time"></i>
-                Today
+                <g:message code="app.default.filters.date.today.label" />
             </g:link>
         </li>
         <li class="${(params.dateCreated == "7")?('active'):('')}">
-            <g:link action="list" params="${params + [dateCreated: 7]}" title="Last week">
+            <g:link action="list" params="${params + [dateCreated: 7]}" title="${message(code:'app.default.filters.date.lastWeek.label')}">
                 <i class="icon-time"></i>
-                Last week
+                <g:message code="app.default.filters.date.lastWeek.label" />
             </g:link>
         </li>
         <li class="${(params.dateCreated == "30")?('active'):('')}">
-            <g:link action="list" params="${params + [dateCreated: 30]}" title="Last month">
+            <g:link action="list" params="${params + [dateCreated: 30]}" title="${message(code:'app.default.filters.date.lastMonth.label')}">
                 <i class="icon-time"></i>
-                Last month
+                <g:message code="app.default.filters.date.lastMonth.label" />
             </g:link>
         </li>
 
-        <li class="nav-header">Filter by last login</li>
+        <li class="nav-header"><g:message code="app.default.filters.lastLogin.label" /></li>
         <li class="${(params.lastUpdated == '' || params.lastUpdated == null)?('active'):('')}">
-            <g:link action="list" params="${params + [lastUpdated: '']}" title="All time">
+            <g:link action="list" params="${params + [lastUpdated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                 <i class="icon-time"></i>
-                All time
+                <g:message code="app.default.filters.date.allTime.label" />
             </g:link>
         </li>
         <li class="${(params.lastUpdated == "30")?('active'):('')}">
-            <g:link action="list" params="${params + [lastUpdated: 30]}" title="Last month">
+            <g:link action="list" params="${params + [lastUpdated: 30]}" title="${message(code:'app.default.filters.date.lastMonth.label')}">
                 <i class="icon-time"></i>
-                Last month
+                <g:message code="app.default.filters.date.lastMonth.label" />
             </g:link>
         </li>
         <li class="${(params.lastUpdated == "7")?('active'):('')}">
-            <g:link action="list" params="${params + [lastUpdated: 7]}" title="Last week">
+            <g:link action="list" params="${params + [lastUpdated: 7]}" title="${message(code:'app.default.filters.date.lastWeek.label')}">
                 <i class="icon-time"></i>
-                Last week
+                <g:message code="app.default.filters.date.lastWeek.label" />
             </g:link>
         </li>
         <li class="${(params.lastUpdated == "1")?('active'):('')}">
-            <g:link action="list" params="${params + [lastUpdated: 1]}" title="Yesterday">
+            <g:link action="list" params="${params + [lastUpdated: 1]}" title="${message(code:'app.default.filters.date.today.label')}">
                 <i class="icon-time"></i>
-                Today
+                <g:message code="app.default.filters.date.today.label" />
             </g:link>
         </li>
     </ul>

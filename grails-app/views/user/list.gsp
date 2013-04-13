@@ -10,8 +10,10 @@
 
 <body>
 <div class="page-header">
-    <h1><i class="icon-briefcase"></i><g:message code="default.management.label" args="[entityName]"/> <small><g:message code="default.list.label"
-                                                                                                                         args="[entityName]"/></small></h1>
+    <h1>
+        <i class="icon-briefcase"></i><g:message code="default.management.label" args="[entityName]"/>
+        <small><g:message code="default.list.label" args="[entityName]"/></small>
+    </h1>
 </div>
 
 <div class="row rowbar">
@@ -25,7 +27,6 @@
             </g:form>
         </div>
     </div>
-
     <div class="span6">
         <div id="options_bar" class="rowbar-right pull-right">
             <g:link class="btn btn-success" action="create">
@@ -71,7 +72,6 @@
 
                     <td><g:formatDate date="${userInstance.lastLogin}"/></td>
 
-
                     <td>
                         <div class="list-actions pull-right">
                             <g:link class="btn btn-mini" action="show" id="${userInstance?.id}"
@@ -106,15 +106,12 @@
             </tfooter>
         </table>
         <g:paginate total="${userInstanceTotal}" maxsteps="4" params="${params}" class="pagination pagination-centered"/>
-
         </div>
     </g:if>
     <g:else>
         <g:render template="/common/empty"/>
     </g:else>
-
 </div>
-
 </div>
 
 </body>

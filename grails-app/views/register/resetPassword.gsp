@@ -6,12 +6,10 @@
 <title><g:message code="app.security.resetPassword.title" /></title>
 </head>
 <body>
-
     <h2 class="section_header">
         <span><i class="icon-info-sign"></i> <g:message code="app.security.forgotPassword.header" /> <small><g:message code="app.security.forgotPassword.description" /></small></span>
         <hr class="right visible-desktop">
     </h2>
-
 
     <g:hasErrors bean="${command}">
         <div class="alert-message block-message error">

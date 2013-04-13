@@ -1,7 +1,7 @@
 <%@ page import="com.app.domain.security.User" %>
 
 <fieldset class="embedded">
-    <legend>User details</legend>
+    <legend><g:message code="app.user.userDetails.label" /></legend>
 
 <div class="control-group ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
     <label class="control-label" for="username">
@@ -45,7 +45,7 @@
 </fieldset>
 
 <fieldset class="embedded">
-    <legend>User account</legend>
+    <legend><g:message code="app.user.userAccount.label" /></legend>
 
 <div class="control-group ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
     <label class="control-label" for="enabled">
@@ -86,7 +86,7 @@
 
 
 <fieldset>
-    <legend><g:message code="app.profile.preferences.culture.label"></g:message></legend>
+    <legend><g:message code="app.profile.preferences.culture.label" /></legend>
     <div class="clearfix">
         <div class="control-group">
             <label class="control-label"><g:message code="user.preferences.country.label" default="Country" /></label>

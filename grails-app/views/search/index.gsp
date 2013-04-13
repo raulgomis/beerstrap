@@ -10,7 +10,7 @@
             <i class="icon-search"></i>
             <g:message code="app.search.label"/>
             <small>
-            Quick find your data
+            <g:message code="app.search.description"/>
             </small>
         </h1>
     </div>
@@ -27,46 +27,46 @@
 <div class="row">
     <div class="span2">
         <ul class="nav nav-pills nav-stacked">
-            <li class="nav-header">Filter by</li>
+            <li class="nav-header"><g:message code="app.default.filters.dateCreated.label" /></li>
             <li class="${(params.dateCreated == '')?('active'):('')}">
-                <g:link action="index" params="${params + [dateCreated: '']}" title="All time">
+                <g:link action="index" params="${params + [dateCreated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                     <i class="icon-time"></i>
-                    All time
+                    <g:message code="app.default.filters.date.allTime.label" />
                 </g:link>
             </li>
             <li class="${(params.dateCreated == "30")?('active'):('')}">
-                <g:link action="index" params="${params + [dateCreated: 30]}" title="Last month">
+                <g:link action="index" params="${params + [dateCreated: 30]}" title="${message(code:'app.default.filters.date.lastMonth.label')}">
                     <i class="icon-time"></i>
-                    Last month
+                    <g:message code="app.default.filters.date.lastMonth.label" />
                 </g:link>
             </li>
             <li class="${(params.dateCreated == "7")?('active'):('')}">
-                <g:link action="index" params="${params + [dateCreated: 7]}" title="Last week">
+                <g:link action="index" params="${params + [dateCreated: 7]}" title="${message(code:'app.default.filters.date.lastWeek.label')}">
                     <i class="icon-time"></i>
-                    Last week
+                    <g:message code="app.default.filters.date.lastWeek.label" />
                 </g:link>
             </li>
             <li class="${(params.dateCreated == "1")?('active'):('')}">
-                <g:link action="index" params="${params + [dateCreated: 1]}" title="Yesterday">
+                <g:link action="index" params="${params + [dateCreated: 1]}" title="${message(code:'app.default.filters.date.today.label')}">
                     <i class="icon-time"></i>
-                    Today
+                    <g:message code="app.default.filters.date.today.label" />
                 </g:link>
             </li>
             <li class="nav-header">Sort by</li>
             <li class="${(params.sortFilter == "sort1")?('active'):('')}">
-                <g:link action="index" params="${params + [sortFilter: "sort1"]}" title="Yesterday">
+                <g:link action="index" params="${params + [sortFilter: "sort1"]}" title="Sort 1">
                     <i class="icon-filter"></i>
                     Sort 1
                 </g:link>
             </li>
             <li class="${(params.sortFilter == "sort2")?('active'):('')}">
-                <g:link action="index" params="${params + [sortFilter: "sort2"]}" title="Yesterday">
+                <g:link action="index" params="${params + [sortFilter: "sort2"]}" title="Sort 2">
                     <i class="icon-filter"></i>
                     Sort 2
                 </g:link>
             </li>
             <li class="${(params.sortFilter == "sort3")?('active'):('')}">
-                <g:link action="index" params="${params + [sortFilter: "sort3"]}" title="Yesterday">
+                <g:link action="index" params="${params + [sortFilter: "sort3"]}" title="Sort 3">
                     <i class="icon-filter"></i>
                     Sort 3
                 </g:link>

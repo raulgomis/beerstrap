@@ -14,7 +14,6 @@
     <hr class="right visible-desktop">
 </h2>
 
-
 <div class="row-fluid">
 
     <div class="span12">

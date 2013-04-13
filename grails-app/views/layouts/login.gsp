@@ -16,13 +16,12 @@
     <g:layoutHead/>
     <r:layoutResources/>
 </head>
-
 <body class='view-login'>
-<div class="container">
-    <div class="content">
-        <g:layoutBody/>
+    <div class="container">
+        <div class="content">
+            <g:layoutBody/>
+        </div>
     </div>
-</div>
-<r:layoutResources/>
+    <r:layoutResources/>
 </body>
 </html>

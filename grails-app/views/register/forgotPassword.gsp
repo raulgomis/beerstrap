@@ -14,7 +14,6 @@
         <hr class="right visible-desktop">
     </h2>
 
-
     <g:hasErrors bean="${command}">
         <div class="alert alert-block alert-error" data-alert="alert">
             <a class="close" href="#" data-dismiss="alert">×</a>
@@ -22,9 +21,6 @@
                 <strong>Oh snap! You got an error!</strong> Change this and that and try again.
             </p>
             <g:renderErrors bean="${command}" as="list" />
-            <!--  <div class="alert-actions">
-                      <a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
-                    </div>-->
         </div>
     </g:hasErrors>
 
@@ -37,7 +33,6 @@
                     value="${command?.email }" />
             </div>
         </div>
-
 
         <div class="form-actions">
             <button class="btn btn-primary">Send</button>

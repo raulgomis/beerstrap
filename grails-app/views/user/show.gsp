@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <h2>User details</h2>
+        <h2><g:message code="app.user.userDetails.label" /></h2>
 
         <table class="table table-condensed property-list">
             <tr>

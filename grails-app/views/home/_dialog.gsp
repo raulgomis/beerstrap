@@ -10,8 +10,10 @@
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary">
-        Accept
+        <g:message code="app.default.dialog.accept.label" />
     </button>
-    <a class="btn" data-dismiss="modal">Cancel</a>
+    <a class="btn" data-dismiss="modal">
+        <g:message code="app.default.dialog.cancel.label" />
+    </a>
 </div>
 </g:form>

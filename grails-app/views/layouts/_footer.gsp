@@ -1,6 +1,5 @@
 <footer>
     <div class="container">
-
         <hr>
         <div class="row">
             <div class="span4">
@@ -13,17 +12,13 @@
                     </a>
                 </p>
             </div>
-
             <div class="span4">
                 <g:render template="/common/lang" />
             </div>
-
             <div class="span4">
-
                 <div class="pull-left">
-                    <img class="img-circle" style="margin:0 15px 10px 0;" alt="Foto personal" src="https://si0.twimg.com/profile_images/1538926046/IMGP0701-2_bigger.jpg">
+                    <img class="img-circle" style="margin:0 15px 10px 0;" alt="My Photo" src="https://si0.twimg.com/profile_images/1538926046/IMGP0701-2_bigger.jpg">
                 </div>
-
                 <div>
                     <strong><g:message code="app.footer.contact.label"></g:message></strong>
                     <ul class="unstyled">
@@ -33,32 +28,5 @@
                 </div>
             </div>
         </div>
-
     </div>
 </footer>
-
-
-
-<g:if test="${flash.banner}">
-    <div class="modal hide" id="banner-modal">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">×</button>
-            <h3>Noticias</h3>
-        </div>
-        <div class="modal-body">
-            <%
-                //TODO: news
-    List news = (List)flash.banner
-    for(n in news){
-        out << """<h4 class="alert-heading">${n.nombre}</h4>"""
-        out << "<p>${n.descripcion}</p>"
-    }
-     %>
-        </div>
-        <div class="modal-footer">
-            <a href="#" class="btn" data-dismiss="modal">Aceptar</a>
-        </div>
-    </div>
-
-
-</g:if>

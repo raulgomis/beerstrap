@@ -1,6 +1,4 @@
-
 <%@ page import="com.app.domain.repository.Document" %>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -48,7 +46,6 @@
             <thead>
                 <tr>
                     <g:sortableColumn property="title" title="${message(code: 'document.title.label', default: 'Title')}" />
-
                     <th class="span3"></th>
                 </tr>
             </thead>

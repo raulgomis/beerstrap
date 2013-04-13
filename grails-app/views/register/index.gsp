@@ -10,7 +10,6 @@
     <h2 class="section_header">
         <i class="icon-signin"></i>
         <g:message code="app.security.register.title" /> <small><g:message code="app.security.register.description" /></small>
-
         <hr class="right visible-desktop">
     </h2>
 
@@ -21,9 +20,6 @@
                 <strong>Oh snap! You got an error!</strong> Change this and that and try again.
             </p>
             <g:renderErrors bean="${command}" as="list" />
-            <!--  <div class="alert-actions">
-                  <a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
-                </div>-->
         </div>
     </g:hasErrors>
 
@@ -65,8 +61,6 @@
                         <g:message code="app.registerCommand.agree.label"/>
                         <a href="#" role="button" data-toggle="modal" data-target="#modalTerms"><g:message code="app.registerCommand.terms.label"/></a>
                     </label>
-
-
                 </div>
             </div>
 

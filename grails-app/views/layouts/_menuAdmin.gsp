@@ -33,6 +33,7 @@
             </g:link>
         </li>
     </sec:access>
+
     <li class="divider"></li>
     <li class='controller ${pageProperty(name:"page.menu_Help")}'>
         <g:link controller="help" action="index">

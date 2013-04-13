@@ -13,11 +13,10 @@
 
 <div class="alert alert-block">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <h4>Warning!</h4>
-    To change the following values edit the file <strong>Config.groovy</strong> from the server.
+    <g:message code="app.configuration.server.alert.label" />
 </div>
 
-<h2>Email configuration</h2>
+<h2><g:message code="app.configuration.server.emailconfig.label" /></h2>
 <table class="table" summary="configuration table">
     <thead>
     <tr>
@@ -43,7 +42,7 @@
     </tbody>
 </table>
 
-<h2>File uploader configuration</h2>
+<h2><g:message code="app.configuration.server.fileuploader.label" /></h2>
 <table class="table" summary="configuration table">
     <thead>
     <tr>
@@ -68,7 +67,8 @@
     </tbody>
 </table>
 
-<h2>Database</h2><g:link controller="dbconsole" class="btn btn-mini btn-info" target="_blank"><i class="icon-hdd"></i> Database Console</g:link>
+<h2><g:message code="app.configuration.server.database.label" /></h2>
+<g:link controller="dbconsole" class="btn btn-mini btn-info" target="_blank"><i class="icon-hdd"></i> Database Console</g:link>
 <table class="table" summary="configuration table">
     <thead>
     <tr>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main" />
-    <title>Home</title>
+    <title><g:message code="app.home.title.label"></g:message></title>
     <parameter name="menu_Home" value="active" />
 </head>
 <body>

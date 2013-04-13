@@ -8,11 +8,8 @@
 </head>
 
 <body>
-
 <g:render template="sidebar" model="['selected': 'sb_account']"/>
-
 <g:form action="updateAccount">
-
     <div class="row">
         <div class="span3">
             <h2><g:message code="app.profile.account.label"></g:message></h2>
@@ -66,7 +63,6 @@
                     <g:message code="app.profile.account.deactivate" default="Deactivate my account"/>
                 </g:link>
             </p>
-
         </div>
     </div>
 </g:form>

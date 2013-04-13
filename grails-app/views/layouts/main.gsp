@@ -18,32 +18,30 @@
     <g:layoutHead/>
     <r:layoutResources/>
 </head>
-
 <body>
-<div class="header">
-    <g:render template="/layouts/header"></g:render>
-</div>
-
-<div class="container">
-    <g:if test="${flash.message}">
-        <div class="alert alert-info myalert span3 pull-right" data-alert="alert" role="status">
-            <a class="close" data-dismiss="alert" href="#">×</a>
-            <p>${flash.message}</p>
-        </div>
-    </g:if>
-    <div class="contents">
-        <g:layoutBody/>
+    <div class="header">
+        <g:render template="/layouts/header"></g:render>
     </div>
-</div>
 
-<div class="footer">
+    <div class="container">
+        <g:if test="${flash.message}">
+            <div class="alert alert-info myalert span3 pull-right" data-alert="alert" role="status">
+                <a class="close" data-dismiss="alert" href="#">×</a>
+                <p>${flash.message}</p>
+            </div>
+        </g:if>
+        <div class="contents">
+            <g:layoutBody/>
+        </div>
+    </div>
 
-    <g:render template="/layouts/footer"></g:render>
-</div>
+    <div class="footer">
+        <g:render template="/layouts/footer"></g:render>
+    </div>
 
-<g:render template="/common/modal"></g:render>
-<div id="spinner"></div>
+    <g:render template="/common/modal"></g:render>
+    <div id="spinner"></div>
 
-<r:layoutResources/>
+    <r:layoutResources/>
 </body>
 </html>
