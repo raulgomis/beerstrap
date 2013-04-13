@@ -51,7 +51,7 @@ jQuery(function () {
     }
     // ------------------- FIN TAB COOKIE
 
-    $('select').select2({ width: 'resolve' });
+    $('select').select2({ /*width: 'resolve'*/ });
 
     $(".pbar").peity("bar", {
         colours: ["#EA494A"],
