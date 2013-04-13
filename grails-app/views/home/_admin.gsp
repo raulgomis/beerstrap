@@ -1,33 +1,33 @@
 <div class="row-fluid">
     <div class="span12">
-    <a class="quick-button span2">
+    <g:link controller="user" class="quick-button span2">
         <i class="icon-group"></i>
         <p>Users</p>
         <span class="notification">1.367</span>
-    </a>
-    <a class="quick-button span2" style="position: relative;">
-        <i class="icon-comments-alt"></i>
-        <p>Comments</p>
-        <span class="notification green">167</span>
-    </a>
-    <a class="quick-button span2">
+    </g:link>
+    <g:link controller="document" class="quick-button span2">
         <i class="icon-file"></i>
         <p>Documents</p>
         <span class="notification yellow">167</span>
-    </a>
-    <a class="quick-button span2">
-        <i class="icon-barcode"></i>
-        <p>Products</p>
-    </a>
-    <a class="quick-button span2">
-        <i class="icon-envelope"></i>
-        <p>Messages</p>
-    </a>
-    <a class="quick-button span2">
+    </g:link>
+    <g:link action="ajaxGraph" class="quick-button span2 btn-ajax" data-toggle="modal" data-target="#modal-general">
         <i class="icon-calendar"></i>
         <p>Calendar</p>
+        <span class="notification green">167</span>
+    </g:link>
+    <g:link action="ajaxGraph" class="quick-button span2 btn-ajax" data-toggle="modal" data-target="#modal-general">
+        <i class="icon-envelope"></i>
+        <p>Messages</p>
         <span class="notification red">68</span>
-    </a>
+    </g:link>
+    <g:link controller="configuration" class="quick-button span2">
+        <i class="icon-cog"></i>
+        <p>Configuration</p>
+    </g:link>
+    <g:link controller="help" class="quick-button span2">
+        <i class="icon-question-sign"></i>
+        <p>Help</p>
+    </g:link>
     </div>
 </div>
 <hr>
@@ -54,6 +54,9 @@
             <h4>82</h4>
             <h4 class="sub">comments</h4><br>
         </div>
+        <%--
+        <g:link action="ajaxGraph" class="btn-ajax btn" data-toggle="modal" data-target="#modal-general">Ajax call</g:link>
+        --%>
     </div>
 </div>
 <br>
