@@ -118,8 +118,8 @@ grails.plugins.springsecurity.rejectIfNoRule = true
 grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/public'
 
 grails.plugins.springsecurity.interceptUrlMap = [
-        '/admin/**':	['ROLE_ADMIN'],
-        '/home/**':	['IS_AUTHENTICATED_FULLY'],
+        '/admin/**':    ['ROLE_ADMIN'],
+        '/home/**':     ['IS_AUTHENTICATED_FULLY'],
         '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
