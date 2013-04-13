@@ -22,4 +22,9 @@ class HomeController {
 
     }
 
+    def ajaxGraph() {
+        List data = []
+        render(template: "dialog", model: ['data': data])
+    }
+
 }
