@@ -1,7 +1,7 @@
 <div class="page-header">
-    <h1><i class="icon-cog"></i>${entityName}</h1>
+<h1><i class="icon-cog"></i>${entityName}</h1>
 </div>
-<ul class="nav nav-pills">
+<ul class="nav nav-tabs">
     <li class="${selected == 'sb_site' ? 'active' : ''}">
         <g:link action="site"><g:message code="app.configuration.site.label"/></g:link>
     </li>
