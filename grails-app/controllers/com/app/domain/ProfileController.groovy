@@ -103,7 +103,7 @@ class ProfileController {
 
     def preferences() {
         User userInstance = getCurrentUser()
-        [userPreferencesInstance: userInstance.preferences]
+        [userInstance: userInstance]
     }
 
     def updatePreferences() {

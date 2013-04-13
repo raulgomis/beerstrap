@@ -21,31 +21,32 @@
                         <p><g:message code="app.profile.preferences.description"></g:message></p>
                     </div>
                     <div class="span9">
+
                         <fieldset>
                             <legend><g:message code="app.profile.preferences.culture.label"></g:message></legend>
                             <div class="clearfix">
                                 <div class="control-group">
-                                    <label class="control-label">Country</label>
+                                    <label class="control-label"><g:message code="user.preferences.country.label" default="Country" /></label>
                                     <div class="controls">
-                                        <g:countrySelect name="country" value="${userPreferencesInstance?.country}" noSelection="['':'-Choose your country-']" class="span5"/>
+                                        <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="span5"/>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Locale</label>
+                                    <label class="control-label"><g:message code="user.preferences.locale.label" default="Locale" /></label>
                                     <div class="controls">
-                                        <g:localeSelect name="locale" value="${userPreferencesInstance?.locale}" noSelection="['':'-Choose your locale-']" class="span5"/>
+                                        <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="span5"/>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Time zone</label>
+                                    <label class="control-label"><g:message code="user.preferences.timezone.label" default="Time Zone" /></label>
                                     <div class="controls">
-                                        <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userPreferencesInstance?.timezone)}" noSelection="['':'-Choose your time zone-']" class="span5"/>
+                                        <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="span5"/>
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">Currency</label>
+                                    <label class="control-label"><g:message code="user.preferences.currency.label" default="Currency" /></label>
                                     <div class="controls">
-                                        <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userPreferencesInstance?.currency)}" noSelection="['':'-Choose your currency-']" class="span5"/>
+                                        <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="span5"/>
                                     </div>
                                 </div>
                             </div>
@@ -55,21 +56,21 @@
                         <fieldset>
                             <legend><g:message code="app.profile.preferences.messages.label"/></legend>
                             <div class="clearfix">
-                                <label id="optionsCheckboxes">Send me an email when</label>
+                                <label id="optionsCheckboxesEmails">Send me an email when</label>
                                 <div class="controls">
                                     <label>
-                                        <g:checkBox name="email_directmessage" value="${userPreferencesInstance?.email_subscription}" class="checkbox" />
+                                        <g:checkBox name="email_subscription" value="${userInstance?.preferences?.email_subscription}" class="checkbox" />
                                         <span>Email Subscription</span>
                                     </label>
-                                    <label> <g:checkBox name="email_directmessage" value="${userPreferencesInstance?.email_directmessage}" class="checkbox" />
+                                    <label> <g:checkBox name="email_directmessage" value="${userInstance?.preferences?.email_directmessage}" class="checkbox" />
                                         <span>Someone send me a direct message</span>
                                     </label>
-                                    <label> <g:checkBox name="email_mention" value="${userPreferencesInstance?.email_mention}" class="checkbox" />
+                                    <label> <g:checkBox name="email_mention" value="${userInstance?.preferences?.email_mention}" class="checkbox" />
                                         <span>Someone mentions me</span>
                                     </label>
                                     <span class="help-block"> <strong><g:message code="app.default.note.label"/>:</strong> Labels
-                                        surround all the options for much larger click areas and a
-                                        more usable form.
+                                    surround all the options for much larger click areas and a
+                                    more usable form.
                                     </span>
                                 </div>
                             </div>
@@ -79,23 +80,23 @@
                         <fieldset>
                             <legend><g:message code="app.profile.preferences.alerts.label"/></legend>
                             <div class="clearfix">
-                                <label id="optionsCheckboxes">Send me an email when</label>
+                                <label id="optionsCheckboxesAlerts">Send me an email when</label>
                                 <div class="controls">
                                     <label>
-                                        <g:checkBox name="email_alert_type1" value="${userPreferencesInstance?.email_alert_type1}" class="checkbox" />
+                                        <g:checkBox name="email_alert_type1" value="${userInstance?.preferences?.email_alert_type1}" class="checkbox" />
                                         <span>Email Alert 1</span>
                                     </label>
                                     <label>
-                                        <g:checkBox name="email_alert_type2" value="${userPreferencesInstance?.email_alert_type2}" class="checkbox" />
+                                        <g:checkBox name="email_alert_type2" value="${userInstance?.preferences?.email_alert_type2}" class="checkbox" />
                                         <span>Email Alert 2</span>
                                     </label>
                                     <label>
-                                        <g:checkBox name="email_alert_type3" value="${userPreferencesInstance?.email_alert_type3}" class="checkbox" />
+                                        <g:checkBox name="email_alert_type3" value="${userInstance?.preferences?.email_alert_type3}" class="checkbox" />
                                         <span>Email Alert 3</span>
                                     </label>
                                     <span class="help-block"> <strong><g:message code="app.default.note.label"/>:</strong> Labels
-                                        surround all the options for much larger click areas and a
-                                        more usable form.
+                                    surround all the options for much larger click areas and a
+                                    more usable form.
                                     </span>
                                 </div>
                             </div>
