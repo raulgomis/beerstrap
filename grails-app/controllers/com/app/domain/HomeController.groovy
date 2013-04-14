@@ -16,7 +16,7 @@ import org.codehaus.groovy.grails.scaffolding.*
 
 class HomeController {
 
-    static user = true
+    static user = true //set to display in the menu
 
     def index() {
 

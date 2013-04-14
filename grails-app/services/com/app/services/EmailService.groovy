@@ -11,7 +11,6 @@ class EmailService {
     LinkGenerator grailsLinkGenerator
 
     def register(String to, String token) {
-
         if(to == null || to.isEmpty())
             throw new IllegalArgumentException("to is null or empty")
 
@@ -21,11 +20,9 @@ class EmailService {
         String body = """Here is your confirmation code <a href="${urlToken}">${urlToken}</a>"""
 
         sendEmail(to,subject,body)
-
     }
 
     def forgotPassword(String to, String token){
-
         if(to == null || to.isEmpty())
             throw new IllegalArgumentException("to is null or empty")
 
@@ -35,11 +32,9 @@ class EmailService {
         String body = "Hello, Here is your url to create a new password <a href=${urlToken}>Link</a>"
 
         sendEmail(to,subject,body)
-
     }
 
     def general(String to, String subject, String body){
-
         if(to == null || to.isEmpty())
             throw new IllegalArgumentException("to is null or empty")
 

@@ -5,113 +5,71 @@ package com.app.utils
  *
  */
 
-import org.codehaus.groovy.grails.commons.ApplicationHolder
-import grails.util.Metadata
 import org.apache.commons.logging.LogFactory
 
 class ApplicationSupport {
 
     private static final log = LogFactory.getLog(this)
-    def grailsApplication
+    static grailsApplication
 
     /*
      * PATHS
      */
-    static String getPath(){
-        def config = ApplicationHolder.application.config
-        def dirPath = config.documentos.path.toString()
-        return dirPath
+
+    static String getPath() {
+        def config = grailsApplication.config
+        def path = config.documentos.path.toString()
+        return path
     }
 
-    static String getPathFotos(){
-        def config = ApplicationHolder.application.config
-        def dirPathFotos = config.documentos.pathFotos.toString()
-        return dirPathFotos
+    static String getPathPhotos() {
+        def config = grailsApplication.config
+        def path = config.documentos.pathPhotos.toString()
+        return path
     }
 
-    static String getPathGeneral(){
-        def config = ApplicationHolder.application.config
-        def dirPathGeneral = config.documentos.pathGeneral.toString()
-        return dirPathGeneral
+    static String getPathDocs() {
+        def config = grailsApplication.config
+        def path = config.documentos.pathDocs.toString()
+        return path
     }
 
     /*
      * FUNCTIONS
      */
-    static private generateFoldersGeneral (List folders) {
-        for(String folder in folders){
-            if(folder){
+
+    private void generateFoldersHelper(List folders) {
+        for (String folder in folders) {
+            if (folder) {
                 def dir = new File(folder)
-                if (!dir.exists()){
+                if (!dir.exists()) {
                     dir.mkdirs()
-                    log.debug("Directorio creado en "+folder)
+                    log.debug("Folder created in " + folder)
                 }
-            }
-            else{
-                log.error("No se ha creado el directorio ${folder} para subir los ficheros")
+            } else {
+                log.error("Folder '${folder}' not created")
             }
         }
     }
 
+    public void generateInitFolders() {
 
-    public void generateSubfolder(String subfolder){
-        generateFolders()
+        List folders = [
+                getPath(),
+                getPathPhotos(),
+                getPathDocs()
+        ]
+        generateFoldersHelper(folders)
+    }
+
+    public void generateSubfolder(String subfolder) {
+        generateInitFolders()
 
         List folders = [
                 subfolder
         ]
-
-        generateFoldersGeneral(folders)
+        generateFoldersHelper(folders)
     }
-
-    static public generateFolders() {
-
-        def dirPath = getPath()
-        def dirPathFotos = getPathFotos()
-        def dirPathGeneral = getPathGeneral()
-
-        List folders = [
-                dirPath,
-                dirPathFotos,
-                dirPathGeneral
-        ]
-
-        generateFoldersGeneral(folders)
-    }
-
-    static public generateFoldersYear(Integer year) {
-
-        def dirPath = getPath()
-        def dirPathYear = dirPath + File.separator + year.toString()
-
-        List folders = [
-                dirPath,
-                dirPathYear,
-                dirPathYear + File.separator + "usuarios",
-                dirPathYear + File.separator + "informes",
-                dirPathYear + File.separator + "otros"
-        ]
-
-        generateFoldersGeneral(folders)
-    }
-
-    static public generateFoldersUsuario(Integer year, String username) {
-
-        def dirPath = getPath()
-        def dirPathYear = dirPath + File.separator + year.toString()
-        def dirPathUser = dirPath + File.separator + year.toString() + File.separator + username
-
-        List folders = [
-                dirPath,
-                dirPathYear,
-                dirPathUser,
-                dirPathUser + File.separator + "justificantes",
-                dirPathUser + File.separator + "personales"
-        ]
-
-        generateFoldersGeneral(folders)
-    }
-
 
 
 }

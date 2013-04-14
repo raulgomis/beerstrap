@@ -6,7 +6,6 @@ package com.app.utils
  * ==========================================================
  * Copyright 2013 Grails Bootstrap.
  */
-import java.util.Date
 import java.text.SimpleDateFormat
 import org.springframework.beans.propertyeditors.CustomDateEditor
 import org.springframework.beans.PropertyEditorRegistrar

@@ -1,9 +1,8 @@
-
 <!-- Modal Upload -->
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Upload your files</h3>
+        <h3 id="myModalLabel"><g:message code="app.default.button.upload.label"/></h3>
     </div>
     <div class="modal-body">
         <div id="progress" class="progress">
@@ -12,10 +11,10 @@
         <table id="fileUploader" class="table table-bordered table-condensed"></table>
     </div>
     <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true"><g:message code="app.default.dialog.cancel.label"/></button>
         <span class="btn btn-primary fileinput-button">
             <i class="icon-plus icon-white"></i>
-            <span>Add files...</span>
+            <span><g:message code="app.default.button.addFiles.label"/></span>
             <input id="fileupload" type="file" name="files[]" data-url="fileupload" multiple>
         </span>
     </div>

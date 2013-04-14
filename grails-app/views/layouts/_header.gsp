@@ -8,12 +8,7 @@
 
     <div class="navbar-inner">
         <div class="container">
-        <%--
-        <a id="brand" class="brand" href="${createLink(uri: '/')}">
-            <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}"></bs:config>
-        </a>
-        --%>
-            <g:link elementId="" class="brand" controller="home">
+            <g:link class="brand" controller="home">
                 <i class="icon-beer"></i>
                 <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}"></bs:config>
             </g:link>
@@ -28,7 +23,9 @@
                         <g:if test="${c.getPropertyValue('user')}">
                             <sec:access controller="${c.logicalPropertyName}">
                                 <li class='controller ${pageProperty(name:"page.menu_"+c.name)}'>
-                                    <g:link controller="${c.logicalPropertyName}">${c.name}</g:link>
+                                    <g:link controller="${c.logicalPropertyName}">
+                                        <g:message code="app.menu.${c.name.toLowerCase()}.label" default="${c.name}" />
+                                    </g:link>
                                 </li>
                             </sec:access>
                         </g:if>
@@ -38,10 +35,8 @@
                     <li class="dropdown">
                         <g:render template="/layouts/menuAdmin" /></li>
                 </ul>
-                <g:form class="navbar-search pull-right" method="post"
-                        controller="search">
-                    <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}"
-                           value="${params.q}" class="input-large search-query" />
+                <g:form class="navbar-search pull-right" method="post" controller="search">
+                    <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="input-large search-query" />
                 </g:form>
             </div>
         </div>
