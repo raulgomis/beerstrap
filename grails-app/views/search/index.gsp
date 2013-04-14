@@ -18,9 +18,10 @@
 <div class="row rowbar">
     <div class="offset2 span10">
         <g:form class="form-inline" method="post" controller="search" >
-            <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}"
-                   value="${params.q}" class="input-xxlarge"  />
-            <button class="btn btn-primary">Search</button>
+            <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="input-xxlarge"  />
+            <button class="btn btn-primary">
+                <g:message code="app.search.label"/>
+            </button>
         </g:form>
     </div>
 </div>
@@ -75,7 +76,7 @@
    </div>
    <div class="span9">
        <g:if test="${results}">
-           <p><strong>Showing ${resultsCount} results for "${params.q}"</strong></p>
+           <p><strong><g:message code="app.search.pagination.label" args="${[resultsCount, params.q]}"/></strong></p>
            <g:each in="${results}" var="result">
                <div class="media">
                    <a class="pull-left" href="#">

@@ -2,12 +2,12 @@
     <div class="span12">
     <g:link controller="user" class="quick-button span2">
         <i class="icon-group"></i>
-        <p>Users</p>
+        <p><g:message code="app.menu.user.label" /></p>
         <span class="notification">1.367</span>
     </g:link>
     <g:link controller="document" class="quick-button span2">
         <i class="icon-file"></i>
-        <p>Documents</p>
+        <p><g:message code="app.menu.document.label" /></p>
         <span class="notification yellow">167</span>
     </g:link>
     <g:link action="ajaxGraph" class="quick-button span2 btn-ajax" data-toggle="modal" data-target="#modal-general">
@@ -22,11 +22,11 @@
     </g:link>
     <g:link controller="configuration" class="quick-button span2">
         <i class="icon-cog"></i>
-        <p>Configuration</p>
+        <p><g:message code="app.menu.configuration.label" /></p>
     </g:link>
     <g:link controller="help" class="quick-button span2">
         <i class="icon-question-sign"></i>
-        <p>Help</p>
+        <p><g:message code="app.menu.help.label" /></p>
     </g:link>
     </div>
 </div>

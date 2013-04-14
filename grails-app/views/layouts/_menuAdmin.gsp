@@ -20,7 +20,7 @@
                 <li class='controller ${pageProperty(name:"page.menu_"+c.name)}'>
                     <g:link controller="${c.logicalPropertyName}">
                     <i class="icon-briefcase"></i>
-                    <g:message code="app.menu.${c.name}.label" default="${c.name}" />
+                    <g:message code="app.menu.${c.name.toLowerCase()}.label" default="${c.name}" />
                     </g:link>
                 </li>
             </g:if>
