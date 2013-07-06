@@ -73,11 +73,11 @@ environments {
 
 // log4j configuration
 log4j = {
-    // Example of changing the log pattern for the default console appender:
-    //
     appenders {
         console name:'stdout', layout: pattern(conversionPattern: '%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{2}] %m%n')
         //rollingFile name: "myAppender",maxFileSize: 1024,file: "/tmp/logs/myApp.log"
+        //file name: "stacktrace", append: true, file: "/var/tmp/logs/${appName}_stacktrace.log"
+        //'null' name: "stacktrace"
     }
 
 
