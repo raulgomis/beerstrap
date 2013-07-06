@@ -1,7 +1,6 @@
 package com.app.domain.repository
 
 class Document implements Comparable {
-
     transient documentService
     //metadata
     String title
