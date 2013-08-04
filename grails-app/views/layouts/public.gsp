@@ -22,12 +22,12 @@
             <div class="navbar-inner">
                 <div class="container">
                     <ul class="nav">
-                        <li class="${pageProperty(name: "page.menu_Home")}"><g:link controller="public" action="index"><i class="icon-home"></i>Home</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Docs")}"><g:link controller="public" action="docs"><i class="icon-file-alt"></i>Docs</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Pricing")}"><g:link controller="public" action="pricing"><i class="icon-shopping-cart"></i>Pricing</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Downloads")}"><g:link controller="public" action="downloads"><i class="icon-download-alt"></i>Downloads</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_About")}"><g:link controller="public" action="about"><i class="icon-info-sign"></i>About</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Contact")}"><g:link controller="public" action="contact"><i class="icon-phone-sign"></i>Contact</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Home")}"><g:link controller="public" action="index"><i class="icon-home"></i> Home</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Docs")}"><g:link controller="public" action="docs"><i class="icon-file-alt"></i> Docs</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Pricing")}"><g:link controller="public" action="pricing"><i class="icon-shopping-cart"></i> Pricing</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Downloads")}"><g:link controller="public" action="downloads"><i class="icon-download-alt"></i> Downloads</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_About")}"><g:link controller="public" action="about"><i class="icon-info-sign"></i> About</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Contact")}"><g:link controller="public" action="contact"><i class="icon-phone-sign"></i> Contact</g:link></li>
                     </ul>
                 </div>
             </div>

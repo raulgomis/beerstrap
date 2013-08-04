@@ -11,7 +11,7 @@
 <body>
 
 <div class="page-header">
-    <h1><i class="icon-briefcase"></i>${entityName} management <small><g:message code="default.show.label" args="[entityName]"/></small></h1>
+    <h1><i class="icon-briefcase"></i> <g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.show.label" args="[entityName]"/></small></h1>
 </div>
 
 <div class="row rowbar">

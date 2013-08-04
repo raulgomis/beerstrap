@@ -152,7 +152,7 @@
         <div class="row-fluid">
             <div class="span3">
                 <h4>
-                    <i class="icon-tasks"></i> Testing <small>Coming soon!</small>
+                    <i class="icon-thumbs-up"></i> Testing <small>Coming soon!</small>
                 </h4>
                 <p>
                     Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
@@ -161,28 +161,10 @@
             </div>
             <div class="span3">
                 <h4>
-                    <i class="icon-tasks"></i> Testing <small>Coming soon!</small>
+                    <i class="icon-puzzle-piece"></i> Rest <small>Coming soon!</small>
                 </h4>
                 <p>
-                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
-                also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
-                </p>
-            </div>
-            <div class="span3">
-                <h4>
-                    <i class="icon-copy"></i> Documentation
-                </h4>
-                <p>
-                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use the more productive you will be at work.
-                </p>
-            </div>
-            <div class="span3">
-                <h4>
-                    <i class="icon-tasks"></i> Testing <small>Coming soon!</small>
-                </h4>
-                <p>
-                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
-                also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
+                    Create rest interfaces easily (scaffolding for rest) is one of our priorities in Grails Bootstrap.
                 </p>
             </div>
         </div>
@@ -192,16 +174,6 @@
 
     <section id="testimonials" class="clearfix">
         <h2 class="page-header">Testimonials</h2>
-        <!--
-        <div class="well well-large well-transparent">
-            <i class="icon-user icon-2x pull-left icon-border"></i> Use a
-            few of the new styles together, and you've got easy pull quotes or a
-            great introductory article image. Or spinning icons for loading and
-            refreshing content. Or fun big icons in multi-line buttons. You can
-            combine all of them in any combination to get lots of new
-            possibilities.
-        </div>
-        -->
         <div class="well well-large well-transparent">
             <blockquote>
             <p>Use a
@@ -225,38 +197,6 @@
             </blockquote>
         </div>
     </section>
-
-<section id="income" class="clearfix">
-    <h2 class="page-header">Income calculator</h2>
-
-    <!-- HTML5 range input -->
-    <p style="clear:both">
-    <input type="range" class="range" id="range" name="test" min="0" max="200" value="15" width="100%" /> dollars / hour
-    </p>
-    <br />
-    <p>
-        <div class="publicprice">You win <span class="price">7800</span>$</div>
-
-    </p>
-
-    <!-- make it happen -->
-    <script>
-        $(":range").rangeinput();
-        /*$(":range").live('change', function(){
-
-            setTimeout(function(){
-                alert("hello")
-                console.log($range.data('test').getValue());
-            }, 0);
-        });      */
-        $(":range").change(function() {
-            var $range = $(this);
-            var value = $range.val() * 520;
-            $(".price").html(value);
-        });
-    </script>
-
-</section>
 
 </body>
 

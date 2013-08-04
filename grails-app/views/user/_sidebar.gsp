@@ -9,7 +9,7 @@
         </li>
         <g:each in="${roleInstanceList}" var="roleInstance">
             <li class="${(params.roleID == roleInstance.id.toString())?('active'):('')}">
-                <g:link action="list" params="[roleID: roleInstance.id]" title="${roleInstance.authority}">
+                <g:link action="list" params="${params + [roleID: roleInstance.id]}" title="${roleInstance.authority}">
                     <i class="icon-group"></i>
                     ${roleInstance.authority}
                 </g:link>

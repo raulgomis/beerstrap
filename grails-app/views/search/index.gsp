@@ -7,11 +7,8 @@
 <body>
     <div class="page-header">
         <h1>
-            <i class="icon-search"></i>
-            <g:message code="app.search.label"/>
-            <small>
-            <g:message code="app.search.description"/>
-            </small>
+            <i class="icon-search"></i> <g:message code="app.search.label"/>
+            <small><g:message code="app.search.description"/></small>
         </h1>
     </div>
 
