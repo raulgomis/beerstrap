@@ -59,6 +59,7 @@ grails.project.dependency.resolution = {
         compile ":spring-security-core:1.2.7.3"
         compile ":mail:1.0.1"
         compile ':cache:1.0.1'
+        compile ":markdown:1.1.1"
 
         //Uncomment these if you have good support for testing
         //test(":spock:0.7") { exclude "spock-grails-support" }

@@ -3,11 +3,6 @@
 <head>
     <meta name="layout" content="public" />
     <parameter name="menu_Home" value="active" />
-    <!--
-    <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://jquerytools.org/media/css/standalone2.css">
-    <link rel="stylesheet" type="text/css" href="http://jquerytools.org/media/css/rangeinput/skin1.css">
-    -->
 </head>
 <body>
     <div class="jumbotron">
@@ -44,7 +39,7 @@
                 <h2>
                     <i class="icon-money"></i> Money, money...
                 </h2>
-                <p>Grails bootstrap will <strong>give you money</strong> (Yes, you heard right!): earn more than 500$ each time you start a project. It is the money that would cost to develop the features presented in Grails Bootstrap.</p>
+                <p>Grails bootstrap will <strong>give you money</strong> (Yes, you heard right!): save more than 1500$ each time you start a project. It is the money it would cost to develop the features presented in Grails Bootstrap.</p>
             </div>
         </div>
     </section>
@@ -94,7 +89,7 @@
                 <h4>
                     <i class="icon-beaker"></i> Made with Grails
                 </h4>
-                <p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.2.1</a>: a rapid, dynamic & robust
+                <p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.2.2</a>: a rapid, dynamic & robust
                     framework which uses the Groovy programming language (based on the Java platform).
                 </p>
             </div>
@@ -108,7 +103,7 @@
                 <h4>
                     <i class="icon-eye-open"></i> User interface
                 </h4>
-                <p>Catching user's eye with a extremely good looking interface using <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap 2.3.0</a> and <a href="http://fortawesome.github.com/Font-Awesome/">Font awesome 3.0</a>.</p>
+                <p>Catching user's eye with a extremely good looking interface using <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap 2.3.2</a> and <a href="http://fortawesome.github.com/Font-Awesome/">Font awesome 3.2.1</a>.</p>
             </div>
         </div>
         <br>
@@ -125,14 +120,7 @@
                 </h4>
                 <p>Grails bootstrap has it own core translated into English and Spanish. Help us translate it into your own language.</p>
             </div>
-            <div class="span3">
-                <h4>
-                    <i class="icon-copy"></i> Documentation
-                </h4>
-                <p>
-                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use, the more productive you will be at work.
-                </p>
-            </div>
+
             <div class="span3">
                 <h4>
                     <i class="icon-tasks"></i> File management <small></small>
@@ -152,6 +140,14 @@
         <div class="row-fluid">
             <div class="span3">
                 <h4>
+                    <i class="icon-copy"></i> Documentation <small>Coming soon!</small>
+                </h4>
+                <p>
+                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use, the more productive you will be at work.
+                </p>
+            </div>
+            <div class="span3">
+                <h4>
                     <i class="icon-thumbs-up"></i> Testing <small>Coming soon!</small>
                 </h4>
                 <p>
@@ -164,8 +160,16 @@
                     <i class="icon-puzzle-piece"></i> Rest <small>Coming soon!</small>
                 </h4>
                 <p>
-                    Create rest interfaces easily (scaffolding for rest) is one of our priorities in Grails Bootstrap.
+                    Create rest interfaces easily (scaffolding for rest) is one of our priorities in Grails Bootstrap, using <a href="http://jackson.codehaus.org/">Jackson</a> library.
                 </p>
+            </div>
+
+            <div class="span3">
+                <h4>
+                    <i class="icon-magic"></i> More Scaffolding
+                </h4>
+                <p>Scaffolding is a very powerful tool if it is used in the right way. We will add <a href="http://grails.org/plugin/fields">Fields plugin</a> and try to improve the
+                scaffolding with code generation techniques</p>
             </div>
         </div>
     </section>
