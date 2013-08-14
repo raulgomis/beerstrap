@@ -27,9 +27,6 @@ modules = {
         resource url:'css/bootstrap/js/bootstrap.min.js'
         resource url:'css/fontawesome/css/font-awesome.min.css'
         resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
-
-        resource url:'js/pagedown/Markdown.Converter.js'
-        resource url:'js/pagedown/Markdown.Sanitizer.js'
     }
 
     jquerycookie {
@@ -46,7 +43,9 @@ modules = {
         dependsOn 'jquery'
         resource url:'css/bootstrap/css/bootstrap.min.css'
         resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+        resource url:'https://raw.github.com/jharding/typeahead.js-bootstrap.css/master/typeahead.js-bootstrap.css'
         resource url:'css/bootstrap/js/bootstrap.min.js'
+        resource url:'http://twitter.github.com/typeahead.js/releases/latest/typeahead.min.js'
     }
 
     fontawesome {
@@ -92,7 +91,7 @@ modules = {
 
     //For prototyping
     holder {
-        resource url:'http://twitter.github.com/bootstrap/assets/js/holder/holder.js'
+        resource url:'js/holder.js'
     }
 
 }
