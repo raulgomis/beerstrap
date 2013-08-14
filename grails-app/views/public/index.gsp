@@ -9,8 +9,8 @@
         <h1>
             <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}" />
         </h1>
-        <p class="lead">Productivity booster. Kick-start your project and start to develop with
-            the combined knowledge and effort of 100s of experts, all in a startup project. <br> Software development never has been so fast!</p>
+        <p class="lead"><strong>Startup project designed to ease and accelerate software development.</strong><br> Ideal for startups and web developers who want to rapid-prototype
+        and develop products within weeks without wasting time in configurations and boring stuff. <br> Software development never has been so fast!</p>
         <g:link class="btn btn-large btn-success" controller="home">Get started now</g:link>
         <g:link class="btn btn-large btn-info" controller="home"><i class="icon-github"></i>GitHub project</g:link>
 

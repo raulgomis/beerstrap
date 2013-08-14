@@ -18,6 +18,8 @@
 
     <div class="span12">
 
+        <p>Pricing table example</p>
+
         <div class="pricing-plans plans-4">
 
             <div class="plan-container">
