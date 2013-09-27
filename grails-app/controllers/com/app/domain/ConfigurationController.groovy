@@ -6,7 +6,6 @@ import org.codehaus.groovy.grails.scaffolding.DefaultGrailsTemplateGenerator;
 
 class ConfigurationController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
     //static admin = true
 
     def configurationService
@@ -148,7 +147,6 @@ class ConfigurationController {
         }
 
         String data = out.toString()
-
         render(template: "/common/prettycode",model: ['code':data])
     }
 
