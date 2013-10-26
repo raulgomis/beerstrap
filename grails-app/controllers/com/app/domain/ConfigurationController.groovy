@@ -8,7 +8,6 @@ class ConfigurationController {
 
     //static admin = true
 
-    def configurationService
     def grailsApplication
 
     def index() {
@@ -60,12 +59,11 @@ class ConfigurationController {
 
     def server() {
 
+        List configurationEmailInstanceList = []
+        List configurationDocsInstanceList = []
+        List configurationDBInstanceList = []
 
-        def configurationEmailInstanceList = []
 
-        def configurationDocsInstanceList = []
-
-        def configurationDBInstanceList = []
 
         Map configEmail = [
                 "grails.mail.default.from":"${grailsApplication.config.grails.mail.default.from}",

@@ -13,8 +13,6 @@
         and develop products within weeks without wasting time in configurations and boring stuff. <br> Software development never has been so fast!</p>
         <g:link class="btn btn-large btn-success" controller="home">Get started now</g:link>
         <g:link class="btn btn-large btn-info" controller="home"><i class="icon-github"></i>GitHub project</g:link>
-
-
     </div>
 
     <hr>

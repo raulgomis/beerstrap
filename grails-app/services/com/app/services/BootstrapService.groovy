@@ -9,7 +9,6 @@ class BootstrapService {
     static transactional = false
 
     def grailsApplication
-    def configurationService
 
     def loadRequestMap() {
         //Load requestMap here if requestMap activated
