@@ -39,8 +39,6 @@ private renderFieldForProperty(p, owningClass, prefix = "") {
 		<g:message code="${domainClass.propertyName}.${prefix}${p.name}.label" default="${p.naturalName}" />
 		<% if (required) { %><span class="required-indicator">*</span><% } %>
 	</label>
-	<div class="controls">
-		${renderEditor(p)}
-	</div>
+    ${renderEditor(p)}
 </div>
 <%  }   } %>

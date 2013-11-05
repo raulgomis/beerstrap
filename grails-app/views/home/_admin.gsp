@@ -119,7 +119,7 @@
     </div>
     <div class="col-md-6">
         <div class="table-panel">
-            <h4> <i class="fa fa-share-alt"></i>Referrers</h4>
+            <h4> <i class="fa fa-share-o"></i>Referrers</h4>
             <table class="table table-striped sortable">
                 <thead>
                 <tr>

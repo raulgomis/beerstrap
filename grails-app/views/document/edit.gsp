@@ -26,7 +26,7 @@
             <g:hiddenField name="version" value="${documentInstance?.version}" />
             <fieldset>
                 <g:render template="form"/>
-                <div class="form-actions">
+                <div class="form-group">
                     <button type="submit" class="btn btn-primary">
                         <i class="fa fa-ok fa fa-white"></i>
                         <g:message code="default.button.update.label" default="Update" />

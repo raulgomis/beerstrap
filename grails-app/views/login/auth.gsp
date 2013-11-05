@@ -19,29 +19,23 @@
             </g:if>
             <br />
             <div class="form-group">
-                <div class="controls">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type='text' class='col-md-3' name='j_username' id='username' placeholder="Username"/>
-                    </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type='text' class='form-control' name='j_username' id='username' placeholder="Username"/>
                 </div>
             </div>
             <div class="form-group">
-                <div class="controls">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type='password' class='col-md-3' name='j_password' id='password' placeholder="Password"/>
-                    </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <input type='password' class='form-control' name='j_password' id='password' placeholder="Password"/>
                 </div>
             </div>
 
             <div class="form-group">
-                <div class="controls">
                     <label class="checkbox" for='remember_me'>
                         <input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
                         <span><g:message code="springSecurity.login.remember.me.label"/></span>
                     </label>
-                </div>
             </div>
             <button type="submit" name="submit" class="btn btn-info btn-block">
                 <i class="fa fa-lock fa fa-white"></i>

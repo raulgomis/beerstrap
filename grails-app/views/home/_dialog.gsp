@@ -4,9 +4,7 @@
 </div>
 <g:form action="ajaxDialog" method="POST" class="form-vertical">
 <div class="modal-body">
-    <div class="controls">
-        <p>Functionality not available. Coming soon!</p>
-    </div>
+    <p>Functionality not available. Coming soon!</p>
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary">

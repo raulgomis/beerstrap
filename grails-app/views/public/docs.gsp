@@ -8,7 +8,7 @@
 
 <body>
 <h2 class="section_header">
-    <span><i class="icon-file-alt"></i> Docs <small>All the info</small>
+    <span><i class="fa fa-file-o"></i> Docs <small>All the info</small>
     </span>
     <hr class="right visible-desktop"></hr>
 </h2>

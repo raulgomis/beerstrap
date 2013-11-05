@@ -1,24 +1,29 @@
-<div class="navbar navbar-fixed-top">
+<nav class="navbar navbar-default" role="navigation">
 
-    <g:if env="development">
+%{--    <g:if env="development">
         <div class="ribbon">
             <a href="#">Development</a>
         </div>
-    </g:if>
+    </g:if>--}%
 
     <div class="navbar-inner">
         <div class="container">
-            <g:link class="navbar-brand" controller="home">
-                <i class="fa fa-beer"></i>
-                <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}"></bs:config>
-            </g:link>
-            <a class="btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="fa fa-bar"></span>
-                <span class="fa fa-bar"></span>
-                <span class="fa fa-bar"></span>
-            </a>
-            <div class="navbar-collapse">
-                <ul class="nav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <g:link class="navbar-brand" controller="home">
+                    <i class="fa fa-beer"></i>
+                    <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}"></bs:config>
+                </g:link>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
                         <g:if test="${c.getPropertyValue('user')}">
                             <sec:access controller="${c.logicalPropertyName}">
@@ -31,14 +36,17 @@
                         </g:if>
                     </g:each>
                 </ul>
-                <ul class="nav pull-right">
+                <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <g:render template="/layouts/menuAdmin" /></li>
                 </ul>
-                <g:form class="navbar-search pull-right" method="post" controller="search">
-                    <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="input-lg search-query" />
+                <g:form class="navbar-form navbar-right" method="post" controller="search" role="search">
+                    <div class="form-group">
+                        <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="form-control search-query" />
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
                 </g:form>
             </div>
         </div>
     </div>
-</div>
+</nav>

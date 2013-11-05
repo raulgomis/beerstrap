@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2 class="section_header">
-        <span><i class="icon-info-sign"></i> <g:message code="app.security.forgotPassword.header" /> <small><g:message code="app.security.forgotPassword.description" /></small></span>
+        <span><i class="fa fa-info-sign"></i> <g:message code="app.security.forgotPassword.header" /> <small><g:message code="app.security.forgotPassword.description" /></small></span>
         <hr class="right visible-desktop">
     </h2>
 
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <div class="form-actions">
+        <div class="form-group">
             <button type="submit" class="btn btn-primary"><g:message code="app.security.forgotPassword.submit"/></button>
         </div>
     </g:form>

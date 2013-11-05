@@ -23,10 +23,10 @@
         </g:hasErrors>
 
         <g:form action="save" class="form-horizontal" enctype="multipart/form-data" >
-            <fieldset class="form">
+            <fieldset class="form-horizontal">
                 <g:render template="form"/>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">
                         <i class="fa fa-ok fa fa-white"></i>
                         <g:message code="default.button.create.label" default="Create" />
                     </button>

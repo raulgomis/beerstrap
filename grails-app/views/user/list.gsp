@@ -11,7 +11,7 @@
 <body>
 <div class="page-header">
     <h1>
-        <i class="icon-briefcase"></i> <g:message code="default.management.label" args="[entityName]"/>
+        <i class="fa fa-briefcase"></i> <g:message code="default.management.label" args="[entityName]"/>
         <small><g:message code="default.list.label" args="[entityName]"/></small>
     </h1>
 </div>
@@ -30,7 +30,7 @@
     <div class="col-md-6">
         <div id="options_bar" class="rowbar-right pull-right">
             <g:link class="btn btn-success" action="create">
-                <i class="icon-plus icon-white"></i>
+                <i class="fa fa-plus fa fa-white"></i>
                 <g:message code="default.create.label" args="[entityName]"/>
             </g:link>
         </div>
@@ -76,18 +76,18 @@
                         <div class="list-actions pull-right">
                             <g:link class="btn btn-xs" action="show" id="${userInstance?.id}"
                                     title="${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
-                                <i class="icon-search"></i>
+                                <i class="fa fa-search"></i>
                             </g:link>
                             <g:link class="btn btn-xs" action="edit" id="${userInstance?.id}"
                                     title="${message(code: 'default.button.edit.label', default: 'Edit')}" rel="tooltip">
-                                <i class="icon-pencil"></i>
+                                <i class="fa fa-pencil"></i>
                             </g:link>
                             <g:form action="delete">
                                 <g:hiddenField name="id" value="${userInstance?.id}"/>
                                 <button class="btn btn-xs" type="submit" name="_action_delete"
                                         onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"
                                         title="${message(code: 'default.button.delete.label', default: 'Delete')}" rel="tooltip">
-                                    <i class="icon-trash"></i>
+                                    <i class="fa fa-trash"></i>
                                 </button>
                             </g:form>
                         </div>

@@ -8,7 +8,7 @@
 <body>
 
     <h2 class="section_header">
-        <span><i class="icon-info-sign"></i> About <small> See all the people involved in the project</small></span>
+        <span><i class="fa fa-info-circle"></i> About <small> See all the people involved in the project</small></span>
         <hr class="right visible-desktop">
     </h2>
     <section id="about" class="clearfix">

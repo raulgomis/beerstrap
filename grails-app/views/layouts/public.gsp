@@ -23,11 +23,11 @@
                 <div class="container">
                     <ul class="nav">
                         <li class="${pageProperty(name: "page.menu_Home")}"><g:link controller="public" action="index"><i class="fa fa-home"></i> Home</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Docs")}"><g:link controller="public" action="docs"><i class="fa fa-file-alt"></i> Docs</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Docs")}"><g:link controller="public" action="docs"><i class="fa fa-file-o"></i> Docs</g:link></li>
                         <li class="${pageProperty(name: "page.menu_Pricing")}"><g:link controller="public" action="pricing"><i class="fa fa-shopping-cart"></i> Pricing</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Downloads")}"><g:link controller="public" action="downloads"><i class="fa fa-download-alt"></i> Downloads</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_About")}"><g:link controller="public" action="about"><i class="fa fa-info-sign"></i> About</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Contact")}"><g:link controller="public" action="contact"><i class="fa fa-phone-sign"></i> Contact</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Downloads")}"><g:link controller="public" action="downloads"><i class="fa fa-cloud-download"></i> Downloads</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_About")}"><g:link controller="public" action="about"><i class="fa fa-info-circle"></i> About</g:link></li>
+                        <li class="${pageProperty(name: "page.menu_Contact")}"><g:link controller="public" action="contact"><i class="fa fa-phone-square"></i> Contact</g:link></li>
                     </ul>
                 </div>
             </div>

@@ -67,7 +67,7 @@
                             <span class="label">${fieldValue(bean: documentInstance, field: "category")}</span>
 
                             <g:link class="btn btn-xs" action="download" id="${documentInstance?.uuid}" title="${message(code: 'default.button.download.label', default: 'Download')}" rel="tooltip">
-                                <i class="fa fa-download-alt"></i>
+                                <i class="fa fa-download-o"></i>
                             </g:link>
                             <g:link class="btn btn-xs" action="show" id="${documentInstance?.id}" title="${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
                                 <i class="fa fa-search"></i>

@@ -27,27 +27,19 @@
                             <div class="clearfix">
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.country.label" default="Country" /></label>
-                                    <div class="controls">
-                                        <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="col-md-5"/>
-                                    </div>
+                                    <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="col-md-5"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.locale.label" default="Locale" /></label>
-                                    <div class="controls">
-                                        <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="col-md-5"/>
-                                    </div>
+                                    <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="col-md-5"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.timezone.label" default="Time Zone" /></label>
-                                    <div class="controls">
-                                        <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="col-md-5"/>
-                                    </div>
+                                    <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="col-md-5"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.currency.label" default="Currency" /></label>
-                                    <div class="controls">
-                                        <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="col-md-5"/>
-                                    </div>
+                                    <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="col-md-5"/>
                                 </div>
                             </div>
                             <!-- /clearfix -->
@@ -57,14 +49,18 @@
                             <legend><g:message code="app.profile.preferences.messages.label"/></legend>
                             <div class="clearfix">
                                 <label id="optionsCheckboxesEmails">Send me an email when</label>
-                                <div class="controls">
+                                <div class="checkbox">
                                     <label>
                                         <g:checkBox name="email_subscription" value="${userInstance?.preferences?.email_subscription}" class="checkbox" />
                                         <span>Email Subscription</span>
                                     </label>
+                                </div>
+                                <div class="checkbox">
                                     <label> <g:checkBox name="email_directmessage" value="${userInstance?.preferences?.email_directmessage}" class="checkbox" />
                                         <span>Someone send me a direct message</span>
                                     </label>
+                                </div>
+                                <div class="checkbox">
                                     <label> <g:checkBox name="email_mention" value="${userInstance?.preferences?.email_mention}" class="checkbox" />
                                         <span>Someone mentions me</span>
                                     </label>
@@ -81,15 +77,20 @@
                             <legend><g:message code="app.profile.preferences.alerts.label"/></legend>
                             <div class="clearfix">
                                 <label id="optionsCheckboxesAlerts">Send me an email when</label>
-                                <div class="controls">
+
+                                <div class="checkbox">
                                     <label>
                                         <g:checkBox name="email_alert_type1" value="${userInstance?.preferences?.email_alert_type1}" class="checkbox" />
                                         <span>Email Alert 1</span>
                                     </label>
+                                </div>
+                                <div class="checkbox">
                                     <label>
                                         <g:checkBox name="email_alert_type2" value="${userInstance?.preferences?.email_alert_type2}" class="checkbox" />
                                         <span>Email Alert 2</span>
                                     </label>
+                                </div>
+                                <div class="checkbox">
                                     <label>
                                         <g:checkBox name="email_alert_type3" value="${userInstance?.preferences?.email_alert_type3}" class="checkbox" />
                                         <span>Email Alert 3</span>
@@ -103,9 +104,9 @@
                             <!-- /clearfix -->
                         </fieldset>
 
-                        <div class="form-actions">
+                        <div class="form-group">
                             <button class="btn btn-primary">
-                                <i class="icon-ok"></i>
+                                <i class="fa fa-ok"></i>
                                 <g:message code="default.button.update.label" default="Update" />
                             </button>
                         </div>

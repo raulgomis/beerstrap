@@ -1,30 +1,11 @@
 ﻿
 
-h2
-{
-    font-size: 20px;
-}
 
-h3 
-{
-    padding-bottom: 8px;
-    font-size: 16px;
-}
 
 .page-header {
     /*background-color: #F5F5F5;*/
     margin: -20px -20px 20px;
     padding: 20px 20px 10px;
-}
-
-body {
-    padding-top: 40px;
-    /*
-    background: #030303 url(http://api.ning.com:80/files/dRltKnSKyrp9yKd*IsNvhTpcn1vem3XsWGTtYPzkB0NiD2b6AFhuxPCmDJIP1E2IeKhSmdJsya5mJCX5Zkezvg__/new_bg.jpg?xn_version=201211062038) repeat-y scroll 0 0
-    */
-    /*
-    background-color: #EEEEEE;
-    */
 }
 
 @media (max-width: 980px) 
@@ -58,11 +39,6 @@ body {
   -webkit-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   -moz-box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
   box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
-}
-
-.navbar form .btn, .navbar form .input-sm {
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 .nomargin {

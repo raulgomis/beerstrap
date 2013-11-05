@@ -7,7 +7,7 @@
 <body>
     <div class="page-header">
         <h1>
-            <i class="icon-search"></i> <g:message code="app.search.label"/>
+            <i class="fa fa-search"></i> <g:message code="app.search.label"/>
             <small><g:message code="app.search.description"/></small>
         </h1>
     </div>
@@ -28,44 +28,44 @@
             <li class="nav-header"><g:message code="app.default.filters.dateCreated.label" /></li>
             <li class="${(params.dateCreated == '')?('active'):('')}">
                 <g:link action="index" params="${params + [dateCreated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
-                    <i class="icon-time"></i>
+                    <i class="fa fa-time"></i>
                     <g:message code="app.default.filters.date.allTime.label" />
                 </g:link>
             </li>
             <li class="${(params.dateCreated == "30")?('active'):('')}">
                 <g:link action="index" params="${params + [dateCreated: 30]}" title="${message(code:'app.default.filters.date.lastMonth.label')}">
-                    <i class="icon-time"></i>
+                    <i class="fa fa-time"></i>
                     <g:message code="app.default.filters.date.lastMonth.label" />
                 </g:link>
             </li>
             <li class="${(params.dateCreated == "7")?('active'):('')}">
                 <g:link action="index" params="${params + [dateCreated: 7]}" title="${message(code:'app.default.filters.date.lastWeek.label')}">
-                    <i class="icon-time"></i>
+                    <i class="fa fa-time"></i>
                     <g:message code="app.default.filters.date.lastWeek.label" />
                 </g:link>
             </li>
             <li class="${(params.dateCreated == "1")?('active'):('')}">
                 <g:link action="index" params="${params + [dateCreated: 1]}" title="${message(code:'app.default.filters.date.today.label')}">
-                    <i class="icon-time"></i>
+                    <i class="fa fa-time"></i>
                     <g:message code="app.default.filters.date.today.label" />
                 </g:link>
             </li>
             <li class="nav-header">Sort by</li>
             <li class="${(params.sortFilter == "sort1")?('active'):('')}">
                 <g:link action="index" params="${params + [sortFilter: "sort1"]}" title="Sort 1">
-                    <i class="icon-filter"></i>
+                    <i class="fa fa-filter"></i>
                     Sort 1
                 </g:link>
             </li>
             <li class="${(params.sortFilter == "sort2")?('active'):('')}">
                 <g:link action="index" params="${params + [sortFilter: "sort2"]}" title="Sort 2">
-                    <i class="icon-filter"></i>
+                    <i class="fa fa-filter"></i>
                     Sort 2
                 </g:link>
             </li>
             <li class="${(params.sortFilter == "sort3")?('active'):('')}">
                 <g:link action="index" params="${params + [sortFilter: "sort3"]}" title="Sort 3">
-                    <i class="icon-filter"></i>
+                    <i class="fa fa-filter"></i>
                     Sort 3
                 </g:link>
             </li>

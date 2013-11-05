@@ -8,7 +8,7 @@
 <body>
 
     <h2 class="section_header">
-        <span><i class="icon-info-sign"></i> Password recovery <small> Have you forgot your
+        <span><i class="fa fa-info-sign"></i> Password recovery <small> Have you forgot your
                 password? Recover it within seconds</small>
         </span>
         <hr class="right visible-desktop">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div class="form-actions">
+        <div class="form-group">
             <button class="btn btn-primary">Send</button>
         </div>
     </g:form>

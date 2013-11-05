@@ -9,7 +9,7 @@
 
 
     <h2 class="section_header">
-        <span><i class="icon-phone-sign"></i> Contact <small> See all plan details here</small>
+        <span><i class="fa fa-phone-square"></i> Contact <small> See all plan details here</small>
         </span>
         <hr class="right visible-desktop">
     </h2>
@@ -18,26 +18,26 @@
         <div class="col-md-4">
             <address>
                 <h3>Alicante, Spain</h3>
-                <i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
+                <i class="fa fa-map-marker"></i> 795 Folsom Ave, Suite 600<br>
                 San Francisco, CA 94107<br>
-                <i class="icon-phone"></i> (123) 456-7890<br>
+                <i class="fa fa-phone"></i> (123) 456-7890<br>
             </address>
         </div>
         <div class="col-md-4">
             <address>
                 <h3>San Francisco, USA</h3>
-                <i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
+                <i class="fa fa-map-marker"></i> 795 Folsom Ave, Suite 600<br>
                 San Francisco, CA 94107<br>
-                <i class="icon-phone"></i> (123) 456-7890<br>
+                <i class="fa fa-phone"></i> (123) 456-7890<br>
             </address>
         </div>
         <div class="col-md-4">
 
             <address>
                 <h3>London, UK</h3>
-                <i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
+                <i class="fa fa-map-marker"></i> 795 Folsom Ave, Suite 600<br>
                 London, UK 94107<br>
-                <i class="icon-phone"></i> (123) 456-7890<br>
+                <i class="fa fa-phone"></i> (123) 456-7890<br>
             </address>
         </div>
     </div>

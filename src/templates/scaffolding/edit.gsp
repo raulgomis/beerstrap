@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="page-header">
-			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.edit.label" args="[entityName]" /></small></h1>
+			<h1><i class="fa fa-briefcase"></i>\${entityName} management <small><g:message code="default.edit.label" args="[entityName]" /></small></h1>
 		</div>
 		<g:hasErrors bean="\${${propertyName}}">
 		<div class="alert alert-message alert-danger" data-alert="alert">
@@ -26,13 +26,13 @@
 			<g:hiddenField name="version" value="\${${propertyName}?.version}" />
 			<fieldset>
 				<g:render template="form"/>
-				<div class="form-actions">
+				<div class="form-group">
 					<button type="submit" class="btn btn-primary">
-						<i class="icon-ok icon-white"></i>
+						<i class="fa fa-ok fa fa-white"></i>
 						<g:message code="default.button.update.label" default="Update" />
 					</button>
 					<g:link class="btn" action="list">
-						<i class="icon-th-list"></i>
+						<i class="fa fa-th-list"></i>
 						<g:message code="default.button.list.label" default="List" />
 					</g:link>
 				</div>

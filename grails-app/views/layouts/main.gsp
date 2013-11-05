@@ -40,7 +40,6 @@
     </div>
 
     <g:render template="/common/modal"></g:render>
-    <div id="spinner"></div>
 
     <r:layoutResources/>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

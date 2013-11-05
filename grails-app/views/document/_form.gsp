@@ -4,35 +4,27 @@
     <label class="control-label" for="file">
         <g:message code="document.file.label" default="File" />
     </label>
-    <div class="controls">
-        <input type="file" name="file" id="file" />
-    </div>
+    <input type="file" name="file" id="file" class="form-control" />
 </div>
 
 <div class="form-group ${hasErrors(bean: documentInstance, field: 'title', 'error')} ">
     <label class="control-label" for="title">
         <g:message code="document.title.label" default="Title" />
-
     </label>
-    <div class="controls">
-        <g:textField name="title" value="${documentInstance?.title}"/>
-    </div>
+    <g:textField name="title" value="${documentInstance?.title}" class="form-control"/>
 </div>
 
 <div class="form-group ${hasErrors(bean: documentInstance, field: 'category', 'error')} ">
     <label class="control-label" for="category">
         <g:message code="document.category.label" default="Category" />
     </label>
-    <div class="controls">
-        <g:select name="category" from="${com.app.domain.repository.DocumentCategory?.values()}" keys="${com.app.domain.repository.DocumentCategory.values()*.name()}" value="${documentInstance?.category?.name()}" noSelection="['': '']"/>
-    </div>
+    <g:select name="category" from="${com.app.domain.repository.DocumentCategory?.values()}"
+              keys="${com.app.domain.repository.DocumentCategory.values()*.name()}" value="${documentInstance?.category?.name()}" noSelection="['': '']"/>
 </div>
 
 <div class="form-group ${hasErrors(bean: documentInstance, field: 'description', 'error')} ">
     <label class="control-label" for="description">
         <g:message code="document.description.label" default="Description" />
     </label>
-    <div class="controls">
-        <g:textArea name="description" cols="40" rows="5" maxlength="1000" value="${documentInstance?.description}"/>
-    </div>
+    <g:textArea name="description" cols="40" rows="5" maxlength="1000" value="${documentInstance?.description}" class="form-control"/>
 </div>

@@ -8,7 +8,7 @@
 <body>
 
     <h2 class="section_header">
-        <i class="icon-signin"></i> <g:message code="app.security.register.title" /> <small><g:message code="app.security.register.description" /></small>
+        <i class="fa fa-signin"></i> <g:message code="app.security.register.title" /> <small><g:message code="app.security.register.description" /></small>
         <hr class="right visible-desktop">
     </h2>
 
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="form-actions">
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary"><g:message code="app.security.register.submit" /></button>
             </div>
         </g:form>

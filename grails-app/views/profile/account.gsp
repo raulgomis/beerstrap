@@ -51,9 +51,9 @@
             </div>
 
 
-            <div class="form-actions">
+            <div class="form-group">
                 <button class="btn btn-primary">
-                    <i class="icon-ok"></i>
+                    <i class="fa fa-ok"></i>
                     <g:message code="default.button.update.label" default="Update"/>
                 </button>
             </div>

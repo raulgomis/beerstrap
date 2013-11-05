@@ -3,7 +3,7 @@
 		<li class="nav-header">Filter by property</li>
 		<li class="\${(params.filter == '' || params.filter==null)?('active'):('')}">
 			<g:link action="list" params="\${params + [filter:'']}" title="All">
-				<i class="icon-filter"></i>
+				<i class="fa fa-filter"></i>
 				All items
 			</g:link>
 		</li>
