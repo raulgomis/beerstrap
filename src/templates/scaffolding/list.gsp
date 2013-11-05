@@ -13,17 +13,17 @@
 			<h1><i class="icon-briefcase"></i><g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
 		</div>
 		<div class="row rowbar">
-			<div class="span6">
+			<div class="col-md-6">
 				<div id="search_bar" class="rowbar-left pull-left">
 					<g:form action="list" class="form-inline" method="GET">
 						<div class="input-append">
-						<g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="span3" />
+						<g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="col-md-3" />
 						<button class="btn" type="submit"><g:message code="default.search.label"/></button>
 						</div>
 					</g:form>
 				</div>
 			</div>
-			<div class="span6">
+			<div class="col-md-6">
 				<div id="options_bar" class="rowbar-right pull-right">
 					<g:link class="btn btn-success" action="create">
 						<i class="icon-plus icon-white"></i>
@@ -33,10 +33,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="span3">
+			<div class="col-md-3">
 				<g:render template="sidebar" />
 			</div>
-			<div class="span9">
+			<div class="col-md-9">
 				<g:if test="\${${propertyName}List}">
 				<table class="table table-striped table-condensed">
 					<thead>
@@ -52,7 +52,7 @@
 						<%      } else { %>
 							<g:sortableColumn property="${p.name}" title="\${message(code: '${domainClass.propertyName}.${p.name}.label', default: '${p.naturalName}')}" />
 						<%  }   }   } %>
-							<th class="span2"></th>
+							<th class="col-md-2"></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -71,15 +71,15 @@
 						<%  }   }   } %>
 							<td>
 								<div class="list-actions pull-right">
-									<g:link class="btn btn-mini" action="show" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
+									<g:link class="btn btn-xs" action="show" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
 										<i class="icon-search"></i>
 									</g:link>
-									<g:link class="btn btn-mini" action="edit" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.edit.label', default: 'Edit')}" rel="tooltip">
+									<g:link class="btn btn-xs" action="edit" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.edit.label', default: 'Edit')}" rel="tooltip">
 										<i class="icon-pencil"></i>
 									</g:link>
 									<g:form action="delete">
 										<g:hiddenField name="id" value="\${${propertyName}?.id}" />
-										<button class="btn btn-mini" type="submit" name="_action_delete" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" title="\${message(code: 'default.button.delete.label', default: 'Delete')}"  rel="tooltip">
+										<button class="btn btn-xs" type="submit" name="_action_delete" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" title="\${message(code: 'default.button.delete.label', default: 'Delete')}"  rel="tooltip">
 											<i class="icon-trash"></i>
 										</button>
 									</g:form>

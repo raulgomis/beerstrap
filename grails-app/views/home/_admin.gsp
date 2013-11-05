@@ -1,43 +1,43 @@
-<div class="row-fluid">
-    <div class="span12">
-    <g:link controller="user" class="quick-button span2">
-        <i class="icon-group"></i>
+<div class="row">
+    <div class="col-md-12">
+    <g:link controller="user" class="quick-button col-md-2">
+        <i class="fa fa-group"></i>
         <p><g:message code="app.menu.user.label" /></p>
         <span class="notification">1.367</span>
     </g:link>
-    <g:link controller="document" class="quick-button span2">
-        <i class="icon-file"></i>
+    <g:link controller="document" class="quick-button col-md-2">
+        <i class="fa fa-file"></i>
         <p><g:message code="app.menu.document.label" /></p>
         <span class="notification yellow">167</span>
     </g:link>
-    <g:link action="ajaxGraph" class="quick-button span2 btn-ajax" data-toggle="modal" data-target="#modal-general">
-        <i class="icon-calendar"></i>
+    <g:link action="ajaxGraph" class="quick-button col-md-2 btn-ajax" data-toggle="modal" data-target="#modal-general">
+        <i class="fa fa-calendar"></i>
         <p>Calendar</p>
         <span class="notification green">167</span>
     </g:link>
-    <g:link action="ajaxGraph" class="quick-button span2 btn-ajax" data-toggle="modal" data-target="#modal-general">
-        <i class="icon-envelope"></i>
+    <g:link action="ajaxGraph" class="quick-button col-md-2 btn-ajax" data-toggle="modal" data-target="#modal-general">
+        <i class="fa fa-envelope"></i>
         <p>Messages</p>
         <span class="notification red">68</span>
     </g:link>
-    <g:link controller="configuration" class="quick-button span2">
-        <i class="icon-cog"></i>
+    <g:link controller="configuration" class="quick-button col-md-2">
+        <i class="fa fa-cog"></i>
         <p><g:message code="app.menu.configuration.label" /></p>
     </g:link>
-    <g:link controller="help" class="quick-button span2">
-        <i class="icon-question-sign"></i>
+    <g:link controller="help" class="quick-button col-md-2">
+        <i class="fa fa-question-sign"></i>
         <p><g:message code="app.menu.help.label" /></p>
     </g:link>
     </div>
 </div>
 <hr>
-<div class="row-fluid">
-    <div class="span8">
+<div class="row">
+    <div class="col-md-8">
         <div id="d3" style="width: 100%">
             <g:img dir="images" file="loading-small.gif"></g:img>
         </div>
     </div>
-    <div class="span4">
+    <div class="col-md-4">
         <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">5,3,8,7,9,1,2,6,5,8</span>
             <h4>2 </h4>
             <h4 class="sub">signups</h4>
@@ -63,20 +63,20 @@
 <br>
 <hr>
 
-<div class="row-fluid">
-    <div class="span3 knob">
+<div class="row">
+    <div class="col-md-3 knob">
         <h4>INDICATOR 1</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#14B8D4" data-width="120" />
     </div>
-    <div class="span3 knob">
+    <div class="col-md-3 knob">
         <h4>INDICATOR 2</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#EA494A" data-width="120" />
     </div>
-    <div class="span3 knob">
+    <div class="col-md-3 knob">
         <h4>INDICATOR 3</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#FFA93C" data-width="120" />
     </div>
-    <div class="span3 knob">
+    <div class="col-md-3 knob">
         <h4>INDICATOR 4</h4>
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
     </div>
@@ -85,10 +85,10 @@
 <div id="activeUsers" style="height: 300px; padding: 0px; position: relative;">
     --%>
 
-<div class="row-fluid">
-    <div class="span6">
+<div class="row">
+    <div class="col-md-6">
         <div class="table-panel">
-            <h4> <i class="icon-eye-open"></i>Browsers</h4>
+            <h4> <i class="fa fa-eye-open"></i>Browsers</h4>
             <table class="table table-striped sortable">
                 <thead>
                 <tr>
@@ -117,9 +117,9 @@
             </table>
         </div>
     </div>
-    <div class="span6">
+    <div class="col-md-6">
         <div class="table-panel">
-            <h4> <i class="icon-share-alt"></i>Referrers</h4>
+            <h4> <i class="fa fa-share-alt"></i>Referrers</h4>
             <table class="table table-striped sortable">
                 <thead>
                 <tr>

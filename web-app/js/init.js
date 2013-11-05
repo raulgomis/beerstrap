@@ -53,7 +53,7 @@ jQuery(function () {
 
     $('select').select2({ /*width: 'resolve'*/ });
 
-    $(".pbar").peity("bar", {
+    $(".pbar").peity("progress-bar", {
         colours: ["#EA494A"],
         strokeWidth: 4,
         height: 32,

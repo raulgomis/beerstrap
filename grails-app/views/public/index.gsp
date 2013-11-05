@@ -11,21 +11,21 @@
         </h1>
         <p class="lead"><strong>Startup project designed to ease and accelerate software development.</strong><br> Ideal for startups and web developers who want to rapid-prototype
         and develop products within weeks without wasting time in configurations and boring stuff. <br> Software development never has been so fast!</p>
-        <g:link class="btn btn-large btn-success" controller="home">Get started now</g:link>
-        <g:link class="btn btn-large btn-info" controller="home"><i class="icon-github"></i>GitHub project</g:link>
+        <g:link class="btn btn-lg btn-success" controller="home">Get started now</g:link>
+        <g:link class="btn btn-lg btn-info" controller="home"><i class="fa fa-github"></i>GitHub project</g:link>
     </div>
 
     <hr>
 
     <section id="why" class="clearfix">
-        <div class="row-fluid">
-            <div class="span4">
+        <div class="row">
+            <div class="col-md-4">
                 <h2>
                     <i class="icon-dashboard"></i> Productivity
                 </h2>
                 <p><strong>Don't waste your time</strong> in common stuff such as configuring your project: just focus on the specific ENGINEERING SOLUTION! Download it and start to develop. Start from a good base: Security ready, Testing ready, Beautiful UI, Code generation, etc.</p>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <h2>
                     <i class="icon-magic"></i> Code generation
                 </h2>
@@ -33,7 +33,7 @@
                     CRUD functionality based on client's requirements and show a
                     functional version to your client within 15 minutes.</p>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <h2>
                     <i class="icon-money"></i> Money, money...
                 </h2>
@@ -46,20 +46,20 @@
 
     <section id="features" class="clearfix">
         <h2 class="page-header">Features</h2>
-        <div class="row-fluid">
-            <div class="span3">
+        <div class="row">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-magic"></i> Scaffolding templates
                 </h4>
                 <p>Scaffolding templates to generate code that the application can use to create, read, update and delete database entries.</p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-group"></i> User management
                 </h4>
                 <p>User management is already implemented, manage users from the first second.</p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-lock"></i> Security ready
                 </h4>
@@ -68,7 +68,7 @@
                 </p>
 
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-user"></i> User registration
                 </h4>
@@ -76,14 +76,14 @@
             </div>
         </div>
         <br>
-        <div class="row-fluid">
-            <div class="span3">
+        <div class="row">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-cog"></i> Configuration
                 </h4>
                 <p>Ready to define configuration options from database. Every application should have global variables to configure.</p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-beaker"></i> Made with Grails
                 </h4>
@@ -91,13 +91,13 @@
                     framework which uses the Groovy programming language (based on the Java platform).
                 </p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-share-alt"></i> Easy ajax
                 </h4>
                 <p>Well structured way to make ajax calls and modals with little code. See docs for more information about how to do it.</p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-eye-open"></i> User interface
                 </h4>
@@ -105,21 +105,21 @@
             </div>
         </div>
         <br>
-        <div class="row-fluid">
-            <div class="span3">
+        <div class="row">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-envelope-alt"></i> Email sending
                 </h4>
                 <p>Grails bootstrap comes with a structured way to send emails. Configure your credentials and start sending emails to the users.</p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-flag"></i> I18N ready
                 </h4>
                 <p>Grails bootstrap has it own core translated into English and Spanish. Help us translate it into your own language.</p>
             </div>
 
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-tasks"></i> File management <small></small>
                 </h4>
@@ -135,8 +135,8 @@
     <section id="roadmap" class="clearfix">
         <h2 class="page-header">Roadmap</h2>
 
-        <div class="row-fluid">
-            <div class="span3">
+        <div class="row">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-copy"></i> Documentation <small>Coming soon!</small>
                 </h4>
@@ -144,7 +144,7 @@
                     Documentation is one key to success. The more documented and easier Grails Bootstrap is to use, the more productive you will be at work.
                 </p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-thumbs-up"></i> Testing <small>Coming soon!</small>
                 </h4>
@@ -153,7 +153,7 @@
                 also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
                 </p>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-puzzle-piece"></i> Rest <small>Coming soon!</small>
                 </h4>
@@ -162,7 +162,7 @@
                 </p>
             </div>
 
-            <div class="span3">
+            <div class="col-md-3">
                 <h4>
                     <i class="icon-magic"></i> More Scaffolding
                 </h4>

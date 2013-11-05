@@ -20,7 +20,7 @@
     <table class="table" summary="configuration table">
         <thead>
         <tr>
-            <th class="span4"></th>
+            <th class="col-md-4"></th>
             <th></th>
         </tr>
         </thead>
@@ -30,7 +30,7 @@
                 <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationManager.BT_SITE_NAME } %>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
-                    <i class="icon-info-sign"></i>
+                    <i class="fa fa-info-sign"></i>
                 </span>
             </td>
             <td>
@@ -43,7 +43,7 @@
                 <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationManager.BT_SITE_OFFLINE } %>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
-                    <i class="icon-info-sign"></i>
+                    <i class="fa fa-info-sign"></i>
                 </span>
             </td>
             <td>
@@ -55,7 +55,7 @@
                 <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationManager.BT_SITE_MAXLISTHOME } %>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
-                    <i class="icon-info-sign"></i>
+                    <i class="fa fa-info-sign"></i>
                 </span>
             </td>
             <td>
@@ -67,7 +67,7 @@
                 <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationManager.BT_SITE_MAXLIST } %>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
-                    <i class="icon-info-sign"></i>
+                    <i class="fa fa-info-sign"></i>
                 </span>
             </td>
             <td>
@@ -80,7 +80,7 @@
                 <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationManager.BT_HELP_FAQ } %>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
-                    <i class="icon-info-sign"></i>
+                    <i class="fa fa-info-sign"></i>
                 </span>
             </td>
             <td>
@@ -92,7 +92,7 @@
 
     <div class="form-actions">
         <button type="submit" class="btn btn-primary">
-            <i class="icon-ok"></i>
+            <i class="fa fa-ok"></i>
             ${message(code: 'default.button.update.label', default: 'Update')}
         </button>
     </div>

@@ -15,7 +15,7 @@
     </h2>
 
     <g:hasErrors bean="${command}">
-        <div class="alert alert-block alert-error" data-alert="alert">
+        <div class="alert alert-block alert-danger" data-alert="alert">
             <a class="close" href="#" data-dismiss="alert">×</a>
             <p>
                 <strong>Oh snap! You got an error!</strong> Change this and that and try again.
@@ -26,7 +26,7 @@
 
     <g:form action="forgotPassword" class="form-horizontal">
 
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label" for="email">Email</label>
             <div class="controls">
                 <input type="text" name="email" placeholder="Email"

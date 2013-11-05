@@ -12,7 +12,7 @@
 <g:render template="sidebar" model="['selected': 'sb_grails']"></g:render>
 
 <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
         <div id="status" role="complementary" class="well">
             <h2>Application Status</h2>
             <ul>

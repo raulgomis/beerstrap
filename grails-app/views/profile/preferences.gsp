@@ -9,44 +9,44 @@
 </head>
 <body>
     <div class="row">
-        <div class="span16">
+        <div class="col-md-16">
 
             <g:render template="sidebar" model="['selected':'sb_preferences']" />
 
             <g:form action="updatePreferences" class="form-horizontal" method="POST">
 
                 <div class="row">
-                    <div class="span3">
+                    <div class="col-md-3">
                         <h2><g:message code="app.profile.preferences.label"></g:message></h2>
                         <p><g:message code="app.profile.preferences.description"></g:message></p>
                     </div>
-                    <div class="span9">
+                    <div class="col-md-9">
 
                         <fieldset>
                             <legend><g:message code="app.profile.preferences.culture.label"></g:message></legend>
                             <div class="clearfix">
-                                <div class="control-group">
+                                <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.country.label" default="Country" /></label>
                                     <div class="controls">
-                                        <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="span5"/>
+                                        <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="col-md-5"/>
                                     </div>
                                 </div>
-                                <div class="control-group">
+                                <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.locale.label" default="Locale" /></label>
                                     <div class="controls">
-                                        <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="span5"/>
+                                        <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="col-md-5"/>
                                     </div>
                                 </div>
-                                <div class="control-group">
+                                <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.timezone.label" default="Time Zone" /></label>
                                     <div class="controls">
-                                        <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="span5"/>
+                                        <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="col-md-5"/>
                                     </div>
                                 </div>
-                                <div class="control-group">
+                                <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.currency.label" default="Currency" /></label>
                                     <div class="controls">
-                                        <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="span5"/>
+                                        <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="col-md-5"/>
                                     </div>
                                 </div>
                             </div>

@@ -292,8 +292,8 @@
   cursor: default;
   background-color: transparent;
 }
-.input-append.date .add-on i,
-.input-prepend.date .add-on i {
+.input-append.date .input-group-addon i,
+.input-prepend.date .input-group-addon i {
   display: block;
   cursor: pointer;
   width: 16px;

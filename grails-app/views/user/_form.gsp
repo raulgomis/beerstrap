@@ -3,7 +3,7 @@
 <fieldset class="embedded">
     <legend><g:message code="app.user.userDetails.label" /></legend>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
     <label class="control-label" for="username">
         <g:message code="user.username.label" default="Username" />
         <span class="required-indicator">*</span>
@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
     <label class="control-label" for="password">
         <g:message code="user.password.label" default="Password" />
         <span class="required-indicator">*</span>
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'name', 'error')} ">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'name', 'error')} ">
     <label class="control-label" for="name">
         <g:message code="user.name.label" default="Name" />
     </label>
@@ -32,7 +32,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
     <label class="control-label" for="email">
         <g:message code="user.email.label" default="Email" />
         <span class="required-indicator">*</span>
@@ -47,7 +47,7 @@
 <fieldset class="embedded">
     <legend><g:message code="app.user.userAccount.label" /></legend>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
     <label class="control-label" for="enabled">
         <g:message code="user.enabled.label" default="Enabled" />
     </label>
@@ -56,7 +56,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'accountExpired', 'error')} ">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'accountExpired', 'error')} ">
     <label class="control-label" for="accountExpired">
         <g:message code="user.accountExpired.label" default="Account Expired" />
     </label>
@@ -65,7 +65,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'accountLocked', 'error')} ">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'accountLocked', 'error')} ">
     <label class="control-label" for="accountLocked">
         <g:message code="user.accountLocked.label" default="Account Locked" />
     </label>
@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: userInstance, field: 'passwordExpired', 'error')} ">
+<div class="form-group ${hasErrors(bean: userInstance, field: 'passwordExpired', 'error')} ">
     <label class="control-label" for="passwordExpired">
         <g:message code="user.passwordExpired.label" default="Password Expired" />
     </label>
@@ -88,28 +88,28 @@
 <fieldset>
     <legend><g:message code="app.profile.preferences.culture.label" /></legend>
     <div class="clearfix">
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label"><g:message code="user.preferences.country.label" default="Country" /></label>
             <div class="controls">
-                <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="span5"/>
+                <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="col-md-5"/>
             </div>
         </div>
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label"><g:message code="user.preferences.locale.label" default="Locale" /></label>
             <div class="controls">
-                <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="span5"/>
+                <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="col-md-5"/>
             </div>
         </div>
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label"><g:message code="user.preferences.timezone.label" default="Time Zone" /></label>
             <div class="controls">
-                <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="span5"/>
+                <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="col-md-5"/>
             </div>
         </div>
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label"><g:message code="user.preferences.currency.label" default="Currency" /></label>
             <div class="controls">
-                <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="span5"/>
+                <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="col-md-5"/>
             </div>
         </div>
     </div>

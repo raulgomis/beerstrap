@@ -11,14 +11,14 @@
 <body>
 
 <div class="page-header">
-    <h1><i class="icon-briefcase"></i> <g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.show.label" args="[entityName]"/></small></h1>
+    <h1><i class="fa fa-briefcase"></i> <g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.show.label" args="[entityName]"/></small></h1>
 </div>
 
 <div class="row rowbar">
-    <div class="span12">
+    <div class="col-md-12">
         <div class="pull-left">
             <g:link class="btn" action="list">
-                <i class="icon-th-list"></i>
+                <i class="fa fa-th-list"></i>
                 <g:message code="default.button.list.label" default="List"/>
             </g:link>
         </div>
@@ -26,12 +26,12 @@
             <g:form action="delete">
                 <g:hiddenField name="id" value="${documentInstance?.id}"/>
                 <g:link class="btn" action="edit" id="${documentInstance?.id}">
-                    <i class="icon-pencil"></i>
+                    <i class="fa fa-pencil"></i>
                     <g:message code="default.button.edit.label" default="Edit"/>
                 </g:link>
                 <button class="btn" type="submit" name="_action_delete"
                         onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
-                    <i class="icon-trash"></i>
+                    <i class="fa fa-trash"></i>
                     <g:message code="default.button.delete.label" default="Delete"/>
                 </button>
             </g:form>

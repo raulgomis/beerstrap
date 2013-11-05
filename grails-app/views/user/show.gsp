@@ -15,7 +15,7 @@
 </div>
 
 <div class="row rowbar">
-    <div class="span12">
+    <div class="col-md-12">
         <div class="pull-left">
             <g:link class="btn" action="list">
                 <i class="icon-th-list"></i>
@@ -41,7 +41,7 @@
 
 <div class="row">
 
-    <div class="span6">
+    <div class="col-md-6">
         <div class="media">
             <a class="pull-left" href="#">
                 <img class="media-object" data-src="holder.js/64x64">
@@ -115,7 +115,7 @@
 
     </div>
 
-    <div class="span6">
+    <div class="col-md-6">
         <h2>User preferences</h2>
         <table class="table table-condensed property-list">
             <tr>

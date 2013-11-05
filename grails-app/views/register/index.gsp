@@ -13,7 +13,7 @@
     </h2>
 
     <g:hasErrors bean="${command}">
-        <div class="alert alert-block alert-error">
+        <div class="alert alert-block alert-danger">
             <a class="close" href="#">×</a>
             <p>
                 <strong>Oh snap! You got an error!</strong> Change this and that and try again.
@@ -24,28 +24,28 @@
 
     <div class="form-register">
         <g:form action="register" class="form-horizontal">
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="name"><g:message code="app.registerCommand.name.label"/></label>
                 <div class="controls">
                     <input type="text" name="name" placeholder="${message(code:'app.registerCommand.name.label')}"
                         value="${command?.name }" />
                 </div>
             </div>
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="username"><g:message code="app.registerCommand.username.label"/></label>
                 <div class="controls">
                     <input type="text" name="username" placeholder="${message(code:'app.registerCommand.username.label')}"
                         value="${command?.username }" />
                 </div>
             </div>
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="email"><g:message code="app.registerCommand.email.label"/></label>
                 <div class="controls">
                     <input type="text" name="email" placeholder="${message(code:'app.registerCommand.email.label')}"
                         value="${command?.email}" />
                 </div>
             </div>
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="password"><g:message code="app.registerCommand.password.label"/></label>
                 <div class="controls">
                     <input type="password" name="password" placeholder="${message(code:'app.registerCommand.password.label')}"
@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="control-group">
+            <div class="form-group">
                 <div class="controls">
                     <label class="checkbox"> <g:checkBox name="terms"
                             value="${true}" checked="${command?.terms}" />

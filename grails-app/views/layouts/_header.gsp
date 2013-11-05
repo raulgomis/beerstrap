@@ -8,16 +8,16 @@
 
     <div class="navbar-inner">
         <div class="container">
-            <g:link class="brand" controller="home">
-                <i class="icon-beer"></i>
+            <g:link class="navbar-brand" controller="home">
+                <i class="fa fa-beer"></i>
                 <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}"></bs:config>
             </g:link>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+            <a class="btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
             </a>
-            <div class="nav-collapse">
+            <div class="navbar-collapse">
                 <ul class="nav">
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
                         <g:if test="${c.getPropertyValue('user')}">
@@ -36,7 +36,7 @@
                         <g:render template="/layouts/menuAdmin" /></li>
                 </ul>
                 <g:form class="navbar-search pull-right" method="post" controller="search">
-                    <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="input-large search-query" />
+                    <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="input-lg search-query" />
                 </g:form>
             </div>
         </div>

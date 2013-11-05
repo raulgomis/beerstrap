@@ -14,8 +14,8 @@
         <hr class="right visible-desktop">
     </h2>
 
-    <div class="row-fluid">
-        <div class="span4">
+    <div class="row">
+        <div class="col-md-4">
             <address>
                 <h3>Alicante, Spain</h3>
                 <i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
@@ -23,7 +23,7 @@
                 <i class="icon-phone"></i> (123) 456-7890<br>
             </address>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
             <address>
                 <h3>San Francisco, USA</h3>
                 <i class="icon-map-marker"></i> 795 Folsom Ave, Suite 600<br>
@@ -31,7 +31,7 @@
                 <i class="icon-phone"></i> (123) 456-7890<br>
             </address>
         </div>
-        <div class="span4">
+        <div class="col-md-4">
 
             <address>
                 <h3>London, UK</h3>

@@ -18,24 +18,24 @@
                 </div>
             </g:if>
             <br />
-            <div class="control-group">
+            <div class="form-group">
                 <div class="controls">
-                    <div class="input-prepend">
-                        <span class="add-on"><i class="icon-user"></i></span>
-                        <input type='text' class='span3' name='j_username' id='username' placeholder="Username"/>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type='text' class='col-md-3' name='j_username' id='username' placeholder="Username"/>
                     </div>
                 </div>
             </div>
-            <div class="control-group">
+            <div class="form-group">
                 <div class="controls">
-                    <div class="input-prepend">
-                        <span class="add-on"><i class="icon-lock"></i></span>
-                        <input type='password' class='span3' name='j_password' id='password' placeholder="Password"/>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input type='password' class='col-md-3' name='j_password' id='password' placeholder="Password"/>
                     </div>
                 </div>
             </div>
 
-            <div class="control-group">
+            <div class="form-group">
                 <div class="controls">
                     <label class="checkbox" for='remember_me'>
                         <input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <button type="submit" name="submit" class="btn btn-info btn-block">
-                <i class="icon-lock icon-white"></i>
+                <i class="fa fa-lock fa fa-white"></i>
                 <g:message code="app.security.login.login"></g:message>
             </button>
             <hr>

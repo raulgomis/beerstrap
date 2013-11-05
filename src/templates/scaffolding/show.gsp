@@ -14,7 +14,7 @@
 			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.show.label" args="[entityName]" /></small></h1>
 		</div>
 		<div class="row rowbar">
-			<div class="span12">
+			<div class="col-md-12">
 				<div class="pull-left">
 					<g:link class="btn" action="list">
 						<i class="icon-th-list"></i>

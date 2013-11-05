@@ -14,9 +14,9 @@
     <hr class="right visible-desktop">
 </h2>
 
-<div class="row-fluid">
+<div class="row">
 
-    <div class="span12">
+    <div class="col-md-12">
 
         <p>Pricing table example</p>
 
@@ -171,7 +171,7 @@
         </div>
 
     </div>
-    <!-- /span12 -->
+    <!-- /col-md-12 -->
 
 </div>
 

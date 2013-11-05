@@ -6,14 +6,14 @@
     </div>
     <div class="modal-body">
         <div id="progress" class="progress">
-            <div class="bar" style="width: 0%;height: 18px"></div>
+            <div class="progress-bar" style="width: 0%;height: 18px"></div>
         </div>
         <table id="fileUploader" class="table table-bordered table-condensed"></table>
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true"><g:message code="app.default.dialog.cancel.label"/></button>
         <span class="btn btn-primary fileinput-button">
-            <i class="icon-plus icon-white"></i>
+            <i class="fa fa-plus fa fa-white"></i>
             <span><g:message code="app.default.button.addFiles.label"/></span>
             <input id="fileupload" type="file" name="files[]" data-url="fileupload" multiple>
         </span>
@@ -46,7 +46,7 @@
                 $.each(data.result, function (index, file) {
                     $('#fileUploader tr[data-file="'+file.name+'"]')
                             .addClass('success')
-                            .html('<td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="icon-ok"></i></span></td>')
+                            .html('<td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="fa fa-ok"></i></span></td>')
 
                 });
             },

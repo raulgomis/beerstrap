@@ -2,7 +2,7 @@
     <div class="container">
         <hr>
         <div class="row">
-            <div class="span4">
+            <div class="col-md-4">
                 <p>
                     <g:meta name="app.name"></g:meta>
                     <g:meta name="app.version"></g:meta>
@@ -12,10 +12,10 @@
                     </a>
                 </p>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <g:render template="/common/lang" />
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <div class="pull-left">
                     <img class="img-circle" style="margin:0 15px 10px 0;" alt="My Photo" src="https://si0.twimg.com/profile_images/1538926046/IMGP0701-2_bigger.jpg">
                 </div>

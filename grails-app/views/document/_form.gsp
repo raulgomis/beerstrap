@@ -1,6 +1,6 @@
 <%@ page import="com.app.domain.repository.Document" %>
 
-<div class="control-group ${hasErrors(bean: documentInstance, field: 'file', 'error')} ">
+<div class="form-group ${hasErrors(bean: documentInstance, field: 'file', 'error')} ">
     <label class="control-label" for="file">
         <g:message code="document.file.label" default="File" />
     </label>
@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: documentInstance, field: 'title', 'error')} ">
+<div class="form-group ${hasErrors(bean: documentInstance, field: 'title', 'error')} ">
     <label class="control-label" for="title">
         <g:message code="document.title.label" default="Title" />
 
@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: documentInstance, field: 'category', 'error')} ">
+<div class="form-group ${hasErrors(bean: documentInstance, field: 'category', 'error')} ">
     <label class="control-label" for="category">
         <g:message code="document.category.label" default="Category" />
     </label>
@@ -28,7 +28,7 @@
     </div>
 </div>
 
-<div class="control-group ${hasErrors(bean: documentInstance, field: 'description', 'error')} ">
+<div class="form-group ${hasErrors(bean: documentInstance, field: 'description', 'error')} ">
     <label class="control-label" for="description">
         <g:message code="document.description.label" default="Description" />
     </label>

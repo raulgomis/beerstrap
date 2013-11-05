@@ -12,7 +12,7 @@
 			<h1><i class="icon-briefcase"></i>\${entityName} management <small><g:message code="default.edit.label" args="[entityName]" /></small></h1>
 		</div>
 		<g:hasErrors bean="\${${propertyName}}">
-		<div class="alert alert-message alert-error" data-alert="alert">
+		<div class="alert alert-message alert-danger" data-alert="alert">
 			<a class="close" data-dismiss="alert" href="#">×</a>
 			<ul role="alert">
 				<g:eachError bean="\${${propertyName}}" var="error">

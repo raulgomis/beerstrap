@@ -14,7 +14,7 @@ modules = {
 
     login {
         resource url:'css/bootstrap/css/bootstrap.min.css'
-        resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+        resource url:'css/bootstrap/css/bootstrap-theme.min.css'
         resource url:'css/app-login.css'
     }
 
@@ -22,11 +22,10 @@ modules = {
         dependsOn 'jquery'
         resource url:'css/bootstrap/css/bootstrap.min.css'
         resource url:'css/app-public.css'
-        resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+        resource url:'css/bootstrap/css/bootstrap-theme.min.css'
         resource url:'css/app-pricing.css'
         resource url:'css/bootstrap/js/bootstrap.min.js'
         resource url:'css/fontawesome/css/font-awesome.min.css'
-        resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
     }
 
     jquerycookie {
@@ -42,7 +41,7 @@ modules = {
     bootstrap {
         dependsOn 'jquery'
         resource url:'css/bootstrap/css/bootstrap.min.css'
-        resource url:'css/bootstrap/css/bootstrap-responsive.min.css'
+        resource url:'css/bootstrap/css/bootstrap-theme.min.css'
         resource url:'https://raw.github.com/jharding/typeahead.js-bootstrap.css/master/typeahead.js-bootstrap.css'
         resource url:'css/bootstrap/js/bootstrap.min.js'
         resource url:'http://twitter.github.com/typeahead.js/releases/latest/typeahead.min.js'
@@ -50,7 +49,6 @@ modules = {
 
     fontawesome {
         resource url:'css/fontawesome/css/font-awesome.min.css'
-        resource url:'css/fontawesome/css/font-awesome-ie7.min.css'
     }
 
     datepicker {

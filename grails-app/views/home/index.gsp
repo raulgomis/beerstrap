@@ -8,7 +8,7 @@
 <body>
     <div class="page-header">
         <h1>
-            <i class="icon-dashboard"></i>
+            <i class="fa fa-dashboard"></i>
             <g:message code="app.home.title.label"></g:message>
             <small><g:message code="app.home.description.label"></g:message></small>
         </h1>

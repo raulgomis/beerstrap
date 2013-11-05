@@ -24,14 +24,14 @@
     <g:form action="resetPassword" class="form-horizontal">
         <g:hiddenField name="t" value="${token}" />
 
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label" for="password"><g:message code="app.resetPasswordCommand.password.label"/></label>
             <div class="controls">
                 <input type="password" name="password" placeholder="${message(code:'app.resetPasswordCommand.password.label')}" />
             </div>
         </div>
 
-        <div class="control-group">
+        <div class="form-group">
             <label class="control-label" for="password2"><g:message code="app.resetPasswordCommand.password2.label"/></label>
             <div class="controls">
                 <input type="password" name="password2" placeholder="${message(code:'app.resetPasswordCommand.password2.label')}" />

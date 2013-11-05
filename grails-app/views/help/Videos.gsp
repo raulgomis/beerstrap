@@ -28,7 +28,7 @@
                 </p>
 
                 <p>
-                    <span class="muted">Some extra details</span>
+                    <span class="text-muted">Some extra details</span>
                 </p>
             </td>
 
@@ -60,7 +60,7 @@
                 </p>
 
                 <p>
-                    <span class="muted">Some extra details</span>
+                    <span class="text-muted">Some extra details</span>
                 </p>
             </td>
 
@@ -93,7 +93,7 @@
                 </p>
 
                 <p>
-                    <span class="muted">Some extra details</span>
+                    <span class="text-muted">Some extra details</span>
                 </p>
             </td>
             <td>

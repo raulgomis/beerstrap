@@ -11,12 +11,12 @@
 <g:render template="sidebar" model="['selected': 'sb_account']"/>
 <g:form action="updateAccount">
     <div class="row">
-        <div class="span3">
+        <div class="col-md-3">
             <h2><g:message code="app.profile.account.label"></g:message></h2>
             <p><g:message code="app.profile.account.description"></g:message></p>
         </div>
 
-        <div class="span9">
+        <div class="col-md-9">
             <div class="clearfix ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
                 <label for="username">
                     <g:message code="user.username.label" default="Username"/>

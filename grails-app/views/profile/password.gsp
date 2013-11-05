@@ -12,12 +12,12 @@
 <g:render template="sidebar" model="['selected': 'sb_password']"/>
 <g:form action="updatePassword">
     <div class="row">
-        <div class="span3">
+        <div class="col-md-3">
             <h2><g:message code="app.profile.password.label"></g:message></h2>
             <p><g:message code="app.profile.password.description"></g:message></p>
         </div>
 
-        <div class="span9">
+        <div class="col-md-9">
             <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
                 <label for="password"><g:message code="user.password.label" default="Password"/>
                     <span class="required-indicator">*</span>

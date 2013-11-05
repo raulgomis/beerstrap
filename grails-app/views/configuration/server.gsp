@@ -20,7 +20,7 @@
 <table class="table" summary="configuration table">
     <thead>
     <tr>
-        <th class="span4"></th>
+        <th class="col-md-4"></th>
         <th></th>
     </tr>
     </thead>
@@ -30,7 +30,7 @@
             <td>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
-                    <i class="icon-info-sign"></i>
+                    <i class="fa fa-info-sign"></i>
                 </span>
             </td>
             <td>
@@ -46,7 +46,7 @@
 <table class="table" summary="configuration table">
     <thead>
     <tr>
-        <th class="span4"></th>
+        <th class="col-md-4"></th>
         <th></th>
     </tr>
     </thead>
@@ -56,7 +56,7 @@
             <td><strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip"
                       title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}"><i
-                        class="icon-info-sign"></i></span>
+                        class="fa fa-info-sign"></i></span>
             </td>
             <td>
                 <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="input-xxlarge"/>
@@ -68,11 +68,11 @@
 </table>
 
 <h2><g:message code="app.configuration.server.database.label" /></h2>
-<g:link controller="dbconsole" class="btn btn-mini btn-info" target="_blank"><i class="icon-hdd"></i> Database Console</g:link>
+<g:link controller="dbconsole" class="btn btn-xs btn-info" target="_blank"><i class="fa fa-hdd"></i> Database Console</g:link>
 <table class="table" summary="configuration table">
     <thead>
     <tr>
-        <th class="span4"></th>
+        <th class="col-md-4"></th>
         <th></th>
     </tr>
     </thead>
@@ -82,7 +82,7 @@
             <td><strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip"
                       title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}"><i
-                        class="icon-info-sign"></i></span>
+                        class="fa fa-info-sign"></i></span>
             </td>
             <td>
                 <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="input-xxlarge"/>

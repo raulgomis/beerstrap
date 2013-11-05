@@ -1,5 +1,5 @@
 <div class="page-header">
-<h1><i class="icon-cog"></i> ${entityName}</h1>
+<h1><i class="fa fa-cog"></i> ${entityName}</h1>
 </div>
 <ul class="nav nav-tabs">
     <li class="${selected == 'sb_site' ? 'active' : ''}">

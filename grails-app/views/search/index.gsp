@@ -13,7 +13,7 @@
     </div>
 
 <div class="row rowbar">
-    <div class="offset2 span10">
+    <div class="col-md-offset-2 col-md-10">
         <g:form class="form-inline" method="post" controller="search" >
             <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="input-xxlarge"  />
             <button class="btn btn-primary">
@@ -23,7 +23,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="span2">
+    <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked">
             <li class="nav-header"><g:message code="app.default.filters.dateCreated.label" /></li>
             <li class="${(params.dateCreated == '')?('active'):('')}">
@@ -71,7 +71,7 @@
             </li>
         </ul>
    </div>
-   <div class="span9">
+   <div class="col-md-9">
        <g:if test="${results}">
            <p><strong><g:message code="app.search.pagination.label" args="${[resultsCount, params.q]}"/></strong></p>
            <g:each in="${results}" var="result">

@@ -34,7 +34,7 @@ body {
     }
 }
 
-.hero-unit {
+.jumbotron {
     background-color: white;
 }
 
@@ -60,7 +60,7 @@ body {
   box-shadow: 0 0 6px rgba(171, 41, 32, 0.5);
 }
 
-.navbar form .btn, .navbar form .input-small {
+.navbar form .btn, .navbar form .input-sm {
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -75,12 +75,12 @@ footer
     color:Black;
 }
 
-.hero-unit 
+.jumbotron
 {
     padding: 30px;
 }
 
-.hero-unit h1 
+.jumbotron h1
 {
     font-size: 50px;
 }
@@ -109,7 +109,7 @@ footer {
     /*color: #FFFFFF;*/
 }
 
-.navbar .brand {
+.navbar-brand {
     font-size:18px;
     color:#08C;
 }

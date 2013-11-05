@@ -60,7 +60,7 @@ $(function () {
                 url: '//jquery-file-upload.appspot.com/',
                 type: 'HEAD'
             }).fail(function () {
-                $('<span class="alert alert-error"/>')
+                $('<span class="alert alert-danger"/>')
                     .text('Upload server currently unavailable - ' +
                             new Date())
                     .appendTo('#fileupload');
