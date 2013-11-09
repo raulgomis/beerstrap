@@ -88,7 +88,7 @@ class TwitterBootstrapTagLib {
         int firststep = 1
         int laststep = Math.round(Math.ceil(total / max))
 
-        writer << "<div class=\"${cssClasses}\"><ul>"
+        writer << "<ul class=\"${cssClasses}\">"
         // display previous link when not on firststep
         if (currentstep > firststep) {
             linkParams.offset = offset - max
@@ -178,7 +178,7 @@ class TwitterBootstrapTagLib {
             writer << '</li>'
         }
 
-        writer << '</ul></div>'
+        writer << '</ul>'
     }
 
 }

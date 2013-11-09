@@ -80,7 +80,7 @@
         <p><g:message code="app.registerCommand.terms.description"/></p>
     </div>
     <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
     </div>
 </div>
 

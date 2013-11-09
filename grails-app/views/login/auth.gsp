@@ -38,7 +38,7 @@
                     </label>
             </div>
             <button type="submit" name="submit" class="btn btn-info btn-block">
-                <i class="fa fa-lock fa fa-white"></i>
+                <i class="fa fa-lock"></i>
                 <g:message code="app.security.login.login"></g:message>
             </button>
             <hr>

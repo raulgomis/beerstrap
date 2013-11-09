@@ -1,6 +1,6 @@
 <div class="well sidebar-nav">
     <ul class="nav nav-list">
-        <li class="nav-header"><g:message code="app.default.filters.role.label" /></li>
+        <li class="dropdown-header"><g:message code="app.default.filters.role.label" /></li>
         <li class="${(params.roleID == null || params.roleID == '')?('active'):('')}">
             <g:link action="list" params="${params + [roleID:'']}" title="${message(code:'app.default.filters.role.allRoles.label')}">
                 <i class="fa fa-group"></i>
@@ -16,7 +16,7 @@
             </li>
         </g:each>
 
-        <li class="nav-header"><g:message code="app.default.filters.accountStatus.label" /></li>
+        <li class="dropdown-header"><g:message code="app.default.filters.accountStatus.label" /></li>
         <li class="${(params.filter == '' || params.filter==null)?('active'):('')}">
             <g:link action="list" params="${params + [filter:'']}" title="${message(code:'app.default.filters.accountStatus.allStatuses.label')}">
                 <i class="fa fa-filter"></i>
@@ -54,7 +54,7 @@
             </g:link>
         </li>
 
-        <li class="nav-header"><g:message code="app.default.filters.registrationDate.label" /></li>
+        <li class="dropdown-header"><g:message code="app.default.filters.registrationDate.label" /></li>
         <li class="${(params.dateCreated == '' || params.dateCreated == null)?('active'):('')}">
             <g:link action="list" params="${params + [dateCreated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                 <i class="fa fa-time"></i>
@@ -80,7 +80,7 @@
             </g:link>
         </li>
 
-        <li class="nav-header"><g:message code="app.default.filters.lastLogin.label" /></li>
+        <li class="dropdown-header"><g:message code="app.default.filters.lastLogin.label" /></li>
         <li class="${(params.lastUpdated == '' || params.lastUpdated == null)?('active'):('')}">
             <g:link action="list" params="${params + [lastUpdated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                 <i class="fa fa-time"></i>

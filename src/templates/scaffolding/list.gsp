@@ -18,7 +18,7 @@
 					<g:form action="list" class="form-inline" method="GET">
 						<div class="input-append">
 						<g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="col-md-3" />
-						<button class="btn" type="submit"><g:message code="default.search.label"/></button>
+						<button class="btn btn-default" type="submit"><g:message code="default.search.label"/></button>
 						</div>
 					</g:form>
 				</div>
@@ -26,7 +26,7 @@
 			<div class="col-md-6">
 				<div id="options_bar" class="rowbar-right pull-right">
 					<g:link class="btn btn-success" action="create">
-						<i class="fa fa-plus fa fa-white"></i>
+						<i class="fa fa-plus"></i>
 						<g:message code="default.create.label" args="[entityName]" />
 					</g:link>
 				</div>
@@ -71,15 +71,15 @@
 						<%  }   }   } %>
 							<td>
 								<div class="list-actions pull-right">
-									<g:link class="btn btn-xs" action="show" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
+									<g:link class="btn btn-default btn-xs" action="show" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
 										<i class="fa fa-search"></i>
 									</g:link>
-									<g:link class="btn btn-xs" action="edit" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.edit.label', default: 'Edit')}" rel="tooltip">
+									<g:link class="btn btn-default btn-xs" action="edit" id="\${${propertyName}?.id}" title="\${message(code: 'default.button.edit.label', default: 'Edit')}" rel="tooltip">
 										<i class="fa fa-pencil"></i>
 									</g:link>
 									<g:form action="delete">
 										<g:hiddenField name="id" value="\${${propertyName}?.id}" />
-										<button class="btn btn-xs" type="submit" name="_action_delete" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" title="\${message(code: 'default.button.delete.label', default: 'Delete')}"  rel="tooltip">
+										<button class="btn btn-default btn-xs" type="submit" name="_action_delete" onclick="return confirm('\${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" title="\${message(code: 'default.button.delete.label', default: 'Delete')}"  rel="tooltip">
 											<i class="fa fa-trash"></i>
 										</button>
 									</g:form>
@@ -98,8 +98,9 @@
 						</tr>
 					</tfooter>
 				</table>
-				<g:paginate total="\${${propertyName}Total}" maxsteps="4" params="['q':params?.q]" class="pagination-centered" />
-
+                <div class="text-center">
+				    <g:paginate total="\${${propertyName}Total}" maxsteps="4" params="['q':params?.q]" />
+                </div>
 				</div>
 				</g:if>
 				<g:else>

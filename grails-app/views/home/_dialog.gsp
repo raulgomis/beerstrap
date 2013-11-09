@@ -10,7 +10,7 @@
     <button class="btn btn-primary">
         <g:message code="app.default.dialog.accept.label" />
     </button>
-    <a class="btn" data-dismiss="modal">
+    <a class="btn btn-default" data-dismiss="modal">
         <g:message code="app.default.dialog.cancel.label" />
     </a>
 </div>

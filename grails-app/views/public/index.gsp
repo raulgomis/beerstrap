@@ -5,6 +5,8 @@
     <parameter name="menu_Home" value="active" />
 </head>
 <body>
+
+<div class="masthead">
     <div class="jumbotron">
         <h1>
             <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}" />
@@ -12,11 +14,11 @@
         <p class="lead"><strong>Startup project designed to ease and accelerate software development.</strong><br> Ideal for startups and web developers who want to rapid-prototype
         and develop products within weeks without wasting time in configurations and boring stuff. <br> Software development never has been so fast!</p>
         <g:link class="btn btn-lg btn-success" controller="home">Get started now</g:link>
-        <g:link class="btn btn-lg btn-info" controller="home"><i class="fa fa-github"></i>GitHub project</g:link>
+        <g:link class="btn btn-lg btn-info" controller="home"><i class="fa fa-github"></i> GitHub project</g:link>
     </div>
+</div>
 
-    <hr>
-
+<div class="container">
     <section id="why" class="clearfix">
         <div class="row">
             <div class="col-md-4">
@@ -199,7 +201,7 @@
             </blockquote>
         </div>
     </section>
-
+</div>
 </body>
 
 </html>

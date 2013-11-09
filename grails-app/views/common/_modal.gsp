@@ -9,7 +9,7 @@
     <div class="modal-footer">
         <a class="btn btn-primary" href="#"
            onclick="javascript:document.formdialog.submit();"><g:message code="app.default.dialog.accept.label" /></a> <a
-            class="btn" href="#"
+            class="btn btn-default" href="#"
             onclick="javascript:jQuery('#modal-general').modal('hide')"><g:message code="app.default.dialog.cancel.label" /></a>
     </div>
 </div>

@@ -28,10 +28,10 @@
                 <g:render template="form"/>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-ok fa fa-white"></i>
+                        <i class="fa fa-ok"></i>
                         <g:message code="default.button.update.label" default="Update" />
                     </button>
-                    <g:link class="btn" action="list">
+                    <g:link class="btn btn-default" action="list">
                         <i class="fa fa-th-list"></i>
                         <g:message code="default.button.list.label" default="List" />
                     </g:link>

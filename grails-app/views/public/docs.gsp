@@ -7,6 +7,7 @@
 </head>
 
 <body>
+<div class="container">
 <h2 class="section_header">
     <span><i class="fa fa-file-o"></i> Docs <small>All the info</small>
     </span>
@@ -50,7 +51,7 @@ Copyright 2013 Raúl Gomis
 follow @rgomis
 </markdown:renderHtml>
 </section>
-
+</div>
 </body>
 
 </html>

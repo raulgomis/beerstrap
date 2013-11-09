@@ -17,7 +17,7 @@
 <div class="row rowbar">
     <div class="col-md-12">
         <div class="pull-left">
-            <g:link class="btn" action="list">
+            <g:link class="btn btn-default" action="list">
                 <i class="fa fa-th-list"></i>
                 <g:message code="default.button.list.label" default="List"/>
             </g:link>
@@ -25,11 +25,11 @@
         <div class="pull-right">
             <g:form action="delete">
                 <g:hiddenField name="id" value="${userInstance?.id}"/>
-                <g:link class="btn" action="edit" id="${userInstance?.id}">
+                <g:link class="btn btn-default" action="edit" id="${userInstance?.id}">
                     <i class="fa fa-pencil"></i>
                     <g:message code="default.button.edit.label" default="Edit"/>
                 </g:link>
-                <button class="btn" type="submit" name="_action_delete"
+                <button class="btn btn-default" type="submit" name="_action_delete"
                         onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
                     <i class="fa fa-trash"></i>
                     <g:message code="default.button.delete.label" default="Delete"/>

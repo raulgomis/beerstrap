@@ -1,24 +1,26 @@
-body {
-    /*padding-top: 20px;*/
-    padding-bottom: 60px;
-}
-
 /* Custom container */
 .container {
     margin: 0 auto;
     max-width: 1000px;
 }
 
-.container > hr {
-    margin: 60px 0;
+.navbar-inner {
+    background-color: #eee;
+    border-bottom: 1px solid #d5d5d5;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    margin: 50px 0;
+    color: #333;
     text-align: center;
-    /*background: -webkit-linear-gradient(45deg, #CCC 0%,#6d3353 100%);
-    padding: 70px 0 80px;     */
+    background-color: transparent;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
 }
 
 .jumbotron h1 {
@@ -31,11 +33,6 @@ body {
     line-height: 1.25;
 }
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
 /* Supporting marketing content */
 .marketing {
     margin: 60px 0;
@@ -45,36 +42,64 @@ body {
     margin-top: 28px;
 }
 
-/* Customize the navbar links to be fill the entire space of the .navbar */
-.navbar .navbar-inner {
-    padding: 0;
-}
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
 
-.navbar .nav {
-    margin: 0;
-    width: 100%;
+.nav-justified {
+    background-color: #eee;
 }
-
-.navbar .nav li {
-    display: table-cell;
-    width: 1%;
-    float: none;
-    line-height: 30px;
-}
-
-.navbar .nav li a {
+.nav-justified > li > a {
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #777;
     font-weight: bold;
     text-align: center;
-    /*border-left: 1px solid rgba(255,255,255,.75);  */
-    border-right: 1px solid rgba(0, 0, 0, .1);
+    background-color: #eee;
+}
+.nav-justified > li > a:hover {
+    background-color: #ddd;
+}
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+    background-color: #ddd;
+    /*box-shadow: inset 0 3px 7px rgba(0,0,0,.15);*/
+}
+.nav-justified > li:last-child > a {
+    border-bottom: 0;
 }
 
-.navbar .nav li:first-child a {
-    border-left: 0;
-    /*border-radius: 3px 0 0 3px;*/
+@media (min-width: 768px) {
+    .nav-justified {
+        max-height: 52px;
+    }
+    .nav-justified > li > a {
+        border-right: 1px solid #d5d5d5;
+    }
+    .nav-justified > li:first-child > a {
+        border-left: 0;
+    }
+    .nav-justified > li:last-child > a {
+        border-right: 0;
+    }
 }
 
-.navbar .nav li:last-child a {
-    border-right: 0;
-    /*border-radius: 0 3px 3px 0; */
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .masthead,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
+
+.masthead {
+    background-color: #ddd;
+    color: #fff;
+    position: relative;
+    padding: 3em 0;
+    text-align: center;
+}
+

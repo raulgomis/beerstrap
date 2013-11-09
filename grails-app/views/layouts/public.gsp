@@ -17,29 +17,24 @@
     <r:layoutResources/>
 </head>
 <body>
-    <div class="masthead">
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="container">
-                    <ul class="nav">
-                        <li class="${pageProperty(name: "page.menu_Home")}"><g:link controller="public" action="index"><i class="fa fa-home"></i> Home</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Docs")}"><g:link controller="public" action="docs"><i class="fa fa-file-o"></i> Docs</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Pricing")}"><g:link controller="public" action="pricing"><i class="fa fa-shopping-cart"></i> Pricing</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Downloads")}"><g:link controller="public" action="downloads"><i class="fa fa-cloud-download"></i> Downloads</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_About")}"><g:link controller="public" action="about"><i class="fa fa-info-circle"></i> About</g:link></li>
-                        <li class="${pageProperty(name: "page.menu_Contact")}"><g:link controller="public" action="contact"><i class="fa fa-phone-square"></i> Contact</g:link></li>
-                    </ul>
-                </div>
-            </div>
-        </div><!-- /.navbar -->
-    </div>
+    <nav class="navbar-inner">
+        <div class="container">
+            <ul class="nav nav-justified">
+                <li class="${pageProperty(name: "page.menu_Home")}"><g:link controller="public" action="index"><i class="fa fa-home"></i> Home</g:link></li>
+                <li class="${pageProperty(name: "page.menu_Docs")}"><g:link controller="public" action="docs"><i class="fa fa-file-o"></i> Docs</g:link></li>
+                <li class="${pageProperty(name: "page.menu_Pricing")}"><g:link controller="public" action="pricing"><i class="fa fa-shopping-cart"></i> Pricing</g:link></li>
+                <li class="${pageProperty(name: "page.menu_Downloads")}"><g:link controller="public" action="downloads"><i class="fa fa-cloud-download"></i> Downloads</g:link></li>
+                <li class="${pageProperty(name: "page.menu_About")}"><g:link controller="public" action="about"><i class="fa fa-info-circle"></i> About</g:link></li>
+                <li class="${pageProperty(name: "page.menu_Contact")}"><g:link controller="public" action="contact"><i class="fa fa-phone-square"></i> Contact</g:link></li>
+            </ul>
+        </div>
+    </nav>
     <g:if test="${flash.message}">
         <div class="alert alert-info myalert col-md-3 pull-right" data-alert="alert" role="status" style="z-index:2323">
             <a class="close" data-dismiss="alert" href="#">×</a>
             <p>${flash.message}</p>
         </div>
     </g:if>
-    <div class="container">
         <g:layoutBody/>
 
         <hr>
@@ -48,7 +43,6 @@
             <p>&copy; Company 2012</p>
         </div>
 
-    </div> <!-- /container -->
     <r:layoutResources/>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -1,3 +1,35 @@
+<style>
+.panel-body .btn:not(.btn-block) { width:16.3%;margin-bottom:10px; }
+</style>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-bookmark"></span> Quick Shortcuts</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span> <br/>Apps </a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Bookmarks</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span> <br/>Reports</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span> <br/>Comments</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Users</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> <br/>Notes</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> <br/>Photos</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> <br/>Tags</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> <br/>Photos</a>
+                            <a href="#" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span> <br/>Tags</a>
+                        </div>
+                    </div>
+                    <a href="http://www.jquery2dotnet.com/" class="btn btn-default btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span> Website</a>
+                </div>
+            </div>
+        </div>
+
+
 <div class="row">
     <div class="col-md-12">
     <g:link controller="user" class="quick-button col-md-2">
@@ -25,7 +57,7 @@
         <p><g:message code="app.menu.configuration.label" /></p>
     </g:link>
     <g:link controller="help" class="quick-button col-md-2">
-        <i class="fa fa-question-sign"></i>
+        <i class="fa fa-cog"></i>
         <p><g:message code="app.menu.help.label" /></p>
     </g:link>
     </div>

@@ -2,7 +2,7 @@
 <div class="well sidebar-nav">
     <ul class="nav nav-list">
 
-        <li class="nav-header"><g:message code="app.default.filters.category.label" /></li>
+        <li class="dropdown-header"><g:message code="app.default.filters.category.label" /></li>
         <li class="${(params.category == null || params.category == '')?('active'):('')}">
             <g:link action="list" params="${params + [category:'']}" title="${message(code:'app.default.filters.category.allCategories.label')}">
                 <i class="fa fa-group"></i>
@@ -18,7 +18,7 @@
             </li>
         </g:each>
 
-        <li class="nav-header"><g:message code="app.default.filters.dateCreated.label" /></li>
+        <li class="dropdown-header"><g:message code="app.default.filters.dateCreated.label" /></li>
         <li class="${(params.dateCreated == '' || params.dateCreated == null)?('active'):('')}">
             <g:link action="list" params="${params + [dateCreated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                 <i class="fa fa-time"></i>
@@ -44,7 +44,7 @@
             </g:link>
         </li>
 
-        <li class="nav-header"><g:message code="app.default.filters.lastUpdated.label" /></li>
+        <li class="dropdown-header"><g:message code="app.default.filters.lastUpdated.label" /></li>
         <li class="${(params.lastUpdated == '' || params.lastUpdated == null)?('active'):('')}">
             <g:link action="list" params="${params + [lastUpdated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                 <i class="fa fa-time"></i>

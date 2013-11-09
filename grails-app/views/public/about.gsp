@@ -6,7 +6,7 @@
         <title>About</title>
 </head>
 <body>
-
+<div class="container">
     <h2 class="section_header">
         <span><i class="fa fa-info-circle"></i> About <small> See all the people involved in the project</small></span>
         <hr class="right visible-desktop">
@@ -55,5 +55,6 @@
             </div>
         </div>
     </section>
+</div>
 </body>
 </html>

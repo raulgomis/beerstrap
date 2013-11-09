@@ -15,7 +15,9 @@
 <div class="row rowbar">
     <div class="col-md-offset-2 col-md-10">
         <g:form class="form-inline" method="post" controller="search" >
-            <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="input-xxlarge"  />
+            <div class="form-group">
+                <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="form-control"  />
+            </div>
             <button class="btn btn-primary">
                 <g:message code="app.search.label"/>
             </button>
@@ -25,7 +27,7 @@
 <div class="row">
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked">
-            <li class="nav-header"><g:message code="app.default.filters.dateCreated.label" /></li>
+            <li class="dropdown-header"><g:message code="app.default.filters.dateCreated.label" /></li>
             <li class="${(params.dateCreated == '')?('active'):('')}">
                 <g:link action="index" params="${params + [dateCreated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
                     <i class="fa fa-time"></i>
@@ -50,7 +52,7 @@
                     <g:message code="app.default.filters.date.today.label" />
                 </g:link>
             </li>
-            <li class="nav-header">Sort by</li>
+            <li class="dropdown-header">Sort by</li>
             <li class="${(params.sortFilter == "sort1")?('active'):('')}">
                 <g:link action="index" params="${params + [sortFilter: "sort1"]}" title="Sort 1">
                     <i class="fa fa-filter"></i>

@@ -6,8 +6,7 @@
         <title>Contact</title>
 </head>
 <body>
-
-
+<div class="container">
     <h2 class="section_header">
         <span><i class="fa fa-phone-square"></i> Contact <small> See all plan details here</small>
         </span>
@@ -80,6 +79,6 @@
     }
     initializeMaps();
 </script>
-
+</div>
 </body>
 </html>

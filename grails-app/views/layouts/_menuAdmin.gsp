@@ -13,7 +13,7 @@
 
     <sec:access url="/admin/**">
         <li class="divider"></li>
-        <li class="nav-header"><g:message code="app.menu.management.label" /></li>
+        <li class="dropdown-header"><g:message code="app.menu.management.label" /></li>
 
         <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
             <g:if test="${c.getPropertyValue('admin')}">

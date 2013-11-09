@@ -44,7 +44,6 @@
                     <div class="form-group">
                         <input type="text" name="q" placeholder="${message(code:'app.menu.search.label')}" value="${params.q}" class="form-control search-query" />
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
                 </g:form>
             </div>
         </div>

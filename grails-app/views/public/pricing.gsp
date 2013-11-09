@@ -7,7 +7,7 @@
 </head>
 
 <body>
-
+<div class="container">
 <h2 class="section_header">
     <span><i class="fa fa-shopping-cart"></i> Pricing<small> See all plan details here</small>
     </span>
@@ -49,7 +49,7 @@
                     <!-- /plan-features -->
 
                     <div class="plan-actions">
-                        <a href="javascript:;" class="btn">Sing up</a>
+                        <a href="javascript:;" class="btn btn-default">Sing up</a>
                     </div>
                     <!-- /plan-actions -->
 
@@ -85,7 +85,7 @@
                     <!-- /plan-features -->
 
                     <div class="plan-actions">
-                        <a href="javascript:;" class="btn">Purchase Now</a>
+                        <a href="javascript:;" class="btn btn-default">Purchase Now</a>
                     </div>
                     <!-- /plan-actions -->
 
@@ -158,7 +158,7 @@
                     <!-- /plan-features -->
 
                     <div class="plan-actions">
-                        <a href="javascript:;" class="btn">Purchase Now</a>
+                        <a href="javascript:;" class="btn btn-default">Purchase Now</a>
                     </div>
                     <!-- /plan-actions -->
 
@@ -174,6 +174,6 @@
     <!-- /col-md-12 -->
 
 </div>
-
+</div>
 </body>
 </html>

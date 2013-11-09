@@ -11,9 +11,9 @@
         <table id="fileUploader" class="table table-bordered table-condensed"></table>
     </div>
     <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true"><g:message code="app.default.dialog.cancel.label"/></button>
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true"><g:message code="app.default.dialog.cancel.label"/></button>
         <span class="btn btn-primary fileinput-button">
-            <i class="fa fa-plus fa fa-white"></i>
+            <i class="fa fa-plus"></i>
             <span><g:message code="app.default.button.addFiles.label"/></span>
             <input id="fileupload" type="file" name="files[]" data-url="fileupload" multiple>
         </span>
