@@ -57,7 +57,7 @@
         <p><g:message code="app.menu.configuration.label" /></p>
     </g:link>
     <g:link controller="help" class="quick-button col-md-2">
-        <i class="fa fa-cog"></i>
+        <i class="fa fa-question-circle"></i>
         <p><g:message code="app.menu.help.label" /></p>
     </g:link>
     </div>
@@ -113,9 +113,11 @@
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
     </div>
 </div>
-<%--
-<div id="activeUsers" style="height: 300px; padding: 0px; position: relative;">
-    --%>
+
+<div id="activeUsers" style="height: 300px; padding: 0px; position: relative;">       </div>
+
+
+        <div id="cal-heatmap"></div>
 
 <div class="row">
     <div class="col-md-6">

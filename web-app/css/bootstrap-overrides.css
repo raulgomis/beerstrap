@@ -74,7 +74,7 @@ footer {
     /*height: 130px;*/
     border-top: 1px solid #CCC;
     /*border-bottom: 1px solid #C3C3C3;*/
-    padding-top: 10px;
+    padding-top: 40px;
 }
 
 
@@ -121,3 +121,46 @@ footer {
     font-weight: bold !important;
 }
 
+
+
+/*
+ * Main navigation
+ *
+ * Turn the `.navbar` at the top of the docs purple.
+ */
+
+.bs-docs-nav {
+    text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+    background-color: #205081;
+    border-color: #3b73af;
+    box-shadow: 0 1px 0 rgba(255,255,255,.1);
+}
+.bs-docs-nav .navbar-collapse {
+    border-color: #3b73af;
+}
+.bs-docs-nav .navbar-brand {
+    color: #fff;
+}
+.bs-docs-nav .navbar-nav > li > a {
+    color: #f5f5f5;
+}
+.bs-docs-nav .navbar-nav > li > a:hover {
+    color: #fff;
+}
+.bs-docs-nav .navbar-nav > .active > a,
+.bs-docs-nav .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: #3b73af;
+}
+.bs-docs-nav .navbar-toggle {
+    border-color: #205081;
+}
+.bs-docs-nav .navbar-toggle:hover {
+    background-color: #3b73af;
+    border-color: #3b73af;
+}
+
+.bs-docs-nav .navbar-nav>.open>a, .bs-docs-nav .navbar-nav>.open>a:hover, .bs-docs-nav .navbar-nav>.open>a:focus {
+    background-color: #3b73af;
+    border-color: #3b73af;
+}

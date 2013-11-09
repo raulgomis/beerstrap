@@ -79,7 +79,12 @@ modules = {
         resource url:'js/jquery-file-uploader/js/jquery.iframe-transport.js'
         resource url:'js/jquery-file-uploader/js/jquery.fileupload.js'
         //resource url:'js/jquery-file-uploader/js/jquery.fileupload-ui.js'
+    }
 
+    callheatmaps {
+        resource url:"http://cdn.jsdelivr.net/d3js/3.3.3/d3.min.js"
+        resource url:"http://cdn.jsdelivr.net/cal-heatmap/3.3.5/cal-heatmap.min.js"
+        resource url:"http://cdn.jsdelivr.net/cal-heatmap/3.3.5/cal-heatmap.css"
     }
 
     pagedown {

@@ -27,6 +27,8 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    width: 150px;
+    margin: 20px;
 }
 
 .quick-button:hover {

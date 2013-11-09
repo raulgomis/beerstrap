@@ -34,7 +34,7 @@
                 </span>
             </td>
             <td>
-                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}"/>
+                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" class="form-control"/>
             </td>
         </tr>
         <%--
@@ -84,7 +84,7 @@
                 </span>
             </td>
             <td>
-                <g:textArea name="${configurationInstance?.key}" value="${configurationInstance?.value}" class="tiny"/>
+                <g:textArea name="${configurationInstance?.key}" value="${configurationInstance?.value}" class="tiny form-control"/>
             </td>
         </tr>
         </tbody>

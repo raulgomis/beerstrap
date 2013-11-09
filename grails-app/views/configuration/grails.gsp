@@ -13,7 +13,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <div id="status" role="complementary" class="well">
+        <div id="status" role="complementary" >
             <h2>Application Status</h2>
             <ul>
                 <li>App version: <g:meta name="app.version"/></li>

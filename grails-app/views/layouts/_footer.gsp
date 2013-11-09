@@ -1,6 +1,5 @@
 <footer>
     <div class="container">
-        <hr>
         <div class="row">
             <div class="col-md-4">
                 <p>
@@ -8,7 +7,7 @@
                     <g:meta name="app.version"></g:meta>
                     |
                     <a rel="tooltip" href="http://www.twitter.com/rgomis" data-original-title="Built with Grails Bootstrap">
-                        Built with Grails Bootstrap
+                        <span class="badge badge-info">Built with Grails Bootstrap</span>
                     </a>
                 </p>
             </div>
@@ -21,7 +20,7 @@
                 </div>
                 <div>
                     <strong><g:message code="app.footer.contact.label"></g:message></strong>
-                    <ul class="unstyled">
+                    <ul class="list-unstyled">
                         <li>Twitter: <a href="http://www.twitter.com/rgomis">@rgomis</a></li>
                         <li>Linkedin: <a href="http://linkd.in/11eyTDE">http://linkd.in/11eyTDE</a></li>
                     </ul>

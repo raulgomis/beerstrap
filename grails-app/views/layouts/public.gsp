@@ -40,7 +40,9 @@
         <hr>
 
         <div class="footer">
-            <p>&copy; Company 2012</p>
+            <div class="container">
+                <p>&copy; Company 2012</p>
+            </div>
         </div>
 
     <r:layoutResources/>

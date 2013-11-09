@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse bs-docs-nav" role="navigation">
 
 %{--    <g:if env="development">
         <div class="ribbon">

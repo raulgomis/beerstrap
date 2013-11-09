@@ -11,11 +11,6 @@
 
 <g:render template="sidebar" model="['selected': 'sb_server']"></g:render>
 
-<div class="alert alert-block">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <g:message code="app.configuration.server.alert.label" />
-</div>
-
 <h2><g:message code="app.configuration.server.emailconfig.label" /></h2>
 <table class="table" summary="configuration table">
     <thead>
@@ -34,7 +29,7 @@
                 </span>
             </td>
             <td>
-                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="input-xxlarge"/>
+                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="form-control"/>
                 <g:message code="app.configuration.${configurationInstance?.key}.description" default=""/>
             </td>
         </tr>
@@ -59,7 +54,7 @@
                         class="fa fa-info-sign"></i></span>
             </td>
             <td>
-                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="input-xxlarge"/>
+                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="form-control"/>
                 <g:message code="app.configuration.${configurationInstance?.key}.description" default=""/>
             </td>
         </tr>
@@ -85,13 +80,19 @@
                         class="fa fa-info-sign"></i></span>
             </td>
             <td>
-                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="input-xxlarge"/>
+                <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="form-control"/>
                 <g:message code="app.configuration.${configurationInstance?.key}.description" default=""/>
             </td>
         </tr>
     </g:each>
     </tbody>
 </table>
+
+<div class="alert alert-info">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <g:message code="app.configuration.server.alert.label" />
+</div>
+
 
 <%--
 Configuration:

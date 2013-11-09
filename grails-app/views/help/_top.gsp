@@ -1,6 +1,6 @@
 <div class="page-header">
     <h1>
-        <i class="fa fa-phone-sign"></i> Help <small>Ask for help!</small>
+        <i class="fa fa-question-circle"></i> Help <small>Ask for help!</small>
     </h1>
 </div>
 

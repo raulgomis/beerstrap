@@ -37,13 +37,13 @@
     <li class="divider"></li>
     <li class='controller ${pageProperty(name:"page.menu_Help")}'>
         <g:link controller="help" action="index">
-            <i class="fa fa-question-sign"></i>
+            <i class="fa fa-question-circle"></i>
             <g:message code="app.menu.help.label" />
         </g:link>
     </li>
     <li>
         <g:link controller="logout">
-        <i class="fa fa-off"></i>
+        <i class="fa fa-power-off"></i>
         <g:message code="app.menu.signout.label" />
         </g:link>
     </li>
