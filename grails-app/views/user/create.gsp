@@ -21,9 +21,11 @@
             </ul>
         </div>
         </g:hasErrors>
-        <g:form action="save" class="form-horizontal" >
+        <g:form action="save" class="form-horizontal" role="form" >
             <fieldset class="form">
-                <g:render template="form"/>
+                <div class="">
+                    <g:render template="form"/>
+                </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">
                         <i class="fa fa-check"></i>

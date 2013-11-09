@@ -19,7 +19,7 @@
         <g:message code="document.category.label" default="Category" />
     </label>
     <g:select name="category" from="${com.app.domain.repository.DocumentCategory?.values()}"
-              keys="${com.app.domain.repository.DocumentCategory.values()*.name()}" value="${documentInstance?.category?.name()}" noSelection="['': '']"/>
+              keys="${com.app.domain.repository.DocumentCategory.values()*.name()}" value="${documentInstance?.category?.name()}" noSelection="['': '']" class="form-control"/>
 </div>
 
 <div class="form-group ${hasErrors(bean: documentInstance, field: 'description', 'error')} ">
