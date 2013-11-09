@@ -1,7 +1,7 @@
 <style>
 .panel-body .btn:not(.btn-block) { width:16.3%;margin-bottom:10px; }
 </style>
-
+<!--
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
@@ -28,8 +28,8 @@
                 </div>
             </div>
         </div>
-
-
+    </div>
+ -->
 <div class="row">
     <div class="col-md-12">
     <g:link controller="user" class="quick-button col-md-2">
@@ -61,6 +61,7 @@
         <p><g:message code="app.menu.help.label" /></p>
     </g:link>
     </div>
+
 </div>
 <hr>
 <div class="row">

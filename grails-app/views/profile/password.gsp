@@ -18,35 +18,37 @@
         </div>
 
         <div class="col-md-9">
-            <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
-                <label for="password"><g:message code="user.password.label" default="Password"/>
-                    <span class="required-indicator">*</span>
-                </label>
-                <div class="input">
-                    <g:field type="password" name="password" required="" value=""/>
+            <div class="form-group">
+                <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
+                    <label for="password"><g:message code="user.password.label" default="Password"/>
+                        <span class="required-indicator">*</span>
+                    </label>
+                    <div class="input">
+                        <g:field type="password" name="password" required="" value="" class="form-control"/>
+                    </div>
                 </div>
-            </div>
 
-            <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
-                <label for="password"><g:message code="user.passwordnew.label" default="New password"/>
-                    <span class="required-indicator">*</span>
-                </label>
-                <div class="input">
-                    <g:field type="password" name="passwordNew" required="" value=""/>
+                <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
+                    <label for="password"><g:message code="user.passwordnew.label" default="New password"/>
+                        <span class="required-indicator">*</span>
+                    </label>
+                    <div class="input">
+                        <g:field type="password" name="passwordNew" required="" value="" class="form-control"/>
+                    </div>
                 </div>
-            </div>
 
-            <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
-                <label for="password"><g:message
-                        code="user.passwordrepeat.label" default="Repeat password"/> <span class="required-indicator">*</span>
-                </label>
-                <div class="input">
-                    <g:field type="password" name="passwordRepeat" required="" value=""/>
+                <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
+                    <label for="password"><g:message
+                            code="user.passwordrepeat.label" default="Repeat password"/> <span class="required-indicator">*</span>
+                    </label>
+                    <div class="input">
+                        <g:field type="password" name="passwordRepeat" required="" value="" class="form-control"/>
+                    </div>
                 </div>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary">
-                    <i class="fa fa-ok"></i>
+                    <i class="fa fa-check"></i>
                     <g:message code="default.button.update.label" default="Update"/>
                 </button>
             </div>

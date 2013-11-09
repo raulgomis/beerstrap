@@ -31,7 +31,7 @@
                 </g:link>
                 <button class="btn btn-default" type="submit" name="_action_delete"
                         onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
-                    <i class="fa fa-trash"></i>
+                    <i class="fa fa-trash-o"></i>
                     <g:message code="default.button.delete.label" default="Delete"/>
                 </button>
             </g:form>

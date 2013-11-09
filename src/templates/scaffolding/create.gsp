@@ -27,7 +27,7 @@
 				<g:render template="form"/>
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary">
-						<i class="fa fa-ok"></i>
+						<i class="fa fa-check"></i>
 						<g:message code="default.button.create.label" default="Create" />
 					</button>
 					<g:link class="btn btn-default" action="list">

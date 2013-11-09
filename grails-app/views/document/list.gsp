@@ -78,7 +78,7 @@
                             <g:form action="delete">
                                 <g:hiddenField name="id" value="${documentInstance?.id}" />
                                 <button class="btn btn-default btn-xs" type="submit" name="_action_delete" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" title="${message(code: 'default.button.delete.label', default: 'Delete')}"  rel="tooltip">
-                                    <i class="fa fa-trash"></i>
+                                    <i class="fa fa-trash-o"></i>
                                 </button>
                             </g:form>
                         </div>

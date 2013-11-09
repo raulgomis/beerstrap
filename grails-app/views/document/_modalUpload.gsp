@@ -46,7 +46,7 @@
                 $.each(data.result, function (index, file) {
                     $('#fileUploader tr[data-file="'+file.name+'"]')
                             .addClass('success')
-                            .html('<td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="fa fa-ok"></i></span></td>')
+                            .html('<td>'+file.name + ' ('+file.size+')'+'<span class="pull-right"><i class="fa fa-check"></i></span></td>')
 
                 });
             },

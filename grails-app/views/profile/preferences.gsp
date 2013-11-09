@@ -27,19 +27,19 @@
                             <div class="clearfix">
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.country.label" default="Country" /></label>
-                                    <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="col-md-5"/>
+                                    <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['':'-Choose your country-']" class="form-control"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.locale.label" default="Locale" /></label>
-                                    <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="col-md-5"/>
+                                    <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['':'-Choose your locale-']" class="form-control"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.timezone.label" default="Time Zone" /></label>
-                                    <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="col-md-5"/>
+                                    <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}" noSelection="['':'-Choose your time zone-']" class="form-control"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label"><g:message code="user.preferences.currency.label" default="Currency" /></label>
-                                    <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="col-md-5"/>
+                                    <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}" noSelection="['':'-Choose your currency-']" class="form-control"/>
                                 </div>
                             </div>
                             <!-- /clearfix -->
@@ -106,7 +106,7 @@
 
                         <div class="form-group">
                             <button class="btn btn-primary">
-                                <i class="fa fa-ok"></i>
+                                <i class="fa fa-check"></i>
                                 <g:message code="default.button.update.label" default="Update" />
                             </button>
                         </div>

@@ -58,6 +58,7 @@ modules = {
 
     select2 {
         resource url:'js/select2/select2.css'
+        resource url:'js/select2/select2-bootstrap.css'
         resource url:'js/select2/select2.js'
 
     }
