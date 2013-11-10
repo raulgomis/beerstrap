@@ -1,3 +1,4 @@
+<%@ page import="com.app.admin.domain.repository.Document" defaultCodec="html" %>
 <!doctype html>
 <html>
 <head>
@@ -17,6 +18,10 @@
     <sec:ifAnyGranted roles="ROLE_ADMIN">
         <g:render template="admin"></g:render>
     </sec:ifAnyGranted>
+
+<g:form>
+    <f:all bean="${new Document()}" except="Id, Version" />
+</g:form>
 
 </body>
 </html>

@@ -71,6 +71,8 @@ grails.project.dependency.resolution = {
 
         runtime ":resources:1.2.8"
 
+        compile ":fields:1.3"
+
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.7.4"
         //compile ":less-asset-pipeline:1.7.0"
