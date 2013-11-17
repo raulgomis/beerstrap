@@ -106,10 +106,10 @@ log4j = {
 //************************************************************************************************************************
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.app.domain.security.User'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.app.domain.security.UserRole'
-grails.plugins.springsecurity.authority.className = 'com.app.domain.security.Role'
-grails.plugins.springsecurity.requestMap.className = 'com.app.domain.security.Requestmap'
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.app.admin.domain.security.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.app.admin.domain.security.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.app.admin.domain.security.Role'
+grails.plugins.springsecurity.requestMap.className = 'com.app.admin.domain.security.Requestmap'
 //grails.plugins.springsecurity.securityConfigType = 'Requestmap'
 
 grails.plugins.springsecurity.active = true

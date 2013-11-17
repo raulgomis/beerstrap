@@ -1,8 +1,8 @@
 package com.app.services
 
-import com.app.domain.*
-import com.app.domain.security.*
-import com.app.domain.configuration.*
+import com.app.admin.domain.*
+import com.app.admin.domain.security.*
+import com.app.admin.domain.configuration.*
 
 class BootstrapService {
 

@@ -20,10 +20,11 @@
     <div class="col-md-6">
         <div id="search_bar" class="rowbar-left pull-left">
             <g:form action="list" class="form-inline" method="GET">
-                <div class="input-append">
-                    <g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="col-md-3"/>
-                    <button class="btn btn-default" type="submit"><g:message code="default.search.label"/></button>
+                <div class="form-group">
+                    <g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="col-md-3 form-control"/>
                 </div>
+                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                <g:render template="sidebar"></g:render>
             </g:form>
         </div>
     </div>
@@ -38,10 +39,7 @@
 </div>
 
 <div class="row">
-    <div class="col-md-3">
-        <g:render template="sidebar"></g:render>
-    </div>
-<div class="col-md-9">
+<div class="col-md-12">
     <g:if test="${userInstanceList}">
         <table class="table table-striped table-condensed">
             <thead>

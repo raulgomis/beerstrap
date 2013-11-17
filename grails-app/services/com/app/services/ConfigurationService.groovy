@@ -1,6 +1,6 @@
 package com.app.services
 
-import com.app.domain.configuration.Configuration
+import com.app.admin.domain.configuration.Configuration
 
 class ConfigurationService {
 

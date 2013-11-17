@@ -6,8 +6,8 @@ import com.app.utils.*
 import grails.util.Metadata
 import org.apache.commons.validator.ValidatorException
 import org.springframework.web.multipart.commons.CommonsMultipartFile
-import com.app.domain.repository.Document
-import com.app.domain.configuration.*
+import com.app.admin.domain.repository.Document
+import com.app.admin.domain.configuration.*
 
 
 class DocumentService {

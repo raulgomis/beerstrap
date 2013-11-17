@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-6">
                 <div id="options_bar" class="rowbar-right pull-right">
-                    <a href="#myModal" class="btn btn-success" data-toggle="modal">
+                    <a href="#modal-upload" class="btn btn-success" data-toggle="modal" data-target="#modal-upload">
                         <i class="fa fa-plus"></i>
                         <g:message code="default.button.upload.label" args="[entityName]" />
                     </a>

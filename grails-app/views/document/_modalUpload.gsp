@@ -1,29 +1,35 @@
 <!-- Modal Upload -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel"><g:message code="app.default.button.upload.label"/></h3>
-    </div>
-    <div class="modal-body">
-        <div id="progress" class="progress">
-            <div class="progress-bar" style="width: 0%;height: 18px"></div>
+<div id="modal-upload" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalUploadLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalUploadLabel"><g:message code="app.default.button.upload.label"/></h4>
+            </div>
+
+            <div class="modal-body">
+                <div id="progress" class="progress">
+                    <div class="progress-bar" style="width: 0%;height: 18px"></div>
+                </div>
+                <table id="fileUploader" class="table table-bordered table-condensed"></table>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true"><g:message code="app.default.dialog.cancel.label"/></button>
+                <span class="btn btn-primary fileinput-button">
+                    <i class="fa fa-plus"></i>
+                    <span><g:message code="app.default.button.addFiles.label"/></span>
+                    <input id="fileupload" type="file" name="files[]" data-url="fileupload" multiple>
+                </span>
+            </div>
         </div>
-        <table id="fileUploader" class="table table-bordered table-condensed"></table>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true"><g:message code="app.default.dialog.cancel.label"/></button>
-        <span class="btn btn-primary fileinput-button">
-            <i class="fa fa-plus"></i>
-            <span><g:message code="app.default.button.addFiles.label"/></span>
-            <input id="fileupload" type="file" name="files[]" data-url="fileupload" multiple>
-        </span>
     </div>
 </div>
 
 <r:script>
     $(function () {
         $.ajax({
-            url: "${createLink(controller:"document",action:"ajaxGetFiles")}"
+            url: "${createLink(controller: "document", action: "ajaxGetFiles")}"
         }).done(function(data) {
                     $('#fileContainer').html('');
                     $.each(data, function (index, file) {

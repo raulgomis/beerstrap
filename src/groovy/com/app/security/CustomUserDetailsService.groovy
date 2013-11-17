@@ -6,7 +6,7 @@ import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 import org.springframework.security.core.authority.GrantedAuthorityImpl
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UsernameNotFoundException
-import com.app.domain.security.*
+import com.app.admin.domain.security.User
 
 /**
  *

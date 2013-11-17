@@ -1,5 +1,8 @@
-<div class="well sidebar-nav">
-    <ul class="nav nav-list">
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <g:message code="default.filter.label"/> <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
         <li class="dropdown-header"><g:message code="app.default.filters.role.label" /></li>
         <li class="${(params.roleID == null || params.roleID == '')?('active'):('')}">
             <g:link action="list" params="${params + [roleID:'']}" title="${message(code:'app.default.filters.role.allRoles.label')}">
@@ -106,6 +109,4 @@
             </g:link>
         </li>
     </ul>
-
-
 </div>
