@@ -1,4 +1,4 @@
-<%@ page import="com.app.domain.repository.Document" %>
+<%@ page import="com.app.admin.domain.repository.Document" %>
 
 <div class="form-group ${hasErrors(bean: documentInstance, field: 'file', 'error')} ">
     <label class="control-label" for="file">
@@ -18,8 +18,8 @@
     <label class="control-label" for="category">
         <g:message code="document.category.label" default="Category" />
     </label>
-    <g:select name="category" from="${com.app.domain.repository.DocumentCategory?.values()}"
-              keys="${com.app.domain.repository.DocumentCategory.values()*.name()}" value="${documentInstance?.category?.name()}" noSelection="['': '']" class="form-control"/>
+    <g:select name="category" from="${com.app.admin.domain.repository.DocumentCategory?.values()}"
+              keys="${com.app.admin.domain.repository.DocumentCategory.values()*.name()}" value="${documentInstance?.category?.name()}" noSelection="['': '']" class="form-control"/>
 </div>
 
 <div class="form-group ${hasErrors(bean: documentInstance, field: 'description', 'error')} ">

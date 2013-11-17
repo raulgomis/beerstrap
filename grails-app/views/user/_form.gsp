@@ -1,4 +1,4 @@
-<%@ page import="com.app.domain.security.User" %>
+<%@ page import="com.app.admin.domain.security.User" %>
 
 <fieldset>
     <legend><g:message code="app.user.userDetails.label"/></legend>

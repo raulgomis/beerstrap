@@ -60,25 +60,25 @@
         <li class="dropdown-header"><g:message code="app.default.filters.registrationDate.label" /></li>
         <li class="${(params.dateCreated == '' || params.dateCreated == null)?('active'):('')}">
             <g:link action="list" params="${params + [dateCreated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.allTime.label" />
             </g:link>
         </li>
         <li class="${(params.dateCreated == "1")?('active'):('')}">
             <g:link action="list" params="${params + [dateCreated: 1]}" title="${message(code:'app.default.filters.date.today.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.today.label" />
             </g:link>
         </li>
         <li class="${(params.dateCreated == "7")?('active'):('')}">
             <g:link action="list" params="${params + [dateCreated: 7]}" title="${message(code:'app.default.filters.date.lastWeek.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.lastWeek.label" />
             </g:link>
         </li>
         <li class="${(params.dateCreated == "30")?('active'):('')}">
             <g:link action="list" params="${params + [dateCreated: 30]}" title="${message(code:'app.default.filters.date.lastMonth.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.lastMonth.label" />
             </g:link>
         </li>
@@ -86,25 +86,25 @@
         <li class="dropdown-header"><g:message code="app.default.filters.lastLogin.label" /></li>
         <li class="${(params.lastUpdated == '' || params.lastUpdated == null)?('active'):('')}">
             <g:link action="list" params="${params + [lastUpdated: '']}" title="${message(code:'app.default.filters.date.allTime.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.allTime.label" />
             </g:link>
         </li>
         <li class="${(params.lastUpdated == "30")?('active'):('')}">
             <g:link action="list" params="${params + [lastUpdated: 30]}" title="${message(code:'app.default.filters.date.lastMonth.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.lastMonth.label" />
             </g:link>
         </li>
         <li class="${(params.lastUpdated == "7")?('active'):('')}">
             <g:link action="list" params="${params + [lastUpdated: 7]}" title="${message(code:'app.default.filters.date.lastWeek.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.lastWeek.label" />
             </g:link>
         </li>
         <li class="${(params.lastUpdated == "1")?('active'):('')}">
             <g:link action="list" params="${params + [lastUpdated: 1]}" title="${message(code:'app.default.filters.date.today.label')}">
-                <i class="fa fa-time"></i>
+                <i class="fa fa-clock-o"></i>
                 <g:message code="app.default.filters.date.today.label" />
             </g:link>
         </li>

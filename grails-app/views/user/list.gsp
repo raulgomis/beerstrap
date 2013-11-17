@@ -1,4 +1,4 @@
-<%@ page import="com.app.domain.security.User" %>
+<%@ page import="com.app.admin.domain.security.User" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@
                     <g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="col-md-3 form-control"/>
                 </div>
                 <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                <g:render template="sidebar"></g:render>
+                <g:render template="filter"></g:render>
             </g:form>
         </div>
     </div>

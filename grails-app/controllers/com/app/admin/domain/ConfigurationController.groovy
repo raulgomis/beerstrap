@@ -8,8 +8,6 @@ class ConfigurationController extends AbstractController {
 
     //static admin = true
 
-
-
     def index() {
         redirect(action: "site", params: params)
     }

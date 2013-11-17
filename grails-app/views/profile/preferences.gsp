@@ -1,4 +1,4 @@
-<%@ page import="com.app.domain.configuration.Configuration"%>
+<%@ page import="com.app.admin.domain.configuration.Configuration"%>
 <html>
 <head>
 <parameter name="menu_Profile" value="active" />

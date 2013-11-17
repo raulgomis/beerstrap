@@ -1,4 +1,4 @@
-<%@ page import="com.app.domain.security.User" %>
+<%@ page import="com.app.admin.domain.security.User" %>
 <!DOCTYPE html>
 <html>
 <head>

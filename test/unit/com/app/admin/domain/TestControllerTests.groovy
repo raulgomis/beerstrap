@@ -1,4 +1,4 @@
-package com.app.domain
+package com.app.admin.domain
 
 
 

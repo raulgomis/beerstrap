@@ -1,4 +1,4 @@
-<%@ page import="com.app.domain.repository.Document" %>
+<%@ page import="com.app.admin.domain.repository.Document" %>
 <!DOCTYPE html>
 <html>
     <head>

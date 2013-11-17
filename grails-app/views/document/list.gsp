@@ -1,4 +1,4 @@
-<%@ page import="com.app.domain.repository.Document" %>
+<%@ page import="com.app.admin.domain.repository.Document" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,16 +18,14 @@
                         <div class="form-group">
                             <g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="form-control" />
                         </div>
-                        <button class="btn btn-default" type="button"><g:message code="default.search.label"/></button>
+                        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                        <g:render template="filter" ></g:render>
                     </g:form>
                 </div>
             </div>
             <div class="col-md-6">
                 <div id="options_bar" class="rowbar-right pull-right">
-                    <a href="#modal-upload" class="btn btn-success" data-toggle="modal" data-target="#modal-upload">
-                        <i class="fa fa-plus"></i>
-                        <g:message code="default.button.upload.label" args="[entityName]" />
-                    </a>
+                    <g:render template="actions" ></g:render>
                     <g:link class="btn btn-success" action="create">
                         <i class="fa fa-plus"></i>
                         <g:message code="default.create.label" args="[entityName]" />
@@ -36,10 +34,7 @@
             </div>
         </div>
     <div class="row">
-        <div class="col-md-3">
-            <g:render template="sidebar" ></g:render>
-        </div>
-        <div class="col-md-9">
+        <div class="col-md-12">
 
         <g:if test="${documentInstanceList}">
         <table class="table table-striped table-condensed">
@@ -51,7 +46,7 @@
             </thead>
             <tbody>
             <g:each in="${documentInstanceList}" status="i" var="documentInstance">
-                <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                <tr>
 
                     <td>
                         <i class="fa fa-file"></i>
@@ -67,7 +62,7 @@
                             <span class="label">${fieldValue(bean: documentInstance, field: "category")}</span>
 
                             <g:link class="btn btn-default btn-xs" action="download" id="${documentInstance?.uuid}" title="${message(code: 'default.button.download.label', default: 'Download')}" rel="tooltip">
-                                <i class="fa fa-download-o"></i>
+                                <i class="fa fa-download"></i>
                             </g:link>
                             <g:link class="btn btn-default btn-xs" action="show" id="${documentInstance?.id}" title="${message(code: 'default.button.show.label', default: 'Show')}" rel="tooltip">
                                 <i class="fa fa-search"></i>
