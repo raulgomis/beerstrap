@@ -21,44 +21,44 @@
         </div>
 
         <div class="col-md-9">
-            <div class="form-group">
-                <div class="clearfix ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
-                    <label for="username">
-                        <g:message code="user.username.label" default="Username"/>
-                        <span class="required-indicator">*</span>
-                    </label>
 
-                    <div class="input">
-                        <g:textField name="username" required="" readonly="" value="${userInstance?.username}" class="form-control"/>
-                    </div>
+            <div class="form-group ${hasErrors(bean: userInstance, field: 'username', 'has-error')} required">
+                <label for="username">
+                    <g:message code="user.username.label" default="Username"/>
+                    <span class="required-indicator">*</span>
+                </label>
+
+                <div class="input">
+                    <g:textField name="username" required="" readonly="" value="${userInstance?.username}" class="form-control"/>
                 </div>
             </div>
 
-            <div class="form-group">
-                <div class="clearfix ${hasErrors(bean: userInstance, field: 'name', 'error')} required">
-                    <label for="name">
-                        <g:message code="user.name.label" default="Name"/>
-                        <span class="required-indicator">*</span>
-                    </label>
 
-                    <div class="input">
-                        <g:textField name="name" required="" value="${userInstance?.name}" class="form-control"/>
-                    </div>
+
+            <div class="form-group ${hasErrors(bean: userInstance, field: 'name', 'has-error')} required">
+                <label for="name">
+                    <g:message code="user.name.label" default="Name"/>
+                    <span class="required-indicator">*</span>
+                </label>
+
+                <div class="input">
+                    <g:textField name="name" required="" value="${userInstance?.name}" class="form-control"/>
                 </div>
             </div>
 
-            <div class="form-group">
-                <div class="clearfix ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
-                    <label for="email">
-                        <g:message code="user.email.label" default="Email"/>
-                        <span class="required-indicator">*</span>
-                    </label>
 
-                    <div class="input">
-                        <g:field type="email" name="email" required="" value="${userInstance?.email}" class="form-control"/>
-                    </div>
+
+            <div class="form-group ${hasErrors(bean: userInstance, field: 'email', 'has-error')} required">
+                <label for="email">
+                    <g:message code="user.email.label" default="Email"/>
+                    <span class="required-indicator">*</span>
+                </label>
+
+                <div class="input">
+                    <g:field type="email" name="email" required="" value="${userInstance?.email}" class="form-control"/>
                 </div>
             </div>
+
 
             <div class="form-group">
                 <button class="btn btn-primary">
