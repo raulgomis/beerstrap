@@ -12,8 +12,12 @@
 <g:render template="sidebar" model="['selected': 'sb_password']"/>
 <g:form action="updatePassword">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-12">
             <h2><g:message code="app.profile.password.label"></g:message></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
             <p><g:message code="app.profile.password.description"></g:message></p>
         </div>
 
@@ -27,7 +31,8 @@
                         <g:field type="password" name="password" required="" value="" class="form-control"/>
                     </div>
                 </div>
-
+            </div>
+            <div class="form-group">
                 <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
                     <label for="password"><g:message code="user.passwordnew.label" default="New password"/>
                         <span class="required-indicator">*</span>
@@ -36,7 +41,8 @@
                         <g:field type="password" name="passwordNew" required="" value="" class="form-control"/>
                     </div>
                 </div>
-
+            </div>
+            <div class="form-group">
                 <div class="clearfix ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
                     <label for="password"><g:message
                             code="user.passwordrepeat.label" default="Repeat password"/> <span class="required-indicator">*</span>

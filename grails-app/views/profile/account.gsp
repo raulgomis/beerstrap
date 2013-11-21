@@ -11,8 +11,12 @@
 <g:render template="sidebar" model="['selected': 'sb_account']"/>
 <g:form action="updateAccount">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-12">
             <h2><g:message code="app.profile.account.label"></g:message></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
             <p><g:message code="app.profile.account.description"></g:message></p>
         </div>
 
@@ -28,7 +32,9 @@
                         <g:textField name="username" required="" readonly="" value="${userInstance?.username}" class="form-control"/>
                     </div>
                 </div>
+            </div>
 
+            <div class="form-group">
                 <div class="clearfix ${hasErrors(bean: userInstance, field: 'name', 'error')} required">
                     <label for="name">
                         <g:message code="user.name.label" default="Name"/>
@@ -39,7 +45,9 @@
                         <g:textField name="name" required="" value="${userInstance?.name}" class="form-control"/>
                     </div>
                 </div>
+            </div>
 
+            <div class="form-group">
                 <div class="clearfix ${hasErrors(bean: userInstance, field: 'email', 'error')} required">
                     <label for="email">
                         <g:message code="user.email.label" default="Email"/>
