@@ -9,7 +9,7 @@
 
             <div class="modal-body">
                 <div id="progress" class="progress">
-                    <div class="progress-bar" style="width: 0%;height: 18px"></div>
+                    <div class="progress-bar" style="width: 0%;height: 18px;"></div>
                 </div>
                 <table id="fileUploader" class="table table-bordered table-condensed"></table>
             </div>

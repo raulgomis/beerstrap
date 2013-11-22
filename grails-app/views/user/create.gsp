@@ -21,7 +21,7 @@
             </ul>
         </div>
         </g:hasErrors>
-        <g:form action="save" class="form-horizontal" role="form" >
+        <g:form action="save" class="form-vertical" role="form" >
             <fieldset class="form">
                 <div class="">
                     <g:render template="form"/>

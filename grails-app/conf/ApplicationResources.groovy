@@ -23,7 +23,6 @@ modules = {
         resource url:'css/bootstrap/css/bootstrap.min.css'
         resource url:'css/app-public.css'
         //resource url:'css/bootstrap/css/bootstrap-theme.min.css'
-        resource url:'css/app-pricing.css'
         resource url:'css/bootstrap/js/bootstrap.min.js'
         resource url:'css/fontawesome/css/font-awesome.min.css'
     }

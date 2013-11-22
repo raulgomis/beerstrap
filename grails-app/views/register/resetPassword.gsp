@@ -21,7 +21,7 @@
         </div>
     </g:hasErrors>
 
-    <g:form action="resetPassword" class="form-horizontal">
+    <g:form action="resetPassword" class="form-vertical">
         <g:hiddenField name="t" value="${token}" />
 
         <div class="form-group">

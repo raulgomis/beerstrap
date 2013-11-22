@@ -21,7 +21,7 @@
             </ul>
         </div>
         </g:hasErrors>
-        <g:form method="post" action="update" class="form-horizontal" >
+        <g:form method="post" action="update" class="form-vertical" >
             <g:hiddenField name="id" value="${documentInstance?.id}" />
             <g:hiddenField name="version" value="${documentInstance?.version}" />
             <fieldset>

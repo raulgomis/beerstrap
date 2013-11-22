@@ -50,3 +50,12 @@ LOGIN VIEW
     width: 238px !important;
     max-width: 238px !important;
 }
+
+.merged .input-group-addon {
+    border-right: 0px;
+    background-color: #FFFFFF;
+}
+.merged input {
+    border-left: 0px;
+    background-color: #FFFFFF;
+}

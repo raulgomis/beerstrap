@@ -41,7 +41,7 @@
         </div>
     </div>
 
-<div id="map_canvas" style="width: 100%; height: 400px"></div>
+<div id="map_canvas" style="width: 100%; height: 400px;"></div>
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">

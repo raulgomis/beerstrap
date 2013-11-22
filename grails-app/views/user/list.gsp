@@ -20,11 +20,15 @@
     <div class="col-md-6">
         <div id="search_bar" class="rowbar-left pull-left">
             <g:form action="list" class="form-inline" method="GET">
-                <div class="form-group">
+                <div class="input-group">
                     <g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="col-md-3 form-control"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                    <g:render template="filter"></g:render>
+                    </span>
+
                 </div>
-                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                <g:render template="filter"></g:render>
+
             </g:form>
         </div>
     </div>

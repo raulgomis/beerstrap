@@ -66,24 +66,24 @@
 <hr>
 <div class="row">
     <div class="col-md-8">
-        <div id="d3" style="width: 100%">
+        <div id="d3" style="width: 100%;">
             <g:img dir="images" file="loading-small.gif"></g:img>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">5,3,8,7,9,1,2,6,5,8</span>
+        <div class="peity"><span class="pbar" style="display: none;">5,3,8,7,9,1,2,6,5,8</span>
             <h4>2 </h4>
             <h4 class="sub">signups</h4>
         </div>
-        <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">2,7,6,2,9,8,6,0,1,3</span>
+        <div class="peity"><span class="pbar" style="display: none;">2,7,6,2,9,8,6,0,1,3</span>
             <h4>96</h4>
             <h4 class="sub">bounces</h4>
         </div>
-        <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">8,9,6,5,7,3,1,4,2,1</span>
+        <div class="peity"><span class="pbar" style="display: none;">8,9,6,5,7,3,1,4,2,1</span>
             <h4>25</h4>
             <h4 class="sub">ad views</h4>
         </div>
-        <div class="peity"><canvas height="32" width="58"></canvas><span class="pbar" style="display: none;">4,5,3,7,4,6,5,6,3,4</span>
+        <div class="peity"><span class="pbar" style="display: none;">4,5,3,7,4,6,5,6,3,4</span>
             <h4>82</h4>
             <h4 class="sub">comments</h4><br>
         </div>
@@ -114,16 +114,19 @@
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
     </div>
 </div>
-
+                       <!--
 <div id="activeUsers" style="height: 300px; padding: 0px; position: relative;">       </div>
 
 
-        <div id="cal-heatmap"></div>
+<div id="cal-heatmap"></div>
+
+-->
 
 <div class="row">
     <div class="col-md-6">
-        <div class="table-panel">
-            <h4> <i class="fa fa-eye-open"></i>Browsers</h4>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"><i class="fa fa-eye"></i> Browsers</div>
             <table class="table table-striped sortable">
                 <thead>
                 <tr>
@@ -132,29 +135,20 @@
                 </tr>
                 </thead>
                 <tbody>
-
-                <tr>
-                    <td>Safari</td>
-                    <td>3021</td>
-                </tr><tr>
-                    <td>Opera</td>
-                    <td>922</td>
-                </tr><tr>
-                    <td>Internet Explorer</td>
-                    <td>1011</td>
-                </tr><tr>
-                    <td>Firefox</td>
-                    <td>9580</td>
-                </tr><tr>
-                    <td>Chrome</td>
-                    <td>7668</td>
-                </tr></tbody>
+                <g:each in="${['Safari':3021,'Opera':922,'Internet Explorer':1011,'Firefox':9580,'Chrome':7668]}" var="data">
+                    <tr>
+                        <td>${data.key}</td>
+                        <td><span class="pbar" style="display: none;">4,5,3,7,4,6,5,6,3,4</span>${data.value}</td>
+                    </tr>
+                </g:each>
+                </tbody>
             </table>
         </div>
     </div>
     <div class="col-md-6">
-        <div class="table-panel">
-            <h4> <i class="fa fa-share-o"></i>Referrers</h4>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"><i class="fa fa-link"></i> Referrers</div>
             <table class="table table-striped sortable">
                 <thead>
                 <tr>

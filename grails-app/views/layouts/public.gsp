@@ -30,7 +30,7 @@
         </div>
     </nav>
     <g:if test="${flash.message}">
-        <div class="alert alert-info myalert col-md-3 pull-right" data-alert="alert" role="status" style="z-index:2323">
+        <div class="alert alert-info myalert col-md-3 pull-right" data-alert="alert" role="status" style="z-index:2323;">
             <a class="close" data-dismiss="alert" href="#">×</a>
             <p>${flash.message}</p>
         </div>

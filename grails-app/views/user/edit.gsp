@@ -21,12 +21,12 @@
             </ul>
         </div>
         </g:hasErrors>
-        <g:form method="post" action="update" class="form-horizontal" role="form" >
+        <g:form method="post" action="update" class="form-vertical" role="form" >
             <g:hiddenField name="id" value="${userInstance?.id}" />
             <g:hiddenField name="version" value="${userInstance?.version}" />
             <fieldset>
                 <g:render template="form"/>
-                <div class="form-group">
+                <div class="form-group form-actions">
                     <button type="submit" class="btn btn-primary">
                         <i class="fa fa-check"></i>
                         <g:message code="default.button.update.label" default="Update" />

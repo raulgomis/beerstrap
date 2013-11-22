@@ -75,35 +75,33 @@
 <fieldset>
     <legend><g:message code="app.profile.preferences.culture.label"/></legend>
 
-    <div class="clearfix">
-        <div class="form-group">
-            <label class="control-label"><g:message code="user.preferences.country.label" default="Country"/></label>
-            <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['': '-Choose your country-']" class="form-control"/>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label"><g:message code="user.preferences.locale.label" default="Locale"/></label>
-            <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['': '-Choose your locale-']" class="form-control"/>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label"><g:message code="user.preferences.timezone.label" default="Time Zone"/></label>
-            <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}"
-                              noSelection="['': '-Choose your time zone-']" class="form-control"/>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label"><g:message code="user.preferences.currency.label" default="Currency"/></label>
-            <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}"
-                              noSelection="['': '-Choose your currency-']" class="form-control"/>
-        </div>
+    <div class="form-group">
+        <label class="control-label"><g:message code="user.preferences.country.label" default="Country"/></label>
+        <g:countrySelect name="country" value="${userInstance?.preferences?.country}" noSelection="['': '-Choose your country-']" class="form-control"/>
     </div>
+
+    <div class="form-group">
+        <label class="control-label"><g:message code="user.preferences.locale.label" default="Locale"/></label>
+        <g:localeSelect name="locale" value="${userInstance?.preferences?.locale}" noSelection="['': '-Choose your locale-']" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label"><g:message code="user.preferences.timezone.label" default="Time Zone"/></label>
+        <g:timeZoneSelect name="timezone" value="${java.util.TimeZone.getTimeZone(userInstance?.preferences?.timezone)}"
+                          noSelection="['': '-Choose your time zone-']" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label"><g:message code="user.preferences.currency.label" default="Currency"/></label>
+        <g:currencySelect name="currency" value="${java.util.Currency.getInstance(userInstance?.preferences?.currency)}"
+                          noSelection="['': '-Choose your currency-']" class="form-control"/>
+    </div>
+
 </fieldset>
 
 <fieldset>
     <legend><g:message code="app.profile.preferences.messages.label"/></legend>
 
-<div class="clearfix">
     <label id="optionsCheckboxesEmails">Send me an email when</label>
 
     <div class="checkbox">
@@ -128,7 +126,6 @@
         more usable form.
         </span>
     </div>
-</div>
 
 </div>
 </fieldset>
@@ -136,7 +133,6 @@
 <fieldset>
     <legend><g:message code="app.profile.preferences.alerts.label"/></legend>
 
-    <div class="clearfix">
         <label id="optionsCheckboxesAlerts">Send me an email when</label>
 
         <div class="checkbox">
@@ -164,5 +160,4 @@
         more usable form.
         </span>
 
-    </div>
 </fieldset>

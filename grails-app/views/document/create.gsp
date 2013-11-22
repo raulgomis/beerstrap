@@ -22,7 +22,7 @@
         </div>
         </g:hasErrors>
 
-        <g:form action="save" class="form-horizontal" enctype="multipart/form-data" >
+        <g:form action="save" class="form-vertical" enctype="multipart/form-data" >
             <fieldset class="form-horizontal">
                 <g:render template="form"/>
                 <div class="form-group">

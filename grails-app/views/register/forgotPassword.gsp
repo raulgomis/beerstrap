@@ -24,7 +24,7 @@
         </div>
     </g:hasErrors>
 
-    <g:form action="forgotPassword" class="form-horizontal">
+    <g:form action="forgotPassword" class="form-vertical">
 
         <div class="form-group">
             <label class="control-label" for="email">Email</label>

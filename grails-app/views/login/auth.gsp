@@ -19,14 +19,14 @@
             </g:if>
             <br />
             <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <div class="input-group merged">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                     <input type='text' class='form-control' name='j_username' id='username' placeholder="Username"/>
                 </div>
             </div>
             <div class="form-group">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <div class="input-group merged">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                     <input type='password' class='form-control' name='j_password' id='password' placeholder="Password"/>
                 </div>
             </div>
@@ -37,8 +37,8 @@
                         <span><g:message code="springSecurity.login.remember.me.label"/></span>
                     </label>
             </div>
-            <button type="submit" name="submit" class="btn btn-info btn-block">
-                <i class="fa fa-lock"></i>
+            <button name="submit" class="btn btn-info btn-block">
+                <i class="glyphicon glyphicon-lock"></i>
                 <g:message code="app.security.login.login"></g:message>
             </button>
             <hr>

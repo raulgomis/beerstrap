@@ -23,7 +23,7 @@
     </g:hasErrors>
 
     <div class="form-register">
-        <g:form action="register" class="form-horizontal">
+        <g:form action="register" class="form-vertical">
             <div class="form-group">
                 <label class="control-label" for="name"><g:message code="app.registerCommand.name.label"/></label>
                 <div class="controls">
