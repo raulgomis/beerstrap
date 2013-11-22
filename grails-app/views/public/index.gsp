@@ -39,7 +39,7 @@
                 <h2>
                     <i class="fa fa-money"></i> Money, money...
                 </h2>
-                <p>Grails bootstrap will <strong>give you money</strong> (Yes, you heard right!): save more than 1500$ each time you start a project. It is the money it would cost to develop the features presented in Grails Bootstrap.</p>
+                <p><g:meta name="app.name"/> will <strong>give you money</strong> (Yes, you heard right!): save more than 1500$ each time you start a project. It is the money it would cost to develop the features presented in Beerstrap.</p>
             </div>
         </div>
     </section>
@@ -65,7 +65,7 @@
                 <h4>
                     <i class="fa fa-lock"></i> Security ready
                 </h4>
-                <p>Don't waste your time configuring and programming security basic stuff: Grails bootstrap is already secured.
+                <p>Don't waste your time configuring and programming security basic stuff: <g:meta name="app.name"/> is already secured.
                     <a href="http://grails.org/plugin/spring-security-core">Spring Security Core</a>
                 </p>
 
@@ -112,13 +112,13 @@
                 <h4>
                     <i class="fa fa-envelope-o"></i> Email sending
                 </h4>
-                <p>Grails bootstrap comes with a structured way to send emails. Configure your credentials and start sending emails to the users.</p>
+                <p><g:meta name="app.name"/> comes with a structured way to send emails. Configure your credentials and start sending emails to the users.</p>
             </div>
             <div class="col-md-3">
                 <h4>
                     <i class="fa fa-flag"></i> I18N ready
                 </h4>
-                <p>Grails bootstrap has it own core translated into English and Spanish. Help us translate it into your own language.</p>
+                <p><g:meta name="app.name"/> has it own core translated into English and Spanish. Help us translate it into your own language.</p>
             </div>
 
             <div class="col-md-3">
@@ -143,7 +143,7 @@
                     <i class="fa fa-copy"></i> Documentation <small>Coming soon!</small>
                 </h4>
                 <p>
-                    Documentation is one key to success. The more documented and easier Grails Bootstrap is to use, the more productive you will be at work.
+                    Documentation is one key to success. The more documented and easier <g:meta name="app.name"/> is to use, the more productive you will be at work.
                 </p>
             </div>
             <div class="col-md-3">
@@ -160,7 +160,7 @@
                     <i class="fa fa-puzzle-piece"></i> Rest <small>Coming soon!</small>
                 </h4>
                 <p>
-                    Create rest interfaces easily (scaffolding for rest) is one of our priorities in Grails Bootstrap, using <a href="http://jackson.codehaus.org/">Jackson</a> library.
+                    Create rest interfaces easily (scaffolding for rest) is one of our priorities in <g:meta name="app.name"/>, using <a href="http://jackson.codehaus.org/">Jackson</a> library.
                 </p>
             </div>
 

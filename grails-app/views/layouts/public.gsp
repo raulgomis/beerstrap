@@ -41,7 +41,7 @@
 
         <div class="footer">
             <div class="container">
-                <p>&copy; Company 2012</p>
+                <p>&copy; <g:meta name="app.name"/> ${Calendar.getInstance().get(Calendar.YEAR)}</p>
             </div>
         </div>
 

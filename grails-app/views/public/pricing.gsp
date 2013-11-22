@@ -14,166 +14,87 @@
     <hr class="right visible-desktop">
 </h2>
 
-<div class="row">
 
-    <div class="col-md-12">
+    <div class="row">
 
-        <p>Pricing table example</p>
-
-        <div class="pricing-plans plans-4">
-
-            <div class="plan-container">
-                <div class="plan">
-                    <div class="plan-header">
-
-                        <div class="plan-title">Micro</div>
-                        <!-- /plan-title -->
-
-                        <div class="plan-price">
-                            <span class="note">$</span>0<span class="term">FREE</span>
-                        </div>
-                        <!-- /plan-price -->
-
-                    </div>
-                    <!-- /plan-header -->
-
-                    <div class="plan-features">
-                        <ul>
-                            <li><strong>Free</strong> setup</li>
-                            <li><strong>1</strong> Website</li>
-                            <li><strong>2</strong> Projects</li>
-                            <li><strong>1GB</strong> Storage</li>
-                            <li><strong>$0</strong> Google Adwords Credit</li>
-                        </ul>
-                    </div>
-                    <!-- /plan-features -->
-
-                    <div class="plan-actions">
-                        <a href="javascript:;" class="btn btn-default">Sing up</a>
-                    </div>
-                    <!-- /plan-actions -->
-
+        <div class="col-sm-3">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <strong>Basic</strong>
                 </div>
-                <!-- /plan -->
-            </div>
-            <!-- /plan-container -->
-
-            <div class="plan-container">
-                <div class="plan">
-                    <div class="plan-header">
-
-                        <div class="plan-title">Starter</div>
-                        <!-- /plan-title -->
-
-                        <div class="plan-price">
-                            <span class="note">$</span>35<span class="term">Per Month</span>
-                        </div>
-                        <!-- /plan-price -->
-
-                    </div>
-                    <!-- /plan-header -->
-
-                    <div class="plan-features">
-                        <ul>
-                            <li><strong>Free</strong> setup</li>
-                            <li><strong>5</strong> Website</li>
-                            <li><strong>10</strong> Projects</li>
-                            <li><strong>5GB</strong> Storage</li>
-                            <li><strong>$35</strong> Google Adwords Credit</li>
-                        </ul>
-                    </div>
-                    <!-- /plan-features -->
-
-                    <div class="plan-actions">
-                        <a href="javascript:;" class="btn btn-default">Purchase Now</a>
-                    </div>
-                    <!-- /plan-actions -->
-
+                <div class="panel-body">
+                    <h3 class="panel-title price">$9<span class="price-cents">99</span><span class="price-month">mo.</span></h3>
                 </div>
-                <!-- /plan -->
+                <ul class="list-group">
+                    <li class="list-group-item">5 Projects</li>
+                    <li class="list-group-item">5 GB of Storage</li>
+                    <li class="list-group-item">Up to 100 Users</li>
+                    <li class="list-group-item">10 GB Bandwidth</li>
+                    <li class="list-group-item">Security Suite</li>
+                    <li class="list-group-item"><a class="btn btn-primary">Sign Up Now!</a></li>
+                </ul>
             </div>
-            <!-- /plan-container -->
-
-            <div class="plan-container best-value">
-                <div class="plan">
-                    <div class="plan-header">
-
-                        <div class="plan-title">Business</div>
-                        <!-- /plan-title -->
-
-                        <div class="plan-price">
-                            <span class="note">$</span>75<span class="term">Per Month</span>
-                        </div>
-                        <!-- /plan-price -->
-
-                    </div>
-                    <!-- /plan-header -->
-
-                    <div class="plan-features">
-                        <ul>
-                            <li><strong>Free</strong> setup</li>
-                            <li><strong>20</strong> Website</li>
-                            <li><strong>35</strong> Projects</li>
-                            <li><strong>Unlimited</strong> Storage</li>
-                            <li><strong>$150</strong> Google Adwords Credit</li>
-                        </ul>
-                    </div>
-                    <!-- /plan-features -->
-
-                    <div class="plan-actions">
-                        <a href="javascript:;" class="btn btn-success">Purchase Now</a>
-                    </div>
-                    <!-- /plan-actions -->
-
+        </div>
+        <div class="col-sm-3">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <strong>Plus</strong>
                 </div>
-                <!-- /plan -->
-            </div>
-            <!-- /plan-container -->
-
-            <div class="plan-container">
-                <div class="plan">
-                    <div class="plan-header">
-
-                        <div class="plan-title">Enterprise</div>
-                        <!-- /plan-title -->
-
-                        <div class="plan-price">
-                            <span class="note">$</span>125<span class="term">Per
-                        Month</span>
-                        </div>
-                        <!-- /plan-price -->
-
-                    </div>
-                    <!-- /plan-header -->
-
-                    <div class="plan-features">
-                        <ul>
-                            <li><strong>Free</strong> setup</li>
-                            <li><strong>Unlimited</strong> Website</li>
-                            <li><strong>Unlimited</strong> Projects</li>
-                            <li><strong>Unlimited</strong> Storage</li>
-                            <li><strong>$250</strong> Google Adwords Credit</li>
-                        </ul>
-                    </div>
-                    <!-- /plan-features -->
-
-                    <div class="plan-actions">
-                        <a href="javascript:;" class="btn btn-default">Purchase Now</a>
-                    </div>
-                    <!-- /plan-actions -->
-
+                <div class="panel-body">
+                    <h3 class="panel-title price">$19<span class="price-cents">99</span><span class="price-month">mo.</span></h3>
                 </div>
-                <!-- /plan -->
-
+                <ul class="list-group">
+                    <li class="list-group-item">10 Projects</li>
+                    <li class="list-group-item">10 GB of Storage</li>
+                    <li class="list-group-item">Up to 250 Users</li>
+                    <li class="list-group-item">25 GB Bandwidth</li>
+                    <li class="list-group-item">Security Suite</li>
+                    <li class="list-group-item"><a class="btn btn-primary">Sign Up Now!</a></li>
+                </ul>
             </div>
-            <!-- /plan-container -->
-
+        </div>
+        <div class="col-sm-3">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <strong>Premium <span class="label label-success">Best Value!</span></strong>
+                </div>
+                <div class="panel-body">
+                    <h3 class="panel-title price">$29<span class="price-cents">99</span><span class="price-month">mo.</span></h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">Unlimited</li>
+                    <li class="list-group-item">50 GB of Storage</li>
+                    <li class="list-group-item">Up to 1000 Users</li>
+                    <li class="list-group-item">100 GB Bandwidth</li>
+                    <li class="list-group-item">Security Suite</li>
+                    <li class="list-group-item"><a class="btn btn-primary">Sign Up Now!</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <strong>Ultimate</strong>
+                </div>
+                <div class="panel-body">
+                    <h3 class="panel-title price">$49<span class="price-cents">99</span><span class="price-month">mo.</span></h3>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">Unlimited</li>
+                    <li class="list-group-item">150 GB of Storage</li>
+                    <li class="list-group-item">Unlimited</li>
+                    <li class="list-group-item">500 GB Bandwidth</li>
+                    <li class="list-group-item">Security Suite</li>
+                    <li class="list-group-item"><a class="btn btn-primary">Sign Up Now!</a></li>
+                </ul>
+            </div>
         </div>
 
     </div>
-    <!-- /col-md-12 -->
 
-</div>
+
+
+
 </div>
 </body>
 </html>

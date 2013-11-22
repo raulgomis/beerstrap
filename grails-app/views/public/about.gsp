@@ -25,10 +25,10 @@
                 </p>
                 <p>
                     He is a Grails/Java lover and he strongly believes that Grails can radically improve the productivity of the software development process
-                    and Grails Bootstrap could improve much more the agility and quality of this awesome framework.
+                    and <g:meta name="app.name"/> could improve much more the agility and quality of this awesome framework.
                 </p>
                 <p>
-                    If you are interested in using Grails Bootstrap for your company or as a freelance contact me on <a href="mailto:contact@raulgomis.com">contact@raulgomis.com</a>
+                    If you are interested in using <g:meta name="app.name"/> for your company or as a freelance contact me on <a href="mailto:contact@raulgomis.com">contact@raulgomis.com</a>
                 </p>
             </div>
         </div>

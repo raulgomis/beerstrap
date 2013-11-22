@@ -4,7 +4,7 @@ package com.app.utils
  * User: raulgomis
  * Date: 4/03/13 | Time: 16:33
  * ==========================================================
- * Copyright 2013 Grails Bootstrap.
+ * Copyright 2013 Beerstrap.
  */
 import java.text.SimpleDateFormat
 import org.springframework.beans.propertyeditors.CustomDateEditor

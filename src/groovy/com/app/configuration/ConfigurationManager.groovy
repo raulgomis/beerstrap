@@ -6,7 +6,7 @@ import org.codehaus.groovy.grails.commons.GrailsApplication;
  * User: raulgomis
  * Date: 7/03/13 | Time: 17:33
  * ==========================================================
- * Copyright 2013 Grails Bootstrap.
+ * Copyright 2013 Beerstrap.
  */
 public class ConfigurationManager {
 

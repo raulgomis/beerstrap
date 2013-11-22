@@ -34,7 +34,7 @@ class BootstrapService {
         }
 
         def configMap = [
-                "grailsbs.BT_SITE_NAME":"Grails Bootstrap",
+                "grailsbs.BT_SITE_NAME":"Beerstrap",
                 "grailsbs.BT_SITE_OFFLINE":"False",
                 "grailsbs.BT_SITE_MAXLISTHOME":"5",
                 "grailsbs.BT_SITE_MAXLIST":"30",

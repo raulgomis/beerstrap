@@ -103,3 +103,18 @@
     text-align: center;
 }
 
+/* ============== princing ============== */
+.price {
+    font-size: 4em;
+}
+
+.price-cents {
+    vertical-align: super;
+    font-size: 50%;
+}
+
+.price-month {
+    font-size: 35%;
+    font-style: italic;
+}
+

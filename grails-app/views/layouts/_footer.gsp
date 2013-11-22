@@ -6,8 +6,8 @@
                     <g:meta name="app.name"></g:meta>
                     <g:meta name="app.version"></g:meta>
                     |
-                    <a rel="tooltip" href="http://www.twitter.com/rgomis" data-original-title="Built with Grails Bootstrap">
-                        <span class="badge badge-info">Built with Grails Bootstrap</span>
+                    <a rel="tooltip" href="http://www.twitter.com/rgomis" data-original-title="Built with Beerstrap">
+                        <span class="badge badge-info">Built with Beerstrap</span>
                     </a>
                 </p>
             </div>
