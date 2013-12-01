@@ -60,7 +60,7 @@
             </div>
 
 
-            <div class="form-group">
+            <div class="form-group form-actions">
                 <button class="btn btn-primary">
                     <i class="fa fa-check"></i>
                     <g:message code="default.button.update.label" default="Update"/>

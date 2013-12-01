@@ -1,6 +1,6 @@
 <div class="btn-group">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        <g:message code="default.filter.label"/> <span class="caret"></span>
+        <i class="fa fa-filter"></i> <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
         <li class="dropdown-header">Filter by property</li>
