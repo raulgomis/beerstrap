@@ -58,7 +58,7 @@ class DocumentController {
                     if(f){
                         documentInstance = documentService.saveFile(f, documentInstance,null)
 
-                        flash.message = message(code: 'default.created.message', args: [message(code: 'document.label', default: 'Document'), documentInstance.id])
+                        flash.success = message(code: 'default.created.message', args: [message(code: 'document.label', default: 'Document'), documentInstance.id])
                         redirect(action: "list")
                         return
                     }
@@ -68,13 +68,13 @@ class DocumentController {
                 }
                 catch(Exception ex){
                     log.error(ex)
-                    flash.message = ex
+                    flash.error = ex
                     render(view: "create", model: [documentoInstance: documentInstance])
                 }
             }
         }
         else{
-            flash.message = "File missing"
+            flash.error = "File missing"
             render(view: "create", model: [documentoInstance: documentInstance])
         }
 
@@ -91,7 +91,7 @@ class DocumentController {
     def show(Long id) {
         def documentInstance = Document.get(id)
         if (!documentInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
             redirect(action: "list")
             return
         }
@@ -102,7 +102,7 @@ class DocumentController {
     def edit(Long id) {
         def documentInstance = Document.get(id)
         if (!documentInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
             redirect(action: "list")
             return
         }
@@ -113,7 +113,7 @@ class DocumentController {
     def update(Long id, Long version) {
         def documentInstance = Document.get(id)
         if (!documentInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
             redirect(action: "list")
             return
         }
@@ -135,7 +135,7 @@ class DocumentController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'document.label', default: 'Document'), documentInstance.id])
+        flash.success = message(code: 'default.updated.message', args: [message(code: 'document.label', default: 'Document'), documentInstance.id])
         redirect(action: "list")
         //redirect(action: "show", id: documentInstance.id)
     }
@@ -143,18 +143,18 @@ class DocumentController {
     def delete(Long id) {
         def documentInstance = Document.get(id)
         if (!documentInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'document.label', default: 'Document'), id])
             redirect(action: "list")
             return
         }
 
         try {
             documentInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'document.label', default: 'Document'), id])
+            flash.success = message(code: 'default.deleted.message', args: [message(code: 'document.label', default: 'Document'), id])
             redirect(action: "list")
         }
         catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'document.label', default: 'Document'), id])
+            flash.error = message(code: 'default.not.deleted.message', args: [message(code: 'document.label', default: 'Document'), id])
             redirect(action: "show", id: id)
         }
     }
@@ -167,11 +167,11 @@ class DocumentController {
             response.getOutputStream() << new ByteArrayInputStream(bytes)
         }
         catch(ValidationException ex){
-            flash.message = "Document not found"
+            flash.error = "Document not found"
             redirect(action: "show", id: params.id)
         }
         catch(Exception ex){
-            flash.message = ex.message
+            flash.error = ex.message
             redirect(action: "show", id: params.id)
         }
 

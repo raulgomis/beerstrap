@@ -43,11 +43,6 @@
         <span class="notification yellow">167</span>
     </g:link>
     <g:link action="ajaxGraph" class="quick-button col-md-2 btn-ajax" data-toggle="modal" data-target="#modal-general">
-        <i class="fa fa-calendar"></i>
-        <p>Calendar</p>
-        <span class="notification green">167</span>
-    </g:link>
-    <g:link action="ajaxGraph" class="quick-button col-md-2 btn-ajax" data-toggle="modal" data-target="#modal-general">
         <i class="fa fa-envelope"></i>
         <p>Messages</p>
         <span class="notification red">68</span>
@@ -138,7 +133,7 @@
                 <g:each in="${['Safari':3021,'Opera':922,'Internet Explorer':1011,'Firefox':9580,'Chrome':7668]}" var="data">
                     <tr>
                         <td>${data.key}</td>
-                        <td><span class="pbar" style="display: none;">4,5,3,7,4,6,5,6,3,4</span>${data.value}</td>
+                        <td>${data.value}</td>
                     </tr>
                 </g:each>
                 </tbody>

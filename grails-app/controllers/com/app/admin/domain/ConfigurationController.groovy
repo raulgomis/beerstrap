@@ -51,7 +51,7 @@ class ConfigurationController extends AbstractController {
         ConfigurationManager.setSiteName(params[ConfigurationManager.BT_SITE_NAME])
         ConfigurationManager.setFAQText(params[ConfigurationManager.BT_HELP_FAQ])
 
-        flash.message = "${message(code: 'app.default.updated.message', args: [message(code: 'configuration.label', default: 'Configuration')])}"
+        flash.success = "${message(code: 'app.default.updated.message', args: [message(code: 'configuration.label', default: 'Configuration')])}"
         redirect(action: "site")
     }
 

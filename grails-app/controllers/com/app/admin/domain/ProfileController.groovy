@@ -10,7 +10,7 @@ class ProfileController extends AbstractController {
     def account() {
         def userInstance = getCurrentUser()
         if (!userInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
             redirect(action: "list")
             return
         }
@@ -23,7 +23,7 @@ class ProfileController extends AbstractController {
         String redirectTo = "account"
 
         if (!userInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
             redirect(action: redirectTo)
             return
         }
@@ -35,14 +35,14 @@ class ProfileController extends AbstractController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+        flash.success = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(action: redirectTo)
     }
 
     def deactivate() {
         def userInstance = getCurrentUser()
         if (!userInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
             redirect(action: "account")
             return
         }
@@ -54,7 +54,7 @@ class ProfileController extends AbstractController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+        flash.success = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
 
         redirect(controller: "logout")
     }
@@ -75,14 +75,14 @@ class ProfileController extends AbstractController {
 
         def userInstance = getCurrentUser()
         if (!userInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
             redirect(action: redirectTo)
             return
         }
 
         String passwordCurrentSec = springSecurityService.encodePassword(password)
         if(!passwordCurrentSec.equals(userInstance.password)){
-            flash.message = "Su password actual está mal introducido"
+            flash.error = "Su password actual está mal introducido"
             redirect(action: redirectTo)
             return
         }
@@ -94,7 +94,7 @@ class ProfileController extends AbstractController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+        flash.success = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(action: redirectTo)
     }
 
@@ -107,7 +107,7 @@ class ProfileController extends AbstractController {
         User userInstance = getCurrentUser()
         String redirectTo = "preferences"
         if (!userInstance || !userInstance.preferences) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
+            flash.error = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), params.id])
             redirect(action: redirectTo)
             return
         }
@@ -119,7 +119,7 @@ class ProfileController extends AbstractController {
             return
         }
 
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
+        flash.success = message(code: 'default.updated.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(action: redirectTo)
 
     }
