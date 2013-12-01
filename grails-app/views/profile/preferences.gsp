@@ -58,30 +58,30 @@
             <fieldset>
                 <legend><g:message code="app.profile.preferences.messages.label"/></legend>
 
-                    <label id="optionsCheckboxesEmails">Send me an email when</label>
+                <label id="optionsCheckboxesEmails">Send me an email when</label>
 
-                    <div class="checkbox">
-                        <label>
-                            <g:checkBox name="email_subscription" value="${userInstance?.preferences?.email_subscription}" class="checkbox"/>
-                            <span>Email Subscription</span>
-                        </label>
-                    </div>
+                <div class="checkbox">
+                    <label>
+                        <g:checkBox name="email_subscription" value="${userInstance?.preferences?.email_subscription}" class="checkbox"/>
+                        <span>Email Subscription</span>
+                    </label>
+                </div>
 
-                    <div class="checkbox">
-                        <label><g:checkBox name="email_directmessage" value="${userInstance?.preferences?.email_directmessage}" class="checkbox"/>
-                            <span>Someone send me a direct message</span>
-                        </label>
-                    </div>
+                <div class="checkbox">
+                    <label><g:checkBox name="email_directmessage" value="${userInstance?.preferences?.email_directmessage}" class="checkbox"/>
+                        <span>Someone send me a direct message</span>
+                    </label>
+                </div>
 
-                    <div class="checkbox">
-                        <label><g:checkBox name="email_mention" value="${userInstance?.preferences?.email_mention}" class="checkbox"/>
-                            <span>Someone mentions me</span>
-                        </label>
-                        <span class="help-block"><strong><g:message code="app.default.note.label"/>:</strong> Labels
-                        surround all the options for much larger click areas and a
-                        more usable form.
-                        </span>
-                    </div>
+                <div class="checkbox">
+                    <label><g:checkBox name="email_mention" value="${userInstance?.preferences?.email_mention}" class="checkbox"/>
+                        <span>Someone mentions me</span>
+                    </label>
+                    <span class="help-block"><strong><g:message code="app.default.note.label"/>:</strong> Labels
+                    surround all the options for much larger click areas and a
+                    more usable form.
+                    </span>
+                </div>
 
             </fieldset>
 
@@ -117,13 +117,12 @@
 
             </fieldset>
 
-            <div class="form-group">
+            <div class="form-group form-actions">
                 <button class="btn btn-primary">
                     <i class="fa fa-check"></i>
                     <g:message code="default.button.update.label" default="Update"/>
                 </button>
             </div>
-
         </div>
     </div>
 

@@ -90,7 +90,7 @@
         </tbody>
     </table>
 
-    <div class="form-group">
+    <div class="form-group form-actions">
         <button type="submit" class="btn btn-primary">
             <i class="fa fa-check"></i>
             ${message(code: 'default.button.update.label', default: 'Update')}

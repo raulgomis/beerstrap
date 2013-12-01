@@ -17,7 +17,7 @@
 </div>
 
 <div class="row rowbar">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <div id="search_bar" class="rowbar-left pull-left">
             <g:form action="list" class="form-inline" method="GET">
                 <div class="input-group">
@@ -26,13 +26,11 @@
                         <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
                     <g:render template="filter"></g:render>
                     </span>
-
                 </div>
-
             </g:form>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
         <div id="options_bar" class="rowbar-right pull-right">
             <g:link class="btn btn-success" action="create">
                 <i class="fa fa-plus"></i>

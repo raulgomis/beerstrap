@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group form-actions">
                 <button type="submit" class="btn btn-primary"><g:message code="app.security.register.submit" /></button>
             </div>
         </g:form>

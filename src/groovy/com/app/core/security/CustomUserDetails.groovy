@@ -1,4 +1,4 @@
-package com.app.security
+package com.app.core.security
 
 /**
  *

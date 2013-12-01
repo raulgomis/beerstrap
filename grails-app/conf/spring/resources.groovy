@@ -1,5 +1,7 @@
 // Place your Spring DSL code here
-import com.app.security.*
+
+import com.app.core.CustomPropertyEditorRegistrar
+import com.app.core.security.*
 import com.app.utils.*
 
 beans = {
