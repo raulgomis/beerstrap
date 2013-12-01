@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="page-header">
-            <h1><i class="fa fa-briefcase"></i><g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
+            <h1><i class="fa fa-briefcase"></i> <g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
         </div>
         <div class="row rowbar">
             <div class="col-md-6">

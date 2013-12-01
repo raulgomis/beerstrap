@@ -97,4 +97,9 @@ modules = {
         resource url:'js/holder.js'
     }
 
+    toastr {
+        resource url:'js/toastr/toastr.min.css'
+        resource url:'js/toastr/toastr.min.js'
+    }
+
 }

@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><g:layoutTitle default="Beerstrap"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <r:require modules="jquery,application,bootstrap,fontawesome,datepicker,select2,d3js,peity,jqueryfileuploader,holder,callheatmaps"/>
+    <r:require modules="jquery,application,bootstrap,fontawesome,datepicker,select2,d3js,peity,jqueryfileuploader,holder,callheatmaps,toastr"/>
     <script type="text/javascript" src="${resource(dir: 'js/tiny_mce', file: 'tiny_mce.js')}"></script>
     <r:require modules="init"/>
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
@@ -24,11 +24,20 @@
     </div>
 
     <div class="container">
+        <g:if test="${flash.success}">
+            <r:script>
+                toastr.success('${flash.success}')
+            </r:script>
+        </g:if>
         <g:if test="${flash.message}">
-            <div class="alert alert-info myalert col-md-3 pull-right" data-alert="alert" role="status">
-                <a class="close" data-dismiss="alert" href="#">×</a>
-                <p>${flash.message}</p>
-            </div>
+            <r:script>
+                toastr.info('${flash.message}')
+            </r:script>
+        </g:if>
+        <g:if test="${flash.error}">
+            <r:script>
+                toastr.error('${flash.error}')
+            </r:script>
         </g:if>
         <div class="contents">
             <g:layoutBody/>

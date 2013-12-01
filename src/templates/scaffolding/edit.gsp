@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="page-header">
-            <h1><i class="fa fa-briefcase"></i>\${entityName} management <small><g:message code="default.edit.label" args="[entityName]" /></small></h1>
+            <h1><i class="fa fa-briefcase"></i> \${entityName} management <small><g:message code="default.edit.label" args="[entityName]" /></small></h1>
         </div>
         <g:hasErrors bean="\${${propertyName}}">
         <div class="alert alert-message alert-danger" data-alert="alert">
