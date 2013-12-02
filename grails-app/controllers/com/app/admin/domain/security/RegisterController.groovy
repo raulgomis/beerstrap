@@ -3,7 +3,7 @@ package com.app.admin.domain.security
 import groovy.text.SimpleTemplateEngine
 
 import org.codehaus.groovy.grails.commons.ApplicationHolder as AH
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import grails.plugin.springsecurity.SpringSecurityUtils
 
 import com.app.services.EmailService;
 

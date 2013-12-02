@@ -4,7 +4,7 @@ package com.app.core.security
  *
  * @author raul.gomis
  */
-import org.codehaus.groovy.grails.plugins.springsecurity.GrailsUser
+import grails.plugin.springsecurity.userdetails.GrailsUser
 import org.springframework.security.core.GrantedAuthority
 
 //import org.springframework.security.core.userdetails.User

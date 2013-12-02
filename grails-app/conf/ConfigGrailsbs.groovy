@@ -2,18 +2,18 @@
 // CONFIGURATION ADDED BY Beerstrap
 
 // Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.app.admin.domain.security.User'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.app.admin.domain.security.UserRole'
-grails.plugins.springsecurity.authority.className = 'com.app.admin.domain.security.Role'
-grails.plugins.springsecurity.requestMap.className = 'com.app.admin.domain.security.Requestmap'
-//grails.plugins.springsecurity.securityConfigType = 'Requestmap'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.app.admin.domain.security.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.app.admin.domain.security.UserRole'
+grails.plugin.springsecurity.authority.className = 'com.app.admin.domain.security.Role'
+grails.plugin.springsecurity.requestMap.className = 'com.app.admin.domain.security.Requestmap'
+//grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 
-grails.plugins.springsecurity.active = true
-grails.plugins.springsecurity.securityConfigType = grails.plugins.springsecurity.SecurityConfigType.InterceptUrlMap
-grails.plugins.springsecurity.rejectIfNoRule = true
-grails.plugins.springsecurity.successHandler.defaultTargetUrl = '/public'
+grails.plugin.springsecurity.active = true
+grails.plugin.springsecurity.securityConfigType = grails.plugin.springsecurity.SecurityConfigType.InterceptUrlMap
+grails.plugin.springsecurity.rejectIfNoRule = true
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/public'
 
-grails.plugins.springsecurity.interceptUrlMap = [
+grails.plugin.springsecurity.interceptUrlMap = [
         '/admin/**':	['ROLE_ADMIN'],
         '/home/**':	['IS_AUTHENTICATED_FULLY'],
         '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
@@ -27,8 +27,8 @@ grails.plugins.springsecurity.interceptUrlMap = [
         '/**':            ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
-//grails.plugins.springsecurity.dao.reflectionSaltSourceProperty = 'username'
-//grails.plugins.springsecurity.password.encodeHashAsBase64 = true
+//grails.plugin.springsecurity.dao.reflectionSaltSourceProperty = 'username'
+//grails.plugin.springsecurity.password.encodeHashAsBase64 = true
 
 grails.dbconsole.enabled = true
 grails.dbconsole.urlRoot = '/dbconsole'

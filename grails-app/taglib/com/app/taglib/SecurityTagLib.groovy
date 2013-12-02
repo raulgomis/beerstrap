@@ -1,6 +1,6 @@
 package com.app.taglib
 
-import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
+import grails.plugin.springsecurity.SpringSecurityUtils
 
 class SecurityTagLib {
 	static namespace = 'bs'
