@@ -4,8 +4,7 @@ import org.junit.*
 import grails.test.mixin.*
 
 @TestFor(${className}Controller)
-@Mock(${className})
-class ${className}ControllerTests {
+ControllerTests {
 
     def populateValidParams(params) {
         assert params != null
