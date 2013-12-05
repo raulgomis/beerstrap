@@ -127,6 +127,8 @@ log4j = {
 // CONFIGURATION ADDED BY Beerstrap
 //************************************************************************************************************************
 
+grails.databinding.useSpringBinder = true
+
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.app.admin.domain.security.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.app.admin.domain.security.UserRole'
