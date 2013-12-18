@@ -24,7 +24,7 @@
                     <g:textField name="q" placeholder="Text to search" value="${params.q}" elementId="appendedInputButton" class="col-md-3 form-control"/>
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                    <g:render template="filter"></g:render>
+                        <g:render template="filter"></g:render>
                     </span>
                 </div>
             </g:form>

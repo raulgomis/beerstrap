@@ -13,18 +13,20 @@
             <h1><i class="fa fa-briefcase"></i> <g:message code="default.management.label" args="[entityName]" /> <small><g:message code="default.list.label" args="[entityName]" /></small></h1>
         </div>
         <div class="row rowbar">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div id="search_bar" class="rowbar-left pull-left">
-                    <g:form action="list" class="form-inline" method="GET">
-                        <div class="form-group">
-                            <g:textField name="q" placeholder="Text to search" value="\${params.q}" class="col-md-3 form-control" />
+                    <g:form action="index" class="form-inline" method="GET">
+                        <div class="input-group">
+                            <g:textField name="q" placeholder="Text to search" value="\${params.q}" elementId="appendedInputButton" class="col-md-3 form-control" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                <g:render template="filter" />
+                            </span>
                         </div>
-                        <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                        <g:render template="filter" />
                     </g:form>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div id="options_bar" class="rowbar-right pull-right">
                     <g:render template="actions" />
                     <g:link class="btn btn-success" action="create">

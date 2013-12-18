@@ -113,39 +113,6 @@ jQuery(function () {
         return results;
     }
 
-    var cal = new CalHeatMap();
-    cal.init({
-        itemSelector: "#example-k",
-        domain: "day",
-        subDomain: "hour",
-        rowLimit: 1,
-        cellSize: 15,
-        domainGutter: 0,
-        verticalOrientation: true,
-        label: {
-            position: "left",
-            offset: {
-                x: 20,
-                y: 12
-            },
-            width: 110
-        },
-        data: "http://kamisama.github.io/cal-heatmap/google-analytics.csv",
-        dataType: "csv",
-        start: startDate,
-        afterLoadData: GAconverter,
-        range: 10,
-        itemName: "visit",
-        legend: [5, 10, 15, 20, 25, 30],
-        legendHorizontalPosition: "right",
-        legendColors: {
-            empty: "#ededed",
-            min: "#40ffd8",
-            max: "#f20013"
-        }
-    });
-
-
 });
 
     tinyMCE.init({

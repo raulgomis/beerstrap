@@ -17,9 +17,9 @@
 <div class="row rowbar">
     <div class="col-md-12">
         <div class="pull-left">
-            <g:link class="btn btn-default" action="list">
+            <g:link class="btn btn-link" action="index">
                 <i class="fa fa-th-list"></i>
-                <g:message code="default.button.list.label" default="List"/>
+                <g:message code="default.button.back.label" default="Back to the list"/>
             </g:link>
         </div>
         <div class="pull-right">

@@ -109,12 +109,8 @@
         <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
     </div>
 </div>
-                       <!--
+<!--
 <div id="activeUsers" style="height: 300px; padding: 0px; position: relative;">       </div>
-
-
-<div id="cal-heatmap"></div>
-
 -->
 
 <div class="row">

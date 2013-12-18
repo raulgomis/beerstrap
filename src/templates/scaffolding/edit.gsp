@@ -31,9 +31,8 @@
                         <i class="fa fa-check"></i>
                         <g:message code="default.button.update.label" default="Update" />
                     </button>
-                    <g:link class="btn btn-default" action="list">
-                        <i class="fa fa-th-list"></i>
-                        <g:message code="default.button.list.label" default="List" />
+                    <g:link class="btn btn-link" action="index">
+                        <g:message code="default.button.cancel.label" default="Cancel" />
                     </g:link>
                 </div>
     </fieldset>

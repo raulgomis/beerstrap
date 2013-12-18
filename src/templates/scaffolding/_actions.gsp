@@ -18,9 +18,9 @@
         </li>
         <li class="dropdown-header">Bulk actions</li>
         <li>
-            <g:link action="list" title="pdf">
+            <g:link action="index" title="pdf">
                 <i class="fa fa-filter"></i>
-                <g:message code="default.button.bulkDelete.label"></g:message>
+                <g:message code="default.button.bulkChanges.label"></g:message>
             </g:link>
         </li>
     </ul>

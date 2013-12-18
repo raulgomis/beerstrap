@@ -1,7 +1,7 @@
 modules = {
 
     jquery {
-        resource url:'js/jquery/jquery-1.9.1.min.js'
+        resource url:'js/jquery/jquery-2.0.3.min.js'
     }
 
     application {
@@ -10,6 +10,7 @@ modules = {
         resource url:'css/app.css'
         resource url:'css/app-boxes.css'
         resource url:'js/ajax.js'
+        resource url:'css/google-font.css'
     }
 
     login {
@@ -70,7 +71,7 @@ modules = {
     peity {
         resource url:'js/graph/jquery.peity.min.js'
         resource url:'js/graph/jquery.knob.js'
-        resource url:'js/graph/jquery.flot.js'
+        resource url:'js/graph/jquery.flot.min.js'
     }
 
     jqueryfileuploader {
@@ -79,17 +80,6 @@ modules = {
         resource url:'js/jquery-file-uploader/js/jquery.iframe-transport.js'
         resource url:'js/jquery-file-uploader/js/jquery.fileupload.js'
         //resource url:'js/jquery-file-uploader/js/jquery.fileupload-ui.js'
-    }
-
-    callheatmaps {
-        resource url:"http://cdn.jsdelivr.net/d3js/3.3.3/d3.min.js"
-        resource url:"http://cdn.jsdelivr.net/cal-heatmap/3.3.5/cal-heatmap.min.js"
-        resource url:"http://cdn.jsdelivr.net/cal-heatmap/3.3.5/cal-heatmap.css"
-    }
-
-    pagedown {
-        resource url:'http://pagedown.googlecode.com/hg/Markdown.Converter.js'
-        resource url:'http://pagedown.googlecode.com/hg/Markdown.Sanitizer.js'
     }
 
     //For prototyping
