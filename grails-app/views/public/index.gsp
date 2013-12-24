@@ -89,7 +89,7 @@
                 <h4>
                     <i class="fa fa-beaker"></i> Made with Grails
                 </h4>
-                <p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.2.4</a>: a rapid, dynamic & robust
+                <p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.3.4</a>: a rapid, dynamic & robust
                     framework which uses the Groovy programming language (based on the Java platform).
                 </p>
             </div>
