@@ -15,6 +15,7 @@ class UrlMappings {
 
         "/"(controller:"public")
 
-        "500"(view:'/error')
+        "500"(view:'/common/error/error')
+        "404"(view:'/common/error/error404')
     }
 }

@@ -35,15 +35,13 @@
             <p>${flash.message}</p>
         </div>
     </g:if>
-        <g:layoutBody/>
+    <g:layoutBody/>
 
-        <hr>
-
-        <div class="footer">
-            <div class="container">
-                <p>&copy; <g:meta name="app.name"/> ${Calendar.getInstance().get(Calendar.YEAR)}</p>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <g:meta name="app.name"/> ${Calendar.getInstance().get(Calendar.YEAR)}</p>
         </div>
+    </footer>
 
     <r:layoutResources/>
     <script>

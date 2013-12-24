@@ -13,8 +13,7 @@
         </h1>
         <p class="lead"><strong>Startup project designed to ease and accelerate software development.</strong><br> Ideal for startups and web developers who want to rapid-prototype
         and develop products within weeks without wasting time in configurations and boring stuff. <br> Software development never has been so fast!</p>
-        <g:link class="btn btn-lg btn-success" controller="home"><i class="fa fa-beer"></i> Get started</g:link>
-        <g:link class="btn btn-lg btn-info" controller="home"><i class="fa fa-github"></i> GitHub project</g:link>
+        <g:link class="btn btn-lg btn-info" controller="home"><i class="fa fa-beer"></i> Get started</g:link>
     </div>
 </div>
 
@@ -33,13 +32,15 @@
                 </h2>
                 <p><strong>Best scaffolding templates</strong> for rapid prototyping. Generate
                     CRUD functionality based on client's requirements and show a
-                    functional version to your client within 15 minutes.</p>
+                    functional version to your client within hours. Guaranteed!</p>
             </div>
             <div class="col-md-4">
                 <h2>
-                    <i class="fa fa-money"></i> Money, money...
+                    <i class="fa fa-money"></i> Save money
                 </h2>
-                <p><g:meta name="app.name"/> will <strong>give you money</strong> (Yes, you heard right!): save more than 1500$ each time you start a project. It is the money it would cost to develop the features presented in Beerstrap.</p>
+                <p><g:meta name="app.name"/> will <strong>help you to save money</strong>
+                    (Yes, you heard right!). Save more than 1500$ each time you start a project.
+                It is estimated cost to develop the features provided by <g:meta name="app.name"/>.</p>
             </div>
         </div>
     </section>

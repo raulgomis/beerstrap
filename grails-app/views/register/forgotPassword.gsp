@@ -6,7 +6,7 @@
 <title>Password recovery</title>
 </head>
 <body>
-
+<div class="container">
     <h2 class="section_header">
         <span><i class="fa fa-info-sign"></i> Password recovery <small> Have you forgot your
                 password? Recover it within seconds</small>
@@ -25,19 +25,18 @@
     </g:hasErrors>
 
     <g:form action="forgotPassword" class="form-vertical">
-
         <div class="form-group">
             <label class="control-label" for="email">Email</label>
             <div class="controls">
-                <input type="text" name="email" placeholder="Email"
+                <input type="text" name="email" placeholder="Email" class="form-control"
                     value="${command?.email }" />
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group form-actions">
             <button class="btn btn-primary">Send</button>
         </div>
     </g:form>
-
+</div>
 </body>
 </html>

@@ -19,6 +19,12 @@ modules = {
         resource url:'css/app-login.css'
     }
 
+    error {
+        resource url:'css/bootstrap/css/bootstrap.min.css'
+        resource url:'css/bootstrap/css/bootstrap-theme.min.css'
+        resource url:'css/app-errors.css'
+    }
+
     publicpart {
         dependsOn 'jquery'
         resource url:'css/bootstrap/css/bootstrap.min.css'

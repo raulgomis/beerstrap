@@ -6,16 +6,15 @@
 
 .navbar-inner {
     background-color: #eee;
-    border-bottom: 1px solid #d5d5d5;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    color: #333;
+    color: #fff;
     text-align: center;
     background-color: transparent;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .jumbotron .btn {
@@ -24,12 +23,12 @@
 }
 
 .jumbotron h1 {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 1;
 }
 
 .jumbotron .lead {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.25;
 }
 
@@ -69,21 +68,6 @@
     border-bottom: 0;
 }
 
-@media (min-width: 768px) {
-    .nav-justified {
-        max-height: 52px;
-    }
-    .nav-justified > li > a {
-        border-right: 1px solid #d5d5d5;
-    }
-    .nav-justified > li:first-child > a {
-        border-left: 0;
-    }
-    .nav-justified > li:last-child > a {
-        border-right: 0;
-    }
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */
@@ -96,11 +80,12 @@
 }
 
 .masthead {
-    background-color: #ddd;
+    background-color: #1ba1e2;
     color: #fff;
     position: relative;
     padding: 3em 0;
     text-align: center;
+    border-bottom: 3px solid #178ec7;
 }
 
 /* ============== princing ============== */
@@ -116,5 +101,14 @@
 .price-month {
     font-size: 35%;
     font-style: italic;
+}
+
+.footer {
+    margin-top: 10px;
+    border-top: 2px solid #178ec7;
+    background-color: #1ba1e2;
+    color: #fff;
+    position: relative;
+    padding: 3em 0;
 }
 
