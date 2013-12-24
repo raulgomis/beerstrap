@@ -1,10 +1,9 @@
 package com.app.admin.domain
 
-import com.app.admin.domain.security.User
+import grails.transaction.Transactional
 
+@Transactional(readOnly = true)
 class TestController extends AbstractController {
-
     static scaffold = Test
     static admin = true
-
 }

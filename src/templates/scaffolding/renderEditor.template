@@ -232,7 +232,7 @@
         else{
             //Change format, default is yyyy/MM/dd
             String formatDate = "yyyy/MM/dd"
-            def sb = new StringBuilder("<g:textField name=\"${property.name}\" ")
+            def sb = new StringBuilder("<g:textField name=\"${property.name}\" class=\"form-control\" ")
             sb << ' datadatepicker=""'
             if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
             if (!cp.editable) sb << ' readonly="readonly"'

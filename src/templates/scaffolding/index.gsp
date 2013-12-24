@@ -93,14 +93,14 @@
                         <tr>
                             <td colspan="100%">
                                 <div class="pull-right">
-                                    <strong><g:message code="default.paginate.number" args="\${[${propertyName}List?.size(),${propertyName}Total]}"/></strong>
+                                    <strong><g:message code="default.paginate.number" args="\${[${propertyName}List?.size(),${propertyName}Count]}"/></strong>
                                 </div>
                             </td>
                         </tr>
                     </tfooter>
                 </table>
                 <div class="text-center">
-                    <g:paginate total="\${${propertyName}Total}" maxsteps="4" params="['q':params?.q]" />
+                    <g:paginate total="\${${propertyName}Count}" maxsteps="4" params="['q':params?.q]" />
                 </div>
                 </div>
                 </g:if>

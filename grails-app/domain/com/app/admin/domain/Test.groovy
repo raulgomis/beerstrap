@@ -1,22 +1,21 @@
 package com.app.admin.domain
 
+import groovy.transform.ToString
+
 /**
  * grailsbs
  * @autor raulgomis
  * Date: 22/11/13 | Time: 20:03
  */
+@ToString(includeFields = true, includeNames = true)
 class Test {
     String name
     String surname
+    Date dateOfBirth
 
-    Date dateBirth
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Test{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", surname='").append(surname).append('\'');
-        sb.append('}');
-        return sb.toString();
+    static constraints = {
+        name()
+        surname()
+        dateOfBirth()
     }
 }
