@@ -17,6 +17,11 @@
     <r:layoutResources/>
 </head>
 <body>
+    <header id="header">
+        <div class="container">
+            <h4 id="logo"><i class="fa fa-beer" ></i> Beerstrap</h4>
+        </div>
+    </header>
     <g:layoutBody/>
     <r:layoutResources/>
 </body>

@@ -14,6 +14,7 @@ modules = {
     }
 
     login {
+        dependsOn 'fontawesome'
         resource url:'css/bootstrap/css/bootstrap.min.css'
         resource url:'css/bootstrap/css/bootstrap-theme.min.css'
         resource url:'css/app-login.css'

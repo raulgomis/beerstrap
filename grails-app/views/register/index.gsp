@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <meta name="layout" content="public">
+    <meta name="layout" content="login">
     <title><g:message code="app.security.register.title"/></title>
 </head>
 
