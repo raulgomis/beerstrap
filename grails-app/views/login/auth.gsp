@@ -22,7 +22,7 @@
                         </g:each>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <img src="http://192.241.236.31/smartadmin/img/demo/iphoneview.png" width="210px">
+                        <img src="${resource(dir: 'images/frames', file: 'placeit.png')}">
                     </div>
 
                 </div>

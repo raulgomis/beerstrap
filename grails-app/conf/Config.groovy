@@ -121,8 +121,6 @@ log4j = {
     //trace 'org.hibernate.type'
 }
 
-
-
 //************************************************************************************************************************
 // CONFIGURATION ADDED BY Beerstrap
 //************************************************************************************************************************
@@ -139,7 +137,8 @@ grails.plugin.springsecurity.requestMap.className = 'com.app.admin.domain.securi
 grails.plugin.springsecurity.active = true
 grails.plugin.springsecurity.securityConfigType = grails.plugin.springsecurity.SecurityConfigType.InterceptUrlMap
 grails.plugin.springsecurity.rejectIfNoRule = true
-grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/public'
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/home/index'
+grails.plugin.springsecurity.logout.afterLogoutUrl = '/login'
 
 grails.plugin.springsecurity.interceptUrlMap = [
         '/admin/**':    ['ROLE_ADMIN'],
@@ -164,21 +163,12 @@ grails.dbconsole.urlRoot = '/dbconsole'
 grails.resources.debug = true
 
 
-// configuración de autodeploy de Tomcat 7
-tomcat.deploy.username="usuario"
-tomcat.deploy.password="*****"
-tomcat.deploy.url="http://localhost:8080/manager/text"
-
 // documentación de Grails
 grails.doc.authors = "Raúl Gomis Hidalgo"
 grails.doc.license = "License"
 grails.doc.copyright = "Copyright message"
 grails.doc.footer = "Footer"
 grails.doc.title = "User documentation"
-
-
-// configuración del nombre del war generado
-grails.project.war.file = "myapp.war"
 
 // Mail config
 grails.mail.default.from="grailsbs@gmail.com"
