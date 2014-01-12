@@ -15,7 +15,7 @@
         <h3>Project lead</h3>
         <div class="media">
             <a class="pull-left" href="#">
-                <img class="media-object" src="https://si0.twimg.com/profile_images/3151598109/0a7b070b4700c24c41e21a9efd5dfe07.png" height="125" width="125" />
+                <img class="media-object" src="https://pbs.twimg.com/profile_images/3151598109/0a7b070b4700c24c41e21a9efd5dfe07.png" height="125" width="125" />
             </a>
             <div class="media-body">
                 <h4 class="media-heading">Raúl Gomis</h4>
