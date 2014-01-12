@@ -16,13 +16,13 @@
             </div>
             <div class="col-md-4">
                 <div class="pull-left">
-                    <img class="img-circle" style="margin:0 15px 10px 0;" alt="My Photo" src="https://si0.twimg.com/profile_images/1538926046/IMGP0701-2_bigger.jpg">
+                    <img class="img-circle" style="margin:0 15px 10px 0;" alt="My Photo" src="https://pbs.twimg.com/profile_images/3151598109/0a7b070b4700c24c41e21a9efd5dfe07_normal.png">
                 </div>
                 <div>
                     <strong><g:message code="app.footer.contact.label"></g:message></strong>
                     <ul class="list-unstyled">
                         <li>Twitter: <a href="http://www.twitter.com/rgomis">@rgomis</a></li>
-                        <li>Linkedin: <a href="http://linkd.in/11eyTDE">http://linkd.in/11eyTDE</a></li>
+                        <li>Linkedin: <a href="http://es.linkedin.com/in/raulgomis/">http://es.linkedin.com/in/raulgomis/</a></li>
                     </ul>
                 </div>
             </div>

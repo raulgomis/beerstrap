@@ -12,19 +12,18 @@
                 <h1>Beerstrap</h1>
                 <div class="row hero">
                     <div class="col-md-6 col-lg-6">
-                        <g:each in="${1..3}">
                         <div>
-                            <strong>About SmartAdmin - Are you up to date?</strong>
+                            <strong>What is <g:meta name="app.name"/>?</strong>
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+                                Startup project designed to ease and accelerate software development.
+                                Ideal for startups and web developers who want to rapid-prototype and develop products within weeks without wasting time in configurations and boring stuff.
+                                Software development never has been so fast!
                             </p>
                         </div>
-                        </g:each>
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <img src="${resource(dir: 'images/frames', file: 'placeit.png')}">
                     </div>
-
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
