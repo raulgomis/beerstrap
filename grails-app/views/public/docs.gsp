@@ -27,15 +27,15 @@ Software development never has been so fast!
 #### 2.1 Backend
 The Backend has been implemented using **Grails** framework. Grails is a dynamic web application framework built on Java and Groovy, leveraging best of breed APIs including Spring, Hibernate and SiteMesh. Grails brings to Java and Groovy developers the joys of convention-based rapid development while allowing them to leverage their existing knowledge and capitalize on the proven and performant APIs Java developers have been using for years.
 
-- Grails (version 2.3.4)
+- Grails (version 2.3.7)
 - Groovy (version 2.1.9)
 - Sitemesh (version 2.4)
-- Hibernate (grails plugin, version 3.6.10.6)
-- Tomcat (grails plugin, version 7.0.47)
+- Hibernate (grails plugin, version 3.6.10.10)
+- Tomcat (grails plugin, version 7.0.52.1)
 - Grails scaffolding plugin (version 2.0.1)
 - Grails cache plugin (version 1.1.1)
 - Grails database-migration plugin (version 1.3.8)
-- Grails resources plugin (version 1.2.1)
+- Grails resources plugin (version 1.2.7)
 - Grails spring-security-core plugin (version 2.0-RC2)
 - Grails mail plugin (version 1.0.1)
 - Grails markdown plugin (version 1.1.1)
@@ -71,7 +71,7 @@ over configuration to provide a productive and stream-lined development experien
 It is very easy to start to develop with **Grails Boostrap**, that's the key of the tool. Download it and start to develop within minutes.
 
 <pre>
-git clone https://url.com
+git clone URL
 grails run-app
 </pre>
 And you will be able to access to [http://localhost:8080](http://localhost:8080) and see the public website.
