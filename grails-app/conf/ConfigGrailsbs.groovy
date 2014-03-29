@@ -1,5 +1,6 @@
 
 // CONFIGURATION ADDED BY Beerstrap
+grails.databinding.useSpringBinder = true
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.app.admin.domain.security.User'
@@ -11,20 +12,18 @@ grails.plugin.springsecurity.requestMap.className = 'com.app.admin.domain.securi
 grails.plugin.springsecurity.active = true
 grails.plugin.springsecurity.securityConfigType = grails.plugin.springsecurity.SecurityConfigType.InterceptUrlMap
 grails.plugin.springsecurity.rejectIfNoRule = true
-grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/public'
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/home'
 
 grails.plugin.springsecurity.interceptUrlMap = [
         '/admin/**':	['ROLE_ADMIN'],
-        '/home/**':	['IS_AUTHENTICATED_FULLY'],
+        '/*':               ['IS_AUTHENTICATED_FULLY','IS_AUTHENTICATED_REMEMBERED'],
         '/js/**':        ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/css/**':       ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/images/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/register/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/login/**':     ['IS_AUTHENTICATED_ANONYMOUSLY'],
         '/logout/**':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/favicon.ico':    ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/public/**': ['IS_AUTHENTICATED_ANONYMOUSLY'],
-        '/**':            ['IS_AUTHENTICATED_ANONYMOUSLY']
+        '/favicon.ico':    ['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
 
 //grails.plugin.springsecurity.dao.reflectionSaltSourceProperty = 'username'
