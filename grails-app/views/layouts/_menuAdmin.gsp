@@ -17,16 +17,16 @@
 
         <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
             <g:if test="${c.getPropertyValue('admin')}">
-                <li class='controller ${pageProperty(name:"page.menu_"+c.name)}'>
+                <li class='${pageProperty(name:"page.menu_"+c.name)}'>
                     <g:link controller="${c.logicalPropertyName}">
-                    <i class="fa fa-briefcase"></i>
-                    <g:message code="app.menu.${c.name.toLowerCase()}.label" default="${c.name}" />
+                        <i class="fa fa-briefcase"></i>
+                        <g:message code="app.menu.${c.name.toLowerCase()}.label" default="${c.name}" />
                     </g:link>
                 </li>
             </g:if>
         </g:each>
 
-        <li class='controller ${pageProperty(name:"page.menu_Configuration")}'>
+        <li class='${pageProperty(name:"page.menu_Configuration")}'>
             <g:link controller="configuration">
                 <i class="fa fa-cog"></i>
                 <g:message code="app.menu.configuration.label" />
@@ -35,7 +35,7 @@
     </sec:access>
 
     <li class="divider"></li>
-    <li class='controller ${pageProperty(name:"page.menu_Help")}'>
+    <li class='${pageProperty(name:"page.menu_Help")}'>
         <g:link controller="help" action="index">
             <i class="fa fa-question-circle"></i>
             <g:message code="app.menu.help.label" />

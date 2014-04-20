@@ -35,17 +35,16 @@
     <g:link controller="user" class="quick-button col-md-2">
         <i class="fa fa-group"></i>
         <p><g:message code="app.menu.user.label" /></p>
-        <span class="notification">1.367</span>
+        <span class="notification">${countUsers}</span>
     </g:link>
     <g:link controller="document" class="quick-button col-md-2">
         <i class="fa fa-file"></i>
         <p><g:message code="app.menu.document.label" /></p>
-        <span class="notification yellow">167</span>
+        <span class="notification yellow">${countDocs}</span>
     </g:link>
     <g:link action="ajaxGraph" class="quick-button col-md-2 btn-ajax" data-toggle="modal" data-target="#modal-general">
         <i class="fa fa-envelope"></i>
         <p>Messages</p>
-        <span class="notification red">68</span>
     </g:link>
     <g:link controller="configuration" class="quick-button col-md-2">
         <i class="fa fa-cog"></i>
@@ -94,19 +93,19 @@
 <div class="row">
     <div class="col-md-3 knob">
         <h4>INDICATOR 1</h4>
-        <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#14B8D4" data-width="120" />
+        <input type="text" value="${indicator1}" class="dial" data-readOnly=true data-fgColor="#14B8D4" data-width="120" />
     </div>
     <div class="col-md-3 knob">
         <h4>INDICATOR 2</h4>
-        <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#EA494A" data-width="120" />
+        <input type="text" value="${indicator2}" class="dial" data-readOnly=true data-fgColor="#EA494A" data-width="120" />
     </div>
     <div class="col-md-3 knob">
         <h4>INDICATOR 3</h4>
-        <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#FFA93C" data-width="120" />
+        <input type="text" value="${indicator3}" class="dial" data-readOnly=true data-fgColor="#FFA93C" data-width="120" />
     </div>
     <div class="col-md-3 knob">
         <h4>INDICATOR 4</h4>
-        <input type="text" value="45" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
+        <input type="text" value="${indicator4}" class="dial" data-readOnly=true data-fgColor="#333" data-width="120" />
     </div>
 </div>
 <!--
