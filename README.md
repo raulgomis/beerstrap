@@ -5,6 +5,14 @@ Startup project designed to ease and accelerate software development.
 Ideal for startups and web developers who want to rapid-prototype and develop products within weeks without wasting time in configurations and boring stuff.
 Software development never has been so fast!
 
+Key things:
+
+- **Productivity**: Don't waste your time in common stuff such as configuring your project: just focus on the specific PRODUCT SOLUTION! Download it and start to develop. Start from a good base: Security ready, Testing ready, Beautiful UI, Code generation, etc.
+
+- **Code generation**: Best scaffolding templates for rapid prototyping. Generate CRUD functionality based on client's requirements and show a functional version to your client within hours. Guaranteed!
+
+- **Save money**: Beerstrap will help you to save money (Yes, you heard right!). As time is money, starting with a solid base project will avoid you coding the starting and boring project setup.
+
 ## 2. Technology stack
 
 ### 2.1 Backend
