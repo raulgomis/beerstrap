@@ -4,9 +4,7 @@ import grails.plugin.springsecurity.SpringSecurityUtils
 
 class SecurityTagLib {
 	static namespace = 'bs'
-	//def springSecurityService
-	//def securityService
-	
+
 	def showRole = {
 		String ret = ""
 		def authorities = SpringSecurityUtils.getPrincipalAuthorities()

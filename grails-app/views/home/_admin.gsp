@@ -66,7 +66,7 @@
     </div>
     <div class="col-md-4">
         <div class="peity"><span class="pbar" style="display: none;">5,3,8,7,9,1,2,6,5,8</span>
-            <h4>2 </h4>
+            <h4>2</h4>
             <h4 class="sub">signups</h4>
         </div>
         <div class="peity"><span class="pbar" style="display: none;">2,7,6,2,9,8,6,0,1,3</span>
@@ -81,9 +81,6 @@
             <h4>82</h4>
             <h4 class="sub">comments</h4><br>
         </div>
-        <%--
-        <g:link action="ajaxGraph" class="btn-ajax btn" data-toggle="modal" data-target="#modal-general">Ajax call</g:link>
-        --%>
     </div>
 </div>
 <br>
