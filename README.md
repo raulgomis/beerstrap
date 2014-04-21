@@ -52,20 +52,20 @@ jQuery third party plugins that will help us to develop a high quality front-end
 
 
 ## 3. Requirements
-**Grails Boostrap** is based in Grails.
+**Beerstrap** is based in Grails.
 
 - [Grails](http://grails.org): Grails is an Open Source, full stack, web application framework for the JVM. It takes advantage of the Groovy programming language and convention
 over configuration to provide a productive and stream-lined development experience.
 - [JDK](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html): Grails runs on the JVM, so you will need the latest JDK 1.6 or JDK 1.7 to use it.
 
 ## 4. Getting started
-It is very easy to start to develop with **Grails Boostrap**, that's the key of the tool. Download it and start to develop within minutes.
+It is very easy to start to develop with **Beerstrap**, that's the key of the tool. Download it and start to develop within minutes.
 
+Download or clone the [Beerstrap](https://github.com/raulgomis/beerstrap) repo and execute the following command:
 <pre>
-git clone URL
 grails run-app
 </pre>
-And you will be able to access to [http://localhost:8080](http://localhost:8080) and see the public website.
+After that you will be able to access to [http://localhost:8080](http://localhost:8080) and see the website.
 
 There are three main IDEs that have good integration with Grails:
 
