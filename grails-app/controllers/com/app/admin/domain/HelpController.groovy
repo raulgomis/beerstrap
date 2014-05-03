@@ -1,16 +1,15 @@
 package com.app.admin.domain
 
+/**
+ * Help Controller
+ *
+ * @author Raúl Gomis
+ */
 class HelpController extends AbstractController {
 
-    def index() {
-        redirect(action:"Faq")
-    }
+    def index() { redirect(action:"Faq") }
 
-    def Faq(){
+    def faq() {}
 
-    }
-
-    def Videos(){
-
-    }
+    def videos(){}
 }

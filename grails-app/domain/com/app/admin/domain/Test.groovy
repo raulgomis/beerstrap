@@ -3,9 +3,9 @@ package com.app.admin.domain
 import groovy.transform.ToString
 
 /**
- * grailsbs
- * @autor raulgomis
- * Date: 22/11/13 | Time: 20:03
+ * Test Domain Class
+ *
+ * @author Raúl Gomis
  */
 @ToString(includeFields = true, includeNames = true)
 class Test {

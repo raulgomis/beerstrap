@@ -1,5 +1,10 @@
 package com.app.admin.domain.security
 
+/**
+ * RequestMap Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class Requestmap {
 
     String url

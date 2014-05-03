@@ -1,7 +1,10 @@
 package com.app.admin.domain.security
 
-import java.util.Date;
-
+/**
+ * RegisterCode Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class RegisterCode {
 
     String username

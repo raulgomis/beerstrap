@@ -64,16 +64,16 @@ body {
     text-align: center;
 }
 
-/* ============== pagination grailsbootstrap ============== */
+/* ============== pagination beerstrap ============== */
 
-#grailsbspag {
+#beerstrap-pag {
 }
 
-#grailsbspag .grailsbspag-left {
+#beerstrap-pag .beerstrap-pag-left {
     font-weight: bold;
 }
 
-#grailsbspag .grailsbspag-right {
+#beerstrap-pag .beerstrap-pag-right {
 }
 
 /* ============== ribbon ============== */

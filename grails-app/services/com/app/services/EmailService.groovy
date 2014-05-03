@@ -2,6 +2,11 @@ package com.app.services
 
 import org.codehaus.groovy.grails.web.mapping.LinkGenerator
 
+/**
+ * Service used to manage emails sent by the application
+ *
+ * @author Raúl Gomis
+ */
 class EmailService {
 
     static transactional = false
@@ -55,16 +60,4 @@ class EmailService {
         }
         log.info "Sent email to $_to with subject $_subject"
     }
-
-
-    /*private def sendEmail(String to, String from, String replyTo, String subject, String text) {
-        SimpleMailMessage message = new SimpleMailMessage(mailMessage)
-        message.to = [to]
-        message.from = from
-        message.replyTo = replyTo
-        message.subject = subject
-        message.text = text
-        log.info "Sending email to ${message.to[0]} with subject $subject"
-        mailSender.send(message)
-    }*/
 }

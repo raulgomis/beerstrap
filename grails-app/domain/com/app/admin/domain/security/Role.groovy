@@ -1,5 +1,10 @@
 package com.app.admin.domain.security
 
+/**
+ * Role Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class Role {
 
     static String ADMIN = "ROLE_ADMIN"

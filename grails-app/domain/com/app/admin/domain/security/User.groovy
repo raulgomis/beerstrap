@@ -1,5 +1,10 @@
 package com.app.admin.domain.security
 
+/**
+ * User Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class User {
 
     transient springSecurityService
@@ -64,6 +69,11 @@ class User {
     }
 }
 
+/**
+ * UserPreferences Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class UserPreferences {
 
     String country = "esp"; //Change it and write your country code :)

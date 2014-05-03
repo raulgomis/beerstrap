@@ -71,16 +71,13 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.1"
         //runtime ":yui-minify-resources:0.1.5"
 
-
         compile ":spring-security-core:2.0-RC2"
         compile ":mail:1.0.1"
-        compile ":markdown:1.1.1"
 
         //Uncomment these if you have good support for testing
         //test(":spock:0.7") { exclude "spock-grails-support" }
         //test ':fixtures:1.0.7'
         //test ":build-test-data:2.0.4"
         //test ":code-coverage:1.2.5"
-
     }
 }

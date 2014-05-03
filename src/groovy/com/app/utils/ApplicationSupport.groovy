@@ -1,10 +1,10 @@
 package com.app.utils
 
 /**
- * @author raul.gomis
+ * Application utility methods
  *
+ * @author Raúl Gomis
  */
-
 import org.apache.commons.logging.LogFactory
 
 class ApplicationSupport {
@@ -38,20 +38,6 @@ class ApplicationSupport {
      * FUNCTIONS
      */
 
-    private void generateFoldersHelper(List folders) {
-        for (String folder in folders) {
-            if (folder) {
-                def dir = new File(folder)
-                if (!dir.exists()) {
-                    dir.mkdirs()
-                    log.debug("Folder created in " + folder)
-                }
-            } else {
-                log.error("Folder '${folder}' not created")
-            }
-        }
-    }
-
     public void generateInitFolders() {
 
         List folders = [
@@ -71,5 +57,17 @@ class ApplicationSupport {
         generateFoldersHelper(folders)
     }
 
-
+    private void generateFoldersHelper(List folders) {
+        for (String folder in folders) {
+            if (folder) {
+                def dir = new File(folder)
+                if (!dir.exists()) {
+                    dir.mkdirs()
+                    log.debug("Folder created in " + folder)
+                }
+            } else {
+                log.error("Folder '${folder}' not created")
+            }
+        }
+    }
 }

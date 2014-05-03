@@ -2,6 +2,11 @@ package com.app.admin.domain.security
 
 import org.springframework.dao.DataIntegrityViolationException
 
+/**
+ * Register Controller
+ *
+ * @author Raúl Gomis
+ */
 class UserController {
 
     static admin = true

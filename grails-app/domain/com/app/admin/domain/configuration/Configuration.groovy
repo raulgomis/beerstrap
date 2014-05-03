@@ -1,5 +1,10 @@
 package com.app.admin.domain.configuration
 
+/**
+ * Configuration Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class Configuration {
 
     String key

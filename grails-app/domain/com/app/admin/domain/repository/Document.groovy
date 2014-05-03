@@ -1,5 +1,10 @@
 package com.app.admin.domain.repository
 
+/**
+ * Configuration Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class Document implements Comparable {
     transient documentService
     //metadata

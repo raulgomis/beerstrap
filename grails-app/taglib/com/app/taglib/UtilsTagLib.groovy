@@ -1,6 +1,10 @@
 package com.app.taglib
 
-
+/**
+ * TagLib used to encapsulate some utility methods
+ *
+ * @author Raúl Gomis
+ */
 class UtilsTagLib {
     static namespace = 'bs'
 

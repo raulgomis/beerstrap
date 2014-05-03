@@ -1,22 +1,38 @@
 package com.app.configuration
 
-import org.codehaus.groovy.grails.commons.GrailsApplication;
+import com.app.services.ConfigurationService
 
-/**==========================================================
- * User: raulgomis
- * Date: 7/03/13 | Time: 17:33
- * ==========================================================
- * Copyright 2013 Beerstrap.
+/**
+ * Used to manage application configuration values
+ *
+ * @author Raúl Gomis
  */
 public class ConfigurationManager {
 
-    static configurationService
+    static ConfigurationService configurationService
 
-    public final static String BT_SITE_NAME = "grailsbs.BT_SITE_NAME",
-                         BT_SITE_OFFLINE = "grailsbs.BT_SITE_OFFLINE",
-                         BT_SITE_MAXLISTHOME = "grailsbs.BT_SITE_MAXLISTHOME",
-                         BT_SITE_MAXLIST = "grailsbs.BT_SITE_MAXLIST",
-                         BT_HELP_FAQ = "grailsbs.BT_HELP_FAQ"
+    public final static String BT_SITE_NAME = ROOT_PREFIX + ".BT_SITE_NAME",
+                         BT_SITE_OFFLINE = ROOT_PREFIX + ".BT_SITE_OFFLINE",
+                         BT_SITE_MAXLISTHOME = ROOT_PREFIX + ".BT_SITE_MAXLISTHOME",
+                         BT_SITE_MAXLIST = ROOT_PREFIX + ".BT_SITE_MAXLIST",
+                         BT_HELP_FAQ = ROOT_PREFIX + ".BT_HELP_FAQ"
+
+    public static final String ROOT_PREFIX = "beerstrap"
+
+    public static enum ConfigurationGroup {
+        SITE(ROOT_PREFIX + ".BT_SITE_"),
+        SERVER(ROOT_PREFIX + ".BT_SERVER_"),
+        HELP(ROOT_PREFIX + ".BT_HELP_"),
+        MAIL("grails.mail.")
+
+        private final String prefix;
+        ConfigurationGroup(String prefix) {
+            this.prefix = prefix
+        }
+        String getPrefix() {
+            return prefix;
+        }
+    }
 
 
     public static String getSiteName(){

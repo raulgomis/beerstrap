@@ -1,11 +1,10 @@
 package com.app.core
 
-/**==========================================================
- * User: raulgomis
- * Date: 4/03/13 | Time: 16:33
- * ==========================================================
- * Copyright 2013 Beerstrap.
+/**
+ * Register custom property editor for dates
  * See http://stackoverflow.com/questions/963922/grails-date-unmarshalling
+ *
+ * @author Raúl Gomis
  */
 import java.text.SimpleDateFormat
 import org.springframework.beans.propertyeditors.CustomDateEditor

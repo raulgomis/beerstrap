@@ -2,6 +2,11 @@ package com.app.admin.domain.security
 
 import org.apache.commons.lang.builder.HashCodeBuilder
 
+/**
+ * UserRole Domain Class
+ *
+ * @author Raúl Gomis
+ */
 class UserRole implements Serializable {
 
     User user

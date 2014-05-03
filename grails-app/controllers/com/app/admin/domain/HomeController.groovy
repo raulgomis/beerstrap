@@ -5,6 +5,11 @@ import com.app.admin.domain.security.Role
 import com.app.admin.domain.security.User
 import grails.plugin.springsecurity.SpringSecurityUtils
 
+/**
+ * Home Controller
+ *
+ * @author Raúl Gomis
+ */
 class HomeController extends AbstractController {
 
     static user = true //set user=true to display in the user menu

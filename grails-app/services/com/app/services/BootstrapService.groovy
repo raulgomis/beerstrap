@@ -3,16 +3,20 @@ package com.app.services
 import com.app.admin.domain.security.*
 import com.app.admin.domain.configuration.*
 
+/**
+ * Bootstraps application with initial data and example data
+ *
+ * @author Raúl Gomis
+ */
 class BootstrapService {
 
     static transactional = false
 
     def grailsApplication
 
-    def loadRequestMap() {
-        //Load requestMap here if requestMap activated
-    }
-
+    /**
+     * Loads initial necessary data to initialize the application
+     */
     def loadInitialData(){
         log.info("Loading initial data...")
 
@@ -34,11 +38,11 @@ class BootstrapService {
         }
 
         def configMap = [
-                "grailsbs.BT_SITE_NAME":"Beerstrap",
-                "grailsbs.BT_SITE_OFFLINE":"False",
-                "grailsbs.BT_SITE_MAXLISTHOME":"5",
-                "grailsbs.BT_SITE_MAXLIST":"30",
-                "grailsbs.BT_HELP_FAQ":"FAQ text goes here",
+                "beerstrap.BT_SITE_NAME":"Beerstrap",
+                "beerstrap.BT_SITE_OFFLINE":"False",
+                "beerstrap.BT_SITE_MAXLISTHOME":"5",
+                "beerstrap.BT_SITE_MAXLIST":"30",
+                "beerstrap.BT_HELP_FAQ":"FAQ text goes here",
 
                 /*"grails.mail.default.from":"grailsbs@gmail.com",
                 "grails.mail.host":"smtp.gmail.com",
@@ -60,13 +64,16 @@ class BootstrapService {
         }*/
     }
 
+    /**
+     * Loads example data to quickly prototype
+     */
     def loadExampleData() {
         log.info("Loading example data...")
         def userRole = Role.findByAuthority(Role.USER) ?: new Role(authority: Role.USER).save(failOnError: true)
         def adminRole = Role.findByAuthority(Role.ADMIN) ?: new Role(authority: Role.ADMIN).save(failOnError: true)
 
         if(!User.findByUsername('user')){
-        def user = new User( username:"user",
+            def user = new User( username:"user",
                                         password:"user",
                                         name:"User 1",
                                         email:"raulgomis@hotmail.com",

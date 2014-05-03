@@ -1,14 +1,13 @@
 package com.app.core.security
 
-/**
- *
- * @author raul.gomis
- */
 import grails.plugin.springsecurity.userdetails.GrailsUser
 import org.springframework.security.core.GrantedAuthority
 
-//import org.springframework.security.core.userdetails.User
-
+/**
+ * Custom User Details for Spring Security
+ *
+ * @author Raúl Gomis
+ */
 class CustomUserDetails extends GrailsUser {
 
     final String name

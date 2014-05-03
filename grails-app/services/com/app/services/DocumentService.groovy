@@ -1,15 +1,18 @@
 package com.app.services
 
+import com.app.utils.ApplicationSupport
 import grails.validation.ValidationException
 
-import com.app.utils.*
 import grails.util.Metadata
-import org.apache.commons.validator.ValidatorException
 import org.springframework.web.multipart.commons.CommonsMultipartFile
 import com.app.admin.domain.repository.Document
 import com.app.admin.domain.configuration.*
 
-
+/**
+ * Service used to manage document uploads/downloads
+ *
+ * @author Raúl Gomis
+ */
 class DocumentService {
 
     static transactional = false
@@ -73,16 +76,14 @@ class DocumentService {
         def path = (pathBD)?pathBD.valor:pathConfig
         if (!path.endsWith('/')) path=path+'/'
 
-        /*
         if(subfolder){
             path = ""
             path = path+subfolder+File.separator
             ApplicationSupport apps = new ApplicationSupport()
             apps.generateSubfolder(path)
         }
-        */
-        return getUploadDirectory(path)
 
+        return getUploadDirectory(path)
     }
 
     private File getUploadDirectory(String path){
@@ -110,7 +111,6 @@ class DocumentService {
         if (extension != null && !extension.empty) {
             rename = rename + "." + extension
         }
-        //def rename = date.toString()+"_"+originalFilename
         return rename
     }
 
@@ -127,9 +127,7 @@ class DocumentService {
         def type = f.contentType
 
 
-        /************************
-         Check allowed extensions
-         *********************** */
+        // Check allowed extensions
         List allowedExtensions = getAllowedExtensions()
         if(!checkAllowedExtensions(fileExtension,allowedExtensions)){
             def msg = "File extension not allowed"
@@ -137,9 +135,7 @@ class DocumentService {
             throw new RuntimeException(msg)
         }
 
-        /*********************
-         Check file size
-         ********************* */
+        // Check allowed extensions
         Long maxSize = getMaxSize()
         if(!checkSize(size, maxSize)){
             def msg = "MAX_TAM exceeded"
@@ -149,10 +145,7 @@ class DocumentService {
 
         def userDir = getFilePath(subfolder)
 
-        /*********************
-         Save document
-         ********************* */
-
+        // Save document
         documentInstance.url = userDir
         documentInstance.size = size
         documentInstance.originalName = originalFilename

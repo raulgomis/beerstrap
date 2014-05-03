@@ -8,8 +8,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException
 import com.app.admin.domain.security.User
 
 /**
+ * Custom User Details Service for Spring Security
  *
- * @author raul.gomis
+ * @author Raúl Gomis
  */
 class CustomUserDetailsService implements GrailsUserDetailsService {
 

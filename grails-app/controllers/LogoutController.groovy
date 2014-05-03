@@ -1,5 +1,10 @@
 import grails.plugin.springsecurity.SpringSecurityUtils
 
+/**
+ * Logout Controller
+ *
+ * @author Raúl Gomis
+ */
 class LogoutController {
 
     /**

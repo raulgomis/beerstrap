@@ -1,9 +1,17 @@
 package com.app.admin.domain
 
 import com.app.configuration.ConfigurationManager
+import static com.app.configuration.ConfigurationManager.ConfigurationGroup
 import com.app.admin.domain.configuration.Configuration
-import org.codehaus.groovy.grails.scaffolding.DefaultGrailsTemplateGenerator;
+import org.codehaus.groovy.grails.scaffolding.DefaultGrailsTemplateGenerator
 
+import static com.app.configuration.ConfigurationManager.configurationService
+
+/**
+ * Configuration Controller
+ *
+ * @author Raúl Gomis
+ */
 class ConfigurationController extends AbstractController {
 
     //static admin = true
@@ -13,41 +21,30 @@ class ConfigurationController extends AbstractController {
     }
 
     def list() {
-
         def listConfig = Configuration.list()
         def listSite = []
         def listServer = []
-        def listHelp = []
-
-        //println grailsApplication.config.grails.mail.port
-
-        /*
-        grailsApplication.config.grails.mail.default.from = "nrr@hotmail.com"
-        println grailsApplication.config.grails.mail.default.from
-        */
 
         for (Configuration config in listConfig) {
             def key = config.key
-            if (key.startsWith('grailsbs.BT_SITE_') || key.startsWith('grailsbs.BT_HELP_')) {
+            if (key.startsWith(ConfigurationGroup.SITE.getPrefix()) || key.startsWith(ConfigurationGroup.HELP.getPrefix())) {
                 listSite.add(config)
-            } else if (key.startsWith('grailsbs.BT_SERVER_') || key.startsWith('grails.mail.')) {
+            } else if (key.startsWith(ConfigurationGroup.SERVER.getPrefix()) || key.startsWith(ConfigurationGroup.MAIL.getPrefix())) {
                 listServer.add(config)
             } else {
-                log.error("Algun parametro de configuración sin tipo")
+                log.error("There is a configuration parameter without type " + key)
             }
         }
 
         [listServer: listServer, listSite: listSite]
-
     }
 
     def site() {
-        def configurationInstanceList = Configuration.findAllByKeyLike("grailsbs.%")
+        def configurationInstanceList = configurationService.beerstrapConfiguration()
         [configurationInstanceList:configurationInstanceList]
     }
 
     def updateSite() {
-
         ConfigurationManager.setSiteName(params[ConfigurationManager.BT_SITE_NAME])
         ConfigurationManager.setFAQText(params[ConfigurationManager.BT_HELP_FAQ])
 
@@ -56,12 +53,9 @@ class ConfigurationController extends AbstractController {
     }
 
     def server() {
-
         List configurationEmailInstanceList = []
         List configurationDocsInstanceList = []
         List configurationDBInstanceList = []
-
-
 
         Map configEmail = [
                 "grails.mail.default.from":"${grailsApplication.config.grails.mail.default.from}",
@@ -111,7 +105,7 @@ class ConfigurationController extends AbstractController {
 
     }
 
-    def grailsGenerate(String domainClassName,String artifact){
+    def grailsGenerate(String domainClassName, String artifact){
         DefaultGrailsTemplateGenerator templateGenerator = new DefaultGrailsTemplateGenerator();
         templateGenerator.grailsApplication = grailsApplication
         Writer out = new StringWriter()

@@ -1,5 +1,10 @@
 package com.app.taglib
 
+/**
+ * TagLib used to show a configuration value
+ *
+ * @author Raúl Gomis
+ */
 class ConfigurationTagLib {
     static namespace = 'bs'
 

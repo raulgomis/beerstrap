@@ -1,23 +1,29 @@
 package com.app.admin.domain.security
 
 import groovy.text.SimpleTemplateEngine
-
-import org.codehaus.groovy.grails.commons.ApplicationHolder as AH
 import grails.plugin.springsecurity.SpringSecurityUtils
 
-import com.app.services.EmailService;
-
+/**
+ * Register Controller
+ *
+ * @author Raúl Gomis
+ */
 class RegisterController {
 
-    def mailService
     def emailService
     def springSecurityService
 
+    /**
+     * Index action. Shows the register page
+     */
     def index() {
         [command: new RegisterCommand()]
     }
 
-    def register = { RegisterCommand command ->
+    /**
+     * Process user registration
+     */
+    def register(RegisterCommand command) {
 
         if(command.hasErrors()) {
             log.error(command.errors)
@@ -29,7 +35,7 @@ class RegisterController {
                 password: command.password, accountLocked: true, enabled: true)
         if (!user.validate() || !user.save()) {
             // TODO
-            log.error("Error to save user: "+user.errors.allErrors)
+            log.error("Error to save user: " + user.errors.allErrors)
         }
 
         //create registration code
@@ -42,6 +48,9 @@ class RegisterController {
         redirect(controller:"home")
     }
 
+    /**
+     * Verify registration process using a token
+     */
     def verifyRegistration(String t) {
 
         def conf = SpringSecurityUtils.securityConfig
@@ -87,6 +96,9 @@ class RegisterController {
         redirect(uri: conf.ui.register.postRegisterUrl ?: defaultTargetUrl)
     }
 
+    /**
+     * Forgot password action
+     */
     def forgotPassword(String email) {
 
         if (!request.post) {
@@ -116,6 +128,9 @@ class RegisterController {
         [emailSent: true]
     }
 
+    /**
+     * Reset password action
+     */
     def resetPassword(ResetPasswordCommand command, String t){
 
         String token = t
@@ -189,9 +204,12 @@ class RegisterController {
     }
 }
 
-
+/**
+ * Register Command
+ *
+ * @author Raúl Gomis
+ */
 class RegisterCommand {
-
     String name
     String username
     String email
@@ -225,6 +243,11 @@ class RegisterCommand {
     }
 }
 
+/**
+ * Reset Password Command
+ *
+ * @author Raúl Gomis
+ */
 class ResetPasswordCommand {
     String username
     String password

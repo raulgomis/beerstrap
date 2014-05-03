@@ -1,4 +1,4 @@
-package grailsbs
+package com.app.admin.domain
 
 
 
