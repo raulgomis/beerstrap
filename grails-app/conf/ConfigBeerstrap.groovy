@@ -99,6 +99,6 @@ docs {
     maxSize = "10000000" //10 mbytes
     //allowedExtensions = ["doc", "docx", "pdf", "rtf"]
     allowedExtensions = "*"
-    path = new File(System.getProperty('user.home'), appName).canonicalPath
+    //path = new java.io.File(System.getProperty('user.home'), appName).canonicalPath
     //pathPics = new File(System.getProperty('user.home'), appName).canonicalPath + File.separator + "pics"
 }
