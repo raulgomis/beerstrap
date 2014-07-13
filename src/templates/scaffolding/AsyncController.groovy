@@ -17,7 +17,7 @@ class ${className}Controller {
         }
     }
 
-    def show(Long id) {
+    def show(String id) {
         ${className}.async.get(id).then { ${propertyName} ->
             respond ${propertyName}
         }
@@ -41,8 +41,8 @@ class ${className}Controller {
 
             ${propertyName}.save flush:true
             request.withFormat {
-                form {
-                    flash.success = message(code: 'default.created.message', args: [message(code: '${propertyName}.label', default: '${className}'), ${propertyName}.id])
+                form multipartForm {
+                    flash.message = message(code: 'default.created.message', args: [message(code: '${propertyName}.label', default: '${className}'), ${propertyName}.id])
                     redirect ${propertyName}
                 }
                 '*' { respond ${propertyName}, [status: CREATED] }
@@ -50,13 +50,13 @@ class ${className}Controller {
         }
     }
 
-    def edit(Long id) {
+    def edit(String id) {
         ${className}.async.get(id).then { ${propertyName} ->
             respond ${propertyName}
         }
     }
 
-    def update(Long id) {
+    def update(String id) {
         ${className}.async.withTransaction {
             def ${propertyName} = ${className}.get(id)
             if (${propertyName} == null) {
@@ -71,8 +71,8 @@ class ${className}Controller {
             }
 
             request.withFormat {
-                form {
-                    flash.success = message(code: 'default.updated.message', args: [message(code: '${className}.label', default: '${className}'), ${propertyName}.id])
+                form multipartForm {
+                    flash.message = message(code: 'default.updated.message', args: [message(code: '${className}.label', default: '${className}'), ${propertyName}.id])
                     redirect ${propertyName}
                 }
                 '*'{ respond ${propertyName}, [status: OK] }
@@ -80,7 +80,7 @@ class ${className}Controller {
         }
     }
 
-    def delete(Long id) {
+    def delete(String id) {
         ${className}.async.withTransaction {
             def ${propertyName} = ${className}.get(id)
             if (${propertyName} == null) {
@@ -91,8 +91,8 @@ class ${className}Controller {
             ${propertyName}.delete flush:true
 
             request.withFormat {
-                form {
-                    flash.success = message(code: 'default.deleted.message', args: [message(code: '${className}.label', default: '${className}'), ${propertyName}.id])
+                form multipartForm {
+                    flash.message = message(code: 'default.deleted.message', args: [message(code: '${className}.label', default: '${className}'), ${propertyName}.id])
                     redirect action:"index", method:"GET"
                 }
                 '*'{ render status: NO_CONTENT }
@@ -102,8 +102,8 @@ class ${className}Controller {
 
     protected void notFound() {
         request.withFormat {
-            form {
-                flash.error = message(code: 'default.not.found.message', args: [message(code: '${propertyName}.label', default: '${className}'), params.id])
+            form multipartForm {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: '${propertyName}.label', default: '${className}'), params.id])
                 redirect action: "index", method: "GET"
             }
             '*'{ render status: NOT_FOUND }

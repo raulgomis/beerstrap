@@ -24,7 +24,7 @@
         out << renderManyToOne(domainClass, property)
     else if ((property.oneToMany && !property.bidirectional) || (property.manyToMany && property.isOwningSide())) {
         def str = renderManyToMany(domainClass, property)
-        if(str != null) {
+        if (str != null) {
             out << str
         }
     }
@@ -35,54 +35,57 @@
         def sb = new StringBuilder("")
         sb << '<g:select name="' << property.name << '"'
         sb << ' class="form-control"'
-        sb << ' from="${' << "${property.type.name}?.values()" << '}"'
-        sb << ' keys="${' << property.type.name << '.values()*.name()}"'
-        if (isRequired()) sb << ' required=""'
-        sb << ' value="${' << "${domainInstance}?.${property.name}?.name()" << '}"'
-        sb << renderNoSelection(property)
-        sb << '/>'
-        sb as String
+ 		sb << ' from="${' << "${property.type.name}?.values()" << '}"'
+ 		sb << ' keys="${' << property.type.name << '.values()*.name()}"'
+		if (isRequired()) sb << ' required=""'
+		sb << ' value="${' << "${domainInstance}?.${property.name}?.name()" << '}" '
+                cp?.attributes?.each { k, v ->
+                    sb << "${k}=\"${v}\" "
+                }
+		sb << renderNoSelection(property)
+		sb << '/>'
+		sb as String
     }
 
     private renderStringEditor(domainClass, property) {
         if (!cp) {
-            return "<g:textField name=\"${property.name}\" value=\"\${${domainInstance}?.${property.name}}\" class=\"form-control\" />"
+            return "<g:textField name=\"${property.name}\" value=\"\${${domainInstance}?.${property.name}}\" />"
         } else {
-            def sb = new StringBuilder("")
+			def sb = new StringBuilder("")
             if ("textarea" == cp.widget || (cp.maxSize > 250 && !cp.password && !cp.inList)) {
                 sb << '<g:textArea name="' << property.name << '"'
-                sb << ' cols="40" rows="5" class="form-control"'
-                if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
-                if (isRequired()) sb << ' required=""'
-                sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
-                sb << '/>'
+ 				sb << ' cols="40" rows="5"'
+				if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
+				if (isRequired()) sb << ' required=""'
+ 				sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
+				sb << '/>'
             } else if (cp.inList) {
-                sb << '<g:select name="' << property.name << '"'
-                sb << ' from="${' << "${domainInstance}.constraints.${property.name}.inList" << '}" class="form-control"'
-                if (isRequired()) sb << ' required=""'
-                sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
-                sb << ' valueMessagePrefix="' << "${domainClass.propertyName}.${property.name}" << '"'
-                sb << renderNoSelection(property)
-                sb << '/>'
-            } else {
-                if (cp.password) {
-                    sb << '<g:field type="password"'
-                } else if (cp.url) {
-                    sb << '<g:field type="url"'
-                } else if (cp.email) {
-                    sb << '<g:field type="email"'
-                } else {
-                    sb << '<g:textField'
-                }
-                sb << ' name="' << property.name << '" class="form-control"'
-                if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
-                if (!cp.editable) sb << ' readonly="readonly"'
-                if (cp.matches) sb << ' pattern="${' << "${domainInstance}.constraints.${property.name}.matches" << '}"'
-                if (isRequired()) sb << ' required=""'
-                sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
-                sb << '/>'
-            }
-            sb as String
+				sb << '<g:select name="' << property.name << '"'
+				sb << ' from="${' << "${domainInstance}.constraints.${property.name}.inList" << '}"'
+				if (isRequired()) sb << ' required=""'
+				sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
+				sb << ' valueMessagePrefix="' << "${domainClass.propertyName}.${property.name}" << '"'
+				sb << renderNoSelection(property)
+				sb << '/>'
+			} else {
+				if (cp.password) {
+					sb << '<g:field type="password"'
+				} else if (cp.url) {
+					sb << '<g:field type="url"'
+				} else if (cp.email) {
+					sb << '<g:field type="email"'
+				} else {
+					sb << '<g:textField'
+				}
+				sb << ' name="' << property.name << '"'
+				if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
+				if (!cp.editable) sb << ' readonly="readonly"'
+				if (cp.matches) sb << ' pattern="${' << "${domainInstance}.constraints.${property.name}.matches" << '}"'
+				if (isRequired()) sb << ' required=""'
+				sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
+				sb << '/>'
+			}
+			sb as String
         }
     }
 
@@ -110,13 +113,13 @@
 
     private renderManyToMany(domainClass, property) {
         def cls = property.referencedDomainClass?.clazz
-        if(cls == null) {
-            if(property.type instanceof Collection) {
+        if (cls == null) {
+            if (property.type instanceof Collection) {
                 cls = org.springframework.core.GenericCollectionTypeResolver.getCollectionType(property.type)
             }
         }
 
-        if(cls != null) {
+        if (cls != null) {
             def sb = new StringBuilder()
             sb << '<g:select name="' << property.name << '"'
             sb << ' from="${' << cls.name << '.list()}" class="form-control"'
@@ -141,9 +144,9 @@
         pw.println "<g:each in=\"\${${domainInstance}?.${property.name}?}\" var=\"${property.name[0]}\">"
         pw.println "    <li><g:link controller=\"${property.referencedDomainClass.propertyName}\" action=\"show\" id=\"\${${property.name[0]}.id}\">\${${property.name[0]}?.encodeAsHTML()}</g:link></li>"
         pw.println '</g:each>'
-        pw.println '<li class="add">'
+		pw.println '<li class="add">'
         pw.println "<g:link controller=\"${property.referencedDomainClass.propertyName}\" action=\"create\" params=\"['${domainClass.propertyName}.id': ${domainInstance}?.id]\">\${message(code: 'default.add.label', args: [message(code: '${property.referencedDomainClass.propertyName}.label', default: '${property.referencedDomainClass.shortName}')])}</g:link>"
-        pw.println '</li>'
+		pw.println '</li>'
         pw.println '</ul>'
         return sw.toString()
     }
@@ -151,43 +154,43 @@
     private renderNumberEditor(domainClass, property) {
         if (!cp) {
             if (property.type == Byte) {
-                return "<g:select name=\"${property.name}\" from=\"\${-128..127}\" class=\"range\" value=\"\${fieldValue(bean: ${domainInstance}, field: '${property.name}')}\" class=\"form-control\" />"
+                return "<g:select name=\"${property.name}\" from=\"\${-128..127}\" class=\"range\" value=\"\${fieldValue(bean: ${domainInstance}, field: '${property.name}')}\" />"
             } else {
-                return "<g:field type=\"number\" name=\"${property.name}\" value=\"\${${domainInstance}.${property.name}}\" class=\"form-control\" />"
+                return "<g:field type=\"number\" name=\"${property.name}\" value=\"\${${domainInstance}.${property.name}}\" />"
             }
         } else {
-            def sb = new StringBuilder()
+	        def sb = new StringBuilder()
             if (cp.range) {
                 sb << '<g:select name="' << property.name << '"'
                 sb << ' from="${' << "${cp.range.from}..${cp.range.to}" << '}"'
                 sb << ' class="range form-control"'
-                if (isRequired()) sb << ' required=""'
-                sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
-                sb << renderNoSelection(property)
-                sb << '/>'
+				if (isRequired()) sb << ' required=""'
+				sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
+				sb << renderNoSelection(property)
+				sb << '/>'
             } else if (cp.inList) {
                 sb << '<g:select name="' << property.name << '"'
                 sb << ' from="${' << "${domainInstance}.constraints.${property.name}.inList" << '}" class="form-control"'
-                if (isRequired()) sb << ' required=""'
-                sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
-                sb << ' valueMessagePrefix="' << "${domainClass.propertyName}.${property.name}" << '"'
-                sb << renderNoSelection(property)
-                sb << '/>'
+				if (isRequired()) sb << ' required=""'
+				sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
+				sb << ' valueMessagePrefix="' << "${domainClass.propertyName}.${property.name}" << '"'
+				sb << renderNoSelection(property)
+				sb << '/>'
             } else {
-                sb << '<g:field'
+				sb << '<g:field'
                 sb << ' name="' << property.name << '" class="form-control"'
-                if (property.type in [float, double, Float, Double, BigDecimal]) {
-                    sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
-                } else {
-                    sb << ' type="number"'
-                    if (cp.min != null) sb << ' min="' << cp.min << '"'
-                    if (cp.max != null) sb << ' max="' << cp.max << '"'
-                    sb << ' value="${' << domainInstance << '.' << property.name << '}"'
-                }
-                if (isRequired()) sb << ' required=""'
-                sb << '/>'
+				if (property.type in [float, double, Float, Double, BigDecimal]) {
+					sb << ' value="${' << "fieldValue(bean: ${domainInstance}, field: '${property.name}')" << '}"'
+				} else {
+					sb << ' type="number"'
+					if (cp.min != null) sb << ' min="' << cp.min << '"'
+					if (cp.max != null) sb << ' max="' << cp.max << '"'
+					sb << ' value="${' << domainInstance << '.' << property.name << '}"'
+				}
+				if (isRequired()) sb << ' required=""'
+				sb << '/>'
             }
-            sb as String
+			sb as String
         }
      }
 
@@ -207,28 +210,28 @@
 
     private renderDateEditor(domainClass, property) {
         if (!cp || (cp && "string" == cp.widget)) {
-            def precision = (property.type == Date || property.type == java.sql.Date || property.type == Calendar) ? "day" : "minute";
-            if (!cp) {
+        def precision = (property.type == Date || property.type == java.sql.Date || property.type == Calendar) ? "day" : "minute";
+        if (!cp) {
                 return "<g:datePicker name=\"${property.name}\" precision=\"${precision}\" value=\"\${${domainInstance}?.${property.name}}\" class=\"form-control\" />"
+        } else {
+            if (!cp.editable) {
+                return "\${${domainInstance}?.${property.name}?.toString()}"
             } else {
-                if (!cp.editable) {
-                    return "\${${domainInstance}?.${property.name}?.toString()}"
-                } else {
                     def sb = new StringBuilder("<g:datePicker name=\"${property.name}\" class=\"form-control\" ")
-                    if (cp.format) sb << "format=\"${cp.format}\" "
-                    if (cp.widget) sb << "widget=\"${cp.widget}\" "
-                    cp.attributes.each { k, v ->
-                        sb << "${k}=\"${v}\" "
-                    }
-                    if (!cp.attributes.precision){
-                        sb << "precision=\"${precision}\" "
-                    }
-                    sb << " value=\"\${${domainInstance}?.${property.name}}\" ${renderNoSelection(property)} />"
-
-                    return sb.toString()
+                if (cp.format) sb << "format=\"${cp.format}\" "
+                if (cp.widget) sb << "widget=\"${cp.widget}\" "
+                cp.attributes.each { k, v ->
+                    sb << "${k}=\"${v}\" "
                 }
+                if (!cp.attributes.precision) {
+                    sb << "precision=\"${precision}\" "
+                }
+                sb << " value=\"\${${domainInstance}?.${property.name}}\" ${renderNoSelection(property)} />"
+
+                return sb.toString()
             }
         }
+    }
         else{
             //Change format, default is yyyy/MM/dd
             String formatDate = "yyyy/MM/dd"
@@ -271,16 +274,16 @@
         return ""
     }
 
-    private boolean isRequired() {
-        !isOptional()
-    }
+	private boolean isRequired() {
+		!isOptional()
+	}
 
-    private boolean isOptional() {
-        if(!cp) {
-            return false
-        }
-        else {
-            cp.nullable || (cp.propertyType == String && cp.blank) || cp.propertyType in [boolean, Boolean]
-        }
-    }
+	private boolean isOptional() {
+	    if (!cp) {
+	        return false
+	    }
+	    else {
+	        cp.nullable || cp.propertyType in [boolean, Boolean]
+	    }
+	}
 %>
