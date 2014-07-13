@@ -2,6 +2,8 @@
 // CONFIGURATION ADDED BY Beerstrap
 //grails.databinding.useSpringBinder = true
 
+grails.databinding.dateFormats = ['yyyy/MM/dd', 'MMddyyyy', 'yyyy-MM-dd HH:mm:ss.S', "yyyy-MM-dd'T'hh:mm:ss'Z'"]
+
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.app.admin.domain.security.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.app.admin.domain.security.UserRole'

@@ -17,7 +17,4 @@ beans = {
     ConfigurationManager(com.app.configuration.ConfigurationManager) {
         configurationService = ref('configurationService')
     }
-
-    //Custom date input
-    customPropertyEditorRegistrar(CustomPropertyEditorRegistrar)
 }

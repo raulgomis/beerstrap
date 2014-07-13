@@ -54,13 +54,13 @@
 			def sb = new StringBuilder("")
             if ("textarea" == cp.widget || (cp.maxSize > 250 && !cp.password && !cp.inList)) {
                 sb << '<g:textArea name="' << property.name << '"'
- 				sb << ' cols="40" rows="5"'
+ 				sb << ' cols="40" rows="5" class="form-control"'
 				if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
 				if (isRequired()) sb << ' required=""'
  				sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
 				sb << '/>'
             } else if (cp.inList) {
-				sb << '<g:select name="' << property.name << '"'
+				sb << '<g:select name="' << property.name << '" class="form-control"'
 				sb << ' from="${' << "${domainInstance}.constraints.${property.name}.inList" << '}"'
 				if (isRequired()) sb << ' required=""'
 				sb << ' value="${' << "${domainInstance}?.${property.name}" << '}"'
@@ -77,7 +77,7 @@
 				} else {
 					sb << '<g:textField'
 				}
-				sb << ' name="' << property.name << '"'
+				sb << ' name="' << property.name << '" class="form-control"'
 				if (cp.maxSize) sb << ' maxlength="' << cp.maxSize << '"'
 				if (!cp.editable) sb << ' readonly="readonly"'
 				if (cp.matches) sb << ' pattern="${' << "${domainInstance}.constraints.${property.name}.matches" << '}"'

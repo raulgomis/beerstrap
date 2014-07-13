@@ -8,7 +8,7 @@ import grails.transaction.Transactional
  * @author Raúl Gomis
  */
 @Transactional(readOnly = true)
-class TestController extends AbstractController {
-    static scaffold = Test
+class ExampleController extends AbstractController {
+    static scaffold = Example
     static admin = true
 }

@@ -131,6 +131,7 @@ footer {
     background-color: #205081;
     border-color: #3b73af;
     box-shadow: 0 1px 0 rgba(255,255,255,.1);
+    border-radius: 0px;
 }
 .bs-docs-nav .navbar-collapse {
     border-color: #3b73af;
