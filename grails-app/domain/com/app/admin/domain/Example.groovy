@@ -3,12 +3,12 @@ package com.app.admin.domain
 import groovy.transform.ToString
 
 /**
- * Test Domain Class
+ * Example Domain Class
  *
  * @author Raúl Gomis
  */
 @ToString(includeFields = true, includeNames = true)
-class Test {
+class Example {
     String name
     String surname
     Date dateOfBirth

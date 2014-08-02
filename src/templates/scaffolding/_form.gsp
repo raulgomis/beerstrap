@@ -10,7 +10,7 @@ if (hasHibernate) {
         persistentPropNames << domainClass.identifier.name
     }
 }
-props = domainClass.properties.findAll { persistentPropNames.contains(it.name) && !excludedProps.contains(it.name) }
+props = domainClass.properties.findAll { persistentPropNames.contains(it.name) && !excludedProps.contains(it.name) && (domainClass.constrainedProperties[it.name] ? domainClass.constrainedProperties[it.name].display : true) }
 Collections.sort(props, comparator.constructors[0].newInstance([domainClass] as Object[]))
 for (p in props) {
     if (p.embedded) {
@@ -29,14 +29,12 @@ for (p in props) {
 
     private renderFieldForProperty(p, owningClass, prefix = "") {
         boolean hasHibernate = pluginManager?.hasGrailsPlugin('hibernate') || pluginManager?.hasGrailsPlugin('hibernate4')
-        boolean display = true
         boolean required = false
         if (hasHibernate) {
             cp = owningClass.constrainedProperties[p.name]
-            display = (cp ? cp.display : true)
-            required = (cp ? !(cp.propertyType in [boolean, Boolean]) && !cp.nullable && (cp.propertyType != String || !cp.blank) : false)
+            required = (cp ? !(cp.propertyType in [boolean, Boolean]) && !cp.nullable : false)
         }
-        if (display) { %>
+%>
 <div class="form-group \${hasErrors(bean: ${propertyName}, field: '${prefix}${p.name}', 'has-error')} ${required ? 'required' : ''}">
     <label class="control-label" for="${prefix}${p.name}">
         <g:message code="${domainClass.propertyName}.${prefix}${p.name}.label" default="${p.naturalName}" />
@@ -44,4 +42,4 @@ for (p in props) {
     </label>
     ${renderEditor(p)}
 </div>
-<%  }   } %>
+<%  } %>

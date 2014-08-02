@@ -1,6 +1,8 @@
 
 // CONFIGURATION ADDED BY Beerstrap
-grails.databinding.useSpringBinder = true
+//grails.databinding.useSpringBinder = true
+
+grails.databinding.dateFormats = ['yyyy/MM/dd', 'MMddyyyy', 'yyyy-MM-dd HH:mm:ss.S', "yyyy-MM-dd'T'hh:mm:ss'Z'"]
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.app.admin.domain.security.User'
@@ -99,6 +101,6 @@ docs {
     maxSize = "10000000" //10 mbytes
     //allowedExtensions = ["doc", "docx", "pdf", "rtf"]
     allowedExtensions = "*"
-    path = new File(System.getProperty('user.home'), appName).canonicalPath
+    //path = new java.io.File(System.getProperty('user.home'), appName).canonicalPath
     //pathPics = new File(System.getProperty('user.home'), appName).canonicalPath + File.separator + "pics"
 }
