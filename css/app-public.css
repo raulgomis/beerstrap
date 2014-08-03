@@ -110,5 +110,10 @@
     color: #fff;
     position: relative;
     padding: 3em 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
 }
 
