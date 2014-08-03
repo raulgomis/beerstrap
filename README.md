@@ -18,18 +18,17 @@ Key things:
 ### 2.1 Backend
 The Backend has been implemented using **Grails** framework. Grails is a dynamic web application framework built on Java and Groovy, leveraging best of breed APIs including Spring, Hibernate and SiteMesh. Grails brings to Java and Groovy developers the joys of convention-based rapid development while allowing them to leverage their existing knowledge and capitalize on the proven and performant APIs Java developers have been using for years.
 
-- Grails (version 2.3.7)
+- Grails (version 2.4.2)
 - Groovy (version 2.1.9)
 - Sitemesh (version 2.4)
-- Hibernate (grails plugin, version 3.6.10.10)
-- Tomcat (grails plugin, version 7.0.52.1)
-- Grails scaffolding plugin (version 2.0.1)
-- Grails cache plugin (version 1.1.1)
-- Grails database-migration plugin (version 1.3.8)
-- Grails resources plugin (version 1.2.7)
-- Grails spring-security-core plugin (version 2.0-RC2)
-- Grails mail plugin (version 1.0.1)
-- Grails markdown plugin (version 1.1.1)
+- Hibernate (grails plugin, version 4.3.5.4)
+- Tomcat (grails plugin, version 7.0.54)
+- Grails scaffolding plugin (version 2.1.2)
+- Grails cache plugin (version 1.1.7)
+- Grails database-migration plugin (version 1.4.0)
+- Grails resources plugin (version 1.2.8)
+- Grails spring-security-core plugin (version 2.0-RC4)
+- Grails mail plugin (version 1.0.6)
 
 ### 2.2 Frontend
 In the Frontend, it's been included Twitter Bootstrap as a frontend framework and several
