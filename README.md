@@ -34,7 +34,7 @@ The Backend has been implemented using **Grails** framework. Grails is a dynamic
 In the Frontend, it's been included Twitter Bootstrap as a frontend framework and several
 jQuery third party plugins that will help us to develop a high quality front-end:
 
-- Twitter Bootstrap v3.0.3
+- Twitter Bootstrap v3.2.0
 - Font Awesome 4.0.3
 - jQuery v2.0.3
 - jQuery cookie
@@ -75,5 +75,5 @@ There are three main IDEs that have good integration with Grails:
 ## 5. Contribute
 
 ## 6. Terms of use
-- **Web Layout**: Bootstrap v3.0.3, from Twitter Licensed under the Apache License v2.0. Documentation licensed under CC BY 3.0. (@TwBootstrap , http://twitter.github.com/bootstrap/)
+- **Web Layout**: Bootstrap v3.2.0, from Twitter Licensed under the Apache License v2.0. Documentation licensed under CC BY 3.0. (@TwBootstrap , http://twitter.github.com/bootstrap/)
 - **Datepicker**: Datepicker for Bootstrap, Copyright 2012 Stefan Petre, Improvements by Andrew Rowls, Licensed under the Apache License v2.0
