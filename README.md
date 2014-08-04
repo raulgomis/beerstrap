@@ -62,7 +62,8 @@ It is very easy to start to develop with **Beerstrap**, that's the key of the to
 
 Download or clone the [Beerstrap](https://github.com/raulgomis/beerstrap) repo and execute the following command:
 <pre>
-grails run-app
+Set the environment variable JAVA_HOME pointing to a valid Java JDK directory (e.g. C:\Program Files\Java\jdk1.7.0_65)
+grailsw run-app (or grailsw.bat run-app on Windows)
 </pre>
 After that you will be able to access to [http://localhost:8080](http://localhost:8080) and see the website.
 
