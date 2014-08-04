@@ -1,4 +1,5 @@
-#Beerstrap
+# Beerstrap
+[![Build Status](https://travis-ci.org/raulgomis/beerstrap.svg?branch=master)](https://travis-ci.org/raulgomis/beerstrap)
 
 ## 1. What is Beerstrap?
 Startup project designed to ease and accelerate software development.
