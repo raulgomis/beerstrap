@@ -55,14 +55,13 @@ jQuery third party plugins that will help us to develop a high quality front-end
 
 - [Grails](http://grails.org): Grails is an Open Source, full stack, web application framework for the JVM. It takes advantage of the Groovy programming language and convention
 over configuration to provide a productive and stream-lined development experience.
-- [JDK](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html): Grails runs on the JVM, so you will need the latest JDK 1.6 or JDK 1.7 to use it.
+- [JDK](http://www.oracle.com/technetwork/es/java/javase/downloads/index.html): Grails runs on the JVM, so you will need the latest JDK 1.6 or JDK 1.7 to use it. Set the environment variable JAVA_HOME pointing to a valid Java JDK directory (e.g. C:\Program Files\Java\jdk1.7.0_65)
 
 ## 4. Getting started
 It is very easy to start to develop with **Beerstrap**, that's the key of the tool. Download it and start to develop within minutes.
 
 Download or clone the [Beerstrap](https://github.com/raulgomis/beerstrap) repo and execute the following command:
 <pre>
-Set the environment variable JAVA_HOME pointing to a valid Java JDK directory (e.g. C:\Program Files\Java\jdk1.7.0_65)
 grailsw run-app (or grailsw.bat run-app on Windows)
 </pre>
 After that you will be able to access to [http://localhost:8080](http://localhost:8080) and see the website.
