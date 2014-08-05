@@ -51,10 +51,12 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="checkbox" for='remember_me'>
-                                    <input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
-                                    <span><g:message code="springSecurity.login.remember.me.label"/></span>
-                                </label>
+                                <div class="checkbox">
+                                    <label for='remember_me'>
+                                        <input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
+                                        <span><g:message code="springSecurity.login.remember.me.label"/></span>
+                                    </label>
+                                </div>
                             </div>
                             <button name="submit" class="btn btn-info btn-block">
                                 <i class="glyphicon glyphicon-lock"></i>
