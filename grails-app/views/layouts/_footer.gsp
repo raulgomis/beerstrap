@@ -15,9 +15,6 @@
                 <g:render template="/common/lang" />
             </div>
             <div class="col-md-4">
-                <div class="pull-left">
-                    <img class="img-circle" style="margin:0 15px 10px 0;" alt="My Photo" src="https://pbs.twimg.com/profile_images/3151598109/0a7b070b4700c24c41e21a9efd5dfe07_normal.png">
-                </div>
                 <div>
                     <strong><g:message code="app.footer.contact.label"></g:message></strong>
                     <ul class="list-unstyled">
