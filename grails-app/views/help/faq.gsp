@@ -9,7 +9,17 @@
     <g:render template="top" model="['selected':'faq']" />
 
     <div id="faq">
-        <bs:config key="${com.app.configuration.ConfigurationManager.BT_HELP_FAQ}"></bs:config>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><bs:config key="${com.app.configuration.ConfigurationManager.BT_HELP_FAQ}"></bs:config></td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
