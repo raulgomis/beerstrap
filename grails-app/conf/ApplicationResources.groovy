@@ -5,35 +5,31 @@ modules = {
     }
 
     application {
-        dependsOn 'jquery'
-        resource url:'css/bootstrap-overrides.css'
-        resource url:'css/app.css'
-        resource url:'css/app-boxes.css'
-        resource url:'js/ajax.js'
-        resource url:'css/google-font.css'
+        dependsOn 'jquery,bootstrap,fontawesome,datepicker,select2,graphs,jqueryfileuploader,holder,toastr,beerstrap'
+    }
+
+    beerstrap {
+        resource url:'css/beerstrap-bootstrap-overrides.css'
+        resource url:'css/beerstrap.css'
+        resource url:'css/beerstrap-boxes.css'
+
+        resource url:'js/beerstrap-init.js'
+        resource url:'js/beerstrap-utils.js'
+        resource url:'js/beerstrap-ajax.js'
+        resource url:'js/jquery/jquery.cookie.js'
     }
 
     login {
         dependsOn 'fontawesome'
         resource url:'css/bootstrap/css/bootstrap.min.css'
         resource url:'css/bootstrap/css/bootstrap-theme.min.css'
-        resource url:'css/app-login.css'
+        resource url:'css/beerstrap-login.css'
     }
 
     error {
         resource url:'css/bootstrap/css/bootstrap.min.css'
         resource url:'css/bootstrap/css/bootstrap-theme.min.css'
-        resource url:'css/app-errors.css'
-    }
-
-    jquerycookie {
-        dependsOn 'jquery'
-    }
-
-    init {
-        dependsOn 'jquery'
-        resource url:'js/init.js'
-        resource url:'js/jquery/jquery.cookie.js'
+        resource url:'css/beerstrap-errors.css'
     }
 
     bootstrap {
@@ -56,15 +52,11 @@ modules = {
         resource url:'js/select2/select2.css'
         resource url:'js/select2/select2-bootstrap.css'
         resource url:'js/select2/select2.js'
-
     }
 
-    d3js {
+    graphs {
         resource url:'js/graph/d3.v3.min.js'
-        resource url:'js/d3-setup.js'
-    }
-
-    peity {
+        resource url:'js/graph/d3-stacked-graph.js'
         resource url:'js/graph/jquery.peity.min.js'
         resource url:'js/graph/jquery.knob.js'
         resource url:'js/graph/jquery.flot.min.js'
@@ -87,5 +79,4 @@ modules = {
         resource url:'js/toastr/toastr.min.css'
         resource url:'js/toastr/toastr.min.js'
     }
-
 }

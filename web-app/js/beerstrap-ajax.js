@@ -1,6 +1,5 @@
 jQuery(document).ready(function () {
-
-    jQuery("a.btn-ajax").click(function (event) {
+    $("a.btn-ajax").click(function (event) {
         event.preventDefault();
         var link = jQuery(this);
         var href = link.attr("href")
@@ -12,5 +11,4 @@ jQuery(document).ready(function () {
             }
         });
     });
-
 });
