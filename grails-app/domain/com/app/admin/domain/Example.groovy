@@ -14,7 +14,7 @@ class Example {
     Date dateOfBirth
 
     static constraints = {
-        name()
+        name(blank: false)
         surname()
         dateOfBirth()
     }
