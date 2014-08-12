@@ -54,7 +54,7 @@
             <div class="form-group">
                 <label class="control-label" for="password"><g:message code="app.registerCommand.password.label"/></label>
                 <div class="controls">
-                    <g:textField type="password" name="password" class="form-control"
+                    <g:field type="password" name="password" class="form-control"
                            placeholder="${message(code: 'app.registerCommand.password.label')}"
                            value="${command?.password}"/>
                 </div>

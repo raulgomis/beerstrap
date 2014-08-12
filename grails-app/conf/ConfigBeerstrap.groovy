@@ -1,4 +1,3 @@
-
 // CONFIGURATION ADDED BY Beerstrap
 //grails.databinding.useSpringBinder = true
 
@@ -17,7 +16,7 @@ grails.plugin.springsecurity.rejectIfNoRule = true
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/'
 
 grails.plugin.springsecurity.interceptUrlMap = [
-        '/admin/**':	    ['ROLE_ADMIN','IS_AUTHENTICATED_REMEMBERED'],
+        '/admin/**':        ['ROLE_ADMIN','IS_AUTHENTICATED_REMEMBERED'],
         '/*':               ['IS_AUTHENTICATED_FULLY','IS_AUTHENTICATED_REMEMBERED'],
         '/home/*':          ['IS_AUTHENTICATED_FULLY','IS_AUTHENTICATED_REMEMBERED'],
         '/profile/*':       ['IS_AUTHENTICATED_FULLY','IS_AUTHENTICATED_REMEMBERED'],
@@ -41,40 +40,26 @@ grails.dbconsole.urlRoot = '/dbconsole'
 grails.resources.debug = true
 
 
-// configuración de autodeploy de Tomcat 7
+// Tomcat configuration
 tomcat.deploy.username="usuario"
 tomcat.deploy.password="*****"
 tomcat.deploy.url="http://localhost:8080/manager/text"
 
-// documentación de Grails
+// Grails documentation
 grails.doc.authors = "Raúl Gomis Hidalgo"
 grails.doc.license = "License"
 grails.doc.copyright = "Copyright message"
 grails.doc.footer = "Footer"
 grails.doc.title = "User documentation"
 
-
-// configuración del nombre del war generado
-grails.project.war.file = "myapp.war"
-
-// Configuracion del plugin de email
-/*grails.mail.default.from="usuario@eltallerdigital.com"
-
-grails{
-    mail{
-        host = "eltallerdigital.com"
-        port = 25
-        username = "usuario@eltallerdigital.com"
-        password = "*****"
-    }
-}*/
+// Email configuration
 grails.mail.default.from="grailsbs@gmail.com"
 grails {
     mail {
         host = "smtp.gmail.com"
         port = 465
-        username = "grailsbs@gmail.com"
-        password = "bsgrails"
+        username = "beerstrap@gmail.com"
+        password = "ilovegrails"
         props = ["mail.smtp.auth":"true",
                 "mail.smtp.socketFactory.port":"465",
                 "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
@@ -82,17 +67,10 @@ grails {
     }
 }
 
-
-/*props = ["mail.smtp.auth":"true",
- "mail.smtp.socketFactory.port":"465",
- "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
- "mail.smtp.socketFactory.fallback":"false"]*/
-
 //************************************************************
 //TWITTER BOOSTRAP
 //************************************************************
 grails.plugins.twitterbootstrap.fixtaglib = true
-
 
 //************************************************************
 //FILE UPLOADER

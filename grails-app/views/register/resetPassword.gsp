@@ -30,9 +30,8 @@
         <div class="form-group">
             <label class="control-label" for="password"><g:message
                     code="app.resetPasswordCommand.password.label"/></label>
-
             <div class="controls">
-                <input type="password" name="password"
+                <g:field type="password" id="password" name="password"
                        placeholder="${message(code: 'app.resetPasswordCommand.password.label')}"/>
             </div>
         </div>
@@ -40,9 +39,8 @@
         <div class="form-group">
             <label class="control-label" for="password2"><g:message
                     code="app.resetPasswordCommand.password2.label"/></label>
-
             <div class="controls">
-                <input type="password" name="password2"
+                <g:field type="password" id="password2" name="password2"
                        placeholder="${message(code: 'app.resetPasswordCommand.password2.label')}"/>
             </div>
         </div>
