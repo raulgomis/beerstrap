@@ -73,7 +73,8 @@ There are three main IDEs that have good integration with Grails:
 - [Eclipse (GGTS)](http://spring.io/tools/ggts)
 - [Netbeans](https://netbeans.org/kb/docs/web/grails-quickstart.html)
 
-## 5. Contribute
+## 5. Demo
+[Demo version](http://beerstrap.rgomis.eu.cloudbees.net/) (user: admin, password: admin)
 
 ## 6. Terms of use
 - **Web Layout**: Bootstrap v3.2.0, from Twitter Licensed under the Apache License v2.0. Documentation licensed under CC BY 3.0. (@TwBootstrap , http://twitter.github.com/bootstrap/)
