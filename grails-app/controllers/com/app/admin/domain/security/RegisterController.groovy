@@ -3,6 +3,8 @@ package com.app.admin.domain.security
 import groovy.text.SimpleTemplateEngine
 import grails.plugin.springsecurity.SpringSecurityUtils
 
+import javax.mail.AuthenticationFailedException
+
 /**
  * Register Controller
  *
@@ -24,28 +26,34 @@ class RegisterController {
      * Process user registration
      */
     def register(RegisterCommand command) {
+        try {
+            User.withTransaction {
+                if(command.hasErrors()) {
+                    log.error(command.errors)
+                    render(view: 'index', model: [command: command])
+                    return
+                }
 
-        if(command.hasErrors()) {
-            log.error(command.errors)
-            render(view: 'index', model: [command: command])
-            return
+                def user = new User(name:command.name, username: command.username, email: command.email,
+                        password: command.password, accountLocked: true, enabled: true)
+                if (!user.validate() || !user.save()) {
+                    // TODO
+                    log.error("Error to save user: " + user.errors.allErrors)
+                }
+
+                //create registration code
+                def registrationCode = new RegisterCode(username: user.username).save()
+
+                //sent an email
+                emailService.register(command.email,registrationCode?.token)
+
+                flash.message = message(code: 'app.security.register.sent')
+                redirect(controller:"home")
+            }
+        } catch(AuthenticationFailedException) {
+            flash.error = message(code: 'app.security.register.failed')
+            redirect(action:"index")
         }
-
-        def user = new User(name:command.name, username: command.username, email: command.email,
-                password: command.password, accountLocked: true, enabled: true)
-        if (!user.validate() || !user.save()) {
-            // TODO
-            log.error("Error to save user: " + user.errors.allErrors)
-        }
-
-        //create registration code
-        def registrationCode = new RegisterCode(username: user.username).save()
-
-        //sent an email
-        emailService.register(command.email,registrationCode?.token)
-
-        flash.message = message(code: 'app.security.register.sent')
-        redirect(controller:"home")
     }
 
     /**
