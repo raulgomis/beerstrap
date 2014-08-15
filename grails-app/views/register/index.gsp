@@ -13,6 +13,16 @@
         <hr class="right visible-desktop">
     </h2>
 
+    <g:if test="${flash.success}">
+        <div class="alert alert-block alert-danger">${flash.success}</div>
+    </g:if>
+    <g:if test="${flash.message}">
+        <div class="alert alert-block alert-danger">${flash.message}</div>
+    </g:if>
+    <g:if test="${flash.error}">
+        <div class="alert alert-block alert-danger">${flash.error}</div>
+    </g:if>
+
     <g:hasErrors bean="${command}">
         <div class="alert alert-block alert-danger">
             <a class="close" href="#">×</a>
