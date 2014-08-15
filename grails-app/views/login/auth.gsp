@@ -41,13 +41,13 @@
                             <div class="form-group">
                                 <div class="input-group merged">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                    <input type='text' class='form-control' name='j_username' id='username' placeholder="Username"/>
+                                    <input type='text' class='form-control' name='j_username' id='username' placeholder="Username" value="admin"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group merged">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input type='password' class='form-control' name='j_password' id='password' placeholder="Password"/>
+                                    <input type='password' class='form-control' name='j_password' id='password' placeholder="Password" value="admin"/>
                                 </div>
                             </div>
                             <div class="form-group">
