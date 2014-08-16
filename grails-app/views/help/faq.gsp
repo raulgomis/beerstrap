@@ -17,7 +17,7 @@
             </thead>
             <tbody>
             <tr>
-                <td><bs:config key="${com.app.configuration.ConfigurationManager.BT_HELP_FAQ}"></bs:config></td>
+                <td><bs:config key="${com.app.services.ConfigurationService.BT_HELP_FAQ}"></bs:config></td>
             </tr>
         </table>
     </div>

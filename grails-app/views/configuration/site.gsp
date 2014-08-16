@@ -1,5 +1,5 @@
 <%@ page import="com.app.admin.domain.configuration.Configuration" %>
-<%@ page import="com.app.configuration.ConfigurationManager" %>
+<%@ page import="com.app.services.ConfigurationService" %>
 <html>
 <head>
     <meta name="layout" content="main"/>
@@ -27,7 +27,7 @@
         <tbody>
         <tr>
             <td>
-                <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationManager.BT_SITE_NAME } %>
+                <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationService.BT_SITE_NAME } %>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
                     <i class="fa fa-info-sign"></i>
@@ -77,7 +77,7 @@
         --%>
         <tr>
             <td>
-                <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationManager.BT_HELP_FAQ } %>
+                <% configurationInstance = configurationInstanceList.find { it.key == ConfigurationService.BT_HELP_FAQ } %>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
                     <i class="fa fa-info-sign"></i>

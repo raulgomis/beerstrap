@@ -18,7 +18,7 @@
                 </button>
                 <g:link class="navbar-brand" controller="home">
                     <i class="fa fa-beer"></i>
-                    <bs:config key="${com.app.configuration.ConfigurationManager.BT_SITE_NAME}"></bs:config>
+                    <bs:config key="${com.app.services.ConfigurationService.BT_SITE_NAME}"></bs:config>
                 </g:link>
             </div>
 

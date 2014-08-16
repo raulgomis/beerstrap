@@ -1,11 +1,8 @@
 package com.app.admin.domain
 
-import com.app.configuration.ConfigurationManager
-import static com.app.configuration.ConfigurationManager.ConfigurationGroup
 import com.app.admin.domain.configuration.Configuration
+import com.app.services.ConfigurationService
 import org.codehaus.groovy.grails.scaffolding.DefaultGrailsTemplateGenerator
-
-import static com.app.configuration.ConfigurationManager.configurationService
 
 /**
  * Configuration Controller
@@ -13,6 +10,8 @@ import static com.app.configuration.ConfigurationManager.configurationService
  * @author Raúl Gomis
  */
 class ConfigurationController extends AbstractController {
+
+    def configurationService
 
     //static admin = true
 
@@ -45,8 +44,8 @@ class ConfigurationController extends AbstractController {
     }
 
     def updateSite() {
-        ConfigurationManager.setSiteName(params[ConfigurationManager.BT_SITE_NAME])
-        ConfigurationManager.setFAQText(params[ConfigurationManager.BT_HELP_FAQ])
+        configurationService.setSiteName(params[ConfigurationService.BT_SITE_NAME])
+        configurationService.setFAQText(params[ConfigurationService.BT_HELP_FAQ])
 
         flash.success = "${message(code: 'app.default.updated.message', args: [message(code: 'configuration.label', default: 'Configuration')])}"
         redirect(action: "site")

@@ -18,6 +18,11 @@ class BootStrap {
             production {
                 bootstrapService.loadInitialData()
             }
+
+            demo {
+                bootstrapService.loadInitialData()
+                bootstrapService.loadExampleData()
+            }
         }
     }
     def destroy = {

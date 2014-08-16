@@ -11,9 +11,4 @@ beans = {
     ApplicationSupport(com.app.utils.ApplicationSupport) {
         grailsApplication = ref('grailsApplication')
     }
-
-    //Access to configurationService in the groovy class ConfigurationManager
-    ConfigurationManager(com.app.configuration.ConfigurationManager) {
-        configurationService = ref('configurationService')
-    }
 }

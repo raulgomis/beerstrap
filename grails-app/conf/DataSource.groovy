@@ -28,41 +28,42 @@ environments {
     }
     production {
         dataSource {
-
-            // Test production database string (used for cloudbees)
-
-            dbCreate = "update"
-            url = "jdbc:h2:mem:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-
             // Real database connection string
 
-//            driverClassName= 'com.mysql.jdbc.Driver'
-//            dbCreate = "update"
-//            dialect= org.hibernate.dialect.MySQLInnoDBDialect
-//            url = 'jdbc:mysql://127.0.0.1:10100/d1d9f3dd1e2d24c2b85028ceedc00ca5b'
-//            username= 'uZK9mqij2AHDd'
-//            password= 'po5kUdcH7hJO6'
+            driverClassName= 'com.mysql.jdbc.Driver'
+            dbCreate = "update"
+            dialect= org.hibernate.dialect.MySQLInnoDBDialect
+            url = 'jdbc:mysql://127.0.0.1:10100/d1d9f3dd1e2d24c2b85028ceedc00ca5b'
+            username= 'uZK9mqij2AHDd'
+            password= 'po5kUdcH7hJO6'
 
-//            pooled = true
-//            properties {
-//                jmxEnabled = true
-//                initialSize = 5
-//                maxActive = 50
-//                minIdle = 5
-//                maxIdle = 25
-//                maxWait = 10000
-//                maxAge = 10 * 60000
-//                timeBetweenEvictionRunsMillis = 5000
-//                minEvictableIdleTimeMillis = 60000
-//                validationQuery = "SELECT 1"
-//                validationQueryTimeout = 3
-//                validationInterval = 15000
-//                testOnBorrow = true
-//                testWhileIdle = true
-//                testOnReturn = false
-//                jdbcInterceptors = "ConnectionState;StatementCache(max=200)"
-//                defaultTransactionIsolation = java.sql.Connection.TRANSACTION_READ_COMMITTED
-//            }
+            pooled = true
+            properties {
+                jmxEnabled = true
+                initialSize = 5
+                maxActive = 50
+                minIdle = 5
+                maxIdle = 25
+                maxWait = 10000
+                maxAge = 10 * 60000
+                timeBetweenEvictionRunsMillis = 5000
+                minEvictableIdleTimeMillis = 60000
+                validationQuery = "SELECT 1"
+                validationQueryTimeout = 3
+                validationInterval = 15000
+                testOnBorrow = true
+                testWhileIdle = true
+                testOnReturn = false
+                jdbcInterceptors = "ConnectionState;StatementCache(max=200)"
+                defaultTransactionIsolation = java.sql.Connection.TRANSACTION_READ_COMMITTED
+            }
+        }
+    }
+    demo {
+        dataSource {
+            // Test production database string (used for cloudbees)
+            dbCreate = "update"
+            url = "jdbc:h2:mem:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
 }

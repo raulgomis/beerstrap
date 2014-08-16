@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import grails.util.GrailsNameUtils
-import org.codehaus.groovy.grails.scaffolding.DomainClassPropertyComparator
+import org.codehaus.groovy.grails.validation.DomainClassPropertyComparator
 import org.codehaus.groovy.grails.validation.ConstrainedProperty
 
 includeTargets << grailsScript("Init")
@@ -94,6 +94,7 @@ target(uberGenerate: "Generates i18n messages for all domain classes") {
 
 def generateForDomainClass(domainClass) {
     // print generic messages for this domain class
+    println "\n"
     println "# ${domainClass.shortName} messages"
     println "${domainClass.propertyName}.label=${domainClass.shortName}"
     println "${domainClass.propertyName}.create.label=Create ${domainClass.shortName}"
@@ -127,56 +128,53 @@ def generateForDomainClass(domainClass) {
             switch (c.name) {
                 case ConstrainedProperty.BLANK_CONSTRAINT:
                     if (!c.parameter)
-                        println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] cannot be blank"
+                        println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] cannot be blank"
                     break
                 case ConstrainedProperty.CREDIT_CARD_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] is not a valid credit card number"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] is not a valid credit card number"
                     break
                 case ConstrainedProperty.EMAIL_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] is not a valid e-mail address"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] is not a valid e-mail address"
                     break
                 case ConstrainedProperty.IN_LIST_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] is not contained within the list [{3}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] is not contained within the list [{3}]"
                     break
                 case ConstrainedProperty.MATCHES_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] does not match the required pattern [{3}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] does not match the required pattern [{3}]"
                     break
                 case ConstrainedProperty.MAX_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] exceeds maximum value [{3}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] exceeds maximum value [{3}]"
                     break
                 case ConstrainedProperty.MAX_SIZE_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] exceeds the maximum size of [{3}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] exceeds the maximum size of [{3}]"
                     break
                 case ConstrainedProperty.MIN_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] is less than minimum value [{3}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] is less than minimum value [{3}]"
                     break
                 case ConstrainedProperty.MIN_SIZE_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] is less than the minimum size of [{3}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] is less than the minimum size of [{3}]"
                     break
                 case ConstrainedProperty.NOT_EQUAL_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] cannot equal [{3}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] cannot equal [{3}]"
                     break
                 case ConstrainedProperty.NULLABLE_CONSTRAINT:
                     if (!c.nullable)
-                        println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] cannot be null"
+                        println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] cannot be empty"
                     break
                 case ConstrainedProperty.RANGE_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] does not fall within the valid range from [{3}] to [{4}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] does not fall within the valid range from [{3}] to [{4}]"
                     break
                 case ConstrainedProperty.SIZE_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] does not fall within the valid size range from [{3}] to [{4}]"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] does not fall within the valid size range from [{3}] to [{4}]"
                     break
-                //case ConstrainedProperty.UNIQUE_CONSTRAINT: // unique constraint reference not available
-                //    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] must be unique"
-                //    break
                 case ConstrainedProperty.URL_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] is not a valid URL"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] is not a valid URL"
                     break
                 case ConstrainedProperty.VALIDATOR_CONSTRAINT:
-                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] of class [${domainClass.shortName}] with value [{2}] does not pass custom validation"
+                    println "${domainClass.propertyName}.${p.name}.${c.name}.error=Property [${p.naturalName}] with value [{2}] does not pass custom validation"
                     break
             }
         }
     }
-    println ""
+    println "\n"
 }

@@ -44,28 +44,28 @@
     <legend><g:message code="app.user.userAccount.label"/></legend>
 
     <div class="checkbox ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
-        <label class="control-label" for="enabled">
+        <label for="enabled">
+            <g:checkBox name="enabled" value="${userInstance?.enabled}" />
             <g:message code="user.enabled.label" default="Enabled"/>
         </label>
-        <g:checkBox name="enabled" value="${userInstance?.enabled}" />
     </div>
 
     <div class="checkbox ${hasErrors(bean: userInstance, field: 'accountExpired', 'error')} ">
-        <label class="control-label" for="accountExpired">
+        <label class="control-label">
             <g:checkBox name="accountExpired" value="${userInstance?.accountExpired}" />
             <g:message code="user.accountExpired.label" default="Account Expired"/>
         </label>
     </div>
 
     <div class="checkbox ${hasErrors(bean: userInstance, field: 'accountLocked', 'error')} ">
-        <label class="control-label" for="accountLocked">
+        <label for="accountLocked">
             <g:checkBox name="accountLocked" value="${userInstance?.accountLocked}" />
-            <g:message code="user.accountLocked.label" default="Account Locked" class="form-control"/>
+            <g:message code="user.accountLocked.label" default="Account Locked" />
         </label>
     </div>
 
     <div class="checkbox ${hasErrors(bean: userInstance, field: 'passwordExpired', 'error')} ">
-        <label class="control-label" for="passwordExpired">
+        <label for="passwordExpired">
             <g:checkBox name="passwordExpired" value="${userInstance?.passwordExpired}" />
             <g:message code="user.passwordExpired.label" default="Password Expired"/>
         </label>
@@ -107,19 +107,19 @@
     <div class="checkbox">
         <label>
             <g:checkBox name="email_subscription" value="${userInstance?.preferences?.email_subscription}" />
-            <span>Email Subscription</span>
+            <span><g:message code="user.preferences.email_subscription.label" default="Email Subscription"/></span>
         </label>
     </div>
 
     <div class="checkbox">
         <label><g:checkBox name="email_directmessage" value="${userInstance?.preferences?.email_directmessage}" />
-            <span>Someone send me a direct message</span>
+            <span><g:message code="user.preferences.email_directmessage.label" default="Someone send me a direct message"/></span>
         </label>
     </div>
 
     <div class="checkbox">
         <label><g:checkBox name="email_mention" value="${userInstance?.preferences?.email_mention}" />
-            <span>Someone mentions me</span>
+            <span><g:message code="user.preferences.email_mention.label" default="Someone mentions me"/></span>
         </label>
         <span class="help-block"><strong><g:message code="app.default.note.label"/>:</strong> Labels
         surround all the options for much larger click areas and a
@@ -138,21 +138,21 @@
         <div class="checkbox">
             <label>
                 <g:checkBox name="email_alert_type1" value="${userInstance?.preferences?.email_alert_type1}" />
-                <span>Email Alert 1</span>
+                <span><g:message code="user.preferences.email_alert_type1.label" default="Email Alert 1"/></span>
             </label>
         </div>
 
         <div class="checkbox">
             <label>
                 <g:checkBox name="email_alert_type2" value="${userInstance?.preferences?.email_alert_type2}" />
-                <span>Email Alert 2</span>
+                <span><g:message code="user.preferences.email_alert_type2.label" default="Email Alert 2"/></span>
             </label>
         </div>
 
         <div class="checkbox">
             <label>
                 <g:checkBox name="email_alert_type3" value="${userInstance?.preferences?.email_alert_type3}" />
-                <span>Email Alert 3</span>
+                <span><g:message code="user.preferences.email_alert_type3.label" default="Email Alert 3"/></span>
             </label>
         </div>
         <span class="help-block"><strong><g:message code="app.default.note.label"/>:</strong> Labels
