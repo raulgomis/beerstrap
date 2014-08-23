@@ -9,13 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><g:layoutTitle default="Beerstrap"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <r:require modules="application"/>
-    <script type="text/javascript" src="${resource(dir: 'js/tiny_mce', file: 'tiny_mce.js')}"></script>
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
     <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-fa fa-retina.png')}">
+    <asset:stylesheet src="application.css"/>
+    <asset:javascript src="application.js"/>
     <g:layoutHead/>
-    <r:layoutResources/>
 </head>
 <body>
     <div class="header">
@@ -24,19 +23,19 @@
 
     <div class="container">
         <g:if test="${flash.success}">
-            <r:script>
+            <script>
                 toastr.success('${flash.success}')
-            </r:script>
+            </script>
         </g:if>
         <g:if test="${flash.message}">
-            <r:script>
+            <script>
                 toastr.info('${flash.message}')
-            </r:script>
+            </script>
         </g:if>
         <g:if test="${flash.error}">
-            <r:script>
+            <script>
                 toastr.error('${flash.error}')
-            </r:script>
+            </script>
         </g:if>
         <div class="contents">
             <g:layoutBody/>
@@ -49,7 +48,6 @@
 
     <g:render template="/common/modal"></g:render>
 
-    <r:layoutResources/>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

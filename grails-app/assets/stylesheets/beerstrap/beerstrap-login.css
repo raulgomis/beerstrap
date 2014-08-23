@@ -1,4 +1,17 @@
-﻿
+﻿/*
+* This is a manifest file that'll be compiled into login.css, which will include all the files
+* listed below.
+*
+* Any CSS file within this directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require bootstrap/css/bootstrap.min.css
+*= require bootstrap/css/bootstrap-theme.min
+*= require_self
+*/
+
 /* ***********************************
 LOGIN VIEW
 *********************************** */

@@ -111,7 +111,7 @@ body {
 
 /* ============== spinner ============== */
 #spinner {
-    background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
+    background: url(../../images/spinner.gif) 50% 50% no-repeat transparent;
     height: 16px;
     width: 16px;
     padding: 0.5em;
