@@ -51,7 +51,7 @@ jQuery(function () {
     });
 
     // Knob -------------------
-    $(".dial").knob({});
+    $(".dial").knob();
 });
 
 // Tiny MCE -------------------

@@ -162,7 +162,7 @@ $(function () {
         var targetWidth = $("#d3").parent().width();
         chart.attr("width", targetWidth);
         chart.attr("height", targetWidth / aspect);
-        $("svg").width(targetWidth);
-        $("svg").height(targetWidth / aspect);
+        $("#d3 svg").width(targetWidth);
+        $("#d3 svg").height(targetWidth / aspect);
     });
 });
