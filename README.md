@@ -27,7 +27,7 @@ The Backend has been implemented using **Grails** framework. Grails is a dynamic
 - Grails scaffolding plugin (version 2.1.2)
 - Grails cache plugin (version 1.1.7)
 - Grails database-migration plugin (version 1.4.0)
-- Grails resources plugin (version 1.2.8)
+- Grails asset pipeline (version 1.9.7)
 - Grails spring-security-core plugin (version 2.0-RC4)
 - Grails mail plugin (version 1.0.6)
 
@@ -35,20 +35,22 @@ The Backend has been implemented using **Grails** framework. Grails is a dynamic
 In the Frontend, it's been included Twitter Bootstrap as a frontend framework and several
 jQuery third party plugins that will help us to develop a high quality front-end:
 
-- Twitter Bootstrap v3.2.0
-- Font Awesome 4.0.3
-- jQuery v2.0.3
-- jQuery cookie
-- jQuery File Upload Plugin 5.21.1
-- jQuery Iframe Transport Plugin 1.6.1
-- jQuery Knob 1.2.0
-- jQuery Flot Charts 0.8.1
-- jQuery Peity 1.0.0
-- jQuery Sparklines 2.1.2
-- Toastr Version 2.0.1
-- Bootstrap Datepicker
-- Select2 3.4.5
-- Twitter Typeahead.js 0.9.3
+- Twitter Bootstrap (version 3.2.0)
+- Bootstrap Datepicker (version 1.3.0)
+- d3 (version 3.4.11)
+- jQuery Flot Charts (version 0.8.3)
+- Font Awesome (version 4.1.0)
+- Holderjs (version 2.4.0)
+- jQuery (version 2.1.1)
+- jQuery cookie (version 1.4.1)
+- jQuery File Upload Plugin (version 9.7.0)
+- jQuery Iframe Transport Plugin (version 1.6.1)
+- jQuery Knob (version 1.2.9)
+- jQuery Peity (version 2.0.3)
+- Select2 (version 3.5.1)
+- Tiny MCE (version 4.1.4)
+- Toastr (version 2.0.3)
+- Twitter Typeahead.js (version 0.10.5)
 
 
 ## 3. Requirements
