@@ -19,6 +19,4 @@
 //= require beerstrap/beerstrap-init
 //= require beerstrap/beerstrap-utils
 //= require beerstrap/beerstrap-ajax
-
 //= require_self
-console.log("This is my javascript manifest");

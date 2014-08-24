@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-fa fa-retina.png')}">
     <g:layoutHead/>
     <asset:stylesheet src="error.css"/>
+    <asset:javascript src="error.js"/>
 </head>
 <body class='view-login'>
 <div class="container">
