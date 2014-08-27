@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <h2 class="section_header">
-        <span><i class="fa fa-info-sign"></i> <g:message code="app.security.forgotPassword.header"/> <small><g:message
+        <span><i class="fa fa-info-circle"></i> <g:message code="app.security.forgotPassword.header"/> <small><g:message
                 code="app.security.forgotPassword.description"/></small></span>
         <hr class="right visible-desktop">
     </h2>
