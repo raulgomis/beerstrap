@@ -1,17 +1,4 @@
 ﻿
-.page-header {
-    /*background-color: #F5F5F5;*/
-    margin: -20px -20px 20px;
-    padding: 20px 20px 10px;
-}
-
-@media (max-width: 980px) 
-{
-    body{
-        padding-top: 0px;
-    }
-}
-
 .jumbotron {
     background-color: white;
 }
@@ -84,7 +71,6 @@ footer {
 
 .navbar-brand {
     font-size:18px;
-    color:#08C;
 }
 
 .table-bold.table tr td:first-child {
@@ -94,7 +80,6 @@ footer {
 .table-bold.table tr td:first-child label {
     font-weight: bold;
 }
-
 
 
 .rowbar 
@@ -118,47 +103,3 @@ footer {
     font-weight: bold !important;
 }
 
-
-
-/*
- * Main navigation
- *
- * Turn the `.navbar` at the top of the docs purple.
- */
-
-.bs-docs-nav {
-    text-shadow: 0 -1px 0 rgba(0,0,0,.15);
-    background-color: #205081;
-    border-color: #3b73af;
-    box-shadow: 0 1px 0 rgba(255,255,255,.1);
-    border-radius: 0px;
-}
-.bs-docs-nav .navbar-collapse {
-    border-color: #3b73af;
-}
-.bs-docs-nav .navbar-brand {
-    color: #fff;
-}
-.bs-docs-nav .navbar-nav > li > a {
-    color: #f5f5f5;
-}
-.bs-docs-nav .navbar-nav > li > a:hover {
-    color: #fff;
-}
-.bs-docs-nav .navbar-nav > .active > a,
-.bs-docs-nav .navbar-nav > .active > a:hover {
-    color: #fff;
-    background-color: #3b73af;
-}
-.bs-docs-nav .navbar-toggle {
-    border-color: #205081;
-}
-.bs-docs-nav .navbar-toggle:hover {
-    background-color: #3b73af;
-    border-color: #3b73af;
-}
-
-.bs-docs-nav .navbar-nav>.open>a, .bs-docs-nav .navbar-nav>.open>a:hover, .bs-docs-nav .navbar-nav>.open>a:focus {
-    background-color: #3b73af;
-    border-color: #3b73af;
-}

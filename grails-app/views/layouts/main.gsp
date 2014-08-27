@@ -37,9 +37,8 @@
                 toastr.error('${flash.error}')
             </script>
         </g:if>
-        <div class="contents">
-            <g:layoutBody/>
-        </div>
+
+        <g:layoutBody/>
     </div>
 
     <div class="footer">

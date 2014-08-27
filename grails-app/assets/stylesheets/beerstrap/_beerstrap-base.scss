@@ -1,4 +1,14 @@
-﻿.list-actions form {
+﻿#main-navbar {
+  &.navbar.navbar-default {
+    margin-bottom: 0;
+  }
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.list-actions form {
     display: inline;
 }
 
