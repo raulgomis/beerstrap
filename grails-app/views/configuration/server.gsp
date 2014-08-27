@@ -25,7 +25,7 @@
             <td>
                 <strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip" title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}">
-                    <i class="fa fa-info-sign"></i>
+                    <i class="fa fa-info-circle"></i>
                 </span>
             </td>
             <td>
@@ -51,7 +51,7 @@
             <td><strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip"
                       title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}"><i
-                        class="fa fa-info-sign"></i></span>
+                        class="fa fa-info-circle"></i></span>
             </td>
             <td>
                 <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="form-control"/>
@@ -77,7 +77,7 @@
             <td><strong><g:message code="app.configuration.${configurationInstance?.key}.label" default="${configurationInstance?.key}"/></strong>
                 <span rel="tooltip"
                       title="${message(code: "app.configuration.${configurationInstance?.key}.label", default: "")}"><i
-                        class="fa fa-info-sign"></i></span>
+                        class="fa fa-info-circle"></i></span>
             </td>
             <td>
                 <g:textField name="${configurationInstance?.key}" value="${configurationInstance?.value}" readonly="true" class="form-control"/>
