@@ -19,10 +19,10 @@ Key things:
 ### 2.1 Backend
 The Backend has been implemented using **Grails** framework. Grails is a dynamic web application framework built on Java and Groovy, leveraging best of breed APIs including Spring, Hibernate and SiteMesh. Grails brings to Java and Groovy developers the joys of convention-based rapid development while allowing them to leverage their existing knowledge and capitalize on the proven and performant APIs Java developers have been using for years.
 
-- Grails (version 2.4.2)
+- Grails (version 2.4.3)
 - Groovy (version 2.3.3)
 - Sitemesh (version 2.4)
-- Hibernate (grails plugin, version 4.3.5.4)
+- Hibernate (grails plugin, version 4.3.5.5)
 - Tomcat (grails plugin, version 7.0.54)
 - Grails scaffolding plugin (version 2.1.2)
 - Grails cache plugin (version 1.1.7)
