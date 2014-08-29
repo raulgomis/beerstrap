@@ -1,0 +1,17 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS file within this directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require beerstrap/beerstrap
+*= require fontawesome/css/font-awesome.min
+*= require bootstrap-datepicker/css/datepicker3
+*= require select2/select2
+*= require select2/select2-bootstrap
+*= require jquery-file-upload/css/jquery.fileupload-ui
+*= require toastr/toastr.min
+*/

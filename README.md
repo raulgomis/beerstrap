@@ -27,28 +27,35 @@ The Backend has been implemented using **Grails** framework. Grails is a dynamic
 - Grails scaffolding plugin (version 2.1.2)
 - Grails cache plugin (version 1.1.7)
 - Grails database-migration plugin (version 1.4.0)
-- Grails resources plugin (version 1.2.8)
+- Grails asset pipeline (version 1.9.7)
 - Grails spring-security-core plugin (version 2.0-RC4)
 - Grails mail plugin (version 1.0.6)
 
 ### 2.2 Frontend
 In the Frontend, it's been included Twitter Bootstrap as a frontend framework and several
-jQuery third party plugins that will help us to develop a high quality front-end:
+jQuery third party plugins that will help us to develop a high quality front-end.
 
-- Twitter Bootstrap v3.2.0
-- Font Awesome 4.0.3
-- jQuery v2.0.3
-- jQuery cookie
-- jQuery File Upload Plugin 5.21.1
-- jQuery Iframe Transport Plugin 1.6.1
-- jQuery Knob 1.2.0
-- jQuery Flot Charts 0.8.1
-- jQuery Peity 1.0.0
-- jQuery Sparklines 2.1.2
-- Toastr Version 2.0.1
-- Bootstrap Datepicker
-- Select2 3.4.5
-- Twitter Typeahead.js 0.9.3
+Technologies:
+- Bower [http://bower.io/](http://bower.io/)
+- SASS support.
+
+Libraries:
+- Twitter Bootstrap SASS (version 3.2.0)
+- Bootstrap Datepicker (version 1.3.0)
+- d3 (version 3.4.11)
+- jQuery Flot Charts (version 0.8.3)
+- Font Awesome (version 4.1.0)
+- Holderjs (version 2.4.0)
+- jQuery (version 2.1.1)
+- jQuery cookie (version 1.4.1)
+- jQuery File Upload Plugin (version 9.7.0)
+- jQuery Iframe Transport Plugin (version 1.6.1)
+- jQuery Knob (version 1.2.9)
+- jQuery Peity (version 2.0.3)
+- Select2 (version 3.5.1)
+- Tiny MCE (version 4.1.4)
+- Toastr (version 2.0.3)
+- Twitter Typeahead.js (version 0.10.5)
 
 
 ## 3. Requirements
@@ -76,6 +83,12 @@ There are three main IDEs that have good integration with Grails:
 ## 5. Demo
 [Demo version](http://beerstrap.rgomis.eu.cloudbees.net/) (user: admin, password: admin)
 
-## 6. Terms of use
-- **Web Layout**: Bootstrap v3.2.0, from Twitter Licensed under the Apache License v2.0. Documentation licensed under CC BY 3.0. (@TwBootstrap , http://twitter.github.com/bootstrap/)
-- **Datepicker**: Datepicker for Bootstrap, Copyright 2012 Stefan Petre, Improvements by Andrew Rowls, Licensed under the Apache License v2.0
+## 6. Changelog
+
+### Release v0.2: Alhambra
+- SASS support integrated via *Grails asset pipeline* plugin.
+- Bower package manager integrated. Now, all the javascript libraries can be updated via bower. Note: for the moment, in order to ease the project build, the packages are loaded in the GIT repo, in the future they will be integrated in the build process.
+- Updated the third party Frontend plugins to the new versions.
+
+### Release v0.1: Franziskaner
+- Initial project release.

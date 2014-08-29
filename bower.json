@@ -1,0 +1,22 @@
+{
+    "name": "Beerstrap",
+    "version": "0.0.0",
+    "dependencies": {
+        "bootstrap": "3.2.0",
+        "bootstrap-datepicker": "1.3.0",
+        "bootstrap-sass-official": "3.2.0",
+        "d3": "3.4.11",
+        "flot": "0.8.3",
+        "fontawesome": "4.1.0",
+        "holderjs": "2.4.0",
+        "jquery": "2.1.1",
+        "jquery-cookie": "1.4.1",
+        "jquery-file-upload": "9.7.0",
+        "jquery-knob": "1.2.9",
+        "peity": "2.0.3",
+        "select2": "3.5.1",
+        "tinymce": "4.1.4",
+        "toastr": "2.0.3",
+        "typeahead.js": "0.10.5"
+    }
+}

@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<r:script>
+<script>
     $(function () {
         $.ajax({
             url: "${createLink(controller: "document", action: "ajaxGetFiles")}"
@@ -68,4 +68,4 @@
         });
     });
 
-</r:script>
+</script>

@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <img src="${resource(dir: 'images/frames', file: 'placeit.png')}">
+                        <asset:image src="frames/placeit.png"/>
                     </div>
                 </div>
             </div>

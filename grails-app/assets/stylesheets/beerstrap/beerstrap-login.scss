@@ -1,0 +1,88 @@
+﻿/*
+* This is a manifest file that'll be compiled into login.css, which will include all the files
+* listed below.
+*
+* Any CSS file within this directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require bootstrap/css/bootstrap.min.css
+*= require bootstrap/css/bootstrap-theme.min
+*= require_self
+*/
+
+/* ***********************************
+LOGIN VIEW
+*********************************** */
+.view-login {
+    /*padding-top: 0;*/
+    /*background-color: #142849;
+    background-image: -webkit-gradient(radial,center center,0,center center,460,from(#165387),to(#005682));
+    background-image: -webkit-radial-gradient(circle,#165387,#005682);
+    background-image: -moz-radial-gradient(circle,#165387,#005682);
+    background-image: -o-radial-gradient(circle,#165387,#005682);*/
+    /*background-repeat: no-repeat;*/
+}
+.view-login .container {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -206px;
+    margin-left: -150px;
+}
+.view-login .navbar-fixed-bottom {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+.view-login .navbar-fixed-bottom,
+.view-login .navbar-fixed-bottom a {
+    color: #FCFCFC;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.view-login .well {
+    /*padding-bottom: 0;*/
+    -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.9) inset;
+    -moz-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.9) inset;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.9) inset;
+}
+
+.view-login .navbar-fixed-bottom {
+    position: absolute;
+}
+.view-login .input-medium {
+    width: 184px;
+}
+.login .chzn-single {
+    width: 230px !important;
+}
+.login .chzn-container,
+.login .chzn-drop {
+    width: 238px !important;
+    max-width: 238px !important;
+}
+
+.merged .input-group-addon {
+    border-right: 0px;
+    background-color: #FFFFFF;
+}
+.merged input {
+    border-left: 0px;
+    background-color: #FFFFFF;
+}
+
+#header {
+    margin: 0;
+    height: 71px;
+    border-bottom: 1px solid #e5e5e5 !important;
+    overflow: hidden;
+    padding: 0 30px;
+    background-clip: padding-box;
+    border-width: 0;
+    min-height: 28px;
+    background: #f1f1f1 !important;
+    margin-bottom: 20px;
+    padding: 15px;
+}
