@@ -13,12 +13,12 @@
     <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-fa fa-retina.png')}">
     <g:layoutHead/>
-    <asset:stylesheet src="error.css"/>
-    <asset:javascript src="error.js"/>
+    <asset:stylesheet src="beerstrap.css"/>
+    <asset:javascript src="beerstrap.js"/>
 </head>
 <body class='view-login'>
 <div class="container">
-    <div class="content">
+    <div class="content error-page">
         <g:layoutBody/>
     </div>
 </div>

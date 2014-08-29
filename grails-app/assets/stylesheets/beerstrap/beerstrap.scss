@@ -1,6 +1,22 @@
-@import 'beerstrap-vars';
+
+// Variables & Bootstrap
+@import 'variables';
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap';
-@import 'beerstrap-base';
+
+// Core
+@import 'base';
 @import 'beerstrap-bootstrap-overrides';
-@import 'beerstrap-boxes';
+
+// Pages
+@import 'pages/errors';
+
+// Components
+@import 'components/boxes';
+@import 'components/datepicker';
+@import 'components/forms';
+@import 'components/modals';
+@import 'components/knob';
+@import 'components/peity';
+@import 'components/ribbon';
+
 
