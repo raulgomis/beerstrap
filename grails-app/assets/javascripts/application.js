@@ -6,6 +6,7 @@
 //= require bootstrap-datepicker/js/bootstrap-datepicker
 //= require select2/select2.min
 //= require d3/d3.min
+//= require c3/c3.min
 //= require peity/jquery.peity.min
 //= require jquery-knob/dist/jquery.knob.min
 //= require flot/jquery.flot
@@ -15,7 +16,7 @@
 //= require holderjs/holder
 //= require toastr/toastr.min
 //= require tinymce/tinymce.min
-//= require beerstrap/graph/d3-stacked-graph
+//= require beerstrap/graph/c3-stacked
 //= require beerstrap/beerstrap-init
 //= require beerstrap/beerstrap-utils
 //= require beerstrap/beerstrap-ajax

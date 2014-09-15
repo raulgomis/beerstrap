@@ -1,4 +1,9 @@
 /* ============== knobs ============== */
 .knob {
   text-align: center;
+  .knob-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
 }
