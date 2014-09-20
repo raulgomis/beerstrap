@@ -16,7 +16,7 @@
 //= require holderjs/holder
 //= require toastr/toastr.min
 //= require tinymce/tinymce.min
-//= require beerstrap/graph/c3-stacked
+//= require beerstrap/graph/c3-mock
 //= require beerstrap/beerstrap-init
 //= require beerstrap/beerstrap-utils
 //= require beerstrap/beerstrap-ajax

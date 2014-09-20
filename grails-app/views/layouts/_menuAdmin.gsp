@@ -32,6 +32,13 @@
                 <g:message code="app.menu.configuration.label" />
             </g:link>
         </li>
+
+        <li class='${pageProperty(name:"page.menu_Sandbox")}'>
+            <g:link controller="sandbox">
+                <i class="fa fa-paint-brush"></i>
+                <g:message code="app.menu.sandbox.label" />
+            </g:link>
+        </li>
     </sec:access>
 
     <li class="divider"></li>

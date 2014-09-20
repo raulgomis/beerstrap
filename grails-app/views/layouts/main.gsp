@@ -23,19 +23,19 @@
 
     <div class="container">
         <g:if test="${flash.success}">
-            <r:script>
+            <script>
                 toastr.success('${flash.success}')
-            </r:script>
+            </script>
         </g:if>
         <g:if test="${flash.message}">
-            <r:script>
+            <script>
                 toastr.info('${flash.message}')
-            </r:script>
+            </script>
         </g:if>
         <g:if test="${flash.error}">
-            <r:script>
+            <script>
                 toastr.error('${flash.error}')
-            </r:script>
+            </script>
         </g:if>
         <div class="contents">
             <g:layoutBody/>
@@ -48,7 +48,6 @@
 
     <g:render template="/common/modal"></g:render>
 
-    <r:layoutResources/>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

@@ -11,6 +11,7 @@ class UrlMappings {
         "/admin/documents/$action?/$id?"(controller: "document")
         "/admin/test/$action?/$id?"(controller: "example")
         "/admin/configuration/$action?/$id?"(controller: "configuration")
+        "/admin/sandbox/$action?/$id?"(controller: "sandbox")
         "/profile/$action?"(controller: "profile")
         "/search/$action?"(controller: "search")
         "/help/$action?"(controller: "help")
