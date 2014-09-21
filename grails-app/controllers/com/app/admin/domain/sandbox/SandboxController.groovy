@@ -9,4 +9,6 @@ class SandboxController {
     def components() {}
 
     def reports() {}
+
+    def maps() {}
 }

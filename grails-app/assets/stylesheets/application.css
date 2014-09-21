@@ -15,4 +15,5 @@
 *= require jquery-file-upload/css/jquery.fileupload-ui
 *= require toastr/toastr.min
 *= require c3/c3
+*= require leaflet/dist/leaflet
 */
