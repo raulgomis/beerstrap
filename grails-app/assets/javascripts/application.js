@@ -17,7 +17,8 @@
 //= require toastr/toastr.min
 //= require tinymce/tinymce.min
 //= require leaflet/dist/leaflet
-//= require beerstrap/graph/c3-mock
+//= require beerstrap/reports/c3-mock
+//= require beerstrap/maps/leaflet-mock
 //= require beerstrap/beerstrap-init
 //= require beerstrap/beerstrap-utils
 //= require beerstrap/beerstrap-ajax
