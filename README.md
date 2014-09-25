@@ -23,11 +23,11 @@ The Backend has been implemented using **Grails** framework. Grails is a dynamic
 - Groovy (version 2.3.3)
 - Sitemesh (version 2.4)
 - Hibernate (grails plugin, version 4.3.5.5)
-- Tomcat (grails plugin, version 7.0.54)
+- Tomcat (grails plugin, version 7.0.55)
 - Grails scaffolding plugin (version 2.1.2)
 - Grails cache plugin (version 1.1.7)
 - Grails database-migration plugin (version 1.4.0)
-- Grails asset pipeline (version 1.9.7)
+- Grails asset pipeline (version 1.9.9)
 - Grails spring-security-core plugin (version 2.0-RC4)
 - Grails mail plugin (version 1.0.6)
 
