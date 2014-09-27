@@ -4,7 +4,7 @@ author:
   name:   Raúl Gomis
   url:    https://twitter.com/rgomis
   email:  raulgomis@gmail.com
-baseurl:  https://raulgomis.github.io/beerstrap/
+baseurl:  //raulgomis.github.io/beerstrap/
 
 # Dependencies
 markdown: redcarpet
