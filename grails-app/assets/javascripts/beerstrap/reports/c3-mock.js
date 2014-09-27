@@ -31,7 +31,7 @@ $(function () {
             // iris data from R
             columns: [
                 ['data1', 30],
-                ['data2', 120],
+                ['data2', 120]
             ],
             type : 'pie',
             onclick: function (d, i) { console.log("onclick", d, i); },
@@ -49,7 +49,7 @@ $(function () {
                 ['data3', 300, 200, 160, 400, 250, 250],
                 ['data4', 200, 130, 90, 240, 130, 220],
                 ['data5', 130, 120, 150, 140, 160, 150],
-                ['data6', 90, 70, 20, 50, 60, 120],
+                ['data6', 90, 70, 20, 50, 60, 120]
             ],
             type: 'bar',
             types: {

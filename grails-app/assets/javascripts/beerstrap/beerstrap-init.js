@@ -17,9 +17,8 @@ $(function () {
     // Twitter bootstrap: Datepicker ---------
     $('input[datadatepicker]').datepicker({
         format: 'yyyy/mm/dd', autoclose: "true", language: "en"
-    }).on('show', function (ev) {
+    }).on('show', function () {
         var today = new Date();
-        var t = today.getDate() + "/" + today.getMonth() + "/" + today.getFullYear();
         $('input[datadatepicker]').data({ date: today }).datepicker('update');
     });
 
