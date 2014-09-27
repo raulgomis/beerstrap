@@ -1,0 +1,16 @@
+# Setup
+name: Beerstrap
+author:
+  name:   Raúl Gomis
+  url:    https://twitter.com/rgomis
+  email:  raulgomis@gmail.com
+baseurl:  https://raulgomis.github.io/beerstrap/
+
+# Dependencies
+markdown: redcarpet
+highlighter: pygments
+
+# Custom vars
+version:  0.2
+github:   https://github.com/raulgomis/beerstrap
+demo:     http://beerstrap.rgomis.eu.cloudbees.net/

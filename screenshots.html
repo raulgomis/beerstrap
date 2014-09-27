@@ -1,230 +1,26 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Screenshots</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+title: Screenshots
+subtitle: See all the people involved in the project
+icon: picture-o
+weight: 3
+---
 
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="css/syntax.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/app-public.css">
-    <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">
-
-
-    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-fa fa-retina.png')}">
-</head>
-<body>
-    <nav class="navbar-inner">
-        <div class="container">
-            <ul class="nav nav-justified">
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="index.html">
-                            <i class="fa fa-home"></i>
-                            Home
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="docs.html">
-                            <i class="fa fa-file-o"></i>
-                            Docs
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li class="active">
-                            <a href="screenshots.html">
-                            <i class="fa fa-picture-o"></i>
-                            Screenshots
-                            </a>
-                        </li>
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="future.html">
-                            <i class="fa fa-road"></i>
-                            Roadmap
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                        <li >
-                            <a href="about.html">
-                            <i class="fa fa-info-circle"></i>
-                            About
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-            </ul>
+<div id="{{ page.title }}" class="container">
+    <section>
+        <header>
+            <h1 class="section-header">
+                <span><i class="fa fa-{{page.icon}}"></i> {{ page.title }} <small>{{ page.subtitle }}</small></span>
+                <hr class="right visible-desktop"/>
+            </h1>
+        </header>
+        <div class="section-content">
+            <h2>Login</h2>
+            <img src="images/login.png" class="img-responsive" alt="Login screenshot">
+            <h2>Dashboard</h2>
+            <img src="images/dashboard.png" class="img-responsive" alt="Dashboard screenshot">
+            <h2>Crud</h2>
+            <img src="images/crud.png" class="img-responsive" alt="Crud screenshot">
         </div>
-    </nav>
-
-    <div class="container">
-    <h2 class="section_header">
-        <span><i class="fa fa-picture-o"></i> Screenshots <small>See all the people involved in the project</small></span>
-        <hr class="right visible-desktop"/>
-    </h2>
-    <section id="Screenshots" class="clearfix">
-        <h3>Login</h3>
-        <img src="images/login.png" class="img-responsive" alt="Login screenshot">
-        <h3>Dashboard</h3>
-        <img src="images/dashboard.png" class="img-responsive" alt="Dashboard screenshot">
-        <h3>Crud</h3>
-        <img src="images/crud.png" class="img-responsive" alt="Crud screenshot">
     </section>
-
-    <hr>
 </div>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; Beerstrap</p>
-            <p>Maintained by <a href="https://github.com/raulgomis">Raúl Gomis</a> with the help of <a href="https://github.com/raulgomis/beerstrap/graphs/contributors">the contributors</a>.</p>
-            <p>Code licensed under <a href="https://github.com/raulgomis/beerstrap/blob/master/LICENSE" target="_blank">Apache License 2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        </div>
-    </footer>
-
-    <script type="javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
-    <script type="javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-43194168-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-</body>
-</html>
-
-

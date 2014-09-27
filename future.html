@@ -1,260 +1,54 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Roadmap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+title: Roadmap
+icon: road
+weight: 4
+---
 
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="css/syntax.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/app-public.css">
-    <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">
-
-
-    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-fa fa-retina.png')}">
-</head>
-<body>
-    <nav class="navbar-inner">
-        <div class="container">
-            <ul class="nav nav-justified">
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="index.html">
-                            <i class="fa fa-home"></i>
-                            Home
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="docs.html">
-                            <i class="fa fa-file-o"></i>
-                            Docs
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="screenshots.html">
-                            <i class="fa fa-picture-o"></i>
-                            Screenshots
-                            </a>
-                        </li>
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li class="active">
-                            <a href="future.html">
-                            <i class="fa fa-road"></i>
-                            Roadmap
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                        <li >
-                            <a href="about.html">
-                            <i class="fa fa-info-circle"></i>
-                            About
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-    <header>
-        <h2 class="section_header">
-            <span><i class="fa fa-road"></i> Roadmap <small></small></span>
-            <hr class="right visible-desktop"/>
-        </h2>
-    </header>
-    <section id="Roadmap" class="clearfix">
-        <div>
-            <h4>
-                <i class="fa fa-copy"></i> Documentation <small>Coming soon!</small>
-            </h4>
-            <p>
-                Documentation is one key to success. The more documented and easier <g:meta name="app.name"/> is to use, the more productive you will be at work.
-            </p>
-        </div>
-        <hr>
-        <div>
-            <h4>
-                <i class="fa fa-thumbs-up"></i> Testing <small>Coming soon!</small>
-            </h4>
-            <p>
-                Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
-                also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
-            </p>
-        </div>
-        <hr>
-        <div>
-            <h4>
-                <i class="fa fa-puzzle-piece"></i> Rest <small>Coming soon!</small>
-            </h4>
-            <p>
-                Create rest interfaces easily (scaffolding for rest) is one of our priorities in Beerstrap, using <a href="http://jackson.codehaus.org/">Jackson</a> library.
-            </p>
-        </div>
-        <hr>
-        <div>
-            <h4>
-                <i class="fa fa-magic"></i> More Scaffolding
-            </h4>
-            <p>Scaffolding is a very powerful tool if it is used in the right way. We will add <a href="http://grails.org/plugin/fields">Fields plugin</a> and try to improve the
-                scaffolding with code generation techniques</p>
+<div id="{{page.title}}" class="container">
+    <section>
+        <header>
+            <h1 class="section-header">
+                <span><i class="fa fa-{{page.icon}}"></i> {{ page.title }} <small>{{ page.subtitle }}</small></span>
+                <hr class="right visible-desktop"/>
+            </h1>
+        </header>
+        <div class="section-content">
+            <div>
+                <h4>
+                    <i class="fa fa-copy"></i> Documentation <small>Coming soon!</small>
+                </h4>
+                <p>
+                    Documentation is one key to success. The more documented and easier <g:meta name="app.name"/> is to use, the more productive you will be at work.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <h4>
+                    <i class="fa fa-thumbs-up"></i> Testing <small>Coming soon!</small>
+                </h4>
+                <p>
+                    Using <a href="http://www.spockframework.org">Spock Framework</a> to test and
+                    also the great plugins <a href="http://grails.org/plugin/build-test-data">Build test data</a>, <a href="http://grails.org/plugin/fixtures">Fixtures</a> and <a href="http://grails.org/plugin/code-coverage">Code Coverage</a> to ease this testing process.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <h4>
+                    <i class="fa fa-puzzle-piece"></i> Rest <small>Coming soon!</small>
+                </h4>
+                <p>
+                    Create rest interfaces easily (scaffolding for rest) is one of our priorities in {{ site.name }}, using <a href="http://jackson.codehaus.org/">Jackson</a> library.
+                </p>
+            </div>
+            <hr>
+            <div>
+                <h4>
+                    <i class="fa fa-magic"></i> More Scaffolding
+                </h4>
+                <p>Scaffolding is a very powerful tool if it is used in the right way. We will add <a href="http://grails.org/plugin/fields">Fields plugin</a> and try to improve the
+                    scaffolding with code generation techniques</p>
+            </div>
         </div>
     </section>
-
 </div>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; Beerstrap</p>
-            <p>Maintained by <a href="https://github.com/raulgomis">Raúl Gomis</a> with the help of <a href="https://github.com/raulgomis/beerstrap/graphs/contributors">the contributors</a>.</p>
-            <p>Code licensed under <a href="https://github.com/raulgomis/beerstrap/blob/master/LICENSE" target="_blank">Apache License 2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        </div>
-    </footer>
-
-    <script type="javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
-    <script type="javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-43194168-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-</body>
-</html>
-
-

@@ -1,201 +1,21 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+title: Home
+icon: home
+weight: 1
+---
 
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="css/syntax.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/app-public.css">
-    <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">
-
-
-    <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-fa fa-retina.png')}">
-</head>
-<body>
-    <nav class="navbar-inner">
-        <div class="container">
-            <ul class="nav nav-justified">
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li class="active">
-                            <a href="index.html">
-                            <i class="fa fa-home"></i>
-                            Home
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="docs.html">
-                            <i class="fa fa-file-o"></i>
-                            Docs
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="screenshots.html">
-                            <i class="fa fa-picture-o"></i>
-                            Screenshots
-                            </a>
-                        </li>
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                        <li >
-                            <a href="future.html">
-                            <i class="fa fa-road"></i>
-                            Roadmap
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                        <li >
-                            <a href="about.html">
-                            <i class="fa fa-info-circle"></i>
-                            About
-                            </a>
-                        </li>
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                
-            </ul>
-        </div>
-    </nav>
-
-    <div class="masthead">
+<div class="masthead">
     <div class="jumbotron">
         <h1>
-            Beerstrap
+            {{ site.name }}
         </h1>
         <p class="lead"><strong>Startup project designed to ease and accelerate software development.</strong><br> Ideal for startups and web developers who want to rapid-prototype
-            and develop products within weeks without wasting time in configurations and boring stuff. <br> Software development never has been so fast!</p>
-        <a href="http://beerstrap.rgomis.eu.cloudbees.net/" class="btn btn-lg btn-info"><i class="fa fa-beer"></i> Demo</a>
-        <a href="https://github.com/raulgomis/beerstrap" class="btn btn-lg btn-info"><i class="fa fa-github"></i> Code</a>
+            and develop products within weeks without wasting time in configurations and boring stuff. <br> Software development has never been so fast!</p>
+        {% if site.demo %}
+        <a href="{{ site.demo }}" class="btn btn-lg btn-info"><i class="fa fa-beer"></i> Demo</a>
+        {% endif %}
+        <a href="{{ site.github }}/archive/v{{ site.version }}.zip" class="btn btn-lg btn-info"><i class="fa fa-download"></i> Download <small>v{{ site.version }}</small></a>
     </div>
 </div>
 
@@ -221,9 +41,8 @@
                 <h2>
                     <i class="fa fa-money"></i> Save money
                 </h2>
-                <p>Beerstrap will <strong>help you to save money</strong>
-                    (Yes, you heard right!). Save more than 1500$ each time you start a project.
-                    It is estimated cost to develop the features provided by Beerstrap.</p>
+                <p>{{ site.name }} will <strong>help you to save money</strong>
+                    (Yes, you heard right!). (Yes, you heard right!). As time is money, starting with a solid base project will avoid you coding the starting and boring project setup.</p>
             </div>
         </div>
     </section>
@@ -249,7 +68,7 @@
                 <h4>
                     <i class="fa fa-lock"></i> Security ready
                 </h4>
-                <p>Don't waste your time configuring and programming security basic stuff: Beerstrap is already secured.
+                <p>Don't waste your time configuring and programming security basic stuff: {{ site.name }} is already secured.
                     <a href="http://grails.org/plugin/spring-security-core">Spring Security Core</a>
                 </p>
 
@@ -271,23 +90,23 @@
             </div>
             <div class="col-md-3">
                 <h4>
-                    <i class="fa fa-beaker"></i> Made with Grails
+                    <i class="fa fa-cubes"></i> Made with Grails
                 </h4>
-                <p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails 2.4.2</a>: a rapid, dynamic & robust
+                <p>It's been implemented using <a href="http://twitter.github.com/bootstrap/">Grails</a>: a rapid, dynamic & robust
                     framework which uses the Groovy programming language (based on the Java platform).
                 </p>
             </div>
             <div class="col-md-3">
                 <h4>
-                    <i class="fa fa-share-o"></i> Easy ajax
+                    <i class="fa fa-share-alt"></i> Easy ajax
                 </h4>
                 <p>Well structured way to make ajax calls and modals with little code. See docs for more information about how to do it.</p>
             </div>
             <div class="col-md-3">
                 <h4>
-                    <i class="fa fa-eye-open"></i> User interface
+                    <i class="fa fa-paint-brush"></i> User interface
                 </h4>
-                <p>Catching user's eye with a extremely good looking interface using <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap 3.2.0</a> and <a href="http://fortawesome.github.com/Font-Awesome/">Font awesome 4.0.3</a>.</p>
+                <p>Catching user's eye with a extremely good looking interface using <a href="http://twitter.github.com/bootstrap/">Twitter bootstrap</a> and <a href="http://fortawesome.github.com/Font-Awesome/">Font awesome</a>.</p>
             </div>
         </div>
         <br>
@@ -296,13 +115,13 @@
                 <h4>
                     <i class="fa fa-envelope-o"></i> Email sending
                 </h4>
-                <p>Beerstrap comes with a structured way to send emails. Configure your credentials and start sending emails to the users.</p>
+                <p>{{ site.name }} comes with a structured way to send emails. Configure your credentials and start sending emails to the users.</p>
             </div>
             <div class="col-md-3">
                 <h4>
                     <i class="fa fa-flag"></i> I18N ready
                 </h4>
-                <p>Beerstrap has it own core translated into English and Spanish. Help us translate it into your own language.</p>
+                <p>{{ site.name }} has it own core translated into English and Spanish. Help us translate it into your own language.</p>
             </div>
 
             <div class="col-md-3">
@@ -317,28 +136,3 @@
     </section>
     <hr>
 </div>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; Beerstrap</p>
-            <p>Maintained by <a href="https://github.com/raulgomis">Raúl Gomis</a> with the help of <a href="https://github.com/raulgomis/beerstrap/graphs/contributors">the contributors</a>.</p>
-            <p>Code licensed under <a href="https://github.com/raulgomis/beerstrap/blob/master/LICENSE" target="_blank">Apache License 2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        </div>
-    </footer>
-
-    <script type="javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
-    <script type="javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-43194168-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-</body>
-</html>
-
-

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Docs
-subtitle: How Beerstrap works
-icon: file-o
-weight: 2
+title: Blog
+subtitle: Technology posts and Beerstrap updates.
+icon: pencil-square-o
+weight: 5
 ---
 
 <div id="{{ page.title }}" class="container">
@@ -15,13 +15,12 @@ weight: 2
             </h1>
         </header>
         <div class="section-content">
-            {% for post in site.categories.doc %}
+            {% for post in site.categories.blog %}
             <article class="post">
-                <!--
                 <h2 class="post-title">
                     {{ post.title }}
+                    <small><time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time></small>
                 </h2>
-                -->
                 {{ post.content }}
             </article>
             {% endfor %}
