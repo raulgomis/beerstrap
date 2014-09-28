@@ -13,6 +13,6 @@ markdown: redcarpet
 highlighter: pygments
 
 # Custom vars
-version:  0.2
+version:  0.3
 github:   https://github.com/raulgomis/beerstrap
 demo:     http://beerstrap.rgomis.eu.cloudbees.net/
