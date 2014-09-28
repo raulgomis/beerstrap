@@ -1,5 +1,7 @@
 # Setup
 name: Beerstrap
+description: Beerstrap. Startup project designed to ease and accelerate software development.
+keywords: Beerstrap, startup project, prototype, agile, lean, development, framework, mockups, Grails, Java, HTML5, frontend, backend.
 author:
   name:   Raúl Gomis
   url:    https://twitter.com/rgomis
