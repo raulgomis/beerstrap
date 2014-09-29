@@ -26,7 +26,7 @@ environments {
             url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
-    production {
+    database {
         dataSource {
             // Real database connection string
 
@@ -59,7 +59,7 @@ environments {
             }
         }
     }
-    demo {
+    production {
         dataSource {
             // Test production database string (used for cloudbees)
             dbCreate = "update"
