@@ -1,8 +1,12 @@
 language: groovy
-jdk:
-  - oraclejdk7
-branches:
-  only:
-    - master
-script: ./grailsw refresh-dependencies
-  && ./grailsw test-app
+branches: 
+  only: 
+  - master
+deploy: 
+  provider: heroku
+  app: beerstrap
+  api_key: 
+    secure: LXMe36pxYHg/Y2UGEuAp6Ex11CSWEwcYJuId8FnbDJErQ3aYeQDZIrzzbPYqZUw2Fq59ohkDTyq3qkMIhvI6cHXgdFRxQIazRnC/pyd+Vv35lBQd3880AhDeat34IrHkCxP611nkw/Bf2BbTzVq/9VRJ98bLrCGcvLcEH5XkWdM=
+script: ./grailsw refresh-dependencies && ./grailsw test-app
+jdk: 
+- oraclejdk7
