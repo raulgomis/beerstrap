@@ -41,6 +41,7 @@ grails.mime.types = [
 //        mangleOptions: [mangle: true, toplevel: false, defines: null, except: null, no_functions:false],
 //        genOptions: [indent_start:0, indent_level:4, quote_keys: false, space_colon: false, beautify: false, ascii_only: false, inline_script:false]
 //]
+grails.assets.minifyJs = false
 
 // Legacy setting for codec used to encode data with ${}
 grails.views.default.codec = "html"
