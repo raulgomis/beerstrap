@@ -43,7 +43,6 @@ Libraries:
 - Twitter Bootstrap SASS (version 3.2.0)
 - Bootstrap Datepicker (version 1.3.0)
 - d3 (version 3.4.11)
-- jQuery Flot Charts (version 0.8.3)
 - Font Awesome (version 4.2.0)
 - Holderjs (version 2.4.0)
 - jQuery (version 2.1.1)
