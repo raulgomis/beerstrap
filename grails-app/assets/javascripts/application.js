@@ -8,10 +8,10 @@
 //= require d3/d3.min
 //= require c3/c3.min
 //= require peity/jquery.peity.min
-//= require jquery-knob/dist/jquery.knob.min
-//require jquery-file-upload/js/vendor/jquery.ui.widget
-//require jquery-file-upload/js/jquery.iframe-transport
-//require jquery-file-upload/js/jquery.fileupload
+//= require jquery-knob/js/jquery.knob
+//= require jquery-file-upload/js/vendor/jquery.ui.widget
+//= require jquery-file-upload/js/jquery.iframe-transport
+//= require jquery-file-upload/js/jquery.fileupload
 //= require holderjs/holder
 //= require toastr/toastr.min
 //= require tinymce/tinymce.min
