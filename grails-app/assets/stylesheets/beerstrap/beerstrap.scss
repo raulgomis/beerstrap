@@ -3,6 +3,9 @@
 @import 'variables';
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap';
 
+// Mixins
+@import 'mixins/mixins';
+
 // Core
 @import 'base';
 @import 'beerstrap-bootstrap-overrides';

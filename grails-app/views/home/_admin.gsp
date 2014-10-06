@@ -3,12 +3,12 @@
     <g:link controller="user" class="quick-button col-md-2">
         <i class="fa fa-group"></i>
         <p><g:message code="app.menu.user.label" /></p>
-        <span class="notification">${countUsers}</span>
+        <span class="notification notification-success">${countUsers}</span>
     </g:link>
     <g:link controller="document" class="quick-button col-md-2">
         <i class="fa fa-file"></i>
         <p><g:message code="app.menu.document.label" /></p>
-        <span class="notification yellow">${countDocs}</span>
+        <span class="notification notification-warning">${countDocs}</span>
     </g:link>
     <g:link action="ajaxGraph" class="quick-button col-md-2 btn-ajax" data-toggle="modal" data-target="#modal-general">
         <i class="fa fa-envelope"></i>

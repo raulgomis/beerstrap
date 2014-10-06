@@ -12,6 +12,39 @@
     </header>
     <div id="components">
         <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Dashboard panels</div>
+                    <div class="panel-body">
+                        <a href="#" class="quick-button col-md-2">
+                            <i class="fa fa-group"></i>
+                            <p><g:message code="app.menu.user.label" /></p>
+                            <span class="notification notification-success">100</span>
+                        </a>
+                        <a href="#" class="quick-button col-md-2">
+                            <i class="fa fa-file"></i>
+                            <p><g:message code="app.menu.document.label" /></p>
+                            <span class="notification notification-warning">200</span>
+                        </a>
+                        <a href="#" class="quick-button col-md-2 btn-ajax" data-toggle="modal" data-target="#modal-general">
+                            <i class="fa fa-envelope"></i>
+                            <p>Messages</p>
+                        </a>
+                        <a href="#" class="quick-button col-md-2">
+                            <i class="fa fa-cog"></i>
+                            <p><g:message code="app.menu.configuration.label" /></p>
+                            <span class="notification notification-danger">2</span>
+                        </a>
+                        <a href="#" class="quick-button col-md-2">
+                            <i class="fa fa-question-circle"></i>
+                            <p><g:message code="app.menu.help.label" /></p>
+                            <span class="notification notification-info">3</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Forms</div>
