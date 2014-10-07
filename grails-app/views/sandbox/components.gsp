@@ -99,6 +99,18 @@
                         <button type="button" class="btn btn-link">Link</button>
                     </div>
                 </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Spinner</div>
+                    <div class="panel-body">
+                        <div class="spinner">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
