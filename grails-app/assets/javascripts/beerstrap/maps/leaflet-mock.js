@@ -1,6 +1,8 @@
 function loadMap() {
     var map = L.map('map').setView([51.505, -0.09], 13);
 
+    L.Icon.Default.imagePath = window.grailsSupport.assetsRoot + 'leaflet/dist/images';
+
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
