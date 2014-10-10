@@ -18,6 +18,7 @@
         "toastr": "2.0.3",
         "typeahead.js": "0.10.5",
         "c3": "0.3.0",
-        "leaflet": "0.7.3"
+        "leaflet": "0.7.3",
+        "leaflet-fullscreen": "git://github.com/Leaflet/Leaflet.fullscreen.git"
     }
 }

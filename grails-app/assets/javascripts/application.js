@@ -16,6 +16,7 @@
 //= require toastr/toastr.min
 //= require tinymce/tinymce.min
 //= require leaflet/dist/leaflet
+//= require leaflet-fullscreen/dist/Leaflet.fullscreen
 //= require beerstrap/reports/c3-mock
 //= require beerstrap/maps/leaflet-mock
 //= require beerstrap/beerstrap-init
