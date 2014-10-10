@@ -8,6 +8,8 @@ class SandboxController {
 
     def components() {}
 
+    def forms() {}
+
     def reports() {}
 
     def maps() {}
