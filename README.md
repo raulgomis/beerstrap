@@ -25,11 +25,11 @@ The Backend has been implemented using **Grails** framework. Grails is a dynamic
 - Hibernate (grails plugin, version 4.3.5.5)
 - Tomcat (grails plugin, version 7.0.55)
 - Grails scaffolding plugin (version 2.1.2)
-- Grails cache plugin (version 1.1.7)
+- Grails cache plugin (version 1.1.8)
 - Grails database-migration plugin (version 1.4.0)
 - Grails asset pipeline (version 1.9.9)
 - Grails spring-security-core plugin (version 2.0-RC4)
-- Grails mail plugin (version 1.0.6)
+- Grails mail plugin (version 1.0.7)
 
 ### 2.2 Frontend
 In the Frontend, it's been included Twitter Bootstrap as a frontend framework and several
