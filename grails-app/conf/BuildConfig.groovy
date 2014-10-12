@@ -61,7 +61,7 @@ grails.project.dependency.resolution = {
 
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
-        compile ':cache:1.1.7'
+        compile ':cache:1.1.8'
         compile ":asset-pipeline:1.9.9"
 
         // plugins needed at runtime but not for compilation
@@ -76,7 +76,7 @@ grails.project.dependency.resolution = {
         //compile ":handlebars-asset-pipeline:1.3.0.3"
 
         compile ":spring-security-core:2.0-RC4"
-        compile ":mail:1.0.6"
+        compile ":mail:1.0.7"
         //Uncomment these if you have good support for testing
         //test(":spock:0.7") { exclude "spock-grails-support" }
         //test ':fixtures:1.0.7'
