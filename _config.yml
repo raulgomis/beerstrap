@@ -13,6 +13,6 @@ markdown: redcarpet
 highlighter: pygments
 
 # Custom vars
-version:  0.3
+version:  0.4
 github:   https://github.com/raulgomis/beerstrap
 demo:     http://beerstrap.herokuapp.com/
