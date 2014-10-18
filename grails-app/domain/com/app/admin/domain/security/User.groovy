@@ -45,6 +45,10 @@ class User {
         password column: '`password`'
         //preferences lazy: true
     }
+    
+    def setUsername(String username) {
+    	this.username = username.toLowerCase()
+	}
 
     Set<Role> getAuthorities() {
         UserRole.findAllByUser(this).collect { it.role } as Set
