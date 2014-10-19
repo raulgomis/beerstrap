@@ -37,6 +37,30 @@ class BootstrapService {
             UserRole.create admin, adminRole
         }
 
+        if(!User.findByUsername('a')){
+            def admin = new User( username:"a",
+                    password:"a",
+                    name:"A",
+                    email:"raulgomis2@gmail.com",
+                    enabled:true,
+                    accountExpired:false,
+                    accountLocked:false,
+                    passwordExpired:false).save()
+            UserRole.create admin, adminRole
+        }
+
+        if(!User.findByUsername('A')){
+            def admin = new User( username:"A",
+                    password:"A",
+                    name:"A",
+                    email:"raulgomis3@gmail.com",
+                    enabled:true,
+                    accountExpired:false,
+                    accountLocked:false,
+                    passwordExpired:false).save()
+            UserRole.create admin, adminRole
+        }
+
         def configMap = [
                 "beerstrap.BT_SITE_NAME":"Beerstrap",
                 "beerstrap.BT_SITE_OFFLINE":"False",

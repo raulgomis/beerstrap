@@ -6,7 +6,7 @@ class BaseSpecification extends Specification {
 
     Example validExample() {
         new Example(
-                name: 'Raúl', surname: 'Gomis', dateOfBirth: new Date()
+            name: 'Raúl', surname: 'Gomis', dateOfBirth: new Date()
         )
     }
 
