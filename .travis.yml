@@ -7,6 +7,7 @@ deploy:
   app: beerstrap
   api_key: 
     secure: LXMe36pxYHg/Y2UGEuAp6Ex11CSWEwcYJuId8FnbDJErQ3aYeQDZIrzzbPYqZUw2Fq59ohkDTyq3qkMIhvI6cHXgdFRxQIazRnC/pyd+Vv35lBQd3880AhDeat34IrHkCxP611nkw/Bf2BbTzVq/9VRJ98bLrCGcvLcEH5XkWdM=
+  strategy: git
 script: ./grailsw refresh-dependencies && ./grailsw test-app
 jdk: 
 - oraclejdk7
