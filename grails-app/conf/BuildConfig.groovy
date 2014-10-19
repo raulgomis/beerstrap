@@ -48,11 +48,18 @@ grails.project.dependency.resolution = {
         mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
     }
+
+    def gebVersion = '0.9.3'
+    def seleniumVersion = '2.43.1'
+
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+        test "org.gebish:geb-spock:$gebVersion"
+        test "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
+        test "org.seleniumhq.selenium:selenium-htmlunit-driver:$seleniumVersion"
     }
 
     plugins {
@@ -78,8 +85,9 @@ grails.project.dependency.resolution = {
         compile ":spring-security-core:2.0-RC4"
         compile ":mail:1.0.7"
         //Uncomment these if you have good support for testing
+        test ":geb:$gebVersion"
         //test(":spock:0.7") { exclude "spock-grails-support" }
-        //test ':fixtures:1.0.7'
+        //test ":fixtures:1.0.7"
         //test ":build-test-data:2.0.4"
         //test ":code-coverage:1.2.5"
     }
