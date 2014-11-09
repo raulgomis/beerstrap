@@ -3,8 +3,6 @@ package com.app.admin.domain.security
 import groovy.text.SimpleTemplateEngine
 import grails.plugin.springsecurity.SpringSecurityUtils
 
-import javax.mail.AuthenticationFailedException
-
 /**
  * Register Controller
  *
@@ -24,11 +22,13 @@ class RegisterController {
 
     /**
      * Process user registration
+     *
+     * @param command A RegisterCommand command object
      */
     def register(RegisterCommand command) {
         try {
             User.withTransaction {
-                if(command.hasErrors()) {
+                if(!command.validate()) {
                     log.error(command.errors)
                     render(view: 'index', model: [command: command])
                     return
@@ -37,8 +37,7 @@ class RegisterController {
                 def user = new User(name:command.name, username: command.username, email: command.email,
                         password: command.password, accountLocked: true, enabled: true)
                 if (!user.validate() || !user.save()) {
-                    // TODO
-                    log.error("Error to save user: " + user.errors.allErrors)
+                    throw new RuntimeException("Error to save user: " + user.errors.allErrors)
                 }
 
                 //create registration code
@@ -50,7 +49,7 @@ class RegisterController {
                 flash.message = message(code: 'app.security.register.sent')
                 redirect(controller:"home")
             }
-        } catch(AuthenticationFailedException) {
+        } catch(Exception) {
             flash.error = message(code: 'app.security.register.failed')
             redirect(action:"index")
         }
@@ -58,6 +57,8 @@ class RegisterController {
 
     /**
      * Verify registration process using a token
+     *
+     * @return t Token to verify
      */
     def verifyRegistration(String t) {
 
@@ -106,6 +107,8 @@ class RegisterController {
 
     /**
      * Forgot password action
+     *
+     * @return email Email used to recover the user password
      */
     def forgotPassword(String email) {
 
@@ -138,6 +141,9 @@ class RegisterController {
 
     /**
      * Reset password action
+     *
+     * @param command A ResetPasswordCommand command object
+     * @param t Token given to the user to reset the password
      */
     def resetPassword(ResetPasswordCommand command, String t){
 
@@ -181,6 +187,13 @@ class RegisterController {
         redirect(uri: postResetUrl)
     }
 
+    /**
+     * Generates a link given an action and link params
+     *
+     * @param action
+     * @param linkParams
+     * @return
+     */
     protected String generateLink(String action, linkParams) {
         createLink(base: "$request.scheme://$request.serverName:$request.serverPort$request.contextPath",
                 controller: 'register', action: action,
