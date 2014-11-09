@@ -4,14 +4,14 @@ import com.app.admin.domain.sandbox.*
 import com.app.admin.domain.security.*
 import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
+import grails.test.mixin.TestMixin
+import grails.test.mixin.support.GrailsUnitTestMixin
 import spock.lang.Specification
 
-/**
- * Created by raulgomis on 19/10/2014.
- */
 @TestFor(UrlMappings)
 @Mock([UserController, DocumentController, ExampleController, ConfigurationController,
         SandboxController, ProfileController, SearchController, HelpController])
+@TestMixin(GrailsUnitTestMixin)
 class UrlMappingsSpec extends Specification {
 
     void "test forward mappings"() {
