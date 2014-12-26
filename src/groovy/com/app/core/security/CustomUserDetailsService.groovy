@@ -2,9 +2,9 @@ package com.app.core.security
 
 import grails.plugin.springsecurity.userdetails.GrailsUserDetailsService
 import grails.plugin.springsecurity.SpringSecurityUtils
-import org.springframework.security.core.authority.GrantedAuthorityImpl
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UsernameNotFoundException
+import org.springframework.security.core.authority.SimpleGrantedAuthority
 import com.app.admin.domain.security.User
 
 /**
@@ -14,7 +14,7 @@ import com.app.admin.domain.security.User
  */
 class CustomUserDetailsService implements GrailsUserDetailsService {
 
-    static final List NO_ROLES = [new GrantedAuthorityImpl(SpringSecurityUtils.NO_ROLE)]
+    static final List NO_ROLES = [new SimpleGrantedAuthority(SpringSecurityUtils.NO_ROLE)]
     //static final List NO_ROLES = [new GrantedAuthorityImpl(Role.)]
 
     UserDetails loadUserByUsername(String username, boolean loadRoles) throws UsernameNotFoundException {
@@ -25,7 +25,7 @@ class CustomUserDetailsService implements GrailsUserDetailsService {
 
         User.withTransaction { status ->
 
-            User user = User.findByUsername(username)
+            User user = User.findByUsernameIlikeOrEmailIlike(username, username)
             if (!user) {
                 throw new UsernameNotFoundException('User not found', username)
             }
@@ -35,7 +35,7 @@ class CustomUserDetailsService implements GrailsUserDetailsService {
             }
 
             def authorities = user.authorities.collect {
-                new GrantedAuthorityImpl(it.authority)
+                new SimpleGrantedAuthority(it.authority)
             }
 
             return new CustomUserDetails(user.username, user.password, user.enabled, !user.accountExpired, !user.passwordExpired, !user.accountLocked, (authorities) ?: NO_ROLES, user.id, user.name, user.email)

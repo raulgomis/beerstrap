@@ -13,6 +13,7 @@
 /ivy*
 /eclipse
 /.idea
+/.sass-cache
 
 # default HSQL database files for production mode
 /prodDb.*
