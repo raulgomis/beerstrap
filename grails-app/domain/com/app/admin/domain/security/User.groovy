@@ -46,7 +46,7 @@ class User {
         //preferences lazy: true
     }
     
-    def setUsername(String username) {
+    public void setUsername(String username) {
     	this.username = username.toLowerCase()
 	}
 
