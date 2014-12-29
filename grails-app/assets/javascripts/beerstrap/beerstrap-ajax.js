@@ -1,3 +1,4 @@
+'use strict';
 jQuery(document).ready(function () {
     $("a.btn-ajax").click(function (event) {
         event.preventDefault();

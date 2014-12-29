@@ -2,4 +2,3 @@
 //= require jquery/jquery-2.0.3.min
 //= require jquery/jquery.cookie
 //= require bootstrap/js/bootstrap.min
-//= require_self

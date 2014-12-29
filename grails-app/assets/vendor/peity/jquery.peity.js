@@ -1,24 +1,18 @@
-// Peity jQuery plugin version 2.0.3
+// Peity jQuery plugin version 3.0.2
 // (c) 2014 Ben Pickles
 //
 // http://benpickles.github.io/peity
 //
 // Released under MIT license.
-(function($, document, Math) {
+(function($, document, Math, undefined) {
   var svgElement = function(tag, attrs) {
     var elem = document.createElementNS("http://www.w3.org/2000/svg", tag)
-
-    $.each(attrs, function(name, value) {
-      elem.setAttribute(name, value)
-    })
-
+    $(elem).attr(attrs)
     return elem
   }
 
   // https://gist.github.com/madrobby/3201472
-  var svgSupported = "createElementNS" in document && svgElement("svg", {}).createSVGRect
-
-  var pixel = 1 / (window.devicePixelRatio || 1)
+  var svgSupported = 'createElementNS' in document && svgElement('svg', {}).createSVGRect
 
   var peity = $.fn.peity = function(type, options) {
     if (svgSupported) {
@@ -30,16 +24,11 @@
           if (type) chart.type = type
           $.extend(chart.opts, options)
         } else {
-          var defaults = peity.defaults[type]
-          var data = {}
-
-          $.each($this.data(), function(name, value) {
-            if (name in defaults) data[name] = value
-          })
-
-          var opts = $.extend({}, defaults, data, options)
-
-          chart = new Peity($this, type, opts)
+          chart = new Peity(
+            $this,
+            type,
+            $.extend({}, peity.defaults[type], options)
+          )
 
           $this
             .change(function() { chart.draw() })
@@ -67,36 +56,28 @@
 
   PeityPrototype.fill = function() {
     var fill = this.opts.fill
-    var func = fill
 
-    if (!$.isFunction(func)) {
-      func = function(_, i) {
-        return fill[i % fill.length]
-      }
-    }
-
-    return func
+    return $.isFunction(fill)
+      ? fill
+      : function(_, i) { return fill[i % fill.length] }
   }
 
   PeityPrototype.prepare = function(width, height) {
-    var $svg
-
-    if (this.svg) {
-      $svg = $(this.svg).empty()
-    } else {
-      this.svg = svgElement("svg", {
-        "class": "peity"
-      })
-
-      this.$el.hide().after(this.svg)
-
-      $svg = $(this.svg).data("peity", this)
+    if (!this.svg) {
+      this.$el.hide().after(
+        this.svg = svgElement("svg", {
+          "class": "peity"
+        })
+      )
     }
 
-    this.svg.setAttribute("height", height)
-    this.svg.setAttribute("width", width)
-
-    return $svg
+    return $(this.svg)
+      .empty()
+      .data('peity', this)
+      .attr({
+        height: height,
+        width: width
+      })
   }
 
   PeityPrototype.values = function() {
@@ -116,9 +97,8 @@
   peity.register(
     'pie',
     {
-      delimiter: null,
-      diameter: 16,
-      fill: ["#ff9900", "#fff4dd", "#ffc66e"]
+      fill: ['#ff9900', '#fff4dd', '#ffc66e'],
+      radius: 8
     },
     function(opts) {
       if (!opts.delimiter) {
@@ -142,9 +122,11 @@
         sum += values[i]
       }
 
+      var diameter = opts.radius * 2
+
       var $svg = this.prepare(
-        opts.width || opts.diameter,
-        opts.height || opts.diameter
+        opts.width || diameter,
+        opts.height || diameter
       )
 
       var width = $svg.width()
@@ -153,9 +135,20 @@
         , cy = height / 2
 
       var radius = Math.min(cx, cy)
+        , innerRadius = opts.innerRadius
       var pi = Math.PI
       var fill = this.fill()
-      var start = -pi / 2
+
+      var scale = this.scale = function(value, radius) {
+        var radians = value / sum * pi * 2 - pi / 2
+
+        return [
+          radius * Math.cos(radians) + cx,
+          radius * Math.sin(radians) + cy
+        ]
+      }
+
+      var cumulative = 0
 
       for (i = 0; i < length; i++) {
         var value = values[i]
@@ -165,37 +158,66 @@
         if (portion == 0) continue
 
         if (portion == 1) {
-          node = svgElement("circle", {
-            cx: cx,
-            cy: cy,
-            r: radius
-          })
-        } else {
-          var slice = portion * pi * 2
-            , end = start + slice
-            , x1 = radius * Math.cos(start) + cx
-            , y1 = radius * Math.sin(start) + cy
-            , x2 = radius * Math.cos(end) + cx
-            , y2 = radius * Math.sin(end) + cy
+          if (innerRadius) {
+            var x2 = cx - 0.01
+              , y1 = cy - radius
+              , y2 = cy - innerRadius
 
-          var d = [
-            "M", cx, cy,
-            "L", x1, y1,
-            "A", radius, radius, 0, slice > pi ? 1 : 0, 1, x2, y2,
-            "Z"
-          ]
+            node = svgElement('path', {
+              d: [
+                'M', cx, y1,
+                'A', radius, radius, 0, 1, 1, x2, y1,
+                'L', x2, y2,
+                'A', innerRadius, innerRadius, 0, 1, 0, cx, y2
+              ].join(' ')
+            })
+          } else {
+            node = svgElement("circle", {
+              cx: cx,
+              cy: cy,
+              r: radius
+            })
+          }
+        } else {
+          var cumulativePlusValue = cumulative + value
+
+          var d = ['M'].concat(
+            scale(cumulative, radius),
+            'A', radius, radius, 0, portion > 0.5 ? 1 : 0, 1,
+            scale(cumulativePlusValue, radius),
+            'L'
+          )
+
+          if (innerRadius) {
+            d = d.concat(
+              scale(cumulativePlusValue, innerRadius),
+              'A', innerRadius, innerRadius, 0, portion > 0.5 ? 1 : 0, 0,
+              scale(cumulative, innerRadius)
+            )
+          } else {
+            d.push(cx, cy)
+          }
+
+          cumulative += value
 
           node = svgElement("path", {
             d: d.join(" ")
           })
-
-          start = end
         }
 
-        node.setAttribute("fill", fill.call(this, value, i, values))
+        $(node).attr('fill', fill.call(this, value, i, values))
 
         this.svg.appendChild(node)
       }
+    }
+  )
+
+  peity.register(
+    'donut',
+    $.extend(true, {}, peity.defaults.pie),
+    function(opts) {
+      if (!opts.innerRadius) opts.innerRadius = opts.radius * 0.5
+      peity.graphers.pie.call(this, opts)
     }
   )
 
@@ -205,7 +227,6 @@
       delimiter: ",",
       fill: "#c6d9fd",
       height: 16,
-      max: null,
       min: 0,
       stroke: "#4d89f9",
       strokeWidth: 1,
@@ -214,44 +235,58 @@
     function(opts) {
       var values = this.values()
       if (values.length == 1) values.push(values[0])
-      var max = Math.max.apply(Math, values.concat([opts.max]));
-      var min = Math.min.apply(Math, values.concat([opts.min]))
+      var max = Math.max.apply(Math, opts.max == undefined ? values : values.concat(opts.max))
+        , min = Math.min.apply(Math, opts.min == undefined ? values : values.concat(opts.min))
 
       var $svg = this.prepare(opts.width, opts.height)
+        , strokeWidth = opts.strokeWidth
         , width = $svg.width()
-        , height = $svg.height() - opts.strokeWidth
-        , xQuotient = width / (values.length - 1)
+        , height = $svg.height() - strokeWidth
         , diff = max - min
-        , yQuotient = diff == 0 ? height : height / diff
-        , zero = height + (min * yQuotient)
+
+      var xScale = this.x = function(input) {
+        return input * (width / (values.length - 1))
+      }
+
+      var yScale = this.y = function(input) {
+        var y = height
+
+        if (diff) {
+          y -= ((input - min) / diff) * height
+        }
+
+        return y + strokeWidth / 2
+      }
+
+      var zero = yScale(Math.max(min, 0))
         , coords = [0, zero]
 
       for (var i = 0; i < values.length; i++) {
-        var x = i * xQuotient
-        var y = height - (yQuotient * (values[i] - min)) + opts.strokeWidth / 2
-
-        coords.push(x, y)
+        coords.push(
+          xScale(i),
+          yScale(values[i])
+        )
       }
 
       coords.push(width, zero)
 
-      var polygon = svgElement("polygon", {
-        fill: opts.fill,
-        points: coords.join(" ")
-      })
-
-      this.svg.appendChild(polygon)
-
-      if (opts.strokeWidth) {
-        var polyline = svgElement("polyline", {
-          fill: "transparent",
-          points: coords.slice(2, coords.length - 2).join(" "),
-          stroke: opts.stroke,
-          "stroke-width": opts.strokeWidth,
-          "stroke-linecap": "square"
+      this.svg.appendChild(
+        svgElement('polygon', {
+          fill: opts.fill,
+          points: coords.join(' ')
         })
+      )
 
-        this.svg.appendChild(polyline)
+      if (strokeWidth) {
+        this.svg.appendChild(
+          svgElement('polyline', {
+            fill: 'transparent',
+            points: coords.slice(2, coords.length - 2).join(' '),
+            stroke: opts.stroke,
+            'stroke-width': strokeWidth,
+            'stroke-linecap': 'square'
+          })
+        )
       }
     }
   );
@@ -261,50 +296,68 @@
     {
       delimiter: ",",
       fill: ["#4D89F9"],
-      gap: 1,
       height: 16,
-      max: null,
       min: 0,
+      padding: 0.1,
       width: 32
     },
     function(opts) {
       var values = this.values()
-      var max = Math.max.apply(Math, values.concat([opts.max]));
-      var min = Math.min.apply(Math, values.concat([opts.min]))
+        , max = Math.max.apply(Math, opts.max == undefined ? values : values.concat(opts.max))
+        , min = Math.min.apply(Math, opts.min == undefined ? values : values.concat(opts.min))
 
       var $svg = this.prepare(opts.width, opts.height)
         , width = $svg.width()
         , height = $svg.height()
         , diff = max - min
-        , yQuotient = diff == 0 ? 0 : height / diff
-        , gap = opts.gap
-        , xQuotient = (width + gap) / values.length
+        , padding = opts.padding
         , fill = this.fill()
 
+      var xScale = this.x = function(input) {
+        return input * width / values.length
+      }
+
+      var yScale = this.y = function(input) {
+        return height - (
+          diff
+            ? ((input - min) / diff) * height
+            : 1
+        )
+      }
+
       for (var i = 0; i < values.length; i++) {
-        var value = values[i]
-        var y = height - (yQuotient * (value - min))
-        var h = yQuotient * value
+        var x = xScale(i + padding)
+          , w = xScale(i + 1 - padding) - x
+          , value = values[i]
+          , valueY = yScale(value)
+          , y1 = valueY
+          , y2 = valueY
+          , h
 
-        if (h == 0) {
-          // Always show a bar even if it represents zero.
-          h = pixel
-
-          if (min <= 0 && max > 0 || diff == 0) y -= pixel
-        } else if (h < 0) {
-          y += h
-          h = -h
+        if (!diff) {
+          h = 1
+        } else if (value < 0) {
+          y1 = yScale(Math.min(max, 0))
+        } else {
+          y2 = yScale(Math.max(min, 0))
         }
 
-        var rect = svgElement("rect", {
-          fill: fill.call(this, value, i, values),
-          x: i * xQuotient,
-          y: y,
-          width: xQuotient - gap,
-          height: h
-        })
+        h = y2 - y1
 
-        this.svg.appendChild(rect)
+        if (h == 0) {
+          h = 1
+          if (max > 0 && diff) y1--
+        }
+
+        this.svg.appendChild(
+          svgElement('rect', {
+            fill: fill.call(this, value, i, values),
+            x: x,
+            y: y1,
+            width: w,
+            height: h
+          })
+        )
       }
     }
   );

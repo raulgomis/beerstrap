@@ -19,6 +19,11 @@ c3_chart_internal_fn.getXValuesOfXKey = function (key, targets) {
     });
     return xValues;
 };
+c3_chart_internal_fn.getIndexByX = function (x) {
+    var $$ = this,
+        data = $$.filterByX($$.data.targets, x);
+    return data.length ? data[0].index : null;
+};
 c3_chart_internal_fn.getXValue = function (id, i) {
     var $$ = this;
     return id in $$.data.xs && $$.data.xs[id] && isValue($$.data.xs[id][i]) ? $$.data.xs[id][i] : i;
@@ -42,8 +47,7 @@ c3_chart_internal_fn.hasMultipleX = function (xs) {
     return this.d3.set(Object.keys(xs).map(function (id) { return xs[id]; })).size() > 1;
 };
 c3_chart_internal_fn.isMultipleX = function () {
-    var $$ = this, config = $$.config;
-    return notEmpty(config.data_xs) && $$.hasMultipleX(config.data_xs);
+    return notEmpty(this.config.data_xs) || !this.config.data_xSort || this.hasType('scatter');
 };
 c3_chart_internal_fn.addName = function (data) {
     var $$ = this, name;
@@ -96,13 +100,22 @@ c3_chart_internal_fn.cloneTarget = function (target) {
         })
     };
 };
+c3_chart_internal_fn.updateXs = function () {
+    var $$ = this;
+    if ($$.data.targets.length) {
+        $$.xs = [];
+        $$.data.targets[0].values.forEach(function (v) {
+            $$.xs[v.index] = v.x;
+        });
+    }
+};
 c3_chart_internal_fn.getPrevX = function (i) {
-    var $$ = this, value = $$.getValueOnIndex($$.data.targets[0].values, i - 1);
-    return value ? value.x : null;
+    var x = this.xs[i - 1];
+    return typeof x !== 'undefined' ? x : null;
 };
 c3_chart_internal_fn.getNextX = function (i) {
-    var $$ = this, value = $$.getValueOnIndex($$.data.targets[0].values, i + 1);
-    return value ? value.x : null;
+    var x = this.xs[i + 1];
+    return typeof x !== 'undefined' ? x : null;
 };
 c3_chart_internal_fn.getMaxDataCount = function () {
     var $$ = this;
@@ -123,12 +136,11 @@ c3_chart_internal_fn.getMaxDataCountTarget = function (targets) {
     return maxTarget;
 };
 c3_chart_internal_fn.getEdgeX = function (targets) {
-    var target = this.getMaxDataCountTarget(targets), firstData, lastData;
-    if (!target) {
-        return [0, 0];
-    }
-    firstData = target.values[0], lastData = target.values[target.values.length - 1];
-    return [firstData.x, lastData.x];
+    var $$ = this;
+    return !targets.length ? [0, 0] : [
+        $$.d3.min(targets, function (t) { return t.values[0].x; }),
+        $$.d3.max(targets, function (t) { return t.values[t.values.length - 1].x; })
+    ];
 };
 c3_chart_internal_fn.mapToIds = function (targets) {
     return targets.map(function (d) { return d.id; });
@@ -158,8 +170,8 @@ c3_chart_internal_fn.filterTargetsToShow = function (targets) {
 };
 c3_chart_internal_fn.mapTargetsToUniqueXs = function (targets) {
     var $$ = this;
-    var xs = $$.d3.set($$.d3.merge(targets.map(function (t) { return t.values.map(function (v) { return v.x; }); }))).values();
-    return $$.isTimeSeries() ? xs.map(function (x) { return new Date(x); }) : xs.map(function (x) { return +x; });
+    var xs = $$.d3.set($$.d3.merge(targets.map(function (t) { return t.values.map(function (v) { return +v.x; }); }))).values();
+    return $$.isTimeSeries() ? xs.map(function (x) { return new Date(+x); }) : xs.map(function (x) { return +x; });
 };
 c3_chart_internal_fn.addHiddenTargetIds = function (targetIds) {
     this.hiddenTargetIds = this.hiddenTargetIds.concat(targetIds);
@@ -203,11 +215,11 @@ c3_chart_internal_fn.hasPositiveValueInTargets = function (targets) {
 };
 c3_chart_internal_fn.isOrderDesc = function () {
     var config = this.config;
-    return config.data_order && config.data_order.toLowerCase() === 'desc';
+    return typeof(config.data_order) === 'string' && config.data_order.toLowerCase() === 'desc';
 };
 c3_chart_internal_fn.isOrderAsc = function () {
     var config = this.config;
-    return config.data_order && config.data_order.toLowerCase() === 'asc';
+    return typeof(config.data_order) === 'string' && config.data_order.toLowerCase() === 'asc';
 };
 c3_chart_internal_fn.orderTargets = function (targets) {
     var $$ = this, config = $$.config, orderAsc = $$.isOrderAsc(), orderDesc = $$.isOrderDesc();
@@ -223,11 +235,22 @@ c3_chart_internal_fn.orderTargets = function (targets) {
     } // TODO: accept name array for order
     return targets;
 };
-c3_chart_internal_fn.filterSameX = function (targets, x) {
+c3_chart_internal_fn.filterByX = function (targets, x) {
     return this.d3.merge(targets.map(function (t) { return t.values; })).filter(function (v) { return v.x - x === 0; });
 };
 c3_chart_internal_fn.filterRemoveNull = function (data) {
     return data.filter(function (d) { return isValue(d.value); });
+};
+c3_chart_internal_fn.filterByXDomain = function (targets, xDomain) {
+    return targets.map(function (t) {
+        return {
+            id: t.id,
+            id_org: t.id_org,
+            values: t.values.filter(function (v) {
+                return xDomain[0] <= v.x && v.x <= xDomain[1];
+            })
+        };
+    });
 };
 c3_chart_internal_fn.hasDataLabel = function () {
     var config = this.config;
@@ -270,62 +293,77 @@ c3_chart_internal_fn.findSameXOfValues = function (values, index) {
     return sames;
 };
 
-c3_chart_internal_fn.findClosestOfValues = function (values, pos, _min, _max) { // MEMO: values must be sorted by x
-    var $$ = this,
-        min = _min ? _min : 0,
-        max = _max ? _max : values.length - 1,
-        med = Math.floor((max - min) / 2) + min,
-        value = values[med],
-        diff = $$.x(value.x) - pos[$$.config.axis_rotated ? 1 : 0],
-        candidates;
-
-    // Update range for search
-    diff > 0 ? max = med : min = med;
-
-    // if candidates are two closest min and max, stop recursive call
-    if ((max - min) === 1 || (min === 0 && max === 0)) {
-
-        // Get candidates that has same min and max index
-        candidates = [];
-        if (values[min].x || values[min].x === 0) {
-            candidates = candidates.concat($$.findSameXOfValues(values, min));
-        }
-        if (values[max].x || values[max].x === 0) {
-            candidates = candidates.concat($$.findSameXOfValues(values, max));
-        }
-
-        // Determine the closest and return
-        return $$.findClosest(candidates, pos);
-    }
-
-    return $$.findClosestOfValues(values, pos, min, max);
-};
 c3_chart_internal_fn.findClosestFromTargets = function (targets, pos) {
     var $$ = this, candidates;
 
     // map to array of closest points of each target
     candidates = targets.map(function (target) {
-        return $$.findClosestOfValues(target.values, pos);
+        return $$.findClosest(target.values, pos);
     });
 
     // decide closest point and return
     return $$.findClosest(candidates, pos);
 };
 c3_chart_internal_fn.findClosest = function (values, pos) {
-    var $$ = this, minDist, closest;
-    values.forEach(function (v) {
+    var $$ = this, minDist = 100, closest;
+
+    // find mouseovering bar
+    values.filter(function (v) { return v && $$.isBarType(v.id); }).forEach(function (v) {
+        var shape = $$.main.select('.' + CLASS.bars + $$.getTargetSelectorSuffix(v.id) + ' .' + CLASS.bar + '-' + v.index).node();
+        if (!closest && $$.isWithinBar(shape)) {
+            closest = v;
+        }
+    });
+
+    // find closest point from non-bar
+    values.filter(function (v) { return v && !$$.isBarType(v.id); }).forEach(function (v) {
         var d = $$.dist(v, pos);
-        if (d < minDist || ! minDist) {
+        if (d < minDist) {
             minDist = d;
             closest = v;
         }
     });
+
     return closest;
 };
 c3_chart_internal_fn.dist = function (data, pos) {
     var $$ = this, config = $$.config,
-        yScale = $$.getAxisId(data.id) === 'y' ? $$.y : $$.y2,
         xIndex = config.axis_rotated ? 1 : 0,
-        yIndex = config.axis_rotated ? 0 : 1;
-    return Math.pow($$.x(data.x) - pos[xIndex], 2) + Math.pow(yScale(data.value) - pos[yIndex], 2);
+        yIndex = config.axis_rotated ? 0 : 1,
+        y = $$.circleY(data, data.index),
+        x = $$.x(data.x);
+    return Math.pow(x - pos[xIndex], 2) + Math.pow(y - pos[yIndex], 2);
+};
+c3_chart_internal_fn.convertValuesToStep = function (values) {
+    var converted = [].concat(values), i;
+
+    if (!this.isCategorized()) {
+        return values;
+    }
+
+    for (i = values.length + 1; 0 < i; i--) {
+        converted[i] = converted[i - 1];
+    }
+
+    converted[0] = {
+        x: converted[0].x - 1,
+        value: converted[0].value,
+        id: converted[0].id
+    };
+    converted[values.length + 1] = {
+        x: converted[values.length].x + 1,
+        value: converted[values.length].value,
+        id: converted[values.length].id
+    };
+
+    return converted;
+};
+c3_chart_internal_fn.updateDataAttributes = function (name, attrs) {
+    var $$ = this, config = $$.config, current = config['data_' + name];
+    if (typeof attrs === 'undefined') { return current; }
+    Object.keys(attrs).forEach(function (id) {
+        current[id] = attrs[id];
+    });
+    $$.redraw({withLegend: true});
+    return current;
 };

@@ -41,6 +41,9 @@
 # "temporary" build files
 /target
 
+# Node modules
+/node_modules
+
 # other
 *.iws
 *.iml

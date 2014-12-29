@@ -41,7 +41,7 @@ c3_chart_internal_fn.drag = function (mouse) {
                 _y = box.y;
                 _w = box.width;
                 _h = box.height;
-                toggle = $$.toggleBar;
+                toggle = $$.togglePath;
                 isWithin = !(maxX < _x || _x + _w < minX) && !(maxY < _y || _y + _h < minY);
             } else {
                 // line/area selection not supported yet
@@ -65,7 +65,7 @@ c3_chart_internal_fn.dragstart = function (mouse) {
         .attr('class', CLASS.dragarea)
         .style('opacity', 0.1);
     $$.dragging = true;
-    $$.config.data_ondragstart();
+    $$.config.data_ondragstart.call($$.api);
 };
 
 c3_chart_internal_fn.dragend = function () {
@@ -79,6 +79,6 @@ c3_chart_internal_fn.dragend = function () {
     $$.main.selectAll('.' + CLASS.shape)
         .classed(CLASS.INCLUDED, false);
     $$.dragging = false;
-    $$.config.data_ondragend();
+    $$.config.data_ondragend.call($$.api);
 };
 

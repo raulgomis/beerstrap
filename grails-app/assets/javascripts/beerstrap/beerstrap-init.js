@@ -1,3 +1,4 @@
+'use strict';
 $(function () {
     // Twitter bootstrap: Popover ---------
     $("a[rel=popover]")

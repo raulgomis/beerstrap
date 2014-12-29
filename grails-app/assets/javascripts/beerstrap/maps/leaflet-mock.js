@@ -1,3 +1,4 @@
+'use strict';
 function loadMap() {
     var map = L.map('map', {
         fullscreenControl: true

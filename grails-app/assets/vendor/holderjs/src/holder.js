@@ -164,18 +164,13 @@ Holder.js - client side image placeholders
 							prepareImageElement(options, renderSettings, imageAttr.dataSrc, image);
 						} else {
 							//If the placeholder has not been rendered, check if the image exists and render a fallback if it doesn't
-							//todo: simplify imageExists param marshalling so an object doesn't need to be created
-							imageExists({
-								src: imageAttr.src,
-								options: options,
-								renderSettings: renderSettings,
-								dataSrc: imageAttr.dataSrc,
-								image: image
-							}, function(exists, config) {
-								if (!exists) {
-									prepareImageElement(config.options, config.renderSettings, config.dataSrc, config.image);
-								}
-							});
+              (function(src, options, renderSettings, dataSrc, image){
+                imageExists(src, function(exists){
+                  if(!exists){
+                    prepareImageElement(options, renderSettings, dataSrc, image);
+                  }
+                });
+              })(imageAttr.src, options, renderSettings, imageAttr.dataSrc, image);
 						}
 					}
 				} else if (imageHasDataSrcURL) {
@@ -232,11 +227,15 @@ Holder.js - client side image placeholders
 				},
 				'lava': {
 					background: '#F8591A',
-					foreground: '#1C2846',
-					size: 12
+					foreground: '#1C2846'
 				}
 			}
 		},
+    defaults: {
+      size: 10,
+      units: 'pt',
+      scale: 1/16
+    },
 		flags: {
 			dimensions: {
 				regex: /^(\d+)x(\d+)$/,
@@ -629,7 +628,8 @@ Holder.js - client side image placeholders
 	function buildSceneGraph(scene) {
 		scene.font = {
 			family: scene.theme.font ? scene.theme.font : 'Arial, Helvetica, Open Sans, sans-serif',
-			size: textSize(scene.width, scene.height, scene.theme.size ? scene.theme.size : 12),
+			size: textSize(scene.width, scene.height, scene.theme.size ? scene.theme.size : App.defaults.size),
+      units: scene.theme.units ? scene.theme.units : App.defaults.units,
 			weight: scene.theme.fontweight ? scene.theme.fontweight : 'bold'
 		};
 		scene.text = scene.theme.text ? scene.theme.text : Math.floor(scene.width) + 'x' + Math.floor(scene.height);
@@ -760,7 +760,7 @@ Holder.js - client side image placeholders
 		width = parseInt(width, 10);
 		var bigSide = Math.max(height, width);
 		var smallSide = Math.min(height, width);
-		var scale = 1 / 12;
+		var scale = App.defaults.scale;
 		var newHeight = Math.min(smallSide * 0.75, 0.75 * bigSide * scale);
 		return Math.round(Math.max(fontSize, newHeight));
 	}
@@ -911,7 +911,7 @@ Holder.js - client side image placeholders
 					'y': htgProps.font.size,
 					'style': cssProps({
 						'font-weight': htgProps.font.weight,
-						'font-size': htgProps.font.size + 'px',
+						'font-size': htgProps.font.size + htgProps.font.units,
 						'font-family': htgProps.font.family,
 						'dominant-baseline': 'middle'
 					})
@@ -981,7 +981,7 @@ Holder.js - client side image placeholders
 
 			var textGroup = root.children.holderTextGroup;
 			var tgProps = textGroup.properties;
-			ctx.font = textGroup.properties.font.weight + ' ' + App.dpr(textGroup.properties.font.size) + 'px ' + textGroup.properties.font.family + ', monospace';
+			ctx.font = textGroup.properties.font.weight + ' ' + App.dpr(textGroup.properties.font.size) + textGroup.properties.font.units + ' ' + textGroup.properties.font.family + ', monospace';
 			ctx.fillStyle = textGroup.properties.fill;
 
 			for (var lineKey in textGroup.children) {
@@ -999,7 +999,6 @@ Holder.js - client side image placeholders
 		};
 	})();
 
-	//todo: fix svg rendering on zoomed-in documents if possible
 	var sgSVGRenderer = (function() {
 		//Prevent IE <9 from initializing SVG renderer
 		if (!global.XMLSerializer) return;
@@ -1047,7 +1046,7 @@ Holder.js - client side image placeholders
 							'fill': tgProps.fill,
 							'font-weight': tgProps.font.weight,
 							'font-family': tgProps.font.family + ', monospace',
-							'font-size': tgProps.font.size + 'px',
+							'font-size': tgProps.font.size + tgProps.font.units,
 							'dominant-baseline': 'central'
 						})
 					});
@@ -1277,15 +1276,15 @@ Holder.js - client side image placeholders
 	 * @param params Configuration object, must specify at least a src key
 	 * @param callback Callback to call once image status has been found
 	 */
-	function imageExists(params, callback) {
+	function imageExists(src, callback) {
 		var image = new Image();
 		image.onerror = function() {
-			callback.call(this, false, params);
+			callback.call(this, false);
 		};
 		image.onload = function() {
-			callback.call(this, true, params);
+			callback.call(this, true);
 		};
-		image.src = params.src;
+		image.src = src;
 	}
 
 	/**
@@ -1297,7 +1296,7 @@ Holder.js - client side image placeholders
 		var buf = [];
 		var charCode = 0;
 		for (var i = str.length - 1; i >= 0; i--) {
-			charCode = str[i].charCodeAt();
+			charCode = str.charCodeAt(i);
 			if (charCode > 128) {
 				buf.unshift(['&#', charCode, ';'].join(''));
 			} else {
@@ -1496,8 +1495,8 @@ Holder.js - client side image placeholders
 			App.setup.supportsSVG = true;
 		}
 	})();
-	//Exposing to environment and setting up listeners
 
+	//Exposing to environment and setting up listeners
 	register(Holder, 'Holder', global);
 
 	if (global.onDomReady) {

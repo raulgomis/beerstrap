@@ -59,14 +59,35 @@ c3_chart_internal_fn.updateEventRect = function (eventRectUpdate) {
     }
     else {
         if (($$.isCustomX() || $$.isTimeSeries()) && !$$.isCategorized()) {
+
+            // update index for x that is used by prevX and nextX
+            $$.updateXs();
+
             rectW = function (d) {
-                var prevX = $$.getPrevX(d.index), nextX = $$.getNextX(d.index), dx = $$.data.xs[d.id][d.index],
-                    w = ($$.x(nextX ? nextX : dx) - $$.x(prevX ? prevX : dx)) / 2;
-                return w < 0 ? 0 : w;
+                var prevX = $$.getPrevX(d.index), nextX = $$.getNextX(d.index);
+
+                // if there this is a single data point make the eventRect full width (or height)
+                if (prevX === null && nextX === null) {
+                    return config.axis_rotated ? $$.height : $$.width;
+                }
+
+                if (prevX === null) { prevX = $$.x.domain()[0]; }
+                if (nextX === null) { nextX = $$.x.domain()[1]; }
+
+                return Math.max(0, ($$.x(nextX) - $$.x(prevX)) / 2);
             };
             rectX = function (d) {
-                var prevX = $$.getPrevX(d.index), dx = $$.data.xs[d.id][d.index];
-                return ($$.x(dx) + $$.x(prevX ? prevX : dx)) / 2;
+                var prevX = $$.getPrevX(d.index), nextX = $$.getNextX(d.index),
+                    thisX = $$.data.xs[d.id][d.index];
+
+                // if there this is a single data point position the eventRect at 0
+                if (prevX === null && nextX === null) {
+                    return 0;
+                }
+
+                if (prevX === null) { prevX = $$.x.domain()[0]; }
+
+                return ($$.x(thisX) + $$.x(prevX)) / 2;
             };
         } else {
             rectW = $$.getEventRectWidth();
@@ -95,7 +116,7 @@ c3_chart_internal_fn.generateEventRectsForSingleX = function (eventRectEnter) {
         .on('mouseover', function (d) {
             var index = d.index, selectedData, newData;
 
-            if ($$.dragging) { return; } // do nothing if dragging
+            if ($$.dragging || $$.flowing) { return; } // do nothing while dragging/flowing
             if ($$.hasArcType()) { return; }
 
             selectedData = $$.data.targets.map(function (t) {
@@ -116,12 +137,12 @@ c3_chart_internal_fn.generateEventRectsForSingleX = function (eventRectEnter) {
             selectedData = newData.concat(selectedData); // Add remained
 
             // Expand shapes for selection
-            if (config.point_focus_expand_enabled) { $$.expandCircles(index); }
-            $$.expandBars(index);
+            if (config.point_focus_expand_enabled) { $$.expandCircles(index, null, true); }
+            $$.expandBars(index, null, true);
 
             // Call event handler
             $$.main.selectAll('.' + CLASS.shape + '-' + index).each(function (d) {
-                config.data_onmouseover.call($$, d);
+                config.data_onmouseover.call($$.api, d);
             });
         })
         .on('mouseout', function (d) {
@@ -130,19 +151,23 @@ c3_chart_internal_fn.generateEventRectsForSingleX = function (eventRectEnter) {
             $$.hideXGridFocus();
             $$.hideTooltip();
             // Undo expanded shapes
-            $$.unexpandCircles(index);
+            $$.unexpandCircles();
             $$.unexpandBars();
             // Call event handler
             $$.main.selectAll('.' + CLASS.shape + '-' + index).each(function (d) {
-                config.data_onmouseout.call($$, d);
+                config.data_onmouseout.call($$.api, d);
             });
         })
         .on('mousemove', function (d) {
             var selectedData, index = d.index,
                 eventRect = $$.svg.select('.' + CLASS.eventRect + '-' + index);
 
-            if ($$.dragging) { return; } // do nothing when dragging
+            if ($$.dragging || $$.flowing) { return; } // do nothing while dragging/flowing
             if ($$.hasArcType()) { return; }
+
+            if ($$.isStepType(d) && $$.config.line_step_type === 'step-after' && d3.mouse(this)[0] < $$.x($$.getXValue(d.id, index))) {
+                index -= 1;
+            }
 
             // Show tooltip
             selectedData = $$.filterTargetsToShow($$.data.targets).map(function (t) {
@@ -169,17 +194,12 @@ c3_chart_internal_fn.generateEventRectsForSingleX = function (eventRectEnter) {
                         $$.hideTooltip();
                         if (!config.data_selection_grouped) {
                             $$.unexpandCircles(index);
-                            $$.unexpandBars();
+                            $$.unexpandBars(index);
                         }
                     }
                 })
                 .filter(function (d) {
-                    if (this.nodeName === 'circle') {
-                        return $$.isWithinCircle(this, $$.pointSelectR(d));
-                    }
-                    else if (this.nodeName === 'path') {
-                        return $$.isWithinBar(this);
-                    }
+                    return $$.isWithinShape(this, d);
                 })
                 .each(function (d) {
                     if (config.data_selection_enabled && (config.data_selection_grouped || config.data_selection_isselectable(d))) {
@@ -188,8 +208,8 @@ c3_chart_internal_fn.generateEventRectsForSingleX = function (eventRectEnter) {
                     if (!config.tooltip_grouped) {
                         $$.showTooltip([d], d3.mouse(this));
                         $$.showXGridFocus([d]);
-                        if (config.point_focus_expand_enabled) { $$.expandCircles(index, d.id); }
-                        $$.expandBars(index, d.id);
+                        if (config.point_focus_expand_enabled) { $$.expandCircles(index, d.id, true); }
+                        $$.expandBars(index, d.id, true);
                     }
                 });
         })
@@ -200,8 +220,14 @@ c3_chart_internal_fn.generateEventRectsForSingleX = function (eventRectEnter) {
                 $$.cancelClick = false;
                 return;
             }
+            if ($$.isStepType(d) && config.line_step_type === 'step-after' && d3.mouse(this)[0] < $$.x($$.getXValue(d.id, index))) {
+                index -= 1;
+            }
             $$.main.selectAll('.' + CLASS.shape + '-' + index).each(function (d) {
-                $$.toggleShape(this, d, index);
+                if (config.data_selection_grouped || $$.isWithinShape(this, d)) {
+                    $$.toggleShape(this, d, index);
+                    $$.config.data_onclick.call($$.api, d, this);
+                }
             });
         })
         .call(
@@ -209,12 +235,20 @@ c3_chart_internal_fn.generateEventRectsForSingleX = function (eventRectEnter) {
                 .on('drag', function () { $$.drag(d3.mouse(this)); })
                 .on('dragstart', function () { $$.dragstart(d3.mouse(this)); })
                 .on('dragend', function () { $$.dragend(); })
-        )
-        .on("dblclick.zoom", null);
+        );
 };
 
 c3_chart_internal_fn.generateEventRectsForMultipleXs = function (eventRectEnter) {
     var $$ = this, d3 = $$.d3, config = $$.config;
+
+    function mouseout() {
+        $$.svg.select('.' + CLASS.eventRect).style('cursor', null);
+        $$.hideXGridFocus();
+        $$.hideTooltip();
+        $$.unexpandCircles();
+        $$.unexpandBars();
+    }
+
     eventRectEnter.append('rect')
         .attr('x', 0)
         .attr('y', 0)
@@ -223,9 +257,7 @@ c3_chart_internal_fn.generateEventRectsForMultipleXs = function (eventRectEnter)
         .attr('class', CLASS.eventRect)
         .on('mouseout', function () {
             if ($$.hasArcType()) { return; }
-            $$.hideXGridFocus();
-            $$.hideTooltip();
-            $$.unexpandCircles();
+            mouseout();
         })
         .on('mousemove', function () {
             var targetsToShow = $$.filterTargetsToShow($$.data.targets);
@@ -237,12 +269,20 @@ c3_chart_internal_fn.generateEventRectsForMultipleXs = function (eventRectEnter)
             mouse = d3.mouse(this);
             closest = $$.findClosestFromTargets(targetsToShow, mouse);
 
-            if (! closest) { return; }
+            if ($$.mouseover && (!closest || closest.id !== $$.mouseover.id)) {
+                config.data_onmouseout.call($$.api, $$.mouseover);
+                $$.mouseover = undefined;
+            }
 
-            if ($$.isScatterType(closest)) {
+            if (! closest) {
+                mouseout();
+                return;
+            }
+
+            if ($$.isScatterType(closest) || !config.tooltip_grouped) {
                 sameXData = [closest];
             } else {
-                sameXData = $$.filterSameX(targetsToShow, closest.x);
+                sameXData = $$.filterByX(targetsToShow, closest.x);
             }
 
             // show tooltip when cursor is close to some point
@@ -253,24 +293,20 @@ c3_chart_internal_fn.generateEventRectsForMultipleXs = function (eventRectEnter)
 
             // expand points
             if (config.point_focus_expand_enabled) {
-                $$.unexpandCircles();
-                $$.expandCircles(closest.index, closest.id);
+                $$.expandCircles(closest.index, closest.id, true);
             }
+            $$.expandBars(closest.index, closest.id, true);
 
             // Show xgrid focus line
             $$.showXGridFocus(selectedData);
 
             // Show cursor as pointer if point is close to mouse position
-            if ($$.dist(closest, mouse) < 100) {
+            if ($$.isBarType(closest.id) || $$.dist(closest, mouse) < 100) {
                 $$.svg.select('.' + CLASS.eventRect).style('cursor', 'pointer');
                 if (!$$.mouseover) {
-                    config.data_onmouseover.call($$, closest);
-                    $$.mouseover = true;
+                    config.data_onmouseover.call($$.api, closest);
+                    $$.mouseover = closest;
                 }
-            } else if ($$.mouseover) {
-                $$.svg.select('.' + CLASS.eventRect).style('cursor', null);
-                config.data_onmouseout.call($$, closest);
-                $$.mouseover = false;
             }
         })
         .on('click', function () {
@@ -285,9 +321,12 @@ c3_chart_internal_fn.generateEventRectsForMultipleXs = function (eventRectEnter)
             if (! closest) { return; }
 
             // select if selection enabled
-            if ($$.dist(closest, mouse) < 100 && $$.toggleShape) {
-                $$.main.select('.' + CLASS.circles + $$.getTargetSelectorSuffix(closest.id)).select('.' + CLASS.circle + '-' + closest.index).each(function () {
-                    $$.toggleShape(this, closest, closest.index);
+            if ($$.isBarType(closest.id) || $$.dist(closest, mouse) < 100) {
+                $$.main.selectAll('.' + CLASS.shapes + $$.getTargetSelectorSuffix(closest.id)).select('.' + CLASS.shape + '-' + closest.index).each(function () {
+                    if (config.data_selection_grouped || $$.isWithinShape(this, closest)) {
+                        $$.toggleShape(this, closest, closest.index);
+                        $$.config.data_onclick.call($$.api, closest, this);
+                    }
                 });
             }
         })
@@ -296,6 +335,18 @@ c3_chart_internal_fn.generateEventRectsForMultipleXs = function (eventRectEnter)
                 .on('drag', function () { $$.drag(d3.mouse(this)); })
                 .on('dragstart', function () { $$.dragstart(d3.mouse(this)); })
                 .on('dragend', function () { $$.dragend(); })
-        )
-        .on("dblclick.zoom", null);
+        );
+};
+c3_chart_internal_fn.dispatchEvent = function (type, index, mouse) {
+    var $$ = this,
+        selector = '.' + CLASS.eventRect + (!$$.isMultipleX() ? '-' + index : ''),
+        eventRect = $$.main.select(selector).node(),
+        box = eventRect.getBoundingClientRect(),
+        x = box.left + (mouse ? mouse[0] : 0),
+        y = box.top + (mouse ? mouse[1] : 0),
+        event = document.createEvent("MouseEvents");
+
+    event.initMouseEvent(type, true, true, window, 0, x, y, x, y,
+                         false, false, false, false, 0, null);
+    eventRect.dispatchEvent(event);
 };

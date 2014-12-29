@@ -1,5 +1,30 @@
 # History
 
+## Version 3.0.2 - 2014/10/17
+
+ * Fix `max`/`min` option when it's a string.
+
+## Version 3.0.1 - 2014/10/16
+
+ * jQuery > 1.6.2 doesn’t like `undefined` being passed to `#attr()`.
+
+## Version 3.0.0 - 2014/10/15
+
+ * Remove the ability to read options from data attributes.
+ * Add donut chart type.
+ * Switch from `diameter` pie chart option to `radius`.
+ * Expose the internally-used scale functions to the outside world.
+ * Rename `gap` bar chart option to `padding`. It is now specified as a portion of the width of each bar and is present on both sides.
+
+## Version 2.0.5 - 2014/10/15
+
+ * Changes to make the minified version 147 bytes smaller!
+
+## Version 2.0.4 - 2014/10/8
+
+ * Fix a null max argument being calculated as zero when all values are negative.
+ * Ensure that a null min argument means that the minimum is calculated from a chart’s values.
+
 ## Version 2.0.3 - 2014/4/29
 
  * Don't blow up drawing a line chart of all zeros.

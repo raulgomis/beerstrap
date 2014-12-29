@@ -5,7 +5,7 @@ var http = require('http')
   , server = http.createServer(app)
   , Chart = require('./chart')
   , assert = require('assert')
-  , FUZZY = 4
+  , FUZZY = 7
 
 describe('Peity', function() {
   before(function(done) {
@@ -19,7 +19,7 @@ describe('Peity', function() {
     server.close()
   })
 
-  Chart.forEach(function(chart) {
+  Chart.all().forEach(function(chart) {
     it(chart.id, function(done) {
       queue(1)
         .defer(chart.screenshot.bind(chart), chart.imagePath)

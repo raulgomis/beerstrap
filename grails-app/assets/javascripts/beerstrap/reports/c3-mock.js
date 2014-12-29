@@ -1,3 +1,4 @@
+'use strict';
 $(function () {
     var chart = c3.generate({
         bindto: '#chart',

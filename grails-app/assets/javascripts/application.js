@@ -22,4 +22,3 @@
 //= require beerstrap/beerstrap-init
 //= require beerstrap/beerstrap-utils
 //= require beerstrap/beerstrap-ajax
-//= require_self

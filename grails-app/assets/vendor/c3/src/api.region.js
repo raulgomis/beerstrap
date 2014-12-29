@@ -2,14 +2,14 @@ c3_chart_fn.regions = function (regions) {
     var $$ = this.internal, config = $$.config;
     if (!regions) { return config.regions; }
     config.regions = regions;
-    $$.redraw();
+    $$.redrawWithoutRescale();
     return config.regions;
 };
 c3_chart_fn.regions.add = function (regions) {
     var $$ = this.internal, config = $$.config;
     if (!regions) { return config.regions; }
     config.regions = config.regions.concat(regions);
-    $$.redraw();
+    $$.redrawWithoutRescale();
     return config.regions;
 };
 c3_chart_fn.regions.remove = function (options) {
@@ -27,10 +27,10 @@ c3_chart_fn.regions.remove = function (options) {
 
     config.regions = config.regions.filter(function (region) {
         var found = false;
-        if (!region.class) {
+        if (!region['class']) {
             return true;
         }
-        region.class.split(' ').forEach(function (c) {
+        region['class'].split(' ').forEach(function (c) {
             if (classes.indexOf(c) >= 0) { found = true; }
         });
         return !found;
